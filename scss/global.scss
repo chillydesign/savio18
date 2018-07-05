@@ -8,6 +8,8 @@
 @import 'header';
 @import 'footer';
 
+@import '../node_modules/slick-carousel/slick/slick.scss';
+@import 'slick';
 
 
 @media (min-width: $mobile_width) { }
@@ -68,6 +70,10 @@ section {
 
         h1, h2 {
             font-size: 3em;
+            padding: 0;
+        }
+        p {
+            padding: 15px 0 10px;
         }
     }
 } // END OF WELCOME SCETION
@@ -421,7 +427,7 @@ $features_height: 400px;
     .testimonials_flex {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content:space-between;
 
         @media (min-width: $mobile_width) {
             flex-wrap: nowrap;
@@ -429,8 +435,14 @@ $features_height: 400px;
 
         .testimonials_container {
             flex: 1 auto 0;
+            width: 50%;
+            width: calc( 100% - #{$section_image_width + 30px} );
             @media (min-width: $mobile_width) {
                 padding: 0  30px;
+            }
+
+            .testimonial_slider {
+
             }
 
         }
