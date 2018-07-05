@@ -157,10 +157,21 @@ function remove_category_rel_from_category_list($thelist)
     return str_replace('rel="category tag"', 'rel="tag"', $thelist);
 }
 
+// Add page slug to body class, love this - Credit: Starkers Wordpress Theme
+add_filter('body_class', 'add_slug_to_body_class'); // Add slug to body class (Starkers build)
+function add_slug_to_body_class($classes) {
+    global $post;
+    if (is_home()) {
+        $key = array_search('blog', $classes);
+        if ($key > -1) {
+            unset($classes[$key]);
+        }
+    } elseif (is_page()) {
+        $classes[] = sanitize_html_class($post->post_name);
+    } elseif (is_singular()) {
+        $classes[] = sanitize_html_class($post->post_name);
+    }
 
-// Add specific CSS class by filter
-add_filter('body_class','my_class_names');
-function my_class_names($classes) {
     if (defined('ICL_LANGUAGE_CODE')) {
         // add 'class-name' to the $classes array
         if(ICL_LANGUAGE_CODE == 'en'){
@@ -171,7 +182,10 @@ function my_class_names($classes) {
         // return the $classes array
         return $classes;
     }
+
+    return $classes;
 }
+
 
 
 
@@ -371,6 +385,7 @@ remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
 
 // Add Filters
 add_filter('avatar_defaults', 'webfactorgravatar'); // Custom Gravatar in Settings > Discussion
+
 add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
 add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
 add_filter('wp_nav_menu_args', 'my_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation

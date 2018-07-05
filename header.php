@@ -30,4 +30,17 @@
     <body <?php body_class(); ?>>
 
 
-        
+        <header>
+    <div class="container">
+        <nav>
+            <a href="#" class="branding">Savio</a>
+            <a href="#" id="menu_button">Menu</a>
+            <ul id="menu_navigation">
+
+                <?php chilly_nav('primary-navigation'); ?>
+
+            
+            </ul>
+        </nav>
+    </div>
+</header>

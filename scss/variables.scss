@@ -1,28 +1,39 @@
+$brand_color:  #0e82c5 ;
+$brand_color_hover: #48c1ed;
+$brand_color_dark: #112F58;
 
-
-$brand_color: #005d9a;
-
-
+// , for use with MyFonts
+$font_stack:  'sofia-pro-soft', 'Sofia Pro Soft',   'Varela Round' , 'Quicksand', 'Comfortaa', 'Avenir' , 'Roboto', sans-serif;
+$heading_font_stack:  $font_stack;
+$font_size: 1.8em;
 $font_color: #222;
-$background_color: #fff;
 
-$light_grey: #f1f1f1;
 
-$font_stack:   -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-$header_font_stack:   'Baloo Tammudu', $font_stack;
-$cursive_font_family: 'Lobster Two', 'cursive';
-$bourton_font_stack: BourtonHandExtrudeOutlineBold, $header_font_stack;
+$light_grey: #eee;
+$medium_grey: #888;
+$dark_grey: #222;
+
+$border_radius: 10px;
+
+$primary_color: $brand_color;
+$red: #e6242d;
+$green: #3db634;
+$orange: #fea520;
+$pink: #f3136a;
+
+$skyblue: lighten($brand_color_hover,10);
 
 
 $transition_time: 0.3s;
 
 
 
-$nav_height: 100px;
+$mobile_width: 768px;
 
 
-@keyframes pulse {
-    from { transform: scale(1) }
-    to { transform: scale(1.15) }
+@mixin linear-gradient($direction, $color-stops...) {
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops);
+  background: linear-gradient($direction, $color-stops);
 }
