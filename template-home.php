@@ -84,8 +84,9 @@
 
                     <div class="what_is_savio_slider_container">
                         <div class="what_is_savio_slider">
-                            <div><img src="images/screen1.png" alt="" /></div>
-                            <div><img src="images/screen2.png" alt="" /></div>
+                            <?php foreach ($what_savio_gallery as $image) : ?>
+                                <div><img src="<?php echo $image['url']; ?>" alt="" /></div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
                 </div>

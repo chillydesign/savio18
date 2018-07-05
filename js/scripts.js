@@ -39,10 +39,32 @@ import slick from 'slick-carousel';
             slidesToShow: 1,
             centerMode: false,
             variableWidth: false,
-              adaptiveHeight: true
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
         });
+
+        var $what_is_savio_sliders = $(".what_is_savio_slider");
+        $what_is_savio_sliders.slick({
+            dots: true,
+            arrows: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: false,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+
+
         //////////
         // SLIDERS
+
+
+
+
 
 
         /////////////////////////////////

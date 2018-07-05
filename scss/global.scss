@@ -469,7 +469,7 @@ $features_height: 400px;
 
         blockquote {
             position: relative;
-            padding: 20px 0;
+            padding: 20px 20px;
 
             &:after, &:before {
                 content: '';
@@ -490,7 +490,8 @@ $features_height: 400px;
                 transform: rotate(180deg);
             }
             p {
-                text-indent: 50px
+                text-indent: 50px;
+                font-size: 1.5em;
             }
             p + p {
                 text-indent: 0;
@@ -500,6 +501,7 @@ $features_height: 400px;
         cite {
             text-align: right;
             display: block;
+            margin: 0 20px;
 
         }
     }
