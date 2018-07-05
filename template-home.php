@@ -21,6 +21,7 @@
     <?php $for_parents_paragraph_2 = get_field('for_parents_paragraph_2'); ?>
     <?php $interactive_header = get_field('interactive_header'); ?>
     <?php $interactive_paragraph = get_field('interactive_paragraph'); ?>
+    <?php $interactive_gallery = get_field('interactive_gallery'); ?>
     <?php $features = get_field('features'); ?>
     <?php $follow_header = get_field('follow_header'); ?>
     <?php $follow_paragraph = get_field('follow_paragraph'); ?>
@@ -124,10 +125,13 @@
 
                     <div class="interactive_slider_container">
                         <div class="interactive_slider">
-                            <div><img src="images/screen1.png" alt="" /></div>
-                            <div><img src="images/screen2.png" alt="" /></div>
+                            <?php foreach ($interactive_gallery as $image) : ?>
+                                <div><img src="<?php echo $image['url']; ?>" alt="" /></div>
+                            <?php endforeach; ?>
                         </div>
                     </div>
+
+
                     <div class="interactive_text">
                         <h2><?php echo $interactive_header; ?></h2>
                         <p><?php echo $interactive_paragraph; ?></p>
