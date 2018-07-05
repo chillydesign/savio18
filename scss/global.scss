@@ -1,3 +1,5 @@
+@import "colonnes";
+
 
 @import 'variables';
 @import 'mixins';
@@ -35,6 +37,7 @@ $section_text_width: 700px;
 
 section {
     padding: 90px 0;
+    background: white;
 }
 
 #welcome_section {
@@ -63,7 +66,7 @@ section {
         }
 
 
-        h2 {
+        h1, h2 {
             font-size: 3em;
         }
     }
@@ -74,6 +77,7 @@ section {
 
     text-align: center;
     color: white;
+    background: none;
 
 
     #saviocountdown {
@@ -326,7 +330,7 @@ $features_height: 400px;
 
 #features {
     text-align: center;
-
+    background: none;
 
     @media (min-width: $mobile_width) {
         height: #{$features_height  + 100px};

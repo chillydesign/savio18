@@ -9,27 +9,24 @@
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" >
 
-
-
-
-        <?php
-        $background_image = '';
-        if (  has_post_thumbnail()   ):
-            $page_image = thumbnail_of_post_url( get_the_ID(), 'large' );
-            $background_image = ' style="background-image:url('. $page_image .')" ';
-        endif;
-        ?>
-
-        <section class="section_welcome_paragraph"  <?php echo $background_image; ?>   >
-            <h1><?php the_title(); ?></h1>
+        <?php $background_image = ( has_post_thumbnail() ) ? thumbnail_of_post_url( get_the_ID(), 'large' ) : ''; ?>
+        <section id="welcome_section" style="background-image:url('<?php echo $background_image; ?>')" >
+            <div class="container">
+                <div class="welcome_text">
+                    <h1><?php the_title(); ?></h1>
+                </div>
+            </div>
         </section>
+
 
         <?php include('section-loop.php'); ?>
 
 
-        <div class="container">
-            <?php the_content(); ?>
-        </div>
+        <section>
+            <div class="container">
+                <?php the_content(); ?>
+            </div>
+        </section>
 
 
 
