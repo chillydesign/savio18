@@ -1,0 +1,144 @@
+
+footer {
+    background-color: $brand_color;
+    border-top:8px  solid lighten($brand_color, 10);
+    color: lighten($brand_color, 55);
+    margin-top:30px;
+    padding:40px 0 0;
+
+
+    p {
+        padding: 0;
+        margin: 0 0 30px;
+        font-size: 1.5em;
+        position:relative;
+    }
+
+    a {
+        &:link, &:visited, &:active {
+            color: white;
+        }
+        &:hover {
+            text-shadow: 0 0 5px white;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+    }
+    #ensr_summer_col {
+        img {
+            width:50%;
+            margin-top:50px;
+            max-width:50%;
+        }
+    }
+
+    .social_media{
+      margin-top: -15px;
+      #facebook {background-image: url(../img/facebook.svg);}
+      #youtube {background-image: url(../img/youtube.svg);}
+      #instagram {background-image: url(../img/instagram.svg);}
+      .social_icon{
+        height: 30px;
+        width: 30px;
+        margin-right: 10px;
+        background-size: 35px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: rgba(255,255,255, 0.3);
+        border-radius: 5px;
+        text-indent: -999999px;
+
+        &:hover{
+          background-color: rgba(255,255,255, 0.6);
+          transition: all 0.5s;
+        }
+      }
+    }
+    h2 {
+      font-size: 3em;
+      color: white;
+    }
+
+
+        #copyright {
+            background: darken($brand_color,5);
+            padding: 20px 0;
+            margin-top: 20px;
+
+            p {
+                padding: 0 15px;
+                margin-bottom: 0;
+                font-size: 1.3em;
+            }
+        }
+
+}
+
+
+@media (min-width: 768px) {
+
+    footer {
+
+        #ensr_col {
+            img {
+                height:70px;margin-top:39px;
+                max-width: none;width: auto;
+
+            }
+
+        }
+        #summercamp_col {
+            img {
+                height:110px;
+                max-width: none;width:auto;
+
+            }
+
+        }
+
+        #ensr_summer_col {
+            img {
+                width:90%;
+                max-width: none;
+            }
+
+            h2 {  margin-top: 62px;}
+        }
+
+        #copyright {
+            margin-top: 0px;
+
+        }
+
+
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    footer {
+        #ensr_col {
+            p {
+                left:70px
+            }
+        }
+        #ensr_summer_col {
+            img {
+                width:90%;
+                margin-top: 0;
+            }
+        }
+
+        #copyright {
+            p {
+                padding: 0 30px;
+            }
+        }
+
+    }
+}
