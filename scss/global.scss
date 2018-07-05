@@ -115,6 +115,7 @@ section {
 
     .countdown_text {
         margin: auto;
+        padding: 0 15px 0;
         @media (min-width: $mobile_width) {
             width: $section_text_width;
             max-width: $section_text_width;
@@ -435,10 +436,11 @@ $features_height: 400px;
 
         .testimonials_container {
             flex: 1 auto 0;
-            width: 50%;
-            width: calc( 100% - #{$section_image_width + 30px} );
+            width: 100%;
             @media (min-width: $mobile_width) {
                 padding: 0  30px;
+                width: 50%;
+                width: calc( 100% - #{$section_image_width + 30px} );
             }
 
             .testimonial_slider {
@@ -454,7 +456,7 @@ $features_height: 400px;
             height: $section_image_width;
             border-radius: 50%;
             background: $light_grey;
-            margin: 0 0 50px;
+            margin: 0 auto 50px;
 
             @media (min-width: $mobile_width) {
                 min-width: $section_image_width;
@@ -535,10 +537,10 @@ $features_height: 400px;
 
         .follow_savio_text {
             flex: 1 auto 0;
-            padding: 0 30px 30px 0;
-
-
-
+            padding: 0 0 30px 0;
+            @media (min-width: $mobile_width) {
+                padding: 0 30px 30px 0;
+            }
 
         }
 
