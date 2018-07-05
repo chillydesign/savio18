@@ -162,7 +162,7 @@ $section_image_width: 300px;
             max-width: 100%;
             height: $section_image_width;
             border-radius: 50%;
-            background: red;
+            background: $light_grey;
             margin:  0 0 50px;
 
             @media (min-width: $mobile_width) {
@@ -277,7 +277,7 @@ $section_image_width: 300px;
             max-width: 100%;
             height: $section_image_width;
             border-radius: 50%;
-            background: red;
+            background: $light_grey;
             margin: 0 0 50px;
             @media (min-width: $mobile_width) {
                 min-width: $section_image_width;
@@ -383,13 +383,13 @@ $features_height: 400px;
                 background-size: cover;
                 margin: 30px auto 30px;
 
-                &.feature_logo_clock {
+                &.feature_logo_clock, &.feature_logo_educatif {
                     background-image: url('../images/clock-savio.png');
                 }
-                &.feature_logo_book {
+                &.feature_logo_book, &.feature_logo_pratique {
                     background-image: url('../images/book.png');
                 }
-                &.feature_logo_hourglass {
+                &.feature_logo_hourglass, &.feature_logo_le-mode-tuteur {
                     background-image: url('../images/hourglass.png');
                 }
             }
@@ -453,7 +453,7 @@ $features_height: 400px;
             max-width: 100%;
             height: $section_image_width;
             border-radius: 50%;
-            background: red;
+            background: $light_grey;
             margin: 0 0 50px;
 
             @media (min-width: $mobile_width) {

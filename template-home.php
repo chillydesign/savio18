@@ -1,6 +1,6 @@
 <?php /* Template Name: Home Page Template */ get_header(); ?>
 
-
+<?php $tdu =  get_template_directory_uri(); ?>
 
 
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -61,7 +61,7 @@
         <section id="info_section">
             <div class="container">
                 <div class="info_flex">
-                    <img src="images/girl-knight.png" alt="" />
+                    <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
                     <div class="info_text">
                         <h2><?php echo $info_header; ?></h2>
                         <p><?php echo $info_paragraph; ?></p>
@@ -100,7 +100,7 @@
         <section id="for_parents">
             <div class="container">
                 <div class="for_parent_flex flipped">
-                    <img src="images/beach-chair.png" alt="" />
+                    <img src="<?php echo $tdu; ?>/images/beach-chair.png" alt="" />
                     <div class="for_parent_text">
                         <h2><?php echo $for_parents_header_1; ?></h2>
                         <p><?php echo $for_parents_paragraph_1; ?></p>
@@ -108,7 +108,7 @@
                 </div>
                 <hr />
                 <div class="for_parent_flex ">
-                    <img src="images/hotairballoon.png" alt="" />
+                    <img src="<?php echo $tdu; ?>/images/hotairballoon.png" alt="" />
                     <div class="for_parent_text">
                         <h2><?php echo $for_parents_header_2; ?></h2>
                         <p><?php echo $for_parents_paragraph_2; ?></p>
@@ -149,8 +149,9 @@
                 <div class="features_container">
 
                     <?php foreach ($features as $feature) : ?>
+                        <?php $slug = 'feature_logo_' . sanitize_title( $feature['header'] ); ?>
                         <div class="feature_box">
-                            <div class="feature_logo feature_logo_clock"></div>
+                            <div class="feature_logo <?php echo $slug; ?> "></div>
                             <h3><?php echo $feature['header']; ?></h3>
                             <p><?php echo $feature['paragraph']; ?></p>
                         </div>
@@ -171,7 +172,7 @@
             <section id="testimonials">
                 <div class="container">
                     <div class="testimonials_flex">
-                        <img src="images/quote.png" alt="" />
+                        <img src="<?php echo $tdu; ?>/images/quote.png" alt="" />
                         <div class="testimonials_container">
                             <h2>Ce qu’ils en disent</h2>
                             <div class="testimonial_slider">
