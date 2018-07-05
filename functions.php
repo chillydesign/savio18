@@ -365,7 +365,7 @@ add_action('wp_print_scripts', 'webfactor_conditional_scripts'); // Add Conditio
 add_action('get_header', 'enable_threaded_comments'); // Enable Threaded Comments
 add_action('wp_enqueue_scripts', 'webfactor_styles'); // Add Theme Stylesheet
 add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
- add_action('init', 'create_post_type_application'); // Add our HTML5 Blank Custom Post Type
+add_action('init', 'create_post_types'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -416,24 +416,23 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 \*------------------------------------*/
 
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
-function create_post_type_application()
-{
+function create_post_types() {
 
-    register_post_type('application', // Register Custom Post Type
+    register_post_type('testimonial', // Register Custom Post Type
         array(
         'labels' => array(
-            'name' => __('Application', 'webfactor'), // Rename these to suit
-            'singular_name' => __('Application', 'webfactor'),
+            'name' => __('Testimonial', 'webfactor'), // Rename these to suit
+            'singular_name' => __('Testimonial', 'webfactor'),
             'add_new' => __('Add New', 'webfactor'),
-            'add_new_item' => __('Add New Application', 'webfactor'),
+            'add_new_item' => __('Add New Testimonial', 'webfactor'),
             'edit' => __('Edit', 'webfactor'),
-            'edit_item' => __('Edit Application', 'webfactor'),
-            'new_item' => __('New Application', 'webfactor'),
-            'view' => __('View Application', 'webfactor'),
-            'view_item' => __('View Application', 'webfactor'),
-            'search_items' => __('Search Application', 'webfactor'),
-            'not_found' => __('No Applications found', 'webfactor'),
-            'not_found_in_trash' => __('No Applications found in Trash', 'webfactor')
+            'edit_item' => __('Edit Testimonial', 'webfactor'),
+            'new_item' => __('New Testimonial', 'webfactor'),
+            'view' => __('View Testimonial', 'webfactor'),
+            'view_item' => __('View Testimonial', 'webfactor'),
+            'search_items' => __('Search Testimonial', 'webfactor'),
+            'not_found' => __('No Testimonials found', 'webfactor'),
+            'not_found_in_trash' => __('No Testimonials found in Trash', 'webfactor')
         ),
         'public' => true,
         'publicly_queryable' => false, // dont allow to see on front end
@@ -453,6 +452,7 @@ function create_post_type_application()
         ) // Add Category and Post Tags support
     ));
 }
+
 
 /*------------------------------------*\
 	ShortCode Functions
