@@ -26,8 +26,14 @@ ul.slick-dots {
 
 
 .slick-slide  {
+    $box_shadow_size: 25px;
     img {
         width: 100%;
+        width: calc(100% - #{2 * $box_shadow_size});
         height: auto;
+        margin: 10px $box_shadow_size  #{$box_shadow_size + 5px};
+        box-shadow:  0 10px $box_shadow_size transparentize($dark_grey, 0.45);
+        border-radius: 19px;
+
     }
 }
