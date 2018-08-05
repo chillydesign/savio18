@@ -49,6 +49,18 @@ li {
     padding:0 0 5px;
 }
 
+
+section ul {
+    li {
+
+        background: url('../images/tick.svg') no-repeat  0 1px;
+        background-size: 20px;
+        padding: 0 0 5px 30px;
+    }
+}
+
+
+
 dd, dt {
     font-size: $font_size;
     padding: 0 0 5px;

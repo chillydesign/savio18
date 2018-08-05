@@ -13,7 +13,7 @@
     <?php $date_paragraph = get_field('date_paragraph'); ?>
     <?php $info_header = get_field('info_header'); ?>
     <?php $info_paragraph = get_field('info_paragraph'); ?>
-    <?php $what_savio_list = get_field('what_savio_list'); ?>
+    <?php $what_savio_paragraph = get_field('what_savio_paragraph'); ?>
     <?php $what_savio_gallery = get_field('what_savio_gallery'); ?>
     <?php $for_parents_header_1 = get_field('for_parents_header_1'); ?>
     <?php $for_parents_paragraph_1 = get_field('for_parents_paragraph_1'); ?>
@@ -76,13 +76,9 @@
             <div class="container">
 
                 <div class="what_is_savio_flex">
-                    <dl>
-                        <?php foreach ($what_savio_list as $what_item) : ?>
-                            <dt><?php echo $what_item['item_header']; ?></dt>
-                            <dd><?php echo $what_item['item_paragraph']; ?></dd>
-                        <?php endforeach; ?>
-                    </dl>
-
+                    <div class="what_is_savio_text">
+                        <?php echo $what_savio_paragraph; ?>
+                    </div>
                     <div class="what_is_savio_slider_container">
                         <div class="what_is_savio_slider">
                             <?php foreach ($what_savio_gallery as $image) : ?>

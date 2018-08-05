@@ -204,7 +204,7 @@ $section_image_width: 300px;
         }
 
 
-        dl {
+        .what_is_savio_text {
             flex: 1 auto 0;
             margin: 0 0 60px;
 
@@ -213,19 +213,7 @@ $section_image_width: 300px;
                 width: 45%;
                 margin: 0;
             }
-            dt {
-                background: url('../images/tick.svg') no-repeat  0 1px;
-                background-size: 20px;
-                padding: 0 0 5px 30px;
-                color: $brand_color;
-                font-size: 1.8em;
 
-            }
-            dd {
-                color: $brand_color;
-                font-size: $font_size;
-                padding:  0 0 30px 30px;
-            }
         }
 
         .what_is_savio_slider_container {
