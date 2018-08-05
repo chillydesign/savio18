@@ -321,6 +321,48 @@ $push_features_up: 180px;
 
 
 
+#for_tutors_section {
+    background: white;
+    color: $brand_color;
+    .for_tutors_flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+        @media (min-width: $mobile_width) {
+            flex-wrap: nowrap;
+        }
+
+        img {
+            flex: 1 auto 0;
+            width: $section_image_width;
+            max-width: 100%;
+            height: $section_image_width;
+            border-radius: 50%;
+            background: $light_grey;
+            margin:  0 0 50px;
+
+            @media (min-width: $mobile_width) {
+                min-width: $section_image_width;
+            }
+        }
+        .for_tutors_text {
+            flex: 1 auto 0;
+
+            @media (min-width: $mobile_width) {
+                    padding: 0 0 0 30px;
+            }
+        }
+}
+
+
+
+
+
+
+
+
 $features_height: 400px;
 
 #features {
@@ -359,9 +401,9 @@ $features_height: 400px;
 
 
             @media (min-width: $mobile_width) {
-                width: 29%;
-                max-width: 29%;
-                min-width: 29%;
+                width: 46%;
+                max-width: 46%;
+                min-width: 46%;
             }
 
 

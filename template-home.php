@@ -25,7 +25,8 @@
     <?php $features = get_field('features'); ?>
     <?php $follow_header = get_field('follow_header'); ?>
     <?php $follow_paragraph = get_field('follow_paragraph'); ?>
-
+    <?php $for_tutors_header = get_field('for_tutors_header'); ?>
+    <?php $for_tutors_paragraph = get_field('for_tutors_paragraph'); ?>
 
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" >
@@ -34,7 +35,7 @@
             <div class="container">
                 <div class="welcome_text">
                     <h1><?php echo $welcome_header; ?></h1>
-                    <p><?php echo $welcome_paragraph; ?></p>
+                    <?php echo $welcome_paragraph; ?>
                     <a href="#countdown_section" class="button fancy_button scroll_link">S’inscrire</a>
                 </div>
             </div>
@@ -51,7 +52,7 @@
 
             <div class="countdown_text">
                 <h2><?php echo $date_header; ?></h2>
-                <p><?php echo $date_paragraph; ?></p>
+                <?php echo $date_paragraph; ?>
                 <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
 
             </div>
@@ -64,7 +65,7 @@
                     <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
                     <div class="info_text">
                         <h2><?php echo $info_header; ?></h2>
-                        <p><?php echo $info_paragraph; ?></p>
+                        <?php echo $info_paragraph; ?>
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
                     </div>
                 </div>
@@ -99,7 +100,7 @@
                     <img src="<?php echo $tdu; ?>/images/beach-chair.png" alt="" />
                     <div class="for_parent_text">
                         <h2><?php echo $for_parents_header_1; ?></h2>
-                        <p><?php echo $for_parents_paragraph_1; ?></p>
+                        <?php echo $for_parents_paragraph_1; ?>
                     </div>
                 </div>
                 <hr />
@@ -107,7 +108,7 @@
                     <img src="<?php echo $tdu; ?>/images/hotairballoon.png" alt="" />
                     <div class="for_parent_text">
                         <h2><?php echo $for_parents_header_2; ?></h2>
-                        <p><?php echo $for_parents_paragraph_2; ?></p>
+                        <?php echo $for_parents_paragraph_2; ?>
                     </div>
                 </div>
             </div>
@@ -138,6 +139,21 @@
         </section>
 
 
+        <section id="for_tutors_section">
+            <div class="container">
+                <div class="for_tutors_flex">
+                    <div class="for_tutors_text">
+                        <h2><?php echo $for_tutors_header; ?></h2>
+                        <?php echo $for_tutors_paragraph; ?>
+                        <a  href="" class="hidden button">Inscrivez votre enfant</a>
+                    </div>
+                    <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
+                </div>
+            </div>
+        </section>
+
+
+
         <section id="features">
 
             <div class="container">
@@ -149,7 +165,7 @@
                         <div class="feature_box">
                             <div class="feature_logo <?php echo $slug; ?> "></div>
                             <h3><?php echo $feature['header']; ?></h3>
-                            <p><?php echo $feature['paragraph']; ?></p>
+                            <?php echo $feature['paragraph']; ?>
                         </div>
                     <?php endforeach; ?>
                 </div>
@@ -196,7 +212,7 @@
 
                     <div class="follow_savio_text">
                         <h2><?php echo $follow_header; ?></h2>
-                        <p><?php echo $follow_paragraph; ?></p>
+                        <?php echo $follow_paragraph; ?>
                         <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
                     </div>
 
@@ -224,9 +240,9 @@
 
 
     <?php if ($launch_date) : ?>
-        <script>
+    <script>
         var launch_date =  new Date('<?php echo $launch_date; ?> 12:00:00');
-        </script>
+    </script>
     <?php endif; ?>
 
 
