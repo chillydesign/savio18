@@ -4,6 +4,9 @@ ul.slick-dots {
     li {
 
         display: inline-block;
+        margin: 0;
+        padding: 6px 3px;
+        background: none;
 
         button {
             background: $medium_grey;
