@@ -403,7 +403,7 @@ $features_height: 450px;
             margin: 0 0 20px;
             box-shadow: 0 20px 80px transparentize($dark_grey, 0.7),  0 4px 3px transparentize($dark_grey, 0.9) ;
             display: flex;
-            flex-wrap: nowrap;
+            flex-wrap: wrap;
             align-items: flex-start;
             justify-content: center;
 
@@ -445,6 +445,9 @@ $features_height: 450px;
             ul {
                 width: 100%;
                 min-height: 150px;
+                text-align: left;
+                max-width: 80%;
+                margin: auto;
             }
             p {
                 font-size: 1.4em;
