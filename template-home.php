@@ -161,9 +161,9 @@
                 <div class="features_container">
 
                     <?php foreach ($features as $feature) : ?>
-                        <?php $slug = 'feature_logo_' . sanitize_title( $feature['header'] ); ?>
+                        <?php $image = $feature['image']['url']; ?>
                         <div class="feature_box">
-                            <div class="feature_logo <?php echo $slug; ?> "></div>
+                            <div class="feature_logo" style="background-image:url(<?php $image; ?>)"></div>
                             <h3><?php echo $feature['header']; ?></h3>
                             <?php echo $feature['paragraph']; ?>
                         </div>
