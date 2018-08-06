@@ -398,7 +398,7 @@ $features_height: 400px;
             padding: 20px 10px;
             color: $brand_color;
             margin: 0 0 20px;
-            box-shadow: 0 20px 30px transparentize($dark_grey, 0.7),  0 4px 3px transparentize($dark_grey, 0.9) ;
+            box-shadow: 0 20px 80px transparentize($dark_grey, 0.7),  0 4px 3px transparentize($dark_grey, 0.9) ;
 
 
             @media (min-width: $mobile_width) {
