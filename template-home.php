@@ -163,7 +163,7 @@
                     <?php foreach ($features as $feature) : ?>
                         <?php $image = $feature['image']['url']; ?>
                         <div class="feature_box">
-                            <div class="feature_logo" style="background-image:url(<?php $image; ?>)"></div>
+                            <div class="feature_logo" style="background-image:url(<?php echo $image; ?>)"></div>
                             <h3><?php echo $feature['header']; ?></h3>
                             <?php echo $feature['paragraph']; ?>
                         </div>
