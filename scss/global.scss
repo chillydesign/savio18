@@ -100,6 +100,7 @@ section {
             flex: 1 auto 0;
             font-size: 2em;
             line-height: 1;
+                color: white;
             span {
                 font-size: 4em;
                 display: block;
@@ -578,6 +579,10 @@ $features_height: 450px;
     background: $brand_color;
 
     h2 {
+        color: white;
+    }
+
+    p {
         color: white;
     }
 
