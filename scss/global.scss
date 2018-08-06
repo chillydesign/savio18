@@ -136,6 +136,9 @@ section {
         color: white;
         padding: 0 0 30px;
     }
+    p {
+        color: white;
+    }
 
 } // END OF countdown_section
 
@@ -371,7 +374,7 @@ $features_height: 450px;
     background: none;
 
     @media (min-width: $mobile_width) {
-        height: #{$features_height  + 100px};
+    //    height: #{$features_height  + 100px};
     }
 
     .features_container {
@@ -384,6 +387,7 @@ $features_height: 450px;
         @media (min-width: $mobile_width) {
             flex-wrap: nowrap;
             top: #{$push_features_up * -1};
+                margin-bottom: #{$push_features_up * -1};
         }
 
 

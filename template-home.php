@@ -169,8 +169,8 @@
                         </div>
                     <?php endforeach; ?>
                 </div>
-
-                <a href="#follow_savio" class="button  scroll_link">Inscription en tant qu’école ou enseignant</a>
+<!-- 
+                <a href="#follow_savio" class="button  scroll_link">Inscription en tant qu’école ou enseignant</a> -->
 
 
             </div>
