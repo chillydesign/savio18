@@ -364,7 +364,7 @@ $push_features_up: 180px;
 
 
 
-$features_height: 400px;
+$features_height: 450px;
 
 #features {
     text-align: center;
@@ -387,8 +387,10 @@ $features_height: 400px;
         }
 
 
+
+
         .feature_box {
-            height: $features_height;
+            min-height: $features_height;
             overflow: hidden;
             width: 100%;
             max-width: 100%;
@@ -397,8 +399,13 @@ $features_height: 400px;
             border-radius: 15px;
             padding: 20px 10px;
             color: $brand_color;
+            position: relative;
             margin: 0 0 20px;
             box-shadow: 0 20px 80px transparentize($dark_grey, 0.7),  0 4px 3px transparentize($dark_grey, 0.9) ;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: flex-start;
+            justify-content: center;
 
 
             @media (min-width: $mobile_width) {
@@ -427,6 +434,17 @@ $features_height: 400px;
             }
             h3 {
                 font-size: 2em;
+                width: 100%;
+            }
+
+            h6 {
+                text-align: center;
+                margin: auto;
+            }
+
+            ul {
+                width: 100%;
+                min-height: 150px;
             }
             p {
                 font-size: 1.4em;
