@@ -8,6 +8,9 @@
 	<?php while ( have_rows('columns') ) : the_row(); ?>
 		<div class="<?php echo $column_class; ?> ">
 			<div class="column">
+				<?php if(get_sub_field('background')=='blue'): ?>
+					<div class="feature_logo" style="background-image:url(<?php echo get_sub_field('image')['sizes']['medium']; ?>)"></div>
+				<?php endif; ?>
 				<?php echo get_sub_field('content'); ?>
 			</div>
 		</div>
