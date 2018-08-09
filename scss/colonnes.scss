@@ -21,12 +21,18 @@ section.section_colonnes.blue {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    margin: 10px auto 50px;
+    margin: 0px auto 30px;
 }
 
 h3 {
   font-size: 2em;
-width: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, $orange 0, $pink 100%);
+  color: white;
+  margin: 0 -37px 40px;
+  width: calc(100% + 72px);
+  padding: 16px 37px;
+  text-align: center;
 }
 
 

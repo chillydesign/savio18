@@ -38,6 +38,10 @@ $section_text_width: 700px;
 section {
     padding: 90px 0;
     background: white;
+
+    &.increase_pad {
+      padding-bottom: 170px;
+    }
 }
 
 #welcome_section {
