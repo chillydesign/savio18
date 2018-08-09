@@ -6,8 +6,10 @@
 <div class="container">
 	<div class="row">
 	<?php while ( have_rows('columns') ) : the_row(); ?>
-		<div class="<?php echo $column_class; ?> column">
-			<?php echo get_sub_field('content'); ?>
+		<div class="<?php echo $column_class; ?> ">
+			<div class="column">
+				<?php echo get_sub_field('content'); ?>
+			</div>
 		</div>
 	<?php endwhile; ?>
 	</div> <!-- END OF ROW -->
