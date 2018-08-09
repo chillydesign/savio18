@@ -157,7 +157,7 @@
 
                 <hr>
 
-                <div class="for_parent_flex flipped">
+                <div class="for_parent_flex">
                     <div class="for_tutors_text">
                         <h2><?php echo $for_tutors_header; ?></h2>
                         <?php echo $for_tutors_paragraph; ?>
