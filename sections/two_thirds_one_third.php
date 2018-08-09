@@ -1,19 +1,20 @@
-<section  class="section  section_<?php echo $row_layout; ?>">
+<section  class="section  section_two_thirds_one_third">
 
 
 
-		<?php $column_count =  sizeof(  get_sub_field('columns')  ); ?>
-<?php $column_class = count_to_bootstrap_class($column_count); ?>
-
+<?php $text = get_field('text'); ?>
+<?php $image = get_field('image'); ?>
+<?php $image_side = get_field('image_side'); ?>
 
 <div class="container">
-	<div class="row">
-	<?php while ( have_rows('columns') ) : the_row(); ?>
-		<div class="<?php echo $column_class; ?>">
-			<?php echo get_sub_field('content'); ?>
-		</div>
-	<?php endwhile; ?>
-	</div> <!-- END OF ROW -->
+
+
+	<div class="two_thirds_one_third_flex">
+			<div class="flex_text <?php echo $image_side; ?>">
+					<?php echo $text; ?>
+			</div>
+			<img src="<?php echo $image['sizes']['medium']; ?>" alt="" />
+	</div>
 </div><!--  END OF CONTAINER -->
 
 
