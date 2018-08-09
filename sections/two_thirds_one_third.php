@@ -1,5 +1,6 @@
-<section  class="section  section_two_thirds_one_third
-<?php if(get_sub_field('increase_pad')){echo 'increase_pad';}?>">
+<?php $background =  get_sub_field('background'); ?>
+
+<section  class="section  section_two_thirds_one_third <?php echo $background; ?>  <?php if(get_sub_field('increase_pad')){echo 'increase_pad';}?>">
 
 
 
@@ -7,12 +8,11 @@
 <?php $image = get_sub_field('image'); ?>
 <?php $image_side = get_sub_field('image_side'); ?>
 <?php if($image_side == 'flipped'){
-
-	$class_text = '';
-	$class_image = 'col-sm-push-1';
-} else{
 	$class_text = 'col-sm-push-4';
 	$class_image = 'col-sm-pull-8';
+} else{
+	$class_text = '';
+	$class_image = 'col-sm-push-1';
 }?>
 
 <div class="container">

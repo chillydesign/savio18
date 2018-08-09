@@ -1,5 +1,6 @@
-<section  class="section  section_slider
-<?php if(get_sub_field('increase_pad')){echo 'increase_pad';}?>">
+<?php $background =  get_sub_field('background'); ?>
+
+<section  class="section  section_slider <?php echo $background; ?>  <?php if(get_sub_field('increase_pad')){echo 'increase_pad';}?>">
 
 
 
