@@ -1,5 +1,5 @@
-<?php $background =  echo get_sub_field('background'); ?>
-<section  class="section  section_colonnes $background">
+<?php $background =  get_sub_field('background'); ?>
+<section  class="section  section_colonnes <?php echo $background; ?>">
 		<?php $column_count =  sizeof(  get_sub_field('columns')  ); ?>
 <?php $column_class = count_to_bootstrap_class($column_count); ?>
 
