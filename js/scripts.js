@@ -1,4 +1,5 @@
 import slick from 'slick-carousel';
+import matchHeight from 'jquery-match-height';
 
 (function ($, root, undefined) {
 
@@ -26,6 +27,9 @@ import slick from 'slick-carousel';
             menu_navigation.removeClass('show_menu');
         }
 
+
+
+        $('.blue .column').matchHeight();
 
 
         //////////
