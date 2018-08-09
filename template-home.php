@@ -157,7 +157,7 @@
 
                 <hr>
 
-                <div class="for_tutors_flex">
+                <div class="for_parent_flex flipped">
                     <div class="for_tutors_text">
                         <h2><?php echo $for_tutors_header; ?></h2>
                         <?php echo $for_tutors_paragraph; ?>
@@ -168,7 +168,7 @@
 
                 <hr>
 
-                <div class="tutors2_flex">
+                <div class="info_flex">
                     <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
                     <div class="info_text">
                         <h2><?php echo $tutor2_title; ?></h2>

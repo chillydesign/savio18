@@ -152,36 +152,6 @@ $section_image_width: 300px;
     color: $brand_color;
 
     .info_flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-
-
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-        }
-
-        img {
-            flex: 1 auto 0;
-            width: $section_image_width;
-            max-width: 100%;
-            height: $section_image_width;
-            border-radius: 50%;
-            background: $light_grey;
-            margin:  0 0 50px;
-
-            @media (min-width: $mobile_width) {
-                min-width: $section_image_width;
-            }
-        }
-        .info_text {
-            flex: 1 auto 0;
-
-            @media (min-width: $mobile_width) {
-                    padding: 0 0 0 30px;
-            }
-        }
-    }
 
     h2 {
         font-size: 3em;
@@ -194,52 +164,86 @@ $section_image_width: 300px;
 } // END OF info_section
 
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    @media (min-width: $mobile_width) {
+        flex-wrap: nowrap;
+    }
+
+    img {
+        flex: 1 auto 0;
+        width: $section_image_width;
+        max-width: 100%;
+        height: $section_image_width;
+        border-radius: 50%;
+        background: $light_grey;
+        margin:  0 0 50px;
+
+        @media (min-width: $mobile_width) {
+            min-width: $section_image_width;
+        }
+    }
+    .info_text {
+        flex: 1 auto 0;
+
+        @media (min-width: $mobile_width) {
+                padding: 0 0 0 30px;
+        }
+    }
+}
+
 
 #what_is_savio {
     background: $light_grey;
 
     .what_is_savio_flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-        }
-
-
-        .what_is_savio_text {
-            flex: 1 auto 0;
-            margin: 0 0 60px;
-
-
-            @media (min-width: $mobile_width) {
-                width: 45%;
-                margin: 0;
-            }
-
-        }
-
-        .what_is_savio_slider_container {
-
-            flex: 1 auto 0;
-            overflow: hidden;
-            width: 100%;
-            position: relative;
-        //    top: -50px;
-            @media (min-width: $mobile_width) {
-                width: 50%;
-            }
-
-        }
-    }
 
 } // END OF what_is_savio
 
 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (min-width: $mobile_width) {
+        flex-wrap: nowrap;
+    }
+
+
+    .what_is_savio_text {
+        flex: 1 auto 0;
+        margin: 0 0 60px;
+
+
+        @media (min-width: $mobile_width) {
+            width: 45%;
+            margin: 0;
+        }
+
+    }
+
+    .what_is_savio_slider_container {
+
+        flex: 1 auto 0;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    //    top: -50px;
+        @media (min-width: $mobile_width) {
+            width: 50%;
+        }
+
+    }
+}
+
 #for_parents {
     background-color: white;
 
+
+    } // END OF for_parents
 
     .for_parent_flex {
         display: flex;
@@ -279,8 +283,6 @@ $section_image_width: 300px;
     }
 
 
-
-} // END OF for_parents
 
 
 $push_features_up: 180px;
