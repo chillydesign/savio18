@@ -37,6 +37,13 @@ h4 {
     padding: 0 0 20px;
 }
 
+h6.h6inline{
+  display: inline-block;
+  font-size: 0.8em;
+  line-height: 200%;
+  min-width: 49%;
+}
+
 p {
     font-size: $font_size;
     line-height: 150%;
