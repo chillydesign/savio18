@@ -191,6 +191,43 @@ $section_image_width: 300px;
 
     }
 
+
+    .what_is_savio_flex {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        @media (min-width: $mobile_width) {
+            flex-wrap: nowrap;
+        }
+
+
+        .what_is_savio_text {
+            flex: 1 auto 0;
+            margin: 0 0 60px;
+
+
+            @media (min-width: $mobile_width) {
+                width: 45%;
+                margin: 0;
+            }
+
+        }
+
+        .what_is_savio_slider_container {
+
+            flex: 1 auto 0;
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        //    top: -50px;
+            @media (min-width: $mobile_width) {
+                width: 50%;
+            }
+
+        }
+    }
+
 } // END OF info_section
 
 
