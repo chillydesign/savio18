@@ -7,11 +7,12 @@
 <?php $image = get_sub_field('image'); ?>
 <?php $image_side = get_sub_field('image_side'); ?>
 <?php if($image_side == 'flipped'){
-	$class_text = 'col-sm-push-4';
-	$class_image = 'col-sm-pull-8';
-} else{
+
 	$class_text = '';
 	$class_image = 'col-sm-push-1';
+} else{
+	$class_text = 'col-sm-push-4';
+	$class_image = 'col-sm-pull-8';
 }?>
 
 <div class="container">
