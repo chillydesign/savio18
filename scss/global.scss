@@ -45,6 +45,13 @@ section {
     &.increase_pad {
       padding-bottom: 170px;
     }
+
+    &.grey {
+      background: $light_grey;
+    }
+    &.blue {
+      background: none;
+    }
 }
 
 #welcome_section {
@@ -558,7 +565,7 @@ $features_height: 450px;
             h6 {
                 text-align: center;
                 margin: auto;
-                
+
             }
 
             ul {
