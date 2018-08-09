@@ -36,7 +36,7 @@
                 <div class="welcome_text">
                     <h1><?php echo $welcome_header; ?></h1>
                     <?php echo $welcome_paragraph; ?>
-                    <a href="#countdown_section" class="button fancy_button scroll_link">S’inscrire</a>
+                    <a href="#countdown_section" class="button fancy_button scroll_link">Je découvre</a></a>
                 </div>
             </div>
         </section>
@@ -68,6 +68,23 @@
                         <?php echo $info_paragraph; ?>
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
                     </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="features">
+            <div class="container">
+                <div class="features_container">
+
+                    <?php foreach ($features as $feature) : ?>
+                        <?php $image = $feature['image']['url']; ?>
+                        <div class="feature_box">
+                            <div class="feature_logo" style="background-image:url(<?php echo $image; ?>)"></div>
+                            <h3><?php echo $feature['header']; ?></h3>
+                            <?php echo $feature['paragraph']; ?>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
@@ -152,29 +169,6 @@
             </div>
         </section>
 
-
-
-        <section id="features">
-
-            <div class="container">
-
-                <div class="features_container">
-
-                    <?php foreach ($features as $feature) : ?>
-                        <?php $image = $feature['image']['url']; ?>
-                        <div class="feature_box">
-                            <div class="feature_logo" style="background-image:url(<?php echo $image; ?>)"></div>
-                            <h3><?php echo $feature['header']; ?></h3>
-                            <?php echo $feature['paragraph']; ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-<!-- 
-                <a href="#follow_savio" class="button  scroll_link">Inscription en tant qu’école ou enseignant</a> -->
-
-
-            </div>
-        </section>
 
 
 
