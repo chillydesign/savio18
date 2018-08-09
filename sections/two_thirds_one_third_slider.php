@@ -25,7 +25,7 @@
 			<div class="col-sm-6 <?php echo $class_image; ?>">
 				<div class="slider_container">
 						<div class="slider">
-								<?php foreach ($what_savio_gallery as $image) : ?>
+								<?php foreach ($gallery as $image) : ?>
 										<div><img src="<?php echo $image['sizes']['medium']; ?>" alt="" /></div>
 								<?php endforeach; ?>
 						</div>
