@@ -27,6 +27,8 @@
     <?php $follow_paragraph = get_field('follow_paragraph'); ?>
     <?php $for_tutors_header = get_field('for_tutors_header'); ?>
     <?php $for_tutors_paragraph = get_field('for_tutors_paragraph'); ?>
+    <?php $tutor2_title = get_field('tutors2_title'); ?>
+    <?php $tutor2 = get_field('tutors2'); ?>
 
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" >
@@ -162,6 +164,17 @@
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
                     </div>
                     <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
+                </div>
+
+                <hr>
+
+                <div class="tutors2_flex">
+                    <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
+                    <div class="info_text">
+                        <h2><?php echo $tutor2_title; ?></h2>
+                        <?php echo $tutor2; ?>
+                        <a  href="" class="hidden button">Inscrivez votre enfant</a>
+                    </div>
                 </div>
 
             </div>
