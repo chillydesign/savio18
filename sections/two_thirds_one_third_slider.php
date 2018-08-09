@@ -4,7 +4,7 @@
 
 
 <?php $text = get_sub_field('text'); ?>
-<?php $gallery = get_field('slider'); ?>
+<?php $gallery = get_sub_field('slider'); ?>
 <?php $image_side = get_sub_field('image_side'); ?>
 <?php if($image_side == 'flipped'){
 	$class_text = 'col-sm-push-6';
