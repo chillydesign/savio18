@@ -104,10 +104,16 @@ em, i {font-style: italic}
 table {
     margin:10px 0 30px;
     width: 100%;
+    text-align: center;
 
     th, td {
         padding: 8px;
         font-size: $font_size;
+
+        &:first-child {
+            text-align: left;
+            padding-left: 30px;
+        }
     }
 
     th {
@@ -126,6 +132,10 @@ table {
 
     }
 
+     h6 a {
+        font-size: 0.8em;
+        padding: 8px 12px;
+    }
 
 }
 
