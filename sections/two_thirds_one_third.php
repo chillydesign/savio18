@@ -1,5 +1,5 @@
 <section  class="section  section_two_thirds_one_third
-<?php if(get_field('imcrease_pad')){echo 'increase_pad';}?>">
+<?php if(get_sub_field('increase_pad')){echo 'increase_pad';}?>">
 
 
 
