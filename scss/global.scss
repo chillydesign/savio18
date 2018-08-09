@@ -148,7 +148,7 @@ section {
 
 $section_image_width: 300px;
 #info_section {
-    background: white;
+    background: $light_grey;
     color: $brand_color;
 
     .info_flex {
@@ -326,7 +326,7 @@ $push_features_up: 180px;
 
 
 #for_tutors_section {
-    background: white;
+    background: $light_grey;
     color: $brand_color;
     .for_tutors_flex {
         display: flex;
@@ -414,9 +414,8 @@ $features_height: 450px;
 
 
             @media (min-width: $mobile_width) {
-                width: 46%;
-                max-width: 46%;
-                min-width: 46%;
+                width: 30%;
+                max-width: 30%;
             }
 
 

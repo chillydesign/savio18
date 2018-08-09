@@ -73,22 +73,6 @@
         </section>
 
 
-        <section id="features">
-            <div class="container">
-                <div class="features_container">
-
-                    <?php foreach ($features as $feature) : ?>
-                        <?php $image = $feature['image']['url']; ?>
-                        <div class="feature_box">
-                            <div class="feature_logo" style="background-image:url(<?php echo $image; ?>)"></div>
-                            <h3><?php echo $feature['header']; ?></h3>
-                            <?php echo $feature['paragraph']; ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </section>
-
 
         <section id="what_is_savio">
             <div class="container">
@@ -109,6 +93,21 @@
             </div>
         </section>
 
+        <section id="features">
+            <div class="container">
+                <div class="features_container">
+
+                    <?php foreach ($features as $feature) : ?>
+                        <?php $image = $feature['image']['url']; ?>
+                        <div class="feature_box">
+                            <div class="feature_logo" style="background-image:url(<?php echo $image; ?>)"></div>
+                            <h3><?php echo $feature['header']; ?></h3>
+                            <?php echo $feature['paragraph']; ?>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </section>
 
 
         <section id="for_parents">
