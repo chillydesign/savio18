@@ -38,7 +38,7 @@
                 <div class="welcome_text">
                     <h1><?php echo $welcome_header; ?></h1>
                     <?php echo $welcome_paragraph; ?>
-                    <a href="#countdown_section" class="button fancy_button scroll_link">Je découvre</a></a>
+                    <a href="#countdown_section" class="button fancy_button scroll_link">Je découvre</a>
                 </div>
             </div>
         </section>
