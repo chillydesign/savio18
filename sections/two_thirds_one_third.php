@@ -2,9 +2,9 @@
 
 
 
-<?php $text = get_field('text'); ?>
-<?php $image = get_field('image'); ?>
-<?php $image_side = get_field('image_side'); ?>
+<?php $text = get_sub_field('text'); ?>
+<?php $image = get_sub_field('image'); ?>
+<?php $image_side = get_sub_field('image_side'); ?>
 
 <div class="container">
 
