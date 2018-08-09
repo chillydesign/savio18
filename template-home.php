@@ -69,29 +69,31 @@
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
                     </div>
                 </div>
+              <hr>
+              <div class="what_is_savio_flex">
+                  <div class="what_is_savio_text">
+                      <?php echo $what_savio_paragraph; ?>
+                  </div>
+                  <div class="what_is_savio_slider_container">
+                      <div class="what_is_savio_slider">
+                          <?php foreach ($what_savio_gallery as $image) : ?>
+                              <div><img src="<?php echo $image['url']; ?>" alt="" /></div>
+                          <?php endforeach; ?>
+                      </div>
+                  </div>
+              </div>
             </div>
         </section>
 
 
 
-        <section id="what_is_savio">
+        <!-- <section id="what_is_savio">
             <div class="container">
 
-                <div class="what_is_savio_flex">
-                    <div class="what_is_savio_text">
-                        <?php echo $what_savio_paragraph; ?>
-                    </div>
-                    <div class="what_is_savio_slider_container">
-                        <div class="what_is_savio_slider">
-                            <?php foreach ($what_savio_gallery as $image) : ?>
-                                <div><img src="<?php echo $image['url']; ?>" alt="" /></div>
-                            <?php endforeach; ?>
-                        </div>
-                    </div>
-                </div>
+
 
             </div>
-        </section>
+        </section> -->
 
         <section id="features">
             <div class="container">
@@ -151,12 +153,8 @@
                     </div>
                 </div>
 
-            </div>
-        </section>
+                <hr>
 
-
-        <section id="for_tutors_section">
-            <div class="container">
                 <div class="for_tutors_flex">
                     <div class="for_tutors_text">
                         <h2><?php echo $for_tutors_header; ?></h2>
@@ -165,8 +163,16 @@
                     </div>
                     <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
                 </div>
+
             </div>
         </section>
+
+
+        <!-- <section id="for_tutors_section">
+            <div class="container">
+
+            </div>
+        </section> -->
 
 
 
