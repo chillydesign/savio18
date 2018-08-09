@@ -7,11 +7,12 @@
 <?php $gallery = get_sub_field('slider'); ?>
 <?php $image_side = get_sub_field('image_side'); ?>
 <?php if($image_side == 'flipped'){
-	$class_text = 'col-sm-push-6';
-	$class_image = 'col-sm-pull-6';
-} else{
 	$class_text = '';
 	$class_image = '';
+} else{
+	$class_text = 'col-sm-push-6';
+	$class_image = 'col-sm-pull-6';
+
 }?>
 
 <div class="container">
