@@ -1,4 +1,4 @@
-<section  class="section  section_two_thirds_one_third_slider
+<section  class="section  section_slider
 <?php if(get_sub_field('increase_pad')){echo 'increase_pad';}?>">
 
 
@@ -22,7 +22,7 @@
 					<?php echo $text; ?>
 			</div>
 			<div class="col-sm-6 <?php echo $class_image; ?>">
-				<div class="what_is_savio_slider_container">
+				<div class="slider_container">
 						<div class="slider">
 								<?php foreach ($what_savio_gallery as $image) : ?>
 										<div><img src="<?php echo $image['sizes']['medium']; ?>" alt="" /></div>

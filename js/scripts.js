@@ -48,7 +48,7 @@ import matchHeight from 'jquery-match-height';
             autoplaySpeed: 5000,
         });
 
-        var $what_is_savio_sliders = $(".what_is_savio_slider, .interactive_slider");
+        var $what_is_savio_sliders = $(".what_is_savio_slider, .interactive_slider, .slider");
         $what_is_savio_sliders.slick({
             dots: true,
             arrows: false,
