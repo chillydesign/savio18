@@ -1,4 +1,4 @@
-<section  class="section  section_<?php echo $row_layout; ?> <?php echo get_field('background'); ?>">
+<section  class="section  section_colonnes <?php echo get_field('background'); ?>">
 
 		<?php $column_count =  sizeof(  get_sub_field('columns')  ); ?>
 <?php $column_class = count_to_bootstrap_class($column_count); ?>
