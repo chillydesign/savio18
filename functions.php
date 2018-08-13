@@ -602,7 +602,7 @@ function payment_frequency_shortcode( $atts, $content = null ) {
 
 
 
-    $chilly_map = '<div class="payment_frequency_container">
+    $switcher = '<div class="payment_frequency_container">
 
         <a class="pay_link pay_monthly" href="#" data-freq="month">Pay monthly</a>
         <div class="boolean_outer">
@@ -610,10 +610,48 @@ function payment_frequency_shortcode( $atts, $content = null ) {
         </div>
         <a class="pay_link pay_annually" href="#" data-freq="year">Pay annually</a>
     </div>';
-    return $chilly_map;
+    return $switcher;
 
 }
 add_shortcode( 'payment_frequency_switcher', 'payment_frequency_shortcode' );
+
+
+
+function pay_freq_option_func( $atts, $content = null ) {
+
+
+
+    $attributes = shortcode_atts( array(
+        'button' => "choisir cette offre",
+        'month_id' => 'family_month_1',
+        'year_id' => 'family_year_1',
+        'month_amount' => 100,
+        'year_amount' => 100,
+    ), $atts );
+
+
+    $register_url = 'https://saviodev.com/front/register/';
+    $button_text = $attributes['button'];
+    $month_id = $attributes['month_id'];
+    $year_id = $attributes['year_id'];
+    $month_amount = $attributes['month_amount'];
+    $year_amount = $attributes['year_amount'];
+
+    $pay_option = '<div class="pay_buttons">';
+    $pay_option .= '<div class="pay_monthly">
+    <p class="cost"><span class="currency">EUR</span><span class="amount">'. $month_amount.'</span><span class="freq">/mois</span></p>
+    <h6><a href="'. $register_url .  $month_id . '">' . $button_text . '</a></h6>
+    </div>';
+    $pay_option .= '<div class="pay_annually">
+    <p class="cost"><span class="currency">EUR</span><span class="amount">'. $year_amount.'</span><span class="freq">/annee</span></p>
+    <h6><a href="'. $register_url .  $year_id . '">' . $button_text . '</a></h6>
+    </div>';
+    $pay_option .= '</div>';
+    return $pay_option;
+
+}
+add_shortcode( 'payment_frequency_option', 'pay_freq_option_func' );
+
 
 
 

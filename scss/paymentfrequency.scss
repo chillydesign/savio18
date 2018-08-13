@@ -55,3 +55,24 @@ $boolean_offset: 3px;
         }
     }
 }
+
+.pay_buttons {
+    .pay_monthly, .pay_annually {
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+
+    .cost {
+        .currency {
+
+        }
+        .amount {
+            font-size: 2em;
+        }
+        .freq {
+        }
+    }
+
+}
