@@ -15,11 +15,15 @@
     <?php $what_savio_gallery = get_field('what_savio_gallery'); ?>
     <?php $features = get_field('features'); ?>
     <?php $for_parents_paragraph_1 = get_field('for_parents_paragraph_1'); ?>
+    <?php $image_parents1 = get_field('image_parents1')['url']; ?>
     <?php $for_parents_paragraph_2 = get_field('for_parents_paragraph_2'); ?>
+    <?php $image_parents2 = get_field('image_parents2')['url']; ?>
     <?php $interactive_paragraph = get_field('interactive_paragraph'); ?>
     <?php $interactive_gallery = get_field('interactive_gallery'); ?>
     <?php $for_tutors_paragraph = get_field('for_tutors_paragraph'); ?>
+    <?php $image_enseignants2 = get_field('image_enseignants2'); ?>
     <?php $tutor2 = get_field('tutors2'); ?>
+    <?php $image_enseignants3 = get_field('image_enseignants3'); ?>
     <?php $follow_paragraph = get_field('follow_paragraph'); ?>
 
     <!-- article -->
@@ -107,14 +111,16 @@
         <section id="for_parents">
             <div class="container">
                 <div class="for_parent_flex flipped">
-                    <img src="<?php echo $tdu; ?>/images/beach-chair.png" alt="" />
+                    <!-- <img src="<?php echo $tdu; ?>/images/beach-chair.png" alt="" /> -->
+                    <img src="<?php echo $image_parents1; ?>" alt="" />
                     <div class="for_parent_text">
                         <?php echo $for_parents_paragraph_1; ?>
                     </div>
                 </div>
                 <hr />
                 <div class="for_parent_flex ">
-                    <img src="<?php echo $tdu; ?>/images/hotairballoon.png" alt="" />
+                    <!-- <img src="<?php echo $tdu; ?>/images/hotairballoon.png" alt="" /> -->
+                    <img src="<?php echo $image_parents2; ?>" alt="" />
                     <div class="for_parent_text">
                         <?php echo $for_parents_paragraph_2; ?>
                     </div>
@@ -149,13 +155,15 @@
                         <?php echo $for_tutors_paragraph; ?>
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
                     </div>
-                    <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
+                    <!-- <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" /> -->
+                    <img src="<?php echo $image_enseignants2; ?>" alt="" />
                 </div>
 
                 <hr>
 
                 <div class="info_flex">
-                    <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
+                    <!-- <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" /> -->
+                    <img src="<?php echo $image_enseignants3; ?>" alt="" />
                     <div class="info_text">
                         <?php echo $tutor2; ?>
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
