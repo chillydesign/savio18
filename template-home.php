@@ -21,9 +21,9 @@
     <?php $interactive_paragraph = get_field('interactive_paragraph'); ?>
     <?php $interactive_gallery = get_field('interactive_gallery'); ?>
     <?php $for_tutors_paragraph = get_field('for_tutors_paragraph'); ?>
-    <?php $image_enseignants2 = get_field('image_enseignants2'); ?>
+    <?php $image_enseignants2 = get_field('image_enseignants2')['url']; ?>
     <?php $tutor2 = get_field('tutors2'); ?>
-    <?php $image_enseignants3 = get_field('image_enseignants3'); ?>
+    <?php $image_enseignants3 = get_field('image_enseignants3')['url']; ?>
     <?php $follow_paragraph = get_field('follow_paragraph'); ?>
 
     <!-- article -->
