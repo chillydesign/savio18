@@ -594,8 +594,26 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 
+function payment_frequency_shortcode( $atts, $content = null ) {
+
+    $attributes = shortcode_atts( array(
+
+    ), $atts );
 
 
+
+    $chilly_map = '<div class="payment_frequency_container">
+
+        <a class="pay_link pay_monthly" href="#" data-freq="month">Pay monthly</a>
+        <div class="boolean_outer">
+            <div class="boolean_inner"></div>
+        </div>
+        <a class="pay_link pay_annually" href="#" data-freq="year">Pay annually</a>
+    </div>';
+    return $chilly_map;
+
+}
+add_shortcode( 'payment_frequency_switcher', 'payment_frequency_shortcode' );
 
 
 

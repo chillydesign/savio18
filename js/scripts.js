@@ -32,6 +32,59 @@ import matchHeight from 'jquery-match-height';
         $('.blue .column').matchHeight();
 
 
+
+
+        /////////
+        // FREQUENCY SWITCHER
+        var $payment_freq = 'month';
+        var $boolOuter = $('.boolean_outer');
+        var $pay_monthly = $('.pay_monthly');
+        var $pay_annually =  $('.pay_annually');
+        var $pay_links = $('.pay_link');
+
+        $pay_links.on('click', function(e){
+            e.preventDefault();
+            var $this = $(this);
+            if ($this.data('freq') == 'year') {
+                $payment_freq = 'year';
+            } else {
+                $payment_freq = 'month';
+            };
+            updatePayFreq($payment_freq);
+
+        })
+
+
+
+        updatePayFreq($payment_freq);
+        $boolOuter.on('click', function(){
+            if ($payment_freq  == 'month') {
+                $payment_freq = 'year';
+            } else {
+                $payment_freq = 'month';
+            };
+
+            updatePayFreq($payment_freq);
+
+        })
+
+        function updatePayFreq( freq ) {
+
+            if (freq == 'month') {
+                $boolOuter.removeClass('active');
+                $pay_monthly.addClass('active');
+                $pay_annually.removeClass('active');
+            } else {
+                $boolOuter.addClass('active');
+                $pay_monthly.removeClass('active');
+                $pay_annually.addClass('active');
+            }
+            console.log(freq);
+        }
+
+
+
+
         //////////
         // SLIDERS
         var $testimonial_sliders = $(".testimonial_slider");

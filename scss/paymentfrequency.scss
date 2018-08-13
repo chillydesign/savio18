@@ -1,0 +1,57 @@
+
+
+
+.payment_frequency_container {
+    margin: 0;
+    text-align: center;
+    a {
+        display: inline-block;
+        font-size: $font_size;
+        color: $medium_grey;
+
+        &.active {
+            color: $brand_color;
+        }
+    }
+
+    .boolean_outer {
+            position: relative;
+            top: 5px;
+    }
+
+}
+
+
+
+$boolean_height: 25px;
+$boolean_width: 46px;
+$boolean_offset: 3px;
+.boolean_outer {
+    display: inline-block;
+    height: $boolean_height;
+    border-radius: $boolean_height;
+    width:  $boolean_width;
+    background: $medium_grey;
+    margin: 0 10px;
+    position: relative;
+    cursor: pointer;
+        transition: all 0.3s;
+
+    .boolean_inner {
+        height: #{$boolean_height - (2 * $boolean_offset) };
+        width: #{$boolean_height - (2 * $boolean_offset) };
+        border-radius: 50%;
+        background: white;
+        position: relative;
+        left: $boolean_offset;
+        top: $boolean_offset;
+        transition: all 0.3s;
+    }
+
+    &.active {
+        background: $brand_color;
+        .boolean_inner {
+            left: #{$boolean_width -  $boolean_height + $boolean_offset };
+        }
+    }
+}
