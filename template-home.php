@@ -9,24 +9,18 @@
     <?php $welcome_paragraph = get_field('welcome_paragraph'); ?>
     <?php $launch_date = get_field('launch_date'); ?>
     <?php $date_paragraph = get_field('date_paragraph'); ?>
-    <?php $info_header = get_field('info_header'); ?>
     <?php $info_paragraph = get_field('info_paragraph'); ?>
+    <?php $image_child1 = get_field('image_child1')['url']; ?>
     <?php $what_savio_paragraph = get_field('what_savio_paragraph'); ?>
     <?php $what_savio_gallery = get_field('what_savio_gallery'); ?>
-    <?php $for_parents_header_1 = get_field('for_parents_header_1'); ?>
+    <?php $features = get_field('features'); ?>
     <?php $for_parents_paragraph_1 = get_field('for_parents_paragraph_1'); ?>
-    <?php $for_parents_header_2 = get_field('for_parents_header_2'); ?>
     <?php $for_parents_paragraph_2 = get_field('for_parents_paragraph_2'); ?>
-    <?php $interactive_header = get_field('interactive_header'); ?>
     <?php $interactive_paragraph = get_field('interactive_paragraph'); ?>
     <?php $interactive_gallery = get_field('interactive_gallery'); ?>
-    <?php $features = get_field('features'); ?>
-    <?php $follow_header = get_field('follow_header'); ?>
-    <?php $follow_paragraph = get_field('follow_paragraph'); ?>
-    <?php $for_tutors_header = get_field('for_tutors_header'); ?>
     <?php $for_tutors_paragraph = get_field('for_tutors_paragraph'); ?>
-    <?php $tutor2_title = get_field('tutors2_title'); ?>
     <?php $tutor2 = get_field('tutors2'); ?>
+    <?php $follow_paragraph = get_field('follow_paragraph'); ?>
 
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" >
@@ -60,7 +54,8 @@
         <section id="info_section">
             <div class="container">
                 <div class="info_flex">
-                    <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
+                    <!-- <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" /> -->
+                    <img src="<?php echo $image_child1" alt="" />
                     <div class="info_text">
                         <?php echo $info_paragraph; ?>
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
@@ -114,7 +109,6 @@
                 <div class="for_parent_flex flipped">
                     <img src="<?php echo $tdu; ?>/images/beach-chair.png" alt="" />
                     <div class="for_parent_text">
-                        <h2><?php echo $for_parents_header_1; ?></h2>
                         <?php echo $for_parents_paragraph_1; ?>
                     </div>
                 </div>
@@ -122,7 +116,6 @@
                 <div class="for_parent_flex ">
                     <img src="<?php echo $tdu; ?>/images/hotairballoon.png" alt="" />
                     <div class="for_parent_text">
-                        <h2><?php echo $for_parents_header_2; ?></h2>
                         <?php echo $for_parents_paragraph_2; ?>
                     </div>
                 </div>
@@ -145,7 +138,6 @@
 
 
                     <div class="interactive_text">
-                        <h2><?php echo $interactive_header; ?></h2>
                         <p><?php echo $interactive_paragraph; ?></p>
                     </div>
                 </div>
@@ -154,7 +146,6 @@
 
                 <div class="for_parent_flex">
                     <div class="for_tutors_text">
-                        <h2><?php echo $for_tutors_header; ?></h2>
                         <?php echo $for_tutors_paragraph; ?>
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
                     </div>
@@ -166,7 +157,6 @@
                 <div class="info_flex">
                     <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
                     <div class="info_text">
-                        <h2><?php echo $tutor2_title; ?></h2>
                         <?php echo $tutor2; ?>
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
                     </div>
