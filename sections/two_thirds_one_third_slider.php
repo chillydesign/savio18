@@ -20,7 +20,7 @@
 
 
 	<div class="row">
-			<div class="col-sm-6 <?php echo $class_text; ?>">
+			<div class="col-sm-6 <?php echo $class_text; ?> textblock">
 					<?php echo $text; ?>
 			</div>
 			<div class="col-sm-6 <?php echo $class_image; ?>">
