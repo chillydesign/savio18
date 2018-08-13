@@ -639,11 +639,11 @@ function pay_freq_option_func( $atts, $content = null ) {
 
     $pay_option = '<div class="pay_buttons">';
     $pay_option .= '<div class="pay_monthly">
-    <p class="cost"><span class="currency">EUR</span><span class="amount">'. $month_amount.'</span><span class="freq">/mois</span></p>
+    <p class="cost"><span class="amount">'. $month_amount.'</span><span class="currency">&euro;</span><span class="freq">/mois</span></p>
     <h6><a href="'. $register_url .  $month_id . '">' . $button_text . '</a></h6>
     </div>';
     $pay_option .= '<div class="pay_annually">
-    <p class="cost"><span class="currency">EUR</span><span class="amount">'. $year_amount.'</span><span class="freq">/annee</span></p>
+    <p class="cost"><span class="amount">'. $year_amount.'</span><span class="currency">&euro;</span><span class="freq">/annee</span></p>
     <h6><a href="'. $register_url .  $year_id . '">' . $button_text . '</a></h6>
     </div>';
     $pay_option .= '</div>';
