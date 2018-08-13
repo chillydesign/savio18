@@ -66,11 +66,15 @@ $boolean_offset: 3px;
 
     .cost {
         text-align: center;
+        color: #888;
         .currency {
-
+    position: relative;
+    top: -8px;
         }
         .amount {
             font-size: 2em;
+            padding: 0 4px 0 0 ;
+            color: #000;
         }
         .freq {
         }
