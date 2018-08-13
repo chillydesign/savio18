@@ -6,10 +6,8 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
 
-    <?php $welcome_header = get_field('welcome_header'); ?>
     <?php $welcome_paragraph = get_field('welcome_paragraph'); ?>
     <?php $launch_date = get_field('launch_date'); ?>
-    <?php $date_header = get_field('date_header'); ?>
     <?php $date_paragraph = get_field('date_paragraph'); ?>
     <?php $info_header = get_field('info_header'); ?>
     <?php $info_paragraph = get_field('info_paragraph'); ?>
@@ -36,7 +34,6 @@
         <section id="welcome_section">
             <div class="container">
                 <div class="welcome_text">
-                    <h1><?php echo $welcome_header; ?></h1>
                     <?php echo $welcome_paragraph; ?>
                     <a href="#countdown_section" class="button fancy_button scroll_link">Je découvre</a>
                 </div>
@@ -53,7 +50,6 @@
             </ol>
 
             <div class="countdown_text">
-                <h2><?php echo $date_header; ?></h2>
                 <?php echo $date_paragraph; ?>
                 <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
 
@@ -66,7 +62,6 @@
                 <div class="info_flex">
                     <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" />
                     <div class="info_text">
-                        <h2><?php echo $info_header; ?></h2>
                         <?php echo $info_paragraph; ?>
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
                     </div>
