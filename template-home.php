@@ -55,7 +55,7 @@
             <div class="container">
                 <div class="info_flex">
                     <!-- <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" /> -->
-                    <img src="<?php echo $image_child1" alt="" />
+                    <img src="<?php echo $image_child1; ?>" alt="" />
                     <div class="info_text">
                         <?php echo $info_paragraph; ?>
                         <a  href="" class="hidden button">Inscrivez votre enfant</a>
