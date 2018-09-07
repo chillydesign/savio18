@@ -18,12 +18,12 @@
 <!-- Open Graph -->
 <meta property="og:url" content="<?php echo $smp->url; ?>">
 <meta property="og:type" content="article" />
-<meta property="og:site_name" content="Go Out! Magazine"/>
+<meta property="og:site_name" content="<?php echo $smp->title; ?>"/>
 <meta property="og:title" content="<?php echo $smp->title; ?>">
 <meta property="og:description" content="<?php echo $smp->description; ?>">
 <meta property="og:img" content="<?php echo $smp->image; ?>">
 <meta property="og:image" content="<?php echo $smp->image; ?>">
-<meta property="fb:admins" content="286502748099458" />
+<!-- <meta property="fb:admins" content="" /> -->
 
 <!-- TWITTER -->
 <meta name="twitter:card" value="<?php echo $smp->description; ?>">
