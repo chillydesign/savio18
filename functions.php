@@ -647,6 +647,36 @@ function pay_freq_option_func( $atts, $content = null ) {
 add_shortcode( 'payment_frequency_option', 'pay_freq_option_func' );
 
 
+function social_meta_properties(){
+
+    $smp =  new stdClass();
+    global $post;
+
+    if (is_single()) {
+
+        $post_id = get_the_ID();
+        $excerpt  =  get_the_excerpt();
+        if ($excerpt == '') $excerpt =  wp_trim_words($post->post_content,20);
+        $smp->title = get_the_title();
+        $smp->description = $excerpt;
+        $smp->image =  thumbnail_of_post_url( $post_id, 'medium' );
+        $smp->url = get_the_permalink();
+
+    } else {
+        $smp->title = 'Savio';
+        $smp->description = get_bloginfo('description');
+        $smp->image =   get_template_directory_uri() . '/images/beach.jpg';
+        $smp->url = get_home_url();
+    }
+
+
+    return $smp;
+
+
+}
+
+
+
 
 
 ?>
