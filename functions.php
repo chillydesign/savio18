@@ -665,7 +665,7 @@ function social_meta_properties(){
     } else {
         $smp->title = 'Savio';
         $smp->description = get_bloginfo('description');
-        $smp->image =   get_template_directory_uri() . '/images/beach.jpg';
+        $smp->image =   get_template_directory_uri() . '/images/savio-fb-preview.jpg';
         $smp->url = get_home_url();
     }
 
