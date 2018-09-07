@@ -183,7 +183,7 @@
 
 
 
-        <?php $testimonials = get_posts(array( 'post_type'  => 'testimonial', 'posts_per_page' => 3 )); ?>
+        <?php $testimonials = get_posts(array( 'post_type'  => 'testimonial', 'posts_per_page' => 5 )); ?>
 
         <?php if ($testimonials) : ?>
             <section id="testimonials">
