@@ -624,7 +624,7 @@ function pay_freq_option_func( $atts, $content = null ) {
     ), $atts );
 
 
-    $register_url = 'https://saviodev.com/front/register/';
+    $register_url = 'https://app.savio.fr/register/';
     $button_text = $attributes['button'];
     $month_id = $attributes['month_id'];
     $year_id = $attributes['year_id'];
