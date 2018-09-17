@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="welcome_text">
                     <?php echo $welcome_paragraph; ?>
-                    <a href="#countdown_section" class="button fancy_button scroll_link">Je découvre</a>
+                    <a href="app.savio.fr/register" class="button fancy_button scroll_link">C'est nouveau, j'essaye gratuitement jusqu'au 15 octobre</a>
                 </div>
             </div>
         </section>

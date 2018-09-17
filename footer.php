@@ -4,7 +4,7 @@
     <footer>
 
         <div id="copyright">
-            <p class="container">&copy; <?php echo date('Y'); ?> <?php echo  get_bloginfo( 'site_name' ); ?>.  Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></p>
+            <p class="container">&copy; <?php echo date('Y'); ?> <?php echo  get_bloginfo( 'site_name' ); ?> | <a href="<?php echo get_home_url();?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></p>
         </div>
 
     </footer>
