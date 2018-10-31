@@ -33,7 +33,7 @@
             <div class="container">
                 <div class="welcome_text">
                     <?php echo $welcome_paragraph; ?>
-                    <a href="https://app.savio.fr/register" class="button fancy_button scroll_link">C'est nouveau, j'essaye gratuitement jusqu'au 31 octobre</a>
+                    <a href="https://app.savio.fr/register" class="button fancy_button scroll_link">Je profite des 2 semaines supplémentaires d’essai gratuit jusqu'au 15 novembre</a>
                 </div>
             </div>
         </section>
