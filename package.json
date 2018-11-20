@@ -28,11 +28,12 @@
     "jquery-match-height": "^0.7.2"
   },
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-minify": "^1.0.0",
-    "gulp-sass": "^3.1.0",
-    "hoek": "^5.0.3",
-    "webpack": "^3.0.0"
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-minify": "^3.0.15",
+    "gulp-sass": "^4.0.1",
+    "hoek": "^5.0.4",
+    "sshpk": "^1.15.2",
+    "webpack": "^3.12.0"
   }
 }
