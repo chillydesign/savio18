@@ -1,10 +1,11 @@
 
 	<?php $tdu = get_template_directory_uri(); ?>
+	<?php $hurl = get_home_url(); ?>
 
     <footer>
 
         <div id="copyright">
-            <p class="container">&copy; <?php echo date('Y'); ?> <?php echo  get_bloginfo( 'site_name' ); ?> | <a href="<?php echo get_home_url();?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></p>
+            <p class="container">&copy; <?php echo date('Y'); ?> Savio | <a href="<?php echo $hurl;?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | <a href="<?php echo $hurl;?>/conditions-generales/">Conditions générales</a> | Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></p>
         </div>
 
     </footer>
