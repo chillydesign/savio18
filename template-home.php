@@ -143,7 +143,7 @@
 
 
                     <div class="interactive_text">
-                        <p><?php echo $interactive_paragraph; ?></p>
+                        <?php echo $interactive_paragraph; ?>
                     </div>
                 </div>
 
