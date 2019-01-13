@@ -39,12 +39,12 @@
 
         <section id="countdown_section">
 
-            <!-- <ol id="saviocountdown">
+            <ol id="saviocountdown">
                 <li><span id="span_jours">0</span> jours</li>
                 <li><span id="span_heures">0</span> heures</li>
                 <li><span id="span_minutes">0</span> minutes</li>
                 <li><span id="span_secondes">0</span> secondes</li>
-            </ol> -->
+            </ol>
 
             <div class="countdown_text">
                 <?php echo $date_paragraph; ?>
