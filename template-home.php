@@ -27,6 +27,7 @@
     <?php $tutor2 = get_field('tutors2'); ?>
     <?php $image_enseignants3 = get_field('image_enseignants3')['url']; ?>
     <?php $follow_paragraph = get_field('follow_paragraph'); ?>
+    <?php $newsletter_text_footer = get_field('newsletter_text_footer'); ?>
 
     <!-- article -->
     <article id="post-<?php the_ID(); ?>" >
@@ -232,7 +233,9 @@
                     <div class="follow_savio_text">
                         <h2><?php echo $follow_header; ?></h2>
                         <?php echo $follow_paragraph; ?>
+
                         <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
+                        <?php echo $newsletter_text_footer; ?>
                     </div>
 
                     <aside class="hidden">
