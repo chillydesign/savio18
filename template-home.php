@@ -9,6 +9,7 @@
     <?php $welcome_paragraph = get_field('welcome_paragraph'); ?>
     <?php $launch_date = get_field('launch_date'); ?>
     <?php $date_paragraph = get_field('date_paragraph'); ?>
+    <?php $pre_newsletter_paragraph = get_field('pre_newsletter_paragraph'); ?>
     <?php $newsletter_text = get_field('newsletter_text'); ?>
     <?php $info_paragraph = get_field('info_paragraph'); ?>
     <?php $image_child1 = get_field('image_child1')['url']; ?>
@@ -58,7 +59,7 @@
                 <div class="newsletter_signup flipped">
                   <img src="https://savio.fr/wp-content/uploads/2019/01/small_picture.png" alt="">
                   <div class="newsletter_signup_text">
-                  <p>Pour suivre l’actualité et les réductions Savio inscrivez-vous à notre newsletter.</p>
+                  <?php echo $$pre_newsletter_paragraph ; ?>
                 <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
                 <div class="newsletter_promise"><?php echo $newsletter_text; ?></div>
               </div>

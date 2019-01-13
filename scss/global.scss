@@ -16,15 +16,15 @@
 
 
 body {
-    font: normal 62.5%  $font_stack;
-    background:  url('../images/bg.png') repeat top left,
-    linear-gradient(-90deg, $brand_color 0, $brand_color_hover 100%);
-    background-size: 250px, 100%;
-    position: relative;
-    color: $font_color;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font: normal 62.5%  $font_stack;
+  background:  url('../images/bg.png') repeat top left,
+  linear-gradient(-90deg, $brand_color 0, $brand_color_hover 100%);
+  background-size: 250px, 100%;
+  position: relative;
+  color: $font_color;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
 }
 
@@ -39,293 +39,315 @@ $section_text_width: 700px;
 
 
 section {
-    padding: 90px 0;
-    background: white;
+  padding: 90px 0;
+  background: white;
 
-    &.increase_pad {
-      padding-bottom: 170px;
-    }
+  &.increase_pad {
+    padding-bottom: 170px;
+  }
 
-    &.grey {
-      background: $light_grey;
-    }
-    &.blue {
-      background: none;
-    }
+  &.grey {
+    background: $light_grey;
+  }
+  &.blue {
+    background: none;
+  }
 }
 
 #welcome_section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 90px 0;
-    border-bottom: 5px solid $brand_color;
-    background: url('../images/beach.jpg') no-repeat center center;
-    background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0;
+  border-bottom: 5px solid $brand_color;
+  background: url('../images/beach.jpg') no-repeat center center;
+  background-size: cover;
 
-    .welcome_text {
-        flex: 1 auto 0;
-        background: transparentize(white, 0.2);
-        border-radius: 10px;
-        padding: 20px;
-        align-self: center;
-        margin: auto;
-        text-align: center;
-        color: $brand_color;
+  .welcome_text {
+    flex: 1 auto 0;
+    background: transparentize(white, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    align-self: center;
+    margin: auto;
+    text-align: center;
+    color: $brand_color;
 
-        @media (min-width: $mobile_width) {
-            width: $section_text_width;
-            max-width: $section_text_width;
+    @media (min-width: $mobile_width) {
+      width: $section_text_width;
+      max-width: $section_text_width;
 
-        }
-
-
-        h1, h2 {
-            font-size: 3em;
-            padding: 0;
-        }
-        p {
-            padding: 15px 0 10px;
-        }
     }
+
+
+    h1, h2 {
+      font-size: 3em;
+      padding: 0;
+    }
+    p {
+      padding: 15px 0 10px;
+    }
+  }
 } // END OF WELCOME SCETION
 
 
 #countdown_section {
 
-    text-align: center;
-    color: white;
-    background: none;
+  text-align: center;
+  color: white;
+  background: none;
 
 
-    #saviocountdown {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        margin: 0 0 30px;
-        list-style: none;
-        padding: 0;
+  #saviocountdown {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 30px;
+    list-style: none;
+    padding: 0;
 
-        li {
-            padding: 0 35px 20px;
-            flex: 1 auto 0;
-            font-size: 2em;
-            line-height: 1;
-                color: white;
-            span {
-                font-size: 4em;
-                display: block;
-                margin: 0 0 0px;
-                font-weight: bold;
+    li {
+      padding: 0 35px 20px;
+      flex: 1 auto 0;
+      font-size: 2em;
+      line-height: 1;
+      color: white;
+      span {
+        font-size: 4em;
+        display: block;
+        margin: 0 0 0px;
+        font-weight: bold;
 
-                @media (min-width: $mobile_width) {
-                    min-width: 110px;
-                }
-            }
-        }
-    }
-
-    .countdown_text {
-        margin: auto;
-        padding: 0 15px 0;
         @media (min-width: $mobile_width) {
-            width: $section_text_width;
-            max-width: $section_text_width;
-
+          min-width: 110px;
         }
+      }
+    }
+  }
 
-
-        form {
-            margin-top: 30px;
-        }
-
+  .countdown_text {
+    margin: auto;
+    padding: 0 15px 0;
+    @media (min-width: $mobile_width) {
+      width: $section_text_width;
+      max-width: $section_text_width;
 
     }
 
 
-    h2 {
-        font-size: 3em;
-        color: white;
-        padding: 0 0 30px;
+    form {
+      margin-top: 30px;
     }
-    p {
-        color: white;
-    }
+
+
+  }
+
+
+  h2 {
+    font-size: 3em;
+    color: white;
+    padding: 0 0 30px;
+  }
+  p {
+    color: white;
+  }
 
 } // END OF countdown_section
 
 
+.newsletter_signup_text {
+  form{
+    margin: 10px 30px 10px 0;
+    input, select {
+      border: solid 2px $brand_color;
+      border-radius: 10px;
+      color: $brand_color!important;
+      text-transform: none;
 
+      &::placeholder {
+        color: $brand_color;
+      }
+    }
+
+    input[type="submit"] {
+      background: $brand_color;
+      color: white!important;
+      &:hover {
+        background: $brand_color_hover;
+      }
+    }
+  }
+}
 
 $section_image_width: 300px;
 #info_section {
-    background: $light_grey;
-    color: $brand_color;
+  background: $light_grey;
+  color: $brand_color;
 
-    .info_flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+  .info_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-        }
-
-        img {
-            flex: 1 auto 0;
-            width: $section_image_width;
-            max-width: 100%;
-            height: $section_image_width;
-            border-radius: 50%;
-            background: $light_grey;
-            margin:  0 0 50px;
-
-            @media (min-width: $mobile_width) {
-                min-width: $section_image_width;
-            }
-        }
-        .info_text {
-            flex: 1 auto 0;
-
-            @media (min-width: $mobile_width) {
-                    padding: 0 0 0 30px;
-            }
-        }
+    @media (min-width: $mobile_width) {
+      flex-wrap: nowrap;
     }
 
-    h2 {
-        font-size: 3em;
+    img {
+      flex: 1 auto 0;
+      width: $section_image_width;
+      max-width: 100%;
+      height: $section_image_width;
+      border-radius: 50%;
+      background: $light_grey;
+      margin:  0 0 50px;
+
+      @media (min-width: $mobile_width) {
+        min-width: $section_image_width;
+      }
+    }
+    .info_text {
+      flex: 1 auto 0;
+
+      @media (min-width: $mobile_width) {
+        padding: 0 0 0 30px;
+      }
+    }
+  }
+
+  h2 {
+    font-size: 3em;
+  }
+
+  p {
+
+  }
+
+
+  .what_is_savio_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (min-width: $mobile_width) {
+      flex-wrap: nowrap;
     }
 
-    p {
+
+    .what_is_savio_text {
+      flex: 1 auto 0;
+      margin: 0 0 60px;
+
+
+      @media (min-width: $mobile_width) {
+        width: 45%;
+        margin: 0;
+      }
 
     }
 
+    .what_is_savio_slider_container {
 
-    .what_is_savio_flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+      flex: 1 auto 0;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      //    top: -50px;
+      @media (min-width: $mobile_width) {
+        width: 50%;
+      }
 
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-        }
-
-
-        .what_is_savio_text {
-            flex: 1 auto 0;
-            margin: 0 0 60px;
-
-
-            @media (min-width: $mobile_width) {
-                width: 45%;
-                margin: 0;
-            }
-
-        }
-
-        .what_is_savio_slider_container {
-
-            flex: 1 auto 0;
-            overflow: hidden;
-            width: 100%;
-            position: relative;
-        //    top: -50px;
-            @media (min-width: $mobile_width) {
-                width: 50%;
-            }
-
-        }
     }
+  }
 
 } // END OF info_section
 
 
 
 #what_is_savio {
-    background: $light_grey;
+  background: $light_grey;
 
-    .what_is_savio_flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
+  .what_is_savio_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-        }
-
-
-        .what_is_savio_text {
-            flex: 1 auto 0;
-            margin: 0 0 60px;
-
-
-            @media (min-width: $mobile_width) {
-                width: 45%;
-                margin: 0;
-            }
-
-        }
-
-        .what_is_savio_slider_container {
-
-            flex: 1 auto 0;
-            overflow: hidden;
-            width: 100%;
-            position: relative;
-        //    top: -50px;
-            @media (min-width: $mobile_width) {
-                width: 50%;
-            }
-
-        }
+    @media (min-width: $mobile_width) {
+      flex-wrap: nowrap;
     }
+
+
+    .what_is_savio_text {
+      flex: 1 auto 0;
+      margin: 0 0 60px;
+
+
+      @media (min-width: $mobile_width) {
+        width: 45%;
+        margin: 0;
+      }
+
+    }
+
+    .what_is_savio_slider_container {
+
+      flex: 1 auto 0;
+      overflow: hidden;
+      width: 100%;
+      position: relative;
+      //    top: -50px;
+      @media (min-width: $mobile_width) {
+        width: 50%;
+      }
+
+    }
+  }
 
 } // END OF what_is_savio
 
 
 #for_parents, #newsletter_signup {
-    background-color: white;
+  background-color: white;
 
 
-    .for_parent_flex, .newsletter_signup {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+  .for_parent_flex, .newsletter_signup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-        }
-
-
-        &.flipped {
-            flex-direction: row-reverse;
-        }
-
-
-        .for_parent_text, .newsletter_signup_text {
-            flex: 1 auto 0;
-            @media (min-width: $mobile_width) {
-                padding: 0  30px;
-            }
-
-        }
-
-        img {
-            flex: 1 auto 0;
-            width: $section_image_width;
-            max-width: 100%;
-            height: $section_image_width;
-            border-radius: 50%;
-            background: $light_grey;
-            margin: 0 0 50px;
-            @media (min-width: $mobile_width) {
-                min-width: $section_image_width;
-            }
-        }
+    @media (min-width: $mobile_width) {
+      flex-wrap: nowrap;
     }
+
+
+    &.flipped {
+      flex-direction: row-reverse;
+    }
+
+
+    .for_parent_text, .newsletter_signup_text {
+      flex: 1 auto 0;
+      @media (min-width: $mobile_width) {
+        padding: 0  30px;
+      }
+
+    }
+
+    img {
+      flex: 1 auto 0;
+      width: $section_image_width;
+      max-width: 100%;
+      height: $section_image_width;
+      border-radius: 50%;
+      background: $light_grey;
+      margin: 0 0 50px;
+      @media (min-width: $mobile_width) {
+        min-width: $section_image_width;
+      }
+    }
+  }
 
 
 
@@ -335,150 +357,150 @@ $section_image_width: 300px;
 $push_features_up: 180px;
 #interactive {
 
-    background: $light_grey;
-    padding-bottom: #{$push_features_up - 50px};
+  background: $light_grey;
+  padding-bottom: #{$push_features_up - 50px};
 
-    .interactive_flex {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 0 0 50px;
+  .interactive_flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 50px;
 
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-        }
+    @media (min-width: $mobile_width) {
+      flex-wrap: nowrap;
     }
-    .interactive_text  {
-        flex: 1 auto 0;
+  }
+  .interactive_text  {
+    flex: 1 auto 0;
 
 
 
-        @media (min-width: $mobile_width) {
-            width: 45%;
-            min-width: 45%;
-            padding: 0  30px;
+    @media (min-width: $mobile_width) {
+      width: 45%;
+      min-width: 45%;
+      padding: 0  30px;
 
-        }
     }
-    .interactive_slider_container {
-        flex: 1 auto 0;
-        width: 100%;
-        overflow: hidden;
+  }
+  .interactive_slider_container {
+    flex: 1 auto 0;
+    width: 100%;
+    overflow: hidden;
 
-        @media (min-width: $mobile_width) {
-            width: 50%;
-            min-width: 50%;
-        }
+    @media (min-width: $mobile_width) {
+      width: 50%;
+      min-width: 50%;
+    }
+  }
+
+
+
+  .for_parent_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: $mobile_width) {
+      flex-wrap: nowrap;
     }
 
 
-
-        .for_parent_flex {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-            @media (min-width: $mobile_width) {
-                flex-wrap: nowrap;
-            }
+    &.flipped {
+      flex-direction: row-reverse;
+    }
 
 
-            &.flipped {
-                flex-direction: row-reverse;
-            }
+    .for_parent_text {
+      flex: 1 auto 0;
+      @media (min-width: $mobile_width) {
+        padding: 0  30px;
+      }
+
+    }
+
+    img {
+      flex: 1 auto 0;
+      width: $section_image_width;
+      max-width: 100%;
+      height: $section_image_width;
+      border-radius: 50%;
+      background: $light_grey;
+      margin: 0 0 50px;
+      @media (min-width: $mobile_width) {
+        min-width: $section_image_width;
+      }
+    }
+  }
+
+  .info_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 
-            .for_parent_text {
-                flex: 1 auto 0;
-                @media (min-width: $mobile_width) {
-                    padding: 0  30px;
-                }
+    @media (min-width: $mobile_width) {
+      flex-wrap: nowrap;
+    }
 
-            }
+    img {
+      flex: 1 auto 0;
+      width: $section_image_width;
+      max-width: 100%;
+      height: $section_image_width;
+      border-radius: 50%;
+      background: $light_grey;
+      margin:  0 0 50px;
 
-            img {
-                flex: 1 auto 0;
-                width: $section_image_width;
-                max-width: 100%;
-                height: $section_image_width;
-                border-radius: 50%;
-                background: $light_grey;
-                margin: 0 0 50px;
-                @media (min-width: $mobile_width) {
-                    min-width: $section_image_width;
-                }
-            }
-        }
+      @media (min-width: $mobile_width) {
+        min-width: $section_image_width;
+      }
+    }
+    .info_text {
+      flex: 1 auto 0;
 
-        .info_flex {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-
-
-            @media (min-width: $mobile_width) {
-                flex-wrap: nowrap;
-            }
-
-            img {
-                flex: 1 auto 0;
-                width: $section_image_width;
-                max-width: 100%;
-                height: $section_image_width;
-                border-radius: 50%;
-                background: $light_grey;
-                margin:  0 0 50px;
-
-                @media (min-width: $mobile_width) {
-                    min-width: $section_image_width;
-                }
-            }
-            .info_text {
-                flex: 1 auto 0;
-
-                @media (min-width: $mobile_width) {
-                        padding: 0 0 0 30px;
-                }
-            }
-        }
+      @media (min-width: $mobile_width) {
+        padding: 0 0 0 30px;
+      }
+    }
+  }
 
 } // END OF #interactive
 
 
 
 #for_tutors_section {
-    background: $light_grey;
-    color: $brand_color;
-    .for_tutors_flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+  background: $light_grey;
+  color: $brand_color;
+  .for_tutors_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-        }
-
-        img {
-            flex: 1 auto 0;
-            width: $section_image_width;
-            max-width: 100%;
-            height: $section_image_width;
-            border-radius: 50%;
-            background: $light_grey;
-            margin:  0 0 50px;
-
-            @media (min-width: $mobile_width) {
-                min-width: $section_image_width;
-            }
-        }
-        .for_tutors_text {
-            flex: 1 auto 0;
-
-            @media (min-width: $mobile_width) {
-                    padding: 0 0 0 30px;
-            }
-        }
+    @media (min-width: $mobile_width) {
+      flex-wrap: nowrap;
     }
+
+    img {
+      flex: 1 auto 0;
+      width: $section_image_width;
+      max-width: 100%;
+      height: $section_image_width;
+      border-radius: 50%;
+      background: $light_grey;
+      margin:  0 0 50px;
+
+      @media (min-width: $mobile_width) {
+        min-width: $section_image_width;
+      }
+    }
+    .for_tutors_text {
+      flex: 1 auto 0;
+
+      @media (min-width: $mobile_width) {
+        padding: 0 0 0 30px;
+      }
+    }
+  }
 }
 
 
@@ -491,108 +513,108 @@ $push_features_up: 180px;
 $features_height: 450px;
 
 #features {
-    text-align: center;
-    background: none;
+  text-align: center;
+  background: none;
+
+  @media (min-width: $mobile_width) {
+    //    height: #{$features_height  + 100px};
+  }
+
+  .features_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+
 
     @media (min-width: $mobile_width) {
-    //    height: #{$features_height  + 100px};
+      flex-wrap: nowrap;
+      top: #{$push_features_up * -1};
+      margin-bottom: #{$push_features_up * -1};
     }
 
-    .features_container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        position: relative;
 
 
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-            top: #{$push_features_up * -1};
-                margin-bottom: #{$push_features_up * -1};
+
+    .feature_box {
+      min-height: $features_height;
+      overflow: hidden;
+      width: 100%;
+      max-width: 100%;
+      min-width: 100%;
+      background: white;
+      border-radius: 15px;
+      padding: 20px 10px;
+      color: $brand_color;
+      position: relative;
+      margin: 0 0 20px;
+      box-shadow: 0 20px 80px transparentize($dark_grey, 0.7),  0 4px 3px transparentize($dark_grey, 0.9) ;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+
+
+      @media (min-width: $mobile_width) {
+        width: 30%;
+        max-width: 30%;
+        min-width: 30%;
+      }
+
+
+      .feature_logo {
+        width: 100px;
+        height: 100px;
+        background: no-repeat center center white;
+        background-size: cover;
+        margin: 30px auto 30px;
+
+        &.feature_logo_clock, &.feature_logo_educatif {
+          background-image: url('../images/clock-savio.png');
         }
-
-
-
-
-        .feature_box {
-            min-height: $features_height;
-            overflow: hidden;
-            width: 100%;
-            max-width: 100%;
-            min-width: 100%;
-            background: white;
-            border-radius: 15px;
-            padding: 20px 10px;
-            color: $brand_color;
-            position: relative;
-            margin: 0 0 20px;
-            box-shadow: 0 20px 80px transparentize($dark_grey, 0.7),  0 4px 3px transparentize($dark_grey, 0.9) ;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-start;
-            justify-content: center;
-
-
-            @media (min-width: $mobile_width) {
-                width: 30%;
-                max-width: 30%;
-                min-width: 30%;
-            }
-
-
-            .feature_logo {
-                width: 100px;
-                height: 100px;
-                background: no-repeat center center white;
-                background-size: cover;
-                margin: 30px auto 30px;
-
-                &.feature_logo_clock, &.feature_logo_educatif {
-                    background-image: url('../images/clock-savio.png');
-                }
-                &.feature_logo_book, &.feature_logo_pratique {
-                    background-image: url('../images/book.png');
-                }
-                &.feature_logo_hourglass, &.feature_logo_le-mode-tuteur {
-                    background-image: url('../images/hourglass.png');
-                }
-            }
-            h3 {
-                font-size: 2em;
-                width: 100%;
-            }
-
-            h6 {
-                text-align: center;
-                margin: auto;
-
-            }
-
-            ul {
-                width: 100%;
-                min-height: 150px;
-                text-align: left;
-                max-width: 80%;
-                margin: auto;
-            }
-            p {
-                font-size: 1.4em;
-                padding: 0 30px 10px;
-            }
+        &.feature_logo_book, &.feature_logo_pratique {
+          background-image: url('../images/book.png');
         }
+        &.feature_logo_hourglass, &.feature_logo_le-mode-tuteur {
+          background-image: url('../images/hourglass.png');
+        }
+      }
+      h3 {
+        font-size: 2em;
+        width: 100%;
+      }
+
+      h6 {
+        text-align: center;
+        margin: auto;
+
+      }
+
+      ul {
+        width: 100%;
+        min-height: 150px;
+        text-align: left;
+        max-width: 80%;
+        margin: auto;
+      }
+      p {
+        font-size: 1.4em;
+        padding: 0 30px 10px;
+      }
+    }
+  }
+
+  a.button {
+    position: relative;
+
+
+
+    @media (min-width: $mobile_width) {
+      margin-top: 70px;
+      top:  #{$push_features_up * -1};
     }
 
-    a.button {
-        position: relative;
-
-
-
-        @media (min-width: $mobile_width) {
-            margin-top: 70px;
-            top:  #{$push_features_up * -1};
-        }
-
-    }
+  }
 
 } // END OF FEATURES
 
@@ -600,91 +622,91 @@ $features_height: 450px;
 
 
 #testimonials {
-    background: white;
-    color: $brand_color;
+  background: white;
+  color: $brand_color;
 
-    .testimonials_flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content:space-between;
+  .testimonials_flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;
 
-        @media (min-width: $mobile_width) {
-            flex-wrap: nowrap;
-        }
+    @media (min-width: $mobile_width) {
+      flex-wrap: nowrap;
+    }
 
-        .testimonials_container {
-            flex: 1 auto 0;
-            width: 100%;
-            @media (min-width: $mobile_width) {
-                padding: 0  30px;
-                width: 50%;
-                width: calc( 100% - #{$section_image_width + 30px} );
-            }
+    .testimonials_container {
+      flex: 1 auto 0;
+      width: 100%;
+      @media (min-width: $mobile_width) {
+        padding: 0  30px;
+        width: 50%;
+        width: calc( 100% - #{$section_image_width + 30px} );
+      }
 
-            .testimonial_slider {
+      .testimonial_slider {
 
-            }
-
-        }
-
-        img {
-            flex: 1 auto 0;
-            width: $section_image_width;
-            max-width: 100%;
-            height: $section_image_width;
-            border-radius: 50%;
-            background: $light_grey;
-            margin: 0 auto 50px;
-
-            @media (min-width: $mobile_width) {
-                min-width: $section_image_width;
-            }
-        }
+      }
 
     }
 
-    .testimonial {
+    img {
+      flex: 1 auto 0;
+      width: $section_image_width;
+      max-width: 100%;
+      height: $section_image_width;
+      border-radius: 50%;
+      background: $light_grey;
+      margin: 0 auto 50px;
 
-        margin-bottom: 30px;
-
-        blockquote {
-            position: relative;
-            padding: 20px 20px;
-
-            &:after, &:before {
-                content: '';
-                background: url('../images/quote.svg') no-repeat top left;
-                background-size: 100px;
-                height: 100px;
-                width: 100px;
-                position: absolute;
-                opacity: 0.1;
-                top:0px;
-                left:0px;
-            }
-            &:before {
-                top:auto;
-                left: auto;
-                bottom: 10px;
-                right: 0;
-                transform: rotate(180deg);
-            }
-            p {
-                text-indent: 50px;
-                font-size: 1.5em;
-            }
-            p + p {
-                text-indent: 0;
-            }
-        }
-
-        cite {
-            text-align: right;
-            display: block;
-            margin: 0 20px;
-
-        }
+      @media (min-width: $mobile_width) {
+        min-width: $section_image_width;
+      }
     }
+
+  }
+
+  .testimonial {
+
+    margin-bottom: 30px;
+
+    blockquote {
+      position: relative;
+      padding: 20px 20px;
+
+      &:after, &:before {
+        content: '';
+        background: url('../images/quote.svg') no-repeat top left;
+        background-size: 100px;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        opacity: 0.1;
+        top:0px;
+        left:0px;
+      }
+      &:before {
+        top:auto;
+        left: auto;
+        bottom: 10px;
+        right: 0;
+        transform: rotate(180deg);
+      }
+      p {
+        text-indent: 50px;
+        font-size: 1.5em;
+      }
+      p + p {
+        text-indent: 0;
+      }
+    }
+
+    cite {
+      text-align: right;
+      display: block;
+      margin: 0 20px;
+
+    }
+  }
 
 
 } // END OF #testimonials
@@ -696,54 +718,54 @@ $features_height: 450px;
 
 
 #follow_savio {
+  color: white;
+  background: $brand_color;
+
+  h2 {
     color: white;
-    background: $brand_color;
+  }
 
-    h2 {
-        color: white;
+  p {
+    color: white;
+  }
+
+  .follow_savio_flex {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (min-width: $mobile_width) {
+
+      flex-wrap: nowrap;
     }
 
-    p {
-        color: white;
+    .follow_savio_text {
+      flex: 1 auto 0;
+      padding: 0 0 30px 0;
+      @media (min-width: $mobile_width) {
+        padding: 0 30px 30px 0;
+      }
+
     }
 
-    .follow_savio_flex {
 
-        display: flex;
-        flex-wrap: wrap;
+    aside {
+      flex: 1 auto 0;
 
-        @media (min-width: $mobile_width) {
+      @media (min-width: $mobile_width) {
+        width: 25%;
+        min-width: 25%;
+      }
 
-            flex-wrap: nowrap;
+      ul {
+        li {
+          a {
+            color: white;
+          }
         }
-
-        .follow_savio_text {
-            flex: 1 auto 0;
-            padding: 0 0 30px 0;
-            @media (min-width: $mobile_width) {
-                padding: 0 30px 30px 0;
-            }
-
-        }
-
-
-        aside {
-            flex: 1 auto 0;
-
-            @media (min-width: $mobile_width) {
-                width: 25%;
-                min-width: 25%;
-            }
-
-            ul {
-                li {
-                    a {
-                        color: white;
-                    }
-                }
-            }
-        }
+      }
     }
+  }
 
 }  // end of follow_savio
 
@@ -751,50 +773,50 @@ $features_height: 450px;
 
 .signup_form {
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 10px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 0 0;
 
+  @media (min-width: $mobile_width) {
+    flex-wrap: nowrap;
+
+
+  }
+
+  input, select, button {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0 0 20px;
     @media (min-width: $mobile_width) {
-        flex-wrap: nowrap;
-
-
+      width: 23%;
+      min-width: 23%;
+      max-width: 23%;
     }
 
-    input, select, button {
-        width: 100%;
-        min-width: 100%;
-        max-width: 100%;
-        margin: 0 0 20px;
-        @media (min-width: $mobile_width) {
-            width: 23%;
-            min-width: 23%;
-            max-width: 23%;
-        }
+    flex: 1 auto 0;
+    font-size: $font_size;
 
-        flex: 1 auto 0;
-        font-size: $font_size;
+  }
 
-    }
+  button, input.button {
+    background: white;
+    color: $brand_color;
+  }
 
-    button, input.button {
-        background: white;
-        color: $brand_color;
-    }
-
-    input , select {
-        color: white;
-        background: none;
-        border: 0;
-        border-bottom: 2px solid white;
+  input , select {
+    color: white;
+    background: none;
+    border: 0;
+    border-bottom: 2px solid white;
 
 
-    }
+  }
 
-    ::placeholder {
-        color: white;
-    }
+  ::placeholder {
+    color: white;
+  }
 
 } // end of signupforms
 
@@ -804,60 +826,60 @@ $features_height: 450px;
 
 // TINY SLIDER
 .tns-outer {
-    position: relative;
-    margin-bottom: 60px;
+  position: relative;
+  margin-bottom: 60px;
 
-    .tns-inner {
+  .tns-inner {
+  }
+
+  .tns-nav {
+    position: absolute;
+    bottom: -30px;
+    text-align: center;
+    width: 100%;
+    left: 0;
+    button {
+      background: $medium_grey;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      margin: 0 5px 10px;
+      padding: 0;
+
+      &.tns-nav-active {
+        background: $dark_grey;
+      }
     }
+  }
 
-    .tns-nav {
-        position: absolute;
-        bottom: -30px;
-        text-align: center;
-        width: 100%;
-        left: 0;
-        button {
-            background: $medium_grey;
-            height: 10px;
-            width: 10px;
-            border-radius: 50%;
-            margin: 0 5px 10px;
-            padding: 0;
+  .interactive_slider, .what_is_savio_slider {
 
-            &.tns-nav-active {
-                background: $dark_grey;
-            }
-        }
+
+    div {
+
+      display: inline-block;
+
+
+      $box_shadow_size: 25px;
+      img {
+        width: 90%;
+        width: calc(100% - #{2 * $box_shadow_size});
+        height: auto;
+        margin: 10px $box_shadow_size;
+        box-shadow:  0 10px $box_shadow_size transparentize($dark_grey, 0.45);
+        border-radius: 19px;
+      }
     }
-
-    .interactive_slider, .what_is_savio_slider {
-
-
-        div {
-
-            display: inline-block;
-
-
-            $box_shadow_size: 25px;
-            img {
-                width: 90%;
-                width: calc(100% - #{2 * $box_shadow_size});
-                height: auto;
-                margin: 10px $box_shadow_size;
-                box-shadow:  0 10px $box_shadow_size transparentize($dark_grey, 0.45);
-                border-radius: 19px;
-            }
-        }
-    }
+  }
 
 }
 
 
 .hidden {
-    display: none;
-    visibility: hidden;
-    height: 0;
-    padding: 0;
+  display: none;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
 }
 
 
