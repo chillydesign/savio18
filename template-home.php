@@ -7,6 +7,7 @@
 
 
     <?php $welcome_paragraph = get_field('welcome_paragraph'); ?>
+    <?php $pre_date_paragraph = get_field('pre_date_paragraph'); ?>
     <?php $launch_date = get_field('launch_date'); ?>
     <?php $date_paragraph = get_field('date_paragraph'); ?>
     <?php $info_paragraph = get_field('info_paragraph'); ?>
@@ -38,6 +39,10 @@
         </section>
 
         <section id="countdown_section">
+          <div class="countdown_text">
+              <?php echo $pre_date_paragraph; ?>
+          </div>
+
 
             <ol id="saviocountdown">
                 <li><span id="span_jours">0</span> jours</li>
@@ -49,8 +54,9 @@
             <div class="countdown_text">
                 <?php echo $date_paragraph; ?>
                 <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
-
+                <div class="newsletter_promise"><?php echo $date_paragraph; ?></div>
             </div>
+
         </section>
 
 
