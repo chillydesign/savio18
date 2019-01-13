@@ -59,7 +59,7 @@
                 <div class="newsletter_signup flipped">
                   <img src="https://savio.fr/wp-content/uploads/2019/01/small_picture.png" alt="">
                   <div class="newsletter_signup_text">
-                  <?php echo $$pre_newsletter_paragraph ; ?>
+                  <?php echo $pre_newsletter_paragraph ; ?>
                 <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
                 <div class="newsletter_promise"><?php echo $newsletter_text; ?></div>
               </div>
