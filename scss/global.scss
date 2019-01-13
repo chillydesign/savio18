@@ -286,11 +286,11 @@ $section_image_width: 300px;
 } // END OF what_is_savio
 
 
-#for_parents {
+#for_parents, #newsletter_signup {
     background-color: white;
 
 
-    .for_parent_flex {
+    .for_parent_flex, .newsletter_signup {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -305,7 +305,7 @@ $section_image_width: 300px;
         }
 
 
-        .for_parent_text {
+        .for_parent_text, .newsletter_signup_text {
             flex: 1 auto 0;
             @media (min-width: $mobile_width) {
                 padding: 0  30px;

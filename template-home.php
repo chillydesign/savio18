@@ -52,10 +52,17 @@
               </div>
             </section>
               <section id="newsletter_signup">
-                <div class="newsletter_signup">
+                <div class="container">
+
+
+                <div class="newsletter_signup flipped">
+                  <img src="https://savio.fr/wp-content/uploads/2019/01/small_picture.png" alt="">
+                  <div class="newsletter_signup_text">
                   <p>Pour suivre l’actualité et les réductions Savio inscrivez-vous à notre newsletter.</p>
                 <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
                 <div class="newsletter_promise"><?php echo $newsletter_text; ?></div>
+              </div>
+            </div>
             </div>
 
         </section>
