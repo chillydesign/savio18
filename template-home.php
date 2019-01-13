@@ -7,9 +7,9 @@
 
 
     <?php $welcome_paragraph = get_field('welcome_paragraph'); ?>
-    <?php $pre_date_paragraph = get_field('pre_date_paragraph'); ?>
     <?php $launch_date = get_field('launch_date'); ?>
     <?php $date_paragraph = get_field('date_paragraph'); ?>
+    <?php $newsletter_text = get_field('newsletter_text'); ?>
     <?php $info_paragraph = get_field('info_paragraph'); ?>
     <?php $image_child1 = get_field('image_child1')['url']; ?>
     <?php $what_savio_paragraph = get_field('what_savio_paragraph'); ?>
@@ -39,10 +39,6 @@
         </section>
 
         <section id="countdown_section">
-          <div class="countdown_text">
-              <?php echo $pre_date_paragraph; ?>
-          </div>
-
 
             <ol id="saviocountdown">
                 <li><span id="span_jours">0</span> jours</li>
@@ -53,8 +49,13 @@
 
             <div class="countdown_text">
                 <?php echo $date_paragraph; ?>
+              </div>
+            </section>
+              <section id="newsletter_signup">
+                <div class="newsletter_signup">
+                  <p>Pour suivre l’actualité et les réductions Savio inscrivez-vous à notre newsletter.</p>
                 <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
-                <div class="newsletter_promise"><?php echo $date_paragraph; ?></div>
+                <div class="newsletter_promise"><?php echo $newsletter_text; ?></div>
             </div>
 
         </section>
