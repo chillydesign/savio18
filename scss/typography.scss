@@ -1,40 +1,40 @@
 
 
 h1,h2,h3,h4,h5,h6 {
-    font-family: $heading_font_stack;
-    line-height: 110%;
-    color: $brand_color;
+  font-family: $heading_font_stack;
+  line-height: 110%;
+  color: $brand_color;
 }
 
 h1 {
-    font-size: 3em;
-    padding: 0 0 30px;
-    font-weight: bold;
+  font-size: 3em;
+  padding: 0 0 30px;
+  font-weight: bold;
 
 }
 
 h2 {
-    font-size: 3em;
-    padding: 0 0 20px;
-    font-weight: bold;
+  font-size: 3em;
+  padding: 0 0 20px;
+  font-weight: bold;
 
-        @media (min-width: $mobile_width) {
-            font-size: 3.5em;
-        }
+  @media (min-width: $mobile_width) {
+    font-size: 3.5em;
+  }
 
 
 }
 
 h3 {
-    font-size: 3em;
-    padding: 0 0 20px;
-    font-weight: bold;
+  font-size: 3em;
+  padding: 0 0 20px;
+  font-weight: bold;
 
 }
 
 h4 {
-    font-size: 2em;
-    padding: 0 0 20px;
+  font-size: 2em;
+  padding: 0 0 20px;
 }
 
 h6.h6inline{
@@ -45,55 +45,55 @@ h6.h6inline{
 }
 
 p {
-    font-size: $font_size;
-    line-height: 150%;
-    padding: 0 0 10px;
-    margin:0;
-    color: $font_color;
+  font-size: $font_size;
+  line-height: 150%;
+  padding: 0 0 10px;
+  margin:0;
+  color: $font_color;
 }
 
 li {
-    font-size: $font_size;
-    padding:0 0 5px;
-    color: $font_color;
+  font-size: $font_size;
+  padding:0 0 5px;
+  color: $font_color;
 }
 
 
 section ul {
-    li {
+  li {
 
-        background: url('../images/tick.svg') no-repeat  0 1px;
-        background-size: 20px;
-        padding: 0 0 25px 30px;
-    }
+    background: url('../images/tick.svg') no-repeat  0 1px;
+    background-size: 20px;
+    padding: 0 0 25px 30px;
+  }
 }
 
 
 
 dd, dt {
-    font-size: $font_size;
-    padding: 0 0 5px;
+  font-size: $font_size;
+  padding: 0 0 5px;
 }
 dt {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 a {
+  text-decoration: none;
+  border: 0;
+  color: $brand_color;
+  transition: all 0.3s;
+  &:link, &:active, &:visited {
     text-decoration: none;
-    border: 0;
     color: $brand_color;
-    transition: all 0.3s;
-    &:link, &:active, &:visited {
-        text-decoration: none;
-        color: $brand_color;
-    }
-    &:hover {
-        text-decoration: none;
-        color: $brand_color_hover;
-    }
-    &.button {
-        color: white;
-    }
+  }
+  &:hover {
+    text-decoration: none;
+    color: $brand_color_hover;
+  }
+  &.button {
+    color: white;
+  }
 }
 
 
@@ -102,40 +102,44 @@ em, i {font-style: italic}
 
 
 table {
-    margin:10px 0 30px;
-    width: 100%;
-    text-align: center;
+  margin:10px 0 30px;
+  width: 100%;
+  text-align: center;
+  
+  em {
+    font-size: 0.8em;
+  }
 
-    th, td {
-        padding: 8px;
-        font-size: $font_size;
+  th, td {
+    padding: 8px;
+    font-size: $font_size;
 
-        &:first-child {
-            text-align: left;
-            padding-left: 30px;
-        }
+    &:first-child {
+      text-align: left;
+      padding-left: 30px;
     }
+  }
 
-    th {
-        font-weight: bold;
-        text-align: left;
-        color: $brand_color;
+  th {
+    font-weight: bold;
+    text-align: left;
+    color: $brand_color;
 
-    }
-    tr:nth-child(2n-1) {
-        td {
-            background-color: lighten($brand_color, 52);
-        }
-    }
-
+  }
+  tr:nth-child(2n-1) {
     td {
-
+      background-color: lighten($brand_color, 52);
     }
+  }
 
-     h6 a {
-        font-size: 0.8em;
-        padding: 8px 12px;
-    }
+  td {
+
+  }
+
+  h6 a {
+    font-size: 0.8em;
+    padding: 8px 12px;
+  }
 
 }
 
@@ -143,73 +147,73 @@ table {
 form {}
 
 select {
-    &:focus {
-        box-shadow: 0 0 10px $brand_color;
-    }
+  &:focus {
+    box-shadow: 0 0 10px $brand_color;
+  }
 }
 
 input {
-    font-family: $font_stack;
-    padding: 10px;
-    font-size: $font_size;
+  font-family: $font_stack;
+  padding: 10px;
+  font-size: $font_size;
 
-    &.big_input {
-        width: 100%;
-        padding:20px;
-        font-size: #{$font_size * 1.5};
-    }
+  &.big_input {
+    width: 100%;
+    padding:20px;
+    font-size: #{$font_size * 1.5};
+  }
 }
 
 
 a.button , button, input.button, h6 a , a h6 {
-    background: $brand_color;
+  background: $brand_color;
+  color: white;
+  font-family: $font_stack;
+  padding:15px 35px;
+  display: inline-block;
+  border: 0;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: normal;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: $font_size;
+  transition: all 0.3s;
+
+  &.fancy_button {
+    background: linear-gradient(90deg, $orange 0, $pink 100%);
     color: white;
-    font-family: $font_stack;
-    padding:15px 35px;
-    display: inline-block;
-    border: 0;
-    margin: 10px 0;
-    text-align: center;
-    font-weight: normal;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: $font_size;
-        transition: all 0.3s;
 
-    &.fancy_button {
-        background: linear-gradient(90deg, $orange 0, $pink 100%);
-        color: white;
-
-        &:hover {
-            transform: scale(1.1);
-        }
+    &:hover {
+      transform: scale(1.1);
     }
+  }
 
-    &.inactive {
-        opacity: 0.1;
-        cursor: default;
+  &.inactive {
+    opacity: 0.1;
+    cursor: default;
 
-    }
+  }
 
-    &:active, &:visited, &:link {
-        color: white;
-    }
+  &:active, &:visited, &:link {
+    color: white;
+  }
 
 }
 
 hr {
-        border: 0;
-        margin: 40px auto;
-        padding: 0;
-        background: url('../images/squiggle.svg') repeat-x;
-        background-size: 40px;
-        height: 30px;
-        max-width: 60%;
+  border: 0;
+  margin: 40px auto;
+  padding: 0;
+  background: url('../images/squiggle.svg') repeat-x;
+  background-size: 40px;
+  height: 30px;
+  max-width: 60%;
 }
 
 
 cite {
 
-    color: $medium_grey;
-    font-size: #{$font_size * 0.8};
+  color: $medium_grey;
+  font-size: #{$font_size * 0.8};
 }
