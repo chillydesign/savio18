@@ -105,7 +105,9 @@ table {
   margin:10px 0 30px;
   width: 100%;
   text-align: center;
-  
+  max-width: 100%;
+  overflow-x: scroll;
+
   em {
     font-size: 0.8em;
   }
