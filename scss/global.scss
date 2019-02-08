@@ -884,9 +884,26 @@ $features_height: 450px;
 
 
 
+input[type="text"], input[type="email"], input[type="number"] {
+    font-size: 1em;
+    margin-bottom: 20px;
+    width: 420px;
+    max-width: 100%;
+}
 
+span.wpcf7-list-item.first {
+    display: inline-block;
+    margin-left: -8px;
+    margin-bottom: 20px;
+} 
 
-
+div.wpcf7-validation-errors {
+    border: solid 1px #ff8080;
+    font-size: 1.6em;
+    background: #f7bdbd;
+    padding: 15px;
+    color: #ff0000;
+}
 
 @import "colonnes";
 @import "paymentfrequency";
