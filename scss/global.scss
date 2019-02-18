@@ -883,7 +883,7 @@ $features_height: 450px;
 }
 
 
-
+.wpcf7-form {
 input[type="text"], input[type="email"], input[type="number"] {
     font-size: 1em;
     margin-bottom: 20px;
@@ -895,13 +895,13 @@ input[type="submit"] {
     font-size: 1em;
 }
 
-span.wpcf7-list-item.first {
+.wpcf7-list-item.first {
     display: inline-block;
     margin-left: -8px;
     margin-bottom: 20px;
 }
 
-div.wpcf7-validation-errors {
+.wpcf7-validation-errors {
     border: solid 1px #ff8080;
     font-size: 1.6em;
     background: #f7bdbd;
@@ -909,12 +909,14 @@ div.wpcf7-validation-errors {
     color: #ff0000;
 }
 
-div.wpcf7-mail-sent-ok {
+.wpcf7-mail-sent-ok {
   border: solid 1px green;
   font-size: 1.6em;
   background: #c2e4c2;
   padding: 15px;
   color: green;
+}
+
 }
 
 @import "colonnes";
