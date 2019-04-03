@@ -42,18 +42,18 @@
 
         <section id="countdown_section">
 
-            <ol id="saviocountdown">
+            <!-- <ol id="saviocountdown">
                 <li><span id="span_jours">0</span> jours</li>
                 <li><span id="span_heures">0</span> heures</li>
                 <li><span id="span_minutes">0</span> minutes</li>
                 <li><span id="span_secondes">0</span> secondes</li>
-            </ol>
+            </ol> -->
 
             <div class="countdown_text">
                 <?php echo $date_paragraph; ?>
               </div>
             </section>
-              <section id="newsletter_signup">
+              <!-- <section id="newsletter_signup">
                 <div class="container">
 
 
@@ -67,10 +67,10 @@
             </div>
             </div>
 
-        </section>
+        </section> -->
 
 
-        <section id="info_section">
+        <section id="info_section" style="background:white;">
             <div class="container">
                 <div class="info_flex">
                     <!-- <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" /> -->
