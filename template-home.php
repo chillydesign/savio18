@@ -70,7 +70,7 @@
         </section> -->
 
 
-        <section id="info_section" style="background:white;">
+        <section id="info_section">
             <div class="container">
                 <div class="info_flex">
                     <!-- <img src="<?php echo $tdu; ?>/images/girl-knight.png" alt="" /> -->

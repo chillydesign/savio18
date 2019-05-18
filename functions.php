@@ -418,6 +418,71 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 // Create 1 Custom Post type for a Demo, called HTML5-Blank
 function create_post_types() {
 
+
+
+  $que_news_cat = array(
+      'name'                       => 'Catégories',
+      'singular_name'              => 'Catégorie',
+      'menu_name'                  => 'Catégorie',
+      'all_items'                  => 'Toutes les Catégories',
+      'parent_item'                => 'Catégorie parente',
+      'parent_item_colon'          => 'Catégorie parente:',
+      'new_item_name'              => 'Nom de la nouvelle categorie',
+      'add_new_item'               => 'Ajouter une categorie',
+      'edit_item'                  => 'Modifier categorie',
+      'update_item'                => 'Mettre à jur la categorie',
+      'separate_items_with_commas' => 'Separer les categories avec des virgules',
+      'search_items'               => 'Chercher dans les categories',
+      'add_or_remove_items'        => 'Ajouter ou supprimer des categories',
+      'choose_from_most_used'      => 'Choisir parmi les categories les plus utilisées',
+  );
+  $args_ques_cat = array(
+      'labels'                     => $que_news_cat,
+      'hierarchical'               => true,
+      'public'                     => true,
+      'show_ui'                    => true,
+      'show_admin_column'          => true,
+      'show_in_nav_menus'          => true,
+      'show_tagcloud'              => false,
+  );
+  register_taxonomy( 'question_cat', array( 'question' ), $args_ques_cat );
+
+
+    register_post_type('question', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Question', 'webfactor'), // Rename these to suit
+            'singular_name' => __('Question', 'webfactor'),
+            'add_new' => __('Add New', 'webfactor'),
+            'add_new_item' => __('Add New Question', 'webfactor'),
+            'edit' => __('Edit', 'webfactor'),
+            'edit_item' => __('Edit Question', 'webfactor'),
+            'new_item' => __('New Question', 'webfactor'),
+            'view' => __('View Question', 'webfactor'),
+            'view_item' => __('View Question', 'webfactor'),
+            'search_items' => __('Search Question', 'webfactor'),
+            'not_found' => __('No Questions found', 'webfactor'),
+            'not_found_in_trash' => __('No Questions found in Trash', 'webfactor')
+        ),
+        'public' => true,
+        'publicly_queryable' => true, // dont allow to see on front end
+        'exclude_from_search' => false, // dont show in search
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+           'question_cat',
+        //    'category'
+        ) // Add Category and Post Tags support
+    ));
+
+
     register_post_type('testimonial', // Register Custom Post Type
         array(
         'labels' => array(

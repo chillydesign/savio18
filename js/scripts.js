@@ -186,6 +186,23 @@ import matchHeight from 'jquery-match-height';
 
 
 
+    // FAQ
+    // FAQ
+    var $single_questions = $('.single_question');
+    $('.single_question_link').on('click', function(e){
+        e.preventDefault();
+    });
+    $('.single_question_title').on('click', function(e){
+        var $this = $(this);
+        var $parent_id = $this.data('question');
+        var $parent = $($parent_id);
+        $single_questions.not($parent).removeClass('question_expanded');
+        $parent.toggleClass('question_expanded');
+    });
+    // FAQ
+    // FAQ
+
+
 
 
 
