@@ -15,9 +15,10 @@ footer {
      }
 
      a {
+         border:0;
          &:link, &:visited, &:active {
              color: white;
-             border-bottom: 1px dotted transparentize(white, 0.8);
+             border: 0;
          }
          &:hover {
              text-shadow: 0 0 5px white;
@@ -45,4 +46,5 @@ $social_icon_size: 35px;
 
 #website_author {
     opacity: 0.75;
+    font-size: 90%;
 }
