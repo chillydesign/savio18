@@ -5,7 +5,12 @@
     <footer>
 
         <div id="copyright">
-            <p class="container">&copy; <?php echo date('Y'); ?> Savio | <a href="<?php echo $hurl;?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | <a href="<?php echo $hurl;?>/contact" target="infosavio">Contact</a> | <a href="<?php echo $hurl;?>/conditions-generales/" target="infosavio">Conditions générales</a> | Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></p>
+            <p class="container">
+            &copy; <?php echo date('Y'); ?> Savio | <a href="<?php echo $hurl;?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | <a href="<?php echo $hurl;?>/contact" target="infosavio">Contact</a> | <a href="<?php echo $hurl;?>/conditions-generales/" target="infosavio">Conditions générales</a> | 
+              <a target="_blank" class="social_icon social_icon_instagram" href="https://www.instagram.com/savio.fr/"></a>
+              <a target="_blank" class="social_icon social_icon_facebook" href="https://www.facebook.com/Savio-Le-français-en-samusant-389735735185222/"></a>
+            
+            <br> Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></p>
         </div>
 
     </footer>
