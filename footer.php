@@ -10,7 +10,8 @@
               <a target="_blank" class="social_icon social_icon_instagram" href="https://www.instagram.com/savio.fr/"></a>
               <a target="_blank" class="social_icon social_icon_facebook" href="https://www.facebook.com/Savio-Le-français-en-samusant-389735735185222/"></a>
             
-            <br> Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></p>
+            <div id="website_author"> Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></div>
+            </p>
         </div>
 
     </footer>
