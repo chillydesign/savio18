@@ -9,6 +9,7 @@
     <?php $welcome_paragraph = get_field('welcome_paragraph'); ?>
     <?php $launch_date = get_field('launch_date'); ?>
     <?php $date_paragraph = get_field('date_paragraph'); ?>
+    <?php $news_slider = get_field('news_slider'); ?>
     <?php $pre_newsletter_paragraph = get_field('pre_newsletter_paragraph'); ?>
     <?php $newsletter_text = get_field('newsletter_text'); ?>
     <?php $info_paragraph = get_field('info_paragraph'); ?>
@@ -40,6 +41,28 @@
             </div>
         </section>
 
+<?php if ($news_slider): ?>
+  <section >
+    <div class="container">
+      <div class="what_is_savio_slider">
+        <?php foreach ($news_slider as $slide): ?>
+          <div class="what_is_savio_flex">
+            <div class="what_is_savio_text">
+              <?php echo $slide['content']; ?>
+            </div>
+            <div class="what_is_savio_slider_container">
+              <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div>
+            </div>
+          </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+  </section>
+<?php endif;  // if news_slider?>
+
+
+<?php if ($date_paragraph) : ?>
+
         <section id="countdown_section">
 
             <!-- <ol id="saviocountdown">
@@ -56,18 +79,19 @@
               <!-- <section id="newsletter_signup">
                 <div class="container">
 
-
                 <div class="newsletter_signup flipped">
                   <img src="https://savio.fr/wp-content/uploads/2019/01/small_picture.png" alt="">
                   <div class="newsletter_signup_text">
-                  <?php //echo $pre_newsletter_paragraph ; ?>
-                <?php //get_template_part( 'partials/mailchimp_signup_form' ); ?>
+                  <?php //echo $pre_newsletter_paragraph ;?>
+                <?php //get_template_part( 'partials/mailchimp_signup_form' );?>
                 <div class="newsletter_promise"><?php echo $newsletter_text; ?></div>
               </div>
             </div>
             </div>
 
         </section> -->
+<?php endif; // if date_paragraph?>
+
 
 
         <section id="info_section">
@@ -215,7 +239,7 @@
                                         </blockquote>
                                         <cite><?php echo $testimonial->post_title; ?></cite>
                                     </div>
-                                <?php endforeach;  // end of testimonials loop ?>
+                                <?php endforeach;  // end of testimonials loop?>
                             </div><!--  END OF testimonial_slider -->
                         </div><!--  END OF testimonials_container -->
                     </div><!--  END OF testimonials_flex -->
@@ -234,7 +258,7 @@
                         <h2><?php echo $follow_header; ?></h2>
                         <?php echo $follow_paragraph; ?>
 
-                        <?php get_template_part( 'partials/mailchimp_signup_form' ); ?>
+                        <?php get_template_part('partials/mailchimp_signup_form'); ?>
                         <?php echo $newsletter_text_footer; ?>
                     </div>
 
@@ -275,7 +299,7 @@
     <!-- article -->
     <article class="container">
 
-        <h2><?php _e( 'Sorry, nothing to display.', 'webfactor' ); ?></h2>
+        <h2><?php _e('Sorry, nothing to display.', 'webfactor'); ?></h2>
 
     </article>
     <!-- /article -->
