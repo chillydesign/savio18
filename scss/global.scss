@@ -94,7 +94,7 @@ section {
 
 #countdown_section {
 
-    text-align: center;
+  
     color: white;
     background: none;
 
@@ -233,7 +233,7 @@ $section_image_width: 300px;
 
 
     .what_is_savio_flex {
-        display: flex;
+        display: flex !important;
         flex-wrap: wrap;
         justify-content: space-between;
 
