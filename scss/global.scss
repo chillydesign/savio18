@@ -227,6 +227,11 @@ $section_image_width: 300px;
     }
 
 
+
+} // END OF info_section
+
+
+
     .what_is_savio_flex {
         display: flex;
         flex-wrap: wrap;
@@ -263,7 +268,6 @@ $section_image_width: 300px;
         }
     }
 
-} // END OF info_section
 
 
 
@@ -985,7 +989,7 @@ $features_height: 450px;
             padding: 20px;
             background: white;
 
-    
+
 
              ul:last-child, p:last-child {
                  margin-bottom:  0;

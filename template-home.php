@@ -42,7 +42,7 @@
         </section>
 
 <?php if ($news_slider): ?>
-  <section >
+  <section id="countdown_section" >
     <div class="container">
       <div class="what_is_savio_slider">
         <?php foreach ($news_slider as $slide): ?>
