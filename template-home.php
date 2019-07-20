@@ -8,7 +8,7 @@
 
     <?php $welcome_paragraph = get_field('welcome_paragraph'); ?>
     <?php $launch_date = get_field('launch_date'); ?>
-    <?php $date_paragraph = get_field('date_paragraph'); ?>
+
     <?php $news_slider = get_field('news_slider'); ?>
     <?php $pre_newsletter_paragraph = get_field('pre_newsletter_paragraph'); ?>
     <?php $newsletter_text = get_field('newsletter_text'); ?>
@@ -61,8 +61,8 @@
 <?php endif;  // if news_slider?>
 
 
-<?php if ($date_paragraph) : ?>
-
+<?php if (false) : ?>
+    <?php $date_paragraph = get_field('date_paragraph'); ?>
         <section id="countdown_section">
 
             <!-- <ol id="saviocountdown">
@@ -90,7 +90,7 @@
             </div>
 
         </section> -->
-<?php endif; // if date_paragraph?>
+<?php endif; // if date_paragraph  and if false?>
 
 
 
