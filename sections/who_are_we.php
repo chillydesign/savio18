@@ -8,7 +8,7 @@
 				<div class="photo_border flip-container" ontouchstart="this.classList.toggle('hover');">
 					<div class="flipper">
 				<div class="photo front" style="background-image:url('<?php echo get_sub_field('photo')['url']; ?>');"></div>
-				<div class="photo front" style="background-image:url('<?php echo get_sub_field('drawing')['url']; ?>');"></div>
+				<div class="photo back" style="background-image:url('<?php echo get_sub_field('drawing')['url']; ?>');"></div>
 				</div>
 			</div>
 				<div class="person_name">
