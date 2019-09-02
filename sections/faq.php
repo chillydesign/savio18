@@ -1,7 +1,7 @@
 <?php $site_url = site_url(); ?>
 <?php $question_categories = get_terms('question_cat'); ?>
 
-<section>
+<section class="section_faq">
 
     <div class="container">
 
@@ -20,7 +20,7 @@
                             'post_type' => 'question',
                             'posts_per_page' => -1 ,
                             'order' => 'DESC',
-                            'orderby' => 'date',
+                            'orderby' => 'menu_order',
                             'tax_query' => array(
                                 array(
                                     'taxonomy' => 'question_cat',
