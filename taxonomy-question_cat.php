@@ -15,7 +15,7 @@
 
     <?php get_template_part('partials/breadcrumbs'); ?>
 
-    <section >
+    <section class="section_faq">
     <div class="container">
 
 
