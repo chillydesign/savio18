@@ -2,17 +2,17 @@
 
 
 
-<section >
 
 
     <section id="welcome_section">
         <div class="container">
             <div class="welcome_text">
-                <h1><?php the_title(); ?></h1>
+                <h1><?php single_term_title(); ?></h1>
             </div>
         </div>
     </section>
 
+    <section >
 
     <div class="container">
         <?php if (have_posts()): ?>
