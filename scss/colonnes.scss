@@ -155,11 +155,26 @@ section.section.section_who_are_we.blue {
     width: 75%;
     top: 0;
 
+    .photo {
+background-size: cover;
+height: 200px;
+width: 200px;
+border-radius: 50%;
+border: solid 8px $brand_color;
+display: inline-block;
+}
+    }
+
     .person_name {
         margin: -135px 0 90px;
         h3 {
    text-align: left;
    padding: 20px 0 20px 280px;
+   hr {
+    margin: 13px 0 -8px;
+    filter: saturate(0);
+    background: url('../images/squiggle-white.svg') repeat-x;
+}
 }
     }
   }
