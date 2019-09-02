@@ -1022,19 +1022,23 @@ $features_height: 450px;
 
 
 section.section_breadcrumbs {
-    padding:0;
+    padding:10px 0;
     margin:0;
     background: white;
 }
 ul.breadcrumbs {
     background:white;
-    padding: 10px 0;
-    margin: 10px 0;
+    padding:  0;
+    margin:  0;
     li {
         display: inline-block;
+        background: none;
+        padding: 0;
+        margin: 0;
+        font-size: 1.4em;
         a {
             display: inline-block;
-            padding:5px 10px;
+            padding:5px 3px;
             color: $medium_grey;
             &:link, &:visited, &:active, &:hover {
                 color: $medium_grey;
@@ -1046,8 +1050,8 @@ ul.breadcrumbs {
             &:after {
                 content: '>';
                 display: inline-block;
-                margin: 0 5px;
-                color: $medium_grey;
+                margin: 0  0 0 9px;
+                color: lighten($medium_grey, 20);
             }
         }
         &:last-child {
