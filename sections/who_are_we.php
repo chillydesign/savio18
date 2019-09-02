@@ -7,8 +7,8 @@
 			<div class="heading">
 				<div class="photo" style="background-image:url('<?php echo get_sub_field('photo')['url']; ?>'); background-size:cover; height: 200px; width:200px; border-radius:50%; border:solid 2px blue; display:inline-block;"></div>
 				<div class="person_name">
-					<h3><?php echo get_sub_field('name'); ?></h3>
-					<h4><?php echo get_sub_field('title'); ?></h4>
+					<h3><?php echo get_sub_field('name'); ?>
+					<hr><?php echo get_sub_field('title'); ?></h3>
 				</div>
 			</div>
 			<hr>
