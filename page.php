@@ -18,6 +18,8 @@
             </div>
         </section>
 
+        <?php get_template_part('partials/breadcrumbs'); ?>
+
 
         <?php include('section-loop.php'); ?>
 
