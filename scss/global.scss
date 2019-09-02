@@ -1033,12 +1033,13 @@ ul.breadcrumbs {
     li {
         display: inline-block;
         background: none;
-        padding: 0;
+        padding:5px 3px;
         margin: 0;
         font-size: 1.4em;
+        color: $dark_grey;
         a {
             display: inline-block;
-            padding:5px 3px;
+            padding:0;
             color: $medium_grey;
             &:link, &:visited, &:active, &:hover {
                 color: $medium_grey;
