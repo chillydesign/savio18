@@ -1019,3 +1019,39 @@ $features_height: 450px;
 
     } // end .single_question
 }
+
+
+
+ul.breadcrumbs {
+    background:white;
+    padding: 10px 0;
+    margin: 10px 0;
+    li {
+        display: inline-block;
+        a {
+            display: inline-block;
+            padding:5px 10px;
+            color: $medium_grey;
+            &:link, &:visited, &:active, &:hover {
+                color: $medium_grey;
+            }
+            &:hover {
+                color: $dark_grey;
+            }
+
+            &:after {
+                content: '>';
+                display: inline-block;
+                margin: 0 5px;
+                color: $medium_grey;
+            }
+        }
+        &:last-child {
+            a {
+                &:after {
+                    content: '';
+                }
+            }
+        }
+    }
+}
