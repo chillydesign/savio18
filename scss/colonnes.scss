@@ -152,10 +152,13 @@ section.section_slider .textblock {
 
 section.section.section_who_are_we.blue {
   .person_box {
-    width: 75%;
     top: auto;
     margin-bottom: 50px;
-    &.even {margin-left:24%;}
+    @media (min-width: $mobile_width) {
+        width: 75%;
+        &.even {margin-left:24%;}
+    }
+
 
     .photo_border{
       border: solid 8px #0e82c5;
@@ -200,6 +203,9 @@ section.section.section_who_are_we.blue {
       margin-top: -26px;
 }
   }
+}
+@media (min-width: $mobile_width) {
+
 }
 
 /* entire container, keeps perspective */
