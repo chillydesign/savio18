@@ -3,9 +3,18 @@
 
 
 <section >
+
+
+    <section id="welcome_section">
+        <div class="container">
+            <div class="welcome_text">
+                <h1><?php the_title(); ?></h1>
+            </div>
+        </div>
+    </section>
+
+
     <div class="container">
-
-
         <?php if (have_posts()): ?>
 
             <div class="questions_container">
