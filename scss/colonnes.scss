@@ -153,16 +153,25 @@ section.section_slider .textblock {
 section.section.section_who_are_we.blue {
   .person_box {
     width: 75%;
-    top: 0;
+    top: auto;
+    margin-bottom: 50px;
+    &.even {margin-left:24%;}
 
-    .photo_border{  border: solid 8px $brand_color;}
+    .photo_border{
+      border: solid 8px #0e82c5;
+      height: 217px;
+      width: 216px;
+      position: relative;
+      border-radius: 50%;
+      background: $brand_color;
+    }
     .photo {
       background-size: cover;
-      height: 200px;
-      width: 200px;
-      border-radius: 50%;
-      border: solid 3px white;
-      display: inline-block;
+          height: 200px;
+          width: 200px;
+          border-radius: 50%;
+          border: solid 5px white;
+          display: inline-block;
     }
   }
 
