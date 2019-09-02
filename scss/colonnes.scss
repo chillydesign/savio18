@@ -1,8 +1,8 @@
 // STYLE FOR section colonnes
-section.section_colonnes.blue {
+section.section_colonnes.blue, section.section.section_who_are_we.blue {
   padding-bottom: 0!important;
 
-  .column {
+  .column, .person_box {
     background: white;
     border-radius: 15px;
     padding: 40px 35px;
