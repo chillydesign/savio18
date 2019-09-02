@@ -3,7 +3,7 @@
 	<div class="row">
 	<?php $i = 1; ?>
 	<?php while ( have_rows('person') ) : the_row(); ?>
-		<div class="person_box <?php if($i%2==0){echo 'even'; ?>}">
+		<div class="person_box <?php if($i%2==0){echo 'even';} ?>">
 			<div class="heading">
 				<div class="photo_border"><div class="photo" style="background-image:url('<?php echo get_sub_field('photo')['url']; ?>');"></div></div>
 				<div class="person_name">
