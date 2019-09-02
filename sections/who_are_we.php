@@ -9,7 +9,7 @@
 				<div class="person_name">
 					<h3><?php echo get_sub_field('name'); ?>
 					<hr><?php echo get_sub_field('title'); ?></h3>
-					<h6><?php echo get_sub_field('info'); ?></h6>
+					<h6><?php echo get_sub_field('infos'); ?></h6>
 				</div>
 			</div>
 			<?php echo get_sub_field('description'); ?>
