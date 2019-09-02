@@ -13,8 +13,15 @@
     </section>
 
     <section >
-
     <div class="container">
+
+    <?php if(function_exists('bcn_display')){ ?>
+    <div class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+    <?php bcn_display(); ?>
+    </div>
+    <?php } ?>
+
+
         <?php if (have_posts()): ?>
 
             <div class="questions_container">
