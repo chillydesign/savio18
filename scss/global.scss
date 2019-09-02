@@ -1021,7 +1021,11 @@ $features_height: 450px;
 }
 
 
-
+section.section_breadcrumbs {
+    padding:0;
+    margin:0;
+    background: white;
+}
 ul.breadcrumbs {
     background:white;
     padding: 10px 0;
