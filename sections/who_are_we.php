@@ -1,3 +1,6 @@
+<?php $column_count =  sizeof(  get_sub_field('person')  ); ?>
+<?php $column_class = count_to_bootstrap_class($column_count); ?>
+
 <section  class="section  section_who_are_we blue">
 <div class="container">
 	<div class="row">
