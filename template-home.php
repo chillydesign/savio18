@@ -222,7 +222,7 @@
 
 
 
-        <?php $testimonials = get_posts(array( 'post_type'  => 'testimonial', 'posts_per_page' => 5 )); ?>
+        <?php $testimonials = get_posts(array( 'post_type'  => 'testimonial', 'posts_per_page' => 15 )); ?>
 
         <?php if ($testimonials) : ?>
             <section id="testimonials">
