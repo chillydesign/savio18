@@ -134,6 +134,20 @@ import matchHeight from 'jquery-match-height';
             autoplaySpeed: 5000,
         });
 
+        var $testimonial_sliders = $(".rplg-reviews");
+        $testimonial_sliders.slick({
+            dots: true,
+            arrows: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: false,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+        });
+
         var $what_is_savio_sliders = $(".what_is_savio_slider, .interactive_slider, .slider");
         $what_is_savio_sliders.slick({
             dots: true,
