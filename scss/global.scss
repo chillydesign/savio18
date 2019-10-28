@@ -664,7 +664,7 @@ $features_height: 450px;
             margin: 0 auto 50px;
 
             @media (min-width: $mobile_width) {
-                min-width: $section_image_width;
+                // min-width: $section_image_width;
             }
         }
 
@@ -1063,11 +1063,4 @@ ul.breadcrumbs {
             }
         }
     }
-}
-
-
-.rplg-row-left {
-  img{
-    min-width: 0!important;
-  }
 }
