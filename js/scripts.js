@@ -1,5 +1,5 @@
-import slick from 'slick-carousel';
-import matchHeight from 'jquery-match-height';
+// import slick from 'slick-carousel';
+// import matchHeight from 'jquery-match-height';
 
 (function ($, root, undefined) {
 
@@ -14,7 +14,7 @@ import matchHeight from 'jquery-match-height';
         if (typeof launch_date !== 'undefined') {
             var now = new Date();
             var diff = launch_date - now;
-            if (diff > 0 ) {
+            if (diff > 0) {
 
                 var span_secondes = $('#span_secondes');
                 var span_minutes = $('#span_minutes');
@@ -22,20 +22,20 @@ import matchHeight from 'jquery-match-height';
                 var span_jours = $('#span_jours');
 
 
-                setInterval( function() {
+                setInterval(function () {
                     var now = new Date();
                     var diff = launch_date - now;
-                    if (diff > 0 ) {
+                    if (diff > 0) {
                         var seconds = diff / 1000;
                         var minutes = seconds / 60;
                         var hours = minutes / 60;
-                        span_secondes.html( Math.floor(seconds) % 60 );
-                        span_minutes.html( Math.floor(minutes) % 60 );
-                        span_heures.html( Math.floor(hours) % 24 );
-                        span_jours.html( Math.floor(hours / 24) );
+                        span_secondes.html(Math.floor(seconds) % 60);
+                        span_minutes.html(Math.floor(minutes) % 60);
+                        span_heures.html(Math.floor(hours) % 24);
+                        span_jours.html(Math.floor(hours / 24));
                     };
 
-                }, 1000 );
+                }, 1000);
 
             };
         } // if we have launch date
@@ -46,10 +46,10 @@ import matchHeight from 'jquery-match-height';
         ///////  MOBILE MENU NAVIGATION  ///////
         var menu_button = $('#menu_button');
         var menu_navigation = $('#menu_navigation');
-        menu_button.on('click', function(){
+        menu_button.on('click', function () {
             menu_navigation.toggleClass('show_menu');
         });
-        $(window).on('keyup', function(e){
+        $(window).on('keyup', function (e) {
             if (e.keyCode === 27) {
                 hideMenu();
             }
@@ -72,10 +72,10 @@ import matchHeight from 'jquery-match-height';
         var $payment_freq = 'month';
         var $boolOuter = $('.boolean_outer');
         var $pay_monthly = $('.pay_monthly');
-        var $pay_annually =  $('.pay_annually');
+        var $pay_annually = $('.pay_annually');
         var $pay_links = $('.pay_link');
 
-        $pay_links.on('click', function(e){
+        $pay_links.on('click', function (e) {
             e.preventDefault();
             var $this = $(this);
             if ($this.data('freq') == 'year') {
@@ -90,8 +90,8 @@ import matchHeight from 'jquery-match-height';
 
 
         updatePayFreq($payment_freq);
-        $boolOuter.on('click', function(){
-            if ($payment_freq  == 'month') {
+        $boolOuter.on('click', function () {
+            if ($payment_freq == 'month') {
                 $payment_freq = 'year';
             } else {
                 $payment_freq = 'month';
@@ -101,7 +101,7 @@ import matchHeight from 'jquery-match-height';
 
         })
 
-        function updatePayFreq( freq ) {
+        function updatePayFreq(freq) {
 
             if (freq == 'month') {
                 $boolOuter.removeClass('active');
@@ -175,46 +175,46 @@ import matchHeight from 'jquery-match-height';
 
 
 
-    ////////////////////////////
-    // animate sliding down page
-	$('.scroll_link').on('click', function(e){
-		e.preventDefault();
+        ////////////////////////////
+        // animate sliding down page
+        $('.scroll_link').on('click', function (e) {
+            e.preventDefault();
 
-		var $this = $(this);
-		var $href = $this.attr('href');
-		var $hash = $href.split('#')[1];
+            var $this = $(this);
+            var $href = $this.attr('href');
+            var $hash = $href.split('#')[1];
 
-		if (typeof $hash !== 'undefined') {
-			var $location = $('#' + $hash);
-			if($location.length  > 0) {
-				$("html, body").animate({ scrollTop: $location.offset().top }, 1000);
-			} else {
-				window.location.href = $href;
-			}
-		} else {
-			window.location.href = $href;
-		}
-	});
-    ////////////////////////////
-    // animate sliding down page
+            if (typeof $hash !== 'undefined') {
+                var $location = $('#' + $hash);
+                if ($location.length > 0) {
+                    $("html, body").animate({ scrollTop: $location.offset().top }, 1000);
+                } else {
+                    window.location.href = $href;
+                }
+            } else {
+                window.location.href = $href;
+            }
+        });
+        ////////////////////////////
+        // animate sliding down page
 
 
 
-    // FAQ
-    // FAQ
-    var $single_questions = $('.single_question');
-    $('.single_question_link').on('click', function(e){
-        e.preventDefault();
-    });
-    $('.single_question_title').on('click', function(e){
-        var $this = $(this);
-        var $parent_id = $this.data('question');
-        var $parent = $($parent_id);
-        $single_questions.not($parent).removeClass('question_expanded');
-        $parent.toggleClass('question_expanded');
-    });
-    // FAQ
-    // FAQ
+        // FAQ
+        // FAQ
+        var $single_questions = $('.single_question');
+        $('.single_question_link').on('click', function (e) {
+            e.preventDefault();
+        });
+        $('.single_question_title').on('click', function (e) {
+            var $this = $(this);
+            var $parent_id = $this.data('question');
+            var $parent = $($parent_id);
+            $single_questions.not($parent).removeClass('question_expanded');
+            $parent.toggleClass('question_expanded');
+        });
+        // FAQ
+        // FAQ
 
 
 
