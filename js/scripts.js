@@ -134,8 +134,8 @@ import matchHeight from 'jquery-match-height';
             autoplaySpeed: 5000,
         });
 
-        var $testimonial_sliders = $(".rplg-reviews");
-        $testimonial_sliders.slick({
+        var $reviews_sliders = $(".rplg-reviews");
+        $reviews_sliders.slick({
             dots: true,
             arrows: false,
             infinite: false,
