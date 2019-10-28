@@ -1,5 +1,6 @@
 <section  class="section  section_who_are_we blue">
 <div class="container">
+			<h2 style="font-weight: bold;color: white;text-align: center;border: solid 4px;padding: 11px 50px 10px;max-width: 300px;margin: 0 auto 50px;font-size: 2.5em;">La fondatrice</h2>
 	<div class="row">
 	<?php $i = 1; ?>
 	<?php while ( have_rows('person') ) : the_row(); ?>

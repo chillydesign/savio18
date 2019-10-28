@@ -4,7 +4,7 @@ section.section_colonnes.blue, section.section.section_who_are_we.blue {
 
   .column, .person_box {
     background: white;
-    border-radius: 15px;
+    border-radius: 15px; 
     padding: 40px 35px;
     color: $brand_color;
     position: relative;
@@ -225,6 +225,8 @@ section.section.section_who_are_we.blue {
 }
   }
 }
+
+
 @media (min-width: $mobile_width) {
 
 }
@@ -271,6 +273,34 @@ section.section.section_who_are_we.blue {
 .back {
 	transform: rotateY(180deg);
 }
+// section.section.section_who_are_we.blue.section_founder {
+//   .person_box{
+//     width: 100%!important;
+//     @media (min-width: 768px){
+//       width: 100%!important;
+//     }
+//     .photo_border{
+//       height: 150px;
+// width: 150px;
+// .photo{
+//   height: 136px;
+// width: 135px;
+// }
+//     }
+//     .heading{
+//       .person_name{
+//             margin: -132px 0 25px;
+//             h3{
+//               padding: 15px 0 15px 200px;
+//             }
+//             h6{
+//               padding: 20px 0 0;
+//             }
+//       }
+//     }
+//   }
+// }
+
 
 section.section_faq {
   padding-top: 40px;

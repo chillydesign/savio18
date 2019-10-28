@@ -231,7 +231,8 @@
                         <img src="<?php echo $tdu; ?>/images/quote.png" alt="" />
                         <div class="testimonials_container">
                             <h2>Ce qu’ils en disent</h2>
-                            <div class="testimonial_slider">
+                            <?php echo do_shortcode( '[brb_collection id="773"]' ); ?>
+                            <!-- <div class="testimonial_slider">
                                 <?php foreach ($testimonials as $testimonial) : ?>
                                     <div class="testimonial">
                                         <blockquote>
@@ -240,7 +241,7 @@
                                         <cite><?php echo $testimonial->post_title; ?></cite>
                                     </div>
                                 <?php endforeach;  // end of testimonials loop?>
-                            </div><!--  END OF testimonial_slider -->
+                            </div> -->
                         </div><!--  END OF testimonials_container -->
                     </div><!--  END OF testimonials_flex -->
                 </div>
