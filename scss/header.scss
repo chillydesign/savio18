@@ -128,12 +128,10 @@ header {
                     }
                 }
 
-                ul {
+                ul.sub-menu {
                   display: none;
                   background: $brand_color;
                   li {
-                    display: block;
-
                     &:hover {
                       background: $brand_color_hover;
                     }
