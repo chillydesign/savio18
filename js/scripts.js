@@ -246,17 +246,25 @@
 
         // FAQ
         // FAQ
-        var $single_questions = $('.single_question');
+
         $('.single_question_link').on('click', function (e) {
             e.preventDefault();
         });
         $('.single_question_title').on('click', function (e) {
             var $this = $(this);
             var $parent_id = $this.data('question');
-            var $parent = $($parent_id);
-            $single_questions.not($parent).removeClass('question_expanded');
-            $parent.toggleClass('question_expanded');
+            openQuestion($parent_id);
         });
+        var $hash = window.location.hash;
+        if ($hash != '') {
+            openQuestion($hash);
+        }
+        function openQuestion(hash) {
+            var $questiontopopen = $(hash);
+            var $single_questions = $('.single_question');
+            $single_questions.not($questiontopopen).removeClass('question_expanded');
+            $questiontopopen.toggleClass('question_expanded');
+        }
         // FAQ
         // FAQ
 

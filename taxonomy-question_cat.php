@@ -23,9 +23,10 @@
 
             <div class="questions_container">
                 <?php while (have_posts()) : the_post(); ?>
-                    <?php $question_id = get_the_ID(); ?>
-                    <div class="single_question" id="question_<?php echo $question_id; ?>">
-                        <h2 class="single_question_title" data-question="#question_<?php echo $question_id; ?>">
+                    <?php $question_id = 'question_' . get_the_ID(); ?>
+                    <?php  global $post;  $question_slug =  $post->post_name; ?>
+                    <div class="single_question" id="<?php echo $question_slug; ?>">
+                        <h2 class="single_question_title" data-question="#<?php echo $question_id; ?>">
                             <a class="single_question_link" href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?>
                             </a>
