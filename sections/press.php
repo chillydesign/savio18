@@ -21,14 +21,15 @@
             <div class="gallery_container">
             <?php foreach ($gallery as $image) : ?>
                 <a href="<?php echo $image['sizes']['large']; ?>"><img class="pres_img" src="<?php echo $image['sizes']['medium']; ?>" alt="" /></a>
+                <?php if ($link): ?>
+                <div class="link_container">
+                <?php echo $link; ?>
+                </div>
+                <?php endif; ?>
             <?php endforeach; ?>
             </div>
 
-            <?php if ($link): ?>
-            <div class="link_container">
-            <?php echo $link; ?>
-            </div>
-            <?php endif; ?>
+
         </div>   <!--  end of press item -->
 
 
