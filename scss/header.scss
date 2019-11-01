@@ -128,6 +128,19 @@ header {
 
                     }
                 }
+
+                ul.sub-menu {
+                  display: none;
+                  background: $brand_color;
+                  li {
+                    &:hover {
+                      background: $brand_color_hover;
+                    }
+                  }
+                }
+                &:hover{
+                  display: block;
+                }
             }
         }
     }
