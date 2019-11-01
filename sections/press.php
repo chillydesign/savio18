@@ -19,16 +19,17 @@
 
 
             <div class="gallery_container">
+              <a href="<?php echo $cover_image['sizes']['large']; ?>"><img class="pres_img" src="<?php echo $cover_image['sizes']['medium']; ?>" alt="Cover Image" /></a>
             <?php foreach ($gallery as $image) : ?>
                 <a href="<?php echo $image['sizes']['large']; ?>"><img class="pres_img" src="<?php echo $image['sizes']['medium']; ?>" alt="" /></a>
-                <?php if ($link): ?>
-                <div class="link_container">
-                <?php echo $link; ?>
-                </div>
-                <?php endif; ?>
+
             <?php endforeach; ?>
             </div>
-
+            <?php if ($link AND false): ?>
+            <div class="link_container">
+            <?php echo $link; ?>
+            </div>
+            <?php endif; ?>
 
         </div>   <!--  end of press item -->
 
