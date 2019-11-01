@@ -17,9 +17,11 @@
     </footer>
 
 <div id="freetest_popup" >
+  <div class="freetestpopupinner">
 	<a href="https://app.savio.fr/gratuit" target="_blank" >
 		<img alt="Accéder au test gratuit" src="<?php echo $tdu; ?>/images/Savio-popup.jpg" />
-	</a>
+  </a>
+  </div>
 </div>
 
 
