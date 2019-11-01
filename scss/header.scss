@@ -91,6 +91,7 @@ header {
                 margin: 0;
                 padding: 0;
                 cursor: pointer;
+                cursor: pointer;
 
                 @media (min-width: $mobile_width) {
                     display: inline-block;
@@ -126,6 +127,16 @@ header {
                         color: white !important;
 
                     }
+                }
+
+                ul.sub-menu {
+                  display: none;
+                  background: $brand_color;
+                  li {
+                    &:hover {
+                      background: $brand_color_hover;
+                    }
+                  }
                 }
             }
         }
