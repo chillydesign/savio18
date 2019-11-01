@@ -20,7 +20,7 @@
 			<?php echo get_sub_field('description'); ?>
 		</div>
 	<?php if($i==1){ ?>
-		<h2 style="font-weight: bold;color: white;text-align: center;border: solid 4px;padding: 11px 50px 10px;max-width: 300px;margin: 0 auto 50px;font-size: 2.5em;">Avec la (précieuse) collaboration de</h2>
+		<h2 style="font-weight: bold; color: white; text-align: center; border: solid 4px; padding: 11px 50px 10px; width: 520px; max-width: calc(100% - 30px); margin: 0 auto 50px; font-size: 2.5em;">Avec la (précieuse) collaboration de</h2>
 	<?php } ?>
 	<?php $i++; ?>
 	<?php endwhile; ?>
