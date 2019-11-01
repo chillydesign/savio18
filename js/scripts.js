@@ -77,12 +77,11 @@
 
         var freetest_popup = $('#freetest_popup');
         freetest_popup.on('click', function (e) {
-            console.log(e.target);
             hideFreeTestPopup();
             // clicking on the background
-            if (e.target.nodeName == 'DIV') {
-                console.log('clicking on background');
-            }
+            // if (e.target.nodeName == 'DIV') {
+            //     console.log('clicking on background');
+            // }
         });
 
         $('.freetest_opener').on('click', function (e) {
