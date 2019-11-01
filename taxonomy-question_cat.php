@@ -26,7 +26,7 @@
                     <?php $question_id = 'question_' . get_the_ID(); ?>
                     <?php  global $post;  $question_slug =  $post->post_name; ?>
                     <div class="single_question" id="<?php echo $question_slug; ?>">
-                        <h2 class="single_question_title" data-question="#<?php echo $question_id; ?>">
+                        <h2 class="single_question_title" data-question="#<?php echo $question_slug; ?>">
                             <a class="single_question_link" href="<?php the_permalink(); ?>">
                                 <?php the_title(); ?>
                             </a>
