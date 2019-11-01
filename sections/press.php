@@ -25,7 +25,7 @@
 
             <?php endforeach; ?>
             </div>
-            <?php if ($link AND false): ?>
+            <?php if ($link): ?>
             <div class="link_container">
             <?php echo $link; ?>
             </div>
