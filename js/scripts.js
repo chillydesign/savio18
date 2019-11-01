@@ -121,9 +121,11 @@
 
         $('.cover_image').on('click', function (e) {
             var $this = $(this);
-            var $gallery = $this.parent().find('.gallery_container');
-            $gallery.featherlightGallery({
-                filter: 'a'
+
+            var $gallery_images = $this.parent().find('.gallery_container a');
+            console.log($this, $gallery_images);
+            $gallery_images.featherlightGallery({
+                galleryFadeIn: 100
             });
         });
         // PRESS GALLERY
