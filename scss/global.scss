@@ -1162,11 +1162,14 @@ section.section_press {}
 .press_items {
     display: flex;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 
 }
 
 .press_item {
     flex: 1 auto;
+    flex-grow: unset;
     margin: 20px;
 
     .gallery_container {
@@ -1174,8 +1177,9 @@ section.section_press {}
     }
 
     .cover_image {
-        width: 300px;
-        height: auto;
+        height: 300px;
+        width: auto;
+        cursor: pointer;
     }
 
     .link_container {

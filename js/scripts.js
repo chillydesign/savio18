@@ -121,16 +121,13 @@
 
         $('.cover_image').on('click', function (e) {
             var $this = $(this);
-
             var $gallery_images = $this.parent().find('.gallery_container a');
-            console.log($this, $gallery_images);
-            $gallery_images.featherlightGallery({
-                galleryFadeIn: 100
-            });
-
-            $gallery_images[0].click();
-
-
+            if ($gallery_images) {
+                $gallery_images.featherlightGallery({
+                    galleryFadeIn: 100
+                });
+                $gallery_images[0].click();  // open the gallery by clicking on the first one
+            }
         });
         // PRESS GALLERY
         // PRESS GALLERY
