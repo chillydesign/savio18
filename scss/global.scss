@@ -1151,3 +1151,37 @@ ul.breadcrumbs {
         }
     }
 }
+
+
+
+// PRESS GALLERY
+// PRESS GALLERY
+
+section.section_press {}
+
+.press_items {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.press_item {
+    flex: 1 auto;
+    margin: 20px;
+
+    .gallery_container {
+        display: none;
+    }
+
+    .cover_image {
+        width: 300px;
+        height: auto;
+    }
+
+    .link_container {
+        text-align: center;
+    }
+}
+
+// PRESS GALLERY
+// PRESS GALLERY
