@@ -127,6 +127,21 @@ header {
 
                     }
                 }
+
+                ul {
+                  display: none;
+                  background: $brand_color;
+                  li {
+                    display: block;
+
+                    &:hover {
+                      background: $brand_color_hover;
+                    }
+                  }
+                }
+                &:hover{
+                  display: block;
+                }
             }
         }
     }
