@@ -124,11 +124,12 @@
 
             var $gallery_images = $this.parent().find('.gallery_container a');
             console.log($this, $gallery_images);
-            var $gal = $gallery_images.featherlightGallery({
+            $gallery_images.featherlightGallery({
                 galleryFadeIn: 100
             });
-            console.log($gal);
-            $gal.open();
+
+            $gallery_images[0].click();
+
 
         });
         // PRESS GALLERY
