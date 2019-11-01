@@ -1189,3 +1189,39 @@ section.section_press {}
 
 // PRESS GALLERY
 // PRESS GALLERY
+
+
+
+
+// FREE TEST POP UP
+// FREE TEST POP UP
+#freetest_popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+
+    &.visibile_freetest {
+        display: table;
+    }
+
+    a {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    img {
+        max-height: 70vh;
+        max-width: 70vw;
+        width: auto;
+        height: auto;
+        margin: auto !important;
+    }
+}
+
+// FREE TEST POP UP
+// FREE TEST POP UP

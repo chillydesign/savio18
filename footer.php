@@ -16,9 +16,9 @@
 
     </footer>
 
-<div class="freetest_popup" style="display:none;position: fixed; top: 0; bottom: 0; background: rgba(0,0,0,0.6); width: 100%; height: 100vh;">
-	<a href="https://app.savio.fr/gratuit" target="_blank" style="display: table-cell; text-align: center; vertical-align: middle;">
-		<img alt="Accéder au test gratuit" src="<?php echo $tdu; ?>/images/Savio-popup.jpg" style="max-height: 70vh; max-width: 70vw; width: auto; height: auto; margin: auto!important;"/>
+<div id="freetest_popup" >
+	<a href="https://app.savio.fr/gratuit" target="_blank" >
+		<img alt="Accéder au test gratuit" src="<?php echo $tdu; ?>/images/Savio-popup.jpg" />
 	</a>
 </div>
 

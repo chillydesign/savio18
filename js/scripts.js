@@ -50,8 +50,9 @@
             menu_navigation.toggleClass('show_menu');
         });
         $(window).on('keyup', function (e) {
-            if (e.keyCode === 27) {
+            if (e.keyCode === 27) { // escape
                 hideMenu();
+                hideFreeTestPopup();
             }
         });
 
@@ -59,6 +60,17 @@
             var menu_navigation = $('#menu_navigation');
             menu_navigation.removeClass('show_menu');
         }
+
+        function hideFreeTestPopup() {
+            var freetest_popup = $('#freetest_popup');
+            freetest_popup.removeClass('visibile_freetest');
+        }
+
+
+        var freetest_popup = $('#freetest_popup');
+        freetest_popup.on('click', function (e) {
+            console.log(e);
+        });
 
 
 
