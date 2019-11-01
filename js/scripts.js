@@ -112,10 +112,22 @@
                 $pay_monthly.removeClass('active');
                 $pay_annually.addClass('active');
             }
-            console.log(freq);
         }
 
 
+
+        // PRESS GALLERY
+        // PRESS GALLERY
+
+        $('.cover_image').on('click', function (e) {
+            var $this = $(this);
+            var $gallery = $this.parent().find('.gallery_container');
+            $gallery.featherlightGallery({
+                filter: 'a'
+            });
+        });
+        // PRESS GALLERY
+        // PRESS GALLERY
 
 
         //////////

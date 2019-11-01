@@ -10,7 +10,7 @@
     <div class="press_items">
     <?php while ( have_rows('press_item') ) : the_row(); ?>
 
-        <div class="press_item"  data-featherlight-gallery   data-featherlight-filter="img.pres_img">
+        <div class="press_item">
             <?php $cover_image =  get_sub_field('cover_image'); ?>
             <?php $gallery =  get_sub_field('gallery'); ?>
             <?php $link =  get_sub_field('link'); ?>
@@ -20,7 +20,7 @@
 
             <div class="gallery_container">
             <?php foreach ($gallery as $image) : ?>
-                <img class="pres_img" src="<?php echo $image['sizes']['medium']; ?>" alt="" />
+                <a href="<?php echo $image['sizes']['large']; ?>"><img class="pres_img" src="<?php echo $image['sizes']['medium']; ?>" alt="" /></a>
             <?php endforeach; ?>
             </div>
 
