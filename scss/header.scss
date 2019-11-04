@@ -132,7 +132,7 @@ header {
         }
 
         ul.sub-menu {
-          background: $brand_color;
+          background: $light_grey;
 
           @media (min-width: $mobile_width) {
             display: none;
@@ -157,7 +157,7 @@ header {
               }
             }
             &:hover {
-              background: $brand_color_hover;
+              background: $dark_grey;
             }
           }
         }
