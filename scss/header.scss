@@ -46,7 +46,7 @@ header {
       position: absolute;
       top:35px;
       right: 20px;
-      z-index: 100;
+      z-index: 9999;
 
       @media (min-width: $mobile_width) {
         display: none;
@@ -59,7 +59,7 @@ header {
       flex:1 auto 0;
       transition: all 0.3s;
       margin: 0;
-      padding: 80px 0 0 ;
+      padding: 90px 0 0 ;
       position: fixed;
       z-index: 1000;
       top:0;
@@ -69,6 +69,7 @@ header {
       width:250px;
       text-align: right;
       transform: translateX(250px);
+      overflow-y: scroll;
 
       @media (min-width: $mobile_width) {
 
@@ -141,14 +142,17 @@ header {
           li {
             border-bottom: solid 1px white;
             position: relative;
-            right: 10px;
-            @media (min-width: $mobile_width) {
-              right: 0;
-            }
+
             a{
               color: white!important;
               font-size: 0.5em;
               width: 300px;
+              right: 53px;
+              padding-left: 65px;
+              @media (min-width: $mobile_width) {
+                right: 0;
+                padding: inherit;
+              }
             }
             &:hover {
               background: $brand_color_hover;
