@@ -132,7 +132,7 @@ header {
         }
 
         ul.sub-menu {
-          background: $brand_color;
+          background: $light_grey;
 
           @media (min-width: $mobile_width) {
             display: none;
@@ -153,18 +153,28 @@ header {
               padding-left: 65px;
               @media (min-width: $mobile_width) {
                 right: 20px;
-                padding: inherit;
+                padding: 15px 10px 8px;
               }
             }
             &:hover {
-              background: $brand_color_hover;
+              background: $dark_grey;
+            }
+            &:last-child{
+              @media (min-width: $mobile_width) {
+                border-radius: 0 0 10px 010px;
+              }
+              a{
+                @media (min-width: $mobile_width) {
+                  border-radius: 0 0 10px 010px;
+                }
+              }
             }
           }
-        }
 
-        &:hover {
-          ul.sub-menu {
-            display: inline-block;
+          &:hover {
+            ul.sub-menu {
+              display: inline-block;
+            }
           }
         }
       }
