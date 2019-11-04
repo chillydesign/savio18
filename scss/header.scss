@@ -152,32 +152,32 @@ header {
               right: 53px;
               padding-left: 65px;
               @media (min-width: $mobile_width) {
-                right: 20px;
-                padding: 15px 10px 8px;
+                right: 0;
+                padding: 10px;
               }
             }
             &:hover {
-              background: $dark_grey;
+              background: $brand_color_hover;
             }
             &:last-child{
               @media (min-width: $mobile_width) {
                 border-radius: 0 0 10px 010px;
-              }
-              a{
-                @media (min-width: $mobile_width) {
-                  border-radius: 0 0 10px 010px;
-                }
+            }
+            a{
+              @media (min-width: $mobile_width) {
+                border-radius: 0 0 10px 010px;
               }
             }
           }
+        }
 
-          &:hover {
-            ul.sub-menu {
-              display: inline-block;
-            }
+        &:hover {
+          ul.sub-menu {
+            display: inline-block;
           }
         }
       }
     }
   }
+}
 }
