@@ -132,7 +132,7 @@ header {
         }
 
         ul.sub-menu {
-          background: $light_grey;
+          background: $brand_color;
 
           @media (min-width: $mobile_width) {
             display: none;
@@ -153,20 +153,11 @@ header {
               padding-left: 65px;
               @media (min-width: $mobile_width) {
                 right: 0;
-                padding: 10px;
+                padding: inherit;
               }
             }
             &:hover {
               background: $brand_color_hover;
-            }
-            &:last-child{
-              @media (min-width: $mobile_width) {
-                border-radius: 0 0 10px 010px;
-            }
-            a{
-              @media (min-width: $mobile_width) {
-                border-radius: 0 0 10px 010px;
-              }
             }
           }
         }
@@ -179,5 +170,4 @@ header {
       }
     }
   }
-}
 }
