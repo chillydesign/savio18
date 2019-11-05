@@ -147,6 +147,7 @@ header {
             right: 0;
             padding: 0;
             background: $medium_grey;
+            border-radius: 0 0px 5px 5px;
           }
 
           li {
@@ -155,7 +156,11 @@ header {
             font-size: 0.8em;
 
             @media (min-width: $mobile_width) {
-              border-bottom: solid 1px white;
+              border-bottom: solid 1px lighten($medium_grey, 5);
+
+              &:last-child {
+                border-radius: 0 0px 5px 5px;
+              }
             }
 
             a {
