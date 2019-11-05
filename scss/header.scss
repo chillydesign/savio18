@@ -1,7 +1,6 @@
-
 header {
   background: white;
-  margin: 0 0 ;
+  margin: 0 0;
   border-bottom: 5px solid $brand_color;
 
 
@@ -14,9 +13,9 @@ header {
     $savio_boy_width: 100px;
 
     a.branding {
-      flex:1 auto 0;
+      flex: 1 auto 0;
       font-size: 3em;
-      padding: 20px 10px 10px #{15px + $savio_boy_width} ;
+      padding: 20px 10px 10px #{15px + $savio_boy_width};
       display: block;
       font-weight: normal;
       position: relative;
@@ -30,7 +29,7 @@ header {
         height: $savio_boy_width;
         border-radius: 50%;
         position: absolute;
-        top:0;
+        top: 0;
         left: 0;
       }
     }
@@ -44,7 +43,7 @@ header {
       height: 30px;
       width: 30px;
       position: absolute;
-      top:35px;
+      top: 35px;
       right: 20px;
       z-index: 9999;
 
@@ -53,33 +52,34 @@ header {
       }
     }
 
+    $menu_width: 295px;
 
     ul#menu_navigation {
       display: block;
-      flex:1 auto 0;
+      flex: 1 auto 0;
       transition: all 0.3s;
       margin: 0;
-      padding: 90px 0 0 ;
+      padding: 90px 0 0;
       position: fixed;
       z-index: 1000;
-      top:0;
+      top: 0;
       height: 100%;
-      right:0;
+      right: 0;
       background: transparentize($brand_color, 0.2);
-      width:250px;
+      width: $menu_width;
       text-align: right;
-      transform: translateX(250px);
+      transform: translateX($menu_width);
       overflow-y: scroll;
 
       @media (min-width: $mobile_width) {
 
         position: relative;
         height: auto;
-        background:none;
+        background: none;
         width: 100%;
         padding: 0;
         transform: none;
-        top:6px;
+        top: 6px;
         overflow: visible;
       }
 
@@ -103,8 +103,12 @@ header {
         a {
           display: block;
           padding: 10px 10px;
-          border-radius: 5px  5px 0 0;
-          &:link, &:active, &:hover, &:visited {
+          border-radius: 5px 5px 0 0;
+
+          &:link,
+          &:active,
+          &:hover,
+          &:visited {
             color: white;
             border: 0;
 
@@ -112,6 +116,7 @@ header {
               color: $brand_color;
             }
           }
+
           &:hover {
             background: transparentize(darken($brand_color, 20), 0.6);
           }
@@ -140,23 +145,30 @@ header {
             top: 40px;
             right: 0;
           }
+
           li {
             border-bottom: solid 1px white;
             position: relative;
+            font-size: 0.8em;
 
-            a{
-              color: white!important;
-              font-size: 0.5em;
-              width: 300px;
+            a {
+              color: white !important;
+              display: block;
               position: relative;
               right: 53px;
               padding-left: 65px;
+
               @media (min-width: $mobile_width) {
                 right: 0;
-                padding: inherit;
+                padding: 10px;
+                border-radius: 0;
+                position: static;
+
+                width: 300px;
               }
             }
-            &:hover {
+
+            &:hover {
               background: $dark_grey;
             }
           }
@@ -164,7 +176,11 @@ header {
 
         &:hover {
           ul.sub-menu {
-            display: inline-block;
+            display: block;
+
+            @media (min-width: $mobile_width) {
+              display: inline-block;
+            }
           }
         }
       }
