@@ -137,13 +137,14 @@ header {
         }
 
         ul.sub-menu {
-          background: $light_grey;
+
 
           @media (min-width: $mobile_width) {
             display: none;
             position: absolute;
             top: 40px;
             right: 0;
+            background: $medium_grey;
           }
 
           li {
@@ -154,9 +155,7 @@ header {
             a {
               color: white !important;
               display: block;
-              position: relative;
-              right: 53px;
-              padding-left: 65px;
+
 
               @media (min-width: $mobile_width) {
                 right: 0;
