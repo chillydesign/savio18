@@ -104,7 +104,7 @@ bottom: -90px;
 right: 15px;
 img{
       transform: rotate(15deg);
-      animation: pulse 3s infinite;
+      animation: pulse 3s ease-in-out;
 }
     }
 }
