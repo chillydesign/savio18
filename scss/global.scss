@@ -94,6 +94,17 @@ section {
             padding: 15px 0 10px;
         }
     }
+
+
+    .testlink {
+      position: absolute;
+width: 200px;
+bottom: -90px;
+right: 15px;
+img{
+      transform: rotate(15deg);
+}
+    }
 }
 
 // END OF WELCOME SCETION
