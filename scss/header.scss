@@ -2,6 +2,8 @@ header {
   background: white;
   margin: 0 0;
   border-bottom: 5px solid $brand_color;
+  position: relative;
+  z-index: 9;
 
 
   nav {
