@@ -145,6 +145,7 @@ header {
           @media (min-width: $mobile_width) {
             display: none;
             position: absolute;
+            z-index: 9;
             top: 40px;
             right: 0;
             padding: 0;

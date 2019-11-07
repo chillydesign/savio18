@@ -701,6 +701,10 @@ $features_height: 450px;
     background: white;
     color: $brand_color;
 
+    .rplg .rplg-review-text {
+    font-size:16px!important;
+}
+
     .testimonials_flex {
         display: flex;
         flex-wrap: wrap;
