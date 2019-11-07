@@ -99,13 +99,26 @@ section {
 
     .testlink {
       position: absolute;
-width: 200px;
+width: 260px;
 bottom: -90px;
 right: 15px;
 img{
       transform: rotate(15deg);
+      animation: pulse 5s infinite;
 }
     }
+}
+
+@keyframes pulse {
+  0%{
+    transform: scale(0.9);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(0.9);
+  }
 }
 
 // END OF WELCOME SCETION
