@@ -103,7 +103,6 @@ width: 260px;
 bottom: -90px;
 right: 15px;
 img{
-      transform: rotate(15deg);
       animation: pulse 3s ease-in-out;
 }
     }
@@ -111,13 +110,13 @@ img{
 
 @keyframes pulse {
   0%{
-    transform: scale(0.97);
+    transform: rotate(15deg) scale(0.97);
   }
   50%{
-    transform: scale(1.03);
+    transform: rotate(15deg) scale(1.03);
   }
   100%{
-    transform: scale(0.9);
+    transform: rotate(15deg) scale(0.9);
   }
 }
 
