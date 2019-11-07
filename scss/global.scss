@@ -99,9 +99,10 @@ section {
 
     .testlink {
       position: absolute;
-width: 260px;
-bottom: -90px;
-right: 15px;
+      width: 280px;
+      bottom: -110px;
+      right: 95px;
+      transform:rotate(15deg);
 img{
       animation: pulse 3s ease-in-out;
 }
