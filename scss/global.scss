@@ -101,23 +101,23 @@ section {
       position: absolute;
       width: 280px;
       bottom: -110px;
-      right: 95px;
+      right: 5px;
       transform:rotate(15deg);
 img{
-      animation: pulse 3s ease-in-out;
+      animation: pulse 3s ease-in-out infinite;
 }
     }
 }
 
 @keyframes pulse {
   0%{
-    transform: rotate(15deg) scale(0.97);
+    transform: scale(1);
   }
   50%{
-    transform: rotate(15deg) scale(1.03);
+    transform: scale(1.03);
   }
   100%{
-    transform: rotate(15deg) scale(0.9);
+    transform: scale(1);
   }
 }
 
