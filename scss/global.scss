@@ -62,11 +62,16 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 90px 0;
+    padding: 60px 40px 160px;
     border-bottom: 5px solid $brand_color;
     background: url('../images/beach.jpg') no-repeat center center;
     background-size: cover;
     position: relative;
+
+    @media (min-width: $mobile_width) {
+        padding: 90px 0;
+
+    }
 
     .welcome_text {
         flex: 1 auto 0;
@@ -104,7 +109,7 @@ section {
       right: 5px;
       transform:rotate(15deg);
 img{
-      animation: pulse 3s ease-in-out infinite;
+      animation: pulse 2s ease-in-out infinite;
 }
     }
 }
