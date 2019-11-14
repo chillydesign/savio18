@@ -77,7 +77,8 @@
 
         var freetest_popup = $('#freetest_popup');
         freetest_popup.on('click', function (e) {
-            hideFreeTestPopup();
+          e.preventDefault();
+            openFreeTestPopup();
             // clicking on the background
             // if (e.target.nodeName == 'DIV') {
             //     console.log('clicking on background');
