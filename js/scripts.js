@@ -67,18 +67,17 @@
 
         function hideFreeTestPopup() {
             var freetest_popup = $('#freetest_popup');
-            freetest_popup.hide();
+            freetest_popup.removeClass('visibile_freetest');
         }
         function openFreeTestPopup() {
             var freetest_popup = $('#freetest_popup');
-            freetest_popup.css({'display' : 'table'});
+            freetest_popup.addClass('visibile_freetest');
         }
 
 
         var freetest_popup = $('#freetest_popup');
         freetest_popup.on('click', function (e) {
-          e.preventDefault();
-            openFreeTestPopup();
+            hideFreeTestPopup();
             // clicking on the background
             // if (e.target.nodeName == 'DIV') {
             //     console.log('clicking on background');
