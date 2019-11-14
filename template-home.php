@@ -34,7 +34,7 @@
     <article id="post-<?php the_ID(); ?>" >
 
         <section id="welcome_section">
-            <div class="container">
+            <div class="container" style="position:relative;">
                 <div class="welcome_text">
                     <?php echo $welcome_paragraph; ?>
                 </div>
