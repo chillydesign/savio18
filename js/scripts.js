@@ -67,11 +67,11 @@
 
         function hideFreeTestPopup() {
             var freetest_popup = $('#freetest_popup');
-            freetest_popup.removeClass('visibile_freetest');
+            freetest_popup.hide();
         }
         function openFreeTestPopup() {
             var freetest_popup = $('#freetest_popup');
-            freetest_popup.addClass('visibile_freetest');
+            freetest_popup.css({'display' : 'table'});
         }
 
 
