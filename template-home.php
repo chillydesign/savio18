@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="testlink">
-              <a href="https://app.savio.fr/gratuit" target="_blank">
+              <a href="#freetest_popup" target="_blank">
                 <img src="<?php echo get_template_directory_uri();?>/images/Savio-test-gratuit-coupe.png" alt="Testez votre niveau gratuitement!"/>
               </a>
             </div>
