@@ -15,7 +15,7 @@
 				<?php echo get_sub_field('content'); ?>
 			</div>
 		</div>
-	<?php endwhile; ?>
+	<?php endwhile; ?>boooop
 	</div> <!-- END OF ROW -->
 	<?php if(get_field('bottom_button')) : ?>boooop
 		<div class="row">
