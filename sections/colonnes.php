@@ -17,6 +17,11 @@
 		</div>
 	<?php endwhile; ?>
 	</div> <!-- END OF ROW -->
+	<?php if(get_field('bottom_button')) : ?>
+		<div class="row">
+			<?php the_field('bottom_button'); ?>
+		</div>
+<?php endif; ?>
 </div><!--  END OF CONTAINER -->
 
 </section>
