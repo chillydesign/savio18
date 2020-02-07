@@ -12,14 +12,14 @@
 				<?php if($background=='blue'): ?>
 					<div class="feature_logo" style="background-image:url(<?php echo get_sub_field('image')['sizes']['medium']; ?>)"></div>
 				<?php endif; ?>
-				<?php echo get_sub_field('content'); ?>boooop
+				<?php echo get_sub_field('content'); ?>
 			</div>
 		</div>
-	<?php endwhile; ?>boooop
+	<?php endwhile; ?>
 	</div> <!-- END OF ROW -->
 	<?php if(get_field('bottom_button')) : ?>boooop
 		<div class="row">
-			<?php the_field('bottom_button'); ?>
+			<?php echo get_field('bottom_button'); ?>
 		</div>
 <?php endif; ?>
 </div><!--  END OF CONTAINER -->
