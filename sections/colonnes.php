@@ -12,7 +12,7 @@
 				<?php if($background=='blue'): ?>
 					<div class="feature_logo" style="background-image:url(<?php echo get_sub_field('image')['sizes']['medium']; ?>)"></div>
 				<?php endif; ?>
-				<?php echo get_sub_field('content'); ?>
+				<?php echo get_sub_field('content'); ?>boooop
 			</div>
 		</div>
 	<?php endwhile; ?>boooop
