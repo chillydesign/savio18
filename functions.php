@@ -663,7 +663,7 @@ function count_to_bootstrap_class($count)
     } elseif ($count == 3) {
         $class = 'col-sm-4';
     } elseif ($count == 4) {
-        $class = 'col-sm-3 col-xs-6';
+        $class = 'col-md-3 col-sm-6';
     } elseif ($count <= 6) {
         $class = 'col-sm-2';
     } else {
