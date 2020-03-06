@@ -183,7 +183,8 @@ a.button , button, input.button, h6 a , a h6, input[type="submit"] {
   transition: all 0.3s;
 
   &.fancy_button {
-    background: linear-gradient(90deg, $orange 0, $pink 100%);
+    // background: linear-gradient(90deg, $orange 0, $pink 100%);
+    background: linear-gradient(90deg, #5fd6b0 0, #00a22b 100%);
     color: white;
 
     &:hover {
