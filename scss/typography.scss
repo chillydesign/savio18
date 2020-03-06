@@ -186,10 +186,15 @@ a.button , button, input.button, h6 a , a h6, input[type="submit"] {
     // background: linear-gradient(90deg, $orange 0, $pink 100%);
     background: linear-gradient(90deg, #5fd6b0 0, #00a22b 100%);
     color: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+font-size: 2em;
+/* text-transform: uppercase; */
+font-weight: bold;
+padding: 30px 30px;
 
     &:hover {
       transform: scale(1.1);
-    } 
+    }
   }
 
   &.inactive {
