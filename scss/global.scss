@@ -1270,7 +1270,8 @@ section.section_press {}
 
 ins.wlc-box {
     opacity: 0;
-    animation: fadein 2s ease-in-out forwards;
+    animation: fadein 0.5s ease-in-out forwards;
+    animation-delay: 2s;
 }
 
 @keyframes fadein {
