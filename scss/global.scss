@@ -1266,3 +1266,18 @@ section.section_press {}
 
 // FREE TEST POP UP
 // FREE TEST POP UP
+
+
+ins.wlc-box {
+    opacity: 0;
+    animation: fadein 2s ease-in-out forwards;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
