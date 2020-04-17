@@ -732,7 +732,7 @@ function pay_freq_option_func($atts, $content = null)
     </div>';
     $pay_option .= '<div class="pay_annually">
     <p class="cost"><span class="amount">'. $year_amount.'</span><span class="currency">&euro;</span><span class="freq">/an</span></p>
-    <h6><a href="'. $register_url .  $year_id . '">' . $button_text . '</a></h6>
+    <h6 style="display:none;"><a href="'. $register_url .  $year_id . '">' . $button_text . '</a></h6>
     </div>';
     $pay_option .= '</div>';
     return $pay_option;
