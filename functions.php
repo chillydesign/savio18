@@ -73,22 +73,22 @@ function webfactor_nav()
 {
     wp_nav_menu(
         array(
-        'theme_location'  => 'header-menu',
-        'menu'            => '',
-        'container'       => 'div',
-        'container_class' => 'menu-{menu slug}-container',
-        'container_id'    => '',
-        'menu_class'      => 'menu',
-        'menu_id'         => '',
-        'echo'            => true,
-        'fallback_cb'     => 'wp_page_menu',
-        'before'          => '',
-        'after'           => '',
-        'link_before'     => '',
-        'link_after'      => '',
-        'items_wrap'      => '<ul>%3$s</ul>',
-        'depth'           => 0,
-        'walker'          => ''
+            'theme_location'  => 'header-menu',
+            'menu'            => '',
+            'container'       => 'div',
+            'container_class' => 'menu-{menu slug}-container',
+            'container_id'    => '',
+            'menu_class'      => 'menu',
+            'menu_id'         => '',
+            'echo'            => true,
+            'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '<ul>%3$s</ul>',
+            'depth'           => 0,
+            'walker'          => ''
         )
     );
 }
@@ -120,7 +120,7 @@ function webfactor_header_scripts()
         wp_register_script('slick', $tdu . '/js/slick.min.js', array(), wf_version(), true);
         wp_enqueue_script('slick'); // Enqueue it!
 
-        wp_register_script('matchHeight', $tdu . '/js/matchHeight.min.js', array('jquery'),  wf_version(), true );
+        wp_register_script('matchHeight', $tdu . '/js/matchHeight.min.js', array('jquery'),  wf_version(), true);
         wp_enqueue_script('matchHeight'); // Enqueue it!
 
 
@@ -128,11 +128,6 @@ function webfactor_header_scripts()
         wp_enqueue_script('scripts'); // Enqueue it!
 
     }
-
-
-
-
-
 }
 
 // Load HTML5 Blank conditional scripts
@@ -148,18 +143,18 @@ function webfactor_conditional_scripts()
 function webfactor_styles()
 {
 
-     $tdu =  get_template_directory_uri();
+    $tdu =  get_template_directory_uri();
 
     // remove gutenberg css
     wp_dequeue_style('wp-block-library');
 
 
-    wp_register_style('featherlight', $tdu. '/js/featherlight.min.css', array(), wf_version(), 'all');
+    wp_register_style('featherlight', $tdu . '/js/featherlight.min.css', array(), wf_version(), 'all');
     wp_enqueue_style('featherlight'); // Enqueue it!
-    wp_register_style('featherlight_g', $tdu. '/js/featherlight.gallery.min.css', array(), wf_version(), 'all');
+    wp_register_style('featherlight_g', $tdu . '/js/featherlight.gallery.min.css', array(), wf_version(), 'all');
     wp_enqueue_style('featherlight_g'); // Enqueue it!
 
-    wp_register_style('wf_style', $tdu. '/css/global.css', array(), wf_version(), 'all');
+    wp_register_style('wf_style', $tdu . '/css/global.css', array(), wf_version(), 'all');
     wp_enqueue_style('wf_style'); // Enqueue it!
 }
 
@@ -361,34 +356,34 @@ function webfactorcomments($comment, $args, $depth)
     } ?>
     <!-- heads up: starting < for the html tag (li or div) in the next line: -->
     <<?php echo $tag ?> <?php comment_class(empty($args['has_children']) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-	<?php if ('div' != $args['style']) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) {
-        echo get_avatar($comment, $args['180']);
-    } ?>
-	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-	</div>
-<?php if ($comment->comment_approved == '0') : ?>
-	<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-	<br />
-<?php endif; ?>
+        <?php if ('div' != $args['style']) : ?>
+            <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+            <?php endif; ?>
+            <div class="comment-author vcard">
+                <?php if ($args['avatar_size'] != 0) {
+                    echo get_avatar($comment, $args['180']);
+                } ?>
+                <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+            </div>
+            <?php if ($comment->comment_approved == '0') : ?>
+                <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+                <br />
+            <?php endif; ?>
 
-	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>">
-		<?php
-            printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'), '  ', ''); ?>
-	</div>
+            <div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars(get_comment_link($comment->comment_ID)) ?>">
+                    <?php
+                    printf(__('%1$s at %2$s'), get_comment_date(), get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'), '  ', ''); ?>
+            </div>
 
-	<?php comment_text() ?>
+            <?php comment_text() ?>
 
-	<div class="reply">
-	<?php comment_reply_link(array_merge($args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-	</div>
-	<?php if ('div' != $args['style']) : ?>
-	</div>
-	<?php endif; ?>
-<?php
+            <div class="reply">
+                <?php comment_reply_link(array_merge($args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+            </div>
+            <?php if ('div' != $args['style']) : ?>
+            </div>
+        <?php endif; ?>
+    <?php
 }
 
 /*------------------------------------*\
@@ -455,101 +450,105 @@ add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [htm
 function create_post_types()
 {
     $que_news_cat = array(
-      'name'                       => 'Catégories',
-      'singular_name'              => 'Catégorie',
-      'menu_name'                  => 'Catégorie',
-      'all_items'                  => 'Toutes les Catégories',
-      'parent_item'                => 'Catégorie parente',
-      'parent_item_colon'          => 'Catégorie parente:',
-      'new_item_name'              => 'Nom de la nouvelle categorie',
-      'add_new_item'               => 'Ajouter une categorie',
-      'edit_item'                  => 'Modifier categorie',
-      'update_item'                => 'Mettre à jur la categorie',
-      'separate_items_with_commas' => 'Separer les categories avec des virgules',
-      'search_items'               => 'Chercher dans les categories',
-      'add_or_remove_items'        => 'Ajouter ou supprimer des categories',
-      'choose_from_most_used'      => 'Choisir parmi les categories les plus utilisées',
-  );
+        'name'                       => 'Catégories',
+        'singular_name'              => 'Catégorie',
+        'menu_name'                  => 'Catégorie',
+        'all_items'                  => 'Toutes les Catégories',
+        'parent_item'                => 'Catégorie parente',
+        'parent_item_colon'          => 'Catégorie parente:',
+        'new_item_name'              => 'Nom de la nouvelle categorie',
+        'add_new_item'               => 'Ajouter une categorie',
+        'edit_item'                  => 'Modifier categorie',
+        'update_item'                => 'Mettre à jur la categorie',
+        'separate_items_with_commas' => 'Separer les categories avec des virgules',
+        'search_items'               => 'Chercher dans les categories',
+        'add_or_remove_items'        => 'Ajouter ou supprimer des categories',
+        'choose_from_most_used'      => 'Choisir parmi les categories les plus utilisées',
+    );
     $args_ques_cat = array(
-      'labels'                     => $que_news_cat,
-      'hierarchical'               => true,
-      'public'                     => true,
-      'show_ui'                    => true,
-      'show_admin_column'          => true,
-      'show_in_nav_menus'          => true,
-      'show_tagcloud'              => false,
-  );
-    register_taxonomy('question_cat', array( 'question' ), $args_ques_cat);
+        'labels'                     => $que_news_cat,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => false,
+    );
+    register_taxonomy('question_cat', array('question'), $args_ques_cat);
 
 
-    register_post_type('question', // Register Custom Post Type
+    register_post_type(
+        'question', // Register Custom Post Type
         array(
-        'labels' => array(
-            'name' => __('Question', 'webfactor'), // Rename these to suit
-            'singular_name' => __('Question', 'webfactor'),
-            'add_new' => __('Add New', 'webfactor'),
-            'add_new_item' => __('Add New Question', 'webfactor'),
-            'edit' => __('Edit', 'webfactor'),
-            'edit_item' => __('Edit Question', 'webfactor'),
-            'new_item' => __('New Question', 'webfactor'),
-            'view' => __('View Question', 'webfactor'),
-            'view_item' => __('View Question', 'webfactor'),
-            'search_items' => __('Search Question', 'webfactor'),
-            'not_found' => __('No Questions found', 'webfactor'),
-            'not_found_in_trash' => __('No Questions found in Trash', 'webfactor')
-        ),
-        'public' => true,
-        'publicly_queryable' => true, // dont allow to see on front end
-        'exclude_from_search' => false, // dont show in search
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-           'question_cat',
-        //    'category'
-        ) // Add Category and Post Tags support
-    ));
+            'labels' => array(
+                'name' => __('Question', 'webfactor'), // Rename these to suit
+                'singular_name' => __('Question', 'webfactor'),
+                'add_new' => __('Add New', 'webfactor'),
+                'add_new_item' => __('Add New Question', 'webfactor'),
+                'edit' => __('Edit', 'webfactor'),
+                'edit_item' => __('Edit Question', 'webfactor'),
+                'new_item' => __('New Question', 'webfactor'),
+                'view' => __('View Question', 'webfactor'),
+                'view_item' => __('View Question', 'webfactor'),
+                'search_items' => __('Search Question', 'webfactor'),
+                'not_found' => __('No Questions found', 'webfactor'),
+                'not_found_in_trash' => __('No Questions found in Trash', 'webfactor')
+            ),
+            'public' => true,
+            'publicly_queryable' => true, // dont allow to see on front end
+            'exclude_from_search' => false, // dont show in search
+            'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'excerpt',
+                'thumbnail'
+            ), // Go to Dashboard Custom HTML5 Blank post for supports
+            'can_export' => true, // Allows export in Tools > Export
+            'taxonomies' => array(
+                'question_cat',
+                //    'category'
+            ) // Add Category and Post Tags support
+        )
+    );
 
 
-    register_post_type('testimonial', // Register Custom Post Type
+    register_post_type(
+        'testimonial', // Register Custom Post Type
         array(
-        'labels' => array(
-            'name' => __('Testimonial', 'webfactor'), // Rename these to suit
-            'singular_name' => __('Testimonial', 'webfactor'),
-            'add_new' => __('Add New', 'webfactor'),
-            'add_new_item' => __('Add New Testimonial', 'webfactor'),
-            'edit' => __('Edit', 'webfactor'),
-            'edit_item' => __('Edit Testimonial', 'webfactor'),
-            'new_item' => __('New Testimonial', 'webfactor'),
-            'view' => __('View Testimonial', 'webfactor'),
-            'view_item' => __('View Testimonial', 'webfactor'),
-            'search_items' => __('Search Testimonial', 'webfactor'),
-            'not_found' => __('No Testimonials found', 'webfactor'),
-            'not_found_in_trash' => __('No Testimonials found in Trash', 'webfactor')
-        ),
-        'public' => true,
-        'publicly_queryable' => false, // dont allow to see on front end
-        'exclude_from_search' => true, // dont show in search
-        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
-        'has_archive' => true,
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'thumbnail'
-        ), // Go to Dashboard Custom HTML5 Blank post for supports
-        'can_export' => true, // Allows export in Tools > Export
-        'taxonomies' => array(
-        //    'post_tag',
-        //    'category'
-        ) // Add Category and Post Tags support
-    ));
+            'labels' => array(
+                'name' => __('Testimonial', 'webfactor'), // Rename these to suit
+                'singular_name' => __('Testimonial', 'webfactor'),
+                'add_new' => __('Add New', 'webfactor'),
+                'add_new_item' => __('Add New Testimonial', 'webfactor'),
+                'edit' => __('Edit', 'webfactor'),
+                'edit_item' => __('Edit Testimonial', 'webfactor'),
+                'new_item' => __('New Testimonial', 'webfactor'),
+                'view' => __('View Testimonial', 'webfactor'),
+                'view_item' => __('View Testimonial', 'webfactor'),
+                'search_items' => __('Search Testimonial', 'webfactor'),
+                'not_found' => __('No Testimonials found', 'webfactor'),
+                'not_found_in_trash' => __('No Testimonials found in Trash', 'webfactor')
+            ),
+            'public' => true,
+            'publicly_queryable' => false, // dont allow to see on front end
+            'exclude_from_search' => true, // dont show in search
+            'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'excerpt',
+                'thumbnail'
+            ), // Go to Dashboard Custom HTML5 Blank post for supports
+            'can_export' => true, // Allows export in Tools > Export
+            'taxonomies' => array(
+                //    'post_tag',
+                //    'category'
+            ) // Add Category and Post Tags support
+        )
+    );
 }
 
 
@@ -576,22 +575,22 @@ function chilly_nav($menu)
 {
     wp_nav_menu(
         array(
-        'theme_location'  => $menu,
-        'menu'            => '',
-        'container'       => '',
-        'container_class' => 'menu-{menu slug}-container',
-        'container_id'    => '',
-        'menu_class'      => '',
-        'menu_id'         => '',
-        'echo'            => true,
-        'fallback_cb'     => 'wp_page_menu',
-        'before'          => '',
-        'after'           => '',
-        'link_before'     => '',
-        'link_after'      => '',
-        'items_wrap'      => '%3$s',
-        'depth'           => 0,
-        'walker'          => ''
+            'theme_location'  => $menu,
+            'menu'            => '',
+            'container'       => '',
+            'container_class' => 'menu-{menu slug}-container',
+            'container_id'    => '',
+            'menu_class'      => '',
+            'menu_id'         => '',
+            'echo'            => true,
+            'fallback_cb'     => 'wp_page_menu',
+            'before'          => '',
+            'after'           => '',
+            'link_before'     => '',
+            'link_after'      => '',
+            'items_wrap'      => '%3$s',
+            'depth'           => 0,
+            'walker'          => ''
         )
     );
 }
@@ -615,7 +614,7 @@ add_shortcode('chilly_map', 'chilly_map');
 function disable_wp_emojicons()
 {
 
-  // all actions related to emojis
+    // all actions related to emojis
     remove_action('admin_print_styles', 'print_emoji_styles');
     remove_action('wp_head', 'print_emoji_detection_script', 7);
     remove_action('admin_print_scripts', 'print_emoji_detection_script');
@@ -625,7 +624,7 @@ function disable_wp_emojicons()
     remove_filter('comment_text_rss', 'wp_staticize_emoji');
 
     // filter to remove TinyMCE emojis
-  // add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
+    // add_filter( 'tiny_mce_plugins', 'disable_emojicons_tinymce' );
 }
 add_action('init', 'disable_wp_emojicons');
 
@@ -647,7 +646,7 @@ function remove_json_api()
     // Remove oEmbed-specific JavaScript from the front-end and back-end.
     remove_action('wp_head', 'wp_oembed_add_host_js');
     // Remove all embeds rewrite rules.
-  // add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
+    // add_filter( 'rewrite_rules_array', 'disable_embeds_rewrites' );
 }
 add_action('after_setup_theme', 'remove_json_api');
 
@@ -672,7 +671,7 @@ function count_to_bootstrap_class($count)
     return $class;
 };
 
-function thumbnail_of_post_url($post_id, $size='large')
+function thumbnail_of_post_url($post_id, $size = 'large')
 {
     $image_id = get_post_thumbnail_id($post_id);
     $image_url = wp_get_attachment_image_src($image_id, $size);
@@ -727,12 +726,12 @@ function pay_freq_option_func($atts, $content = null)
 
     $pay_option = '<div class="pay_buttons">';
     $pay_option .= '<div class="pay_monthly">
-    <p class="cost"><span class="amount">'. $month_amount.'</span><span class="currency">&euro;</span><span class="freq">/mois</span></p>
-    <h6><a href="'. $register_url .  $month_id . '">' . $button_text . '</a></h6>
+    <p class="cost"><span class="amount">' . $month_amount . '</span><span class="currency">&euro;</span><span class="freq">/mois</span></p>
+    <h6  style="display:none;"><a href="' . $register_url .  $month_id . '">' . $button_text . '</a></h6>
     </div>';
     $pay_option .= '<div class="pay_annually">
-    <p class="cost"><span class="amount">'. $year_amount.'</span><span class="currency">&euro;</span><span class="freq">/an</span></p>
-    <h6 style="display:none;"><a href="'. $register_url .  $year_id . '">' . $button_text . '</a></h6>
+    <p class="cost"><span class="amount">' . $year_amount . '</span><span class="currency">&euro;</span><span class="freq">/an</span></p>
+    <h6 style="display:none;"><a href="' . $register_url .  $year_id . '">' . $button_text . '</a></h6>
     </div>';
     $pay_option .= '</div>';
     return $pay_option;
@@ -770,4 +769,4 @@ function social_meta_properties()
 
 
 
-?>
+    ?>
