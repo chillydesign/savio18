@@ -184,7 +184,7 @@
       arrows: true,
       infinite: true,
       speed: 300,
-      slidesToShow: 3,
+      slidesToShow: 5,
       centerMode: false,
       variableWidth: false,
       adaptiveHeight: true,
@@ -194,7 +194,7 @@
         {
           breakpoint: 1000,
           settings: {
-            slidesToShow: 5,
+            slidesToShow: 3,
             slidesToScroll: 1
           }
         }
