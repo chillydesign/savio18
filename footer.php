@@ -6,6 +6,7 @@
 	<?php if( have_rows('schools', 'options') ): ?>
 		<section class="partenaires">
 			<div class="container">
+				<h3>Ces écoles nous ont fait confiance...</h3>
 				<div class="slider_container">
 					<div class="school_slider">
 						<?php while ( have_rows('schools', 'options') ) : the_row(); ?>
