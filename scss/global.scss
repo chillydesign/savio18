@@ -1284,17 +1284,16 @@ ins.wlc-box {
 }
 
 
+img.school_logo {
+  box-shadow: 0!important;
+  border-radius: 0!important;
+  cursor: pointer!important;
+  &:focus {
+    border:0!important;
+  }
+}
 
 .school_slider {
-  img {
-    box-shadow: 0!important;
-    border-radius: 0!important;
-    cursor: pointer!important;
-    &:focus {
-      border:0!important;
-    }
-  }
-
   .school_description {
     h5{
       color: white;

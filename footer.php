@@ -11,7 +11,7 @@
 					<?php while ( have_rows('schools', 'options') ) : the_row(); ?>
 
 						<div>
-							<img src="<?php echo get_sub_field('logo')['sizes']['medium']; ?>" alt="" />
+							<img class="school_logo" src="<?php echo get_sub_field('logo')['sizes']['medium']; ?>" alt="" />
 							<div class="school_description">
 								<h5><?php echo get_sub_field('nom'); ?></h5>
 								<p><?php echo get_sub_field('adresse'); ?></p>
