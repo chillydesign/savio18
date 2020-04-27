@@ -7,7 +7,7 @@
 	<?php if( have_rows('schools', 'options') ): ?>
 <section class="partenaires" style="display:none;">
 	<div class="slider_container">
-			<div class="slider">
+			<div class="school_slider">
 <?php while ( have_rows('schools', 'options') ) : the_row(); ?>
 
 <div>

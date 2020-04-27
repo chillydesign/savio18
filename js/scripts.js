@@ -178,6 +178,20 @@
             autoplaySpeed: 5000,
         });
 
+        $(".school_slider");
+        $testimonial_sliders.slick({
+            dots: false,
+            arrows: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 5,
+            centerMode: false,
+            variableWidth: false,
+            adaptiveHeight: true,
+            autoplay: true,
+            autoplaySpeed: 5000,
+        });
+
         var $reviews_sliders = $(".rplg-reviews");
         $reviews_sliders.slick({
             dots: true,
