@@ -198,42 +198,40 @@
             slidesToScroll: 1
           }
         }
-      });
+      ],
+    });
 
-      var $reviews_sliders = $(".rplg-reviews");
-      $reviews_sliders.slick({
-        dots: true,
-        arrows: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 1,
-        centerMode: false,
-        variableWidth: false,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-      });
+    var $reviews_sliders = $(".rplg-reviews");
+    $reviews_sliders.slick({
+      dots: true,
+      arrows: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      centerMode: false,
+      variableWidth: false,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+    });
 
-      var $what_is_savio_sliders = $(".what_is_savio_slider, .interactive_slider, .slider");
-      $what_is_savio_sliders.slick({
-        dots: true,
-        arrows: false,
-        infinite: false,
-        speed: 300,
-        slidesToShow: 1,
-        centerMode: false,
-        variableWidth: false,
-        adaptiveHeight: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-      });
-
-
-      //////////
-      // SLIDERS
+    var $what_is_savio_sliders = $(".what_is_savio_slider, .interactive_slider, .slider");
+    $what_is_savio_sliders.slick({
+      dots: true,
+      arrows: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 1,
+      centerMode: false,
+      variableWidth: false,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+    });
 
 
-
+    //////////
+    // SLIDERS
 
 
 
@@ -241,60 +239,63 @@
 
 
 
-      ////////////////////////////
-      // animate sliding down page
-      $('.scroll_link').on('click', function (e) {
-        e.preventDefault();
 
-        var $this = $(this);
-        var $href = $this.attr('href');
-        var $hash = $href.split('#')[1];
 
-        if (typeof $hash !== 'undefined') {
-          var $location = $('#' + $hash);
-          if ($location.length > 0) {
-            $("html, body").animate({ scrollTop: $location.offset().top }, 1000);
-          } else {
-            window.location.href = $href;
-          }
+
+    ////////////////////////////
+    // animate sliding down page
+    $('.scroll_link').on('click', function (e) {
+      e.preventDefault();
+
+      var $this = $(this);
+      var $href = $this.attr('href');
+      var $hash = $href.split('#')[1];
+
+      if (typeof $hash !== 'undefined') {
+        var $location = $('#' + $hash);
+        if ($location.length > 0) {
+          $("html, body").animate({ scrollTop: $location.offset().top }, 1000);
         } else {
           window.location.href = $href;
         }
-      });
-      ////////////////////////////
-      // animate sliding down page
-
-
-
-      // FAQ
-      // FAQ
-
-      $('.single_question_link').on('click', function (e) {
-        e.preventDefault();
-      });
-      $('.single_question_title').on('click', function (e) {
-        var $this = $(this);
-        var $parent_id = $this.data('question');
-        openQuestion($parent_id);
-      });
-      var $hash = window.location.hash;
-      if ($hash != '') {
-        openQuestion($hash);
+      } else {
+        window.location.href = $href;
       }
-      function openQuestion(hash) {
-        var $questiontopopen = $(hash);
-        var $single_questions = $('.single_question');
-        $single_questions.not($questiontopopen).removeClass('question_expanded');
-        $questiontopopen.toggleClass('question_expanded');
-      }
-      // FAQ
-      // FAQ
-
-
-
-
-
-
     });
+    ////////////////////////////
+    // animate sliding down page
 
-  })(jQuery, this);
+
+
+    // FAQ
+    // FAQ
+
+    $('.single_question_link').on('click', function (e) {
+      e.preventDefault();
+    });
+    $('.single_question_title').on('click', function (e) {
+      var $this = $(this);
+      var $parent_id = $this.data('question');
+      openQuestion($parent_id);
+    });
+    var $hash = window.location.hash;
+    if ($hash != '') {
+      openQuestion($hash);
+    }
+    function openQuestion(hash) {
+      var $questiontopopen = $(hash);
+      var $single_questions = $('.single_question');
+      $single_questions.not($questiontopopen).removeClass('question_expanded');
+      $questiontopopen.toggleClass('question_expanded');
+    }
+    // FAQ
+    // FAQ
+
+
+
+
+
+
+  });
+
+})(jQuery, this);
