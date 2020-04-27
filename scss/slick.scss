@@ -37,10 +37,13 @@ ul.slick-dots {
         margin: 10px $box_shadow_size  #{$box_shadow_size + 5px};
         box-shadow:  0 10px $box_shadow_size transparentize($dark_grey, 0.45);
         border-radius: 19px;
+        &:focus {
+          outline:0;
+        }
 
     }
 
     &:focus {
-      border:0;
+      outline:0;
     }
 }

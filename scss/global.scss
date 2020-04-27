@@ -1290,9 +1290,14 @@ ins.wlc-box {
   .slick-slide{
 
     img.school_logo {
-      box-shadow: none!important;
-      border-radius: 0!important;
-      cursor: pointer!important;
+      box-shadow: none !important;
+      border-radius: 0 !important;
+      cursor: pointer !important;
+      width: auto;
+      height: auto;
+      max-width: 90%;
+      max-height: 110px;
+      margin: auto;
       &:focus {
         border:0!important;
       }
