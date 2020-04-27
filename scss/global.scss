@@ -1284,25 +1284,32 @@ ins.wlc-box {
 }
 
 
-img.school_logo {
-  box-shadow: 0!important;
-  border-radius: 0!important;
-  cursor: pointer!important;
-  &:focus {
-    border:0!important;
-  }
-}
+
 
 .school_slider {
-  .school_description {
-    h5{
-      color: white;
-      font-weight: bold;
-      font-size: 1.8em;
+  .slick-slide{
+
+    img.school_logo {
+      box-shadow: 0!important;
+      border-radius: 0!important;
+      cursor: pointer!important;
+      &:focus {
+        border:0!important;
+      }
     }
-    p {
-      color: white;
-      font-size: 0.65em;
+
+    
+    .school_description {
+      h5{
+        color: white;
+        font-weight: bold;
+        font-size: 1.8em;
+      }
+      p {
+        color: white;
+        font-size: 0.65em;
+      }
     }
+
   }
 }
