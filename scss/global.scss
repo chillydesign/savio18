@@ -1305,15 +1305,43 @@ ins.wlc-box {
 
 
     .school_description {
+      display: none;
       h5{
         color: white;
-        font-weight: bold;
-        font-size: 1.8em;
+    font-weight: bold;
+    font-size: 1.4em;
+    background: #0b6395;
+    text-align: center;
+    margin: 20px 20px 0;
+    padding: 5px;
+    position: relative;
+
+        &:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 10px);
+    height: 20px;
+    width: 20px;
+    background: #0b6395;
+    transform: rotate(45deg);
+    z-index: -1;
+    border-radius: 2px 0 0 0;
+}
       }
       p {
-        color: white;
-        font-size: 0.65em;
-      }
+   color: white;
+   font-size: 1.15em;
+   background: #0b6395;
+   margin: 0 20px 0;
+   font-style: italic;
+   text-align: center;
+   padding: 0 5px 8px;
+}
+    }
+
+    &:hover {
+      .school_description {display: block;}
     }
 
   }
