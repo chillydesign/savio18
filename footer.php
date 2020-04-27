@@ -6,18 +6,20 @@
 <?php if(isset($_GET['testing'])) :?>
 	<?php if( have_rows('schools', 'options') ): ?>
 		<section class="partenaires">
-			<div class="slider_container">
-				<div class="school_slider">
-					<?php while ( have_rows('schools', 'options') ) : the_row(); ?>
+			<div class="container">
+				<div class="slider_container">
+					<div class="school_slider">
+						<?php while ( have_rows('schools', 'options') ) : the_row(); ?>
 
-						<div>
-							<img class="school_logo" src="<?php echo get_sub_field('logo')['sizes']['medium']; ?>" alt="" />
-							<div class="school_description">
-								<h5><?php echo get_sub_field('nom'); ?></h5>
-								<p><?php echo get_sub_field('adresse'); ?></p>
+							<div>
+								<img class="school_logo" src="<?php echo get_sub_field('logo')['sizes']['medium']; ?>" alt="" />
+								<div class="school_description">
+									<h5><?php echo get_sub_field('nom'); ?></h5>
+									<p><?php echo get_sub_field('adresse'); ?></p>
+								</div>
 							</div>
+							<?php endwhile; ?>
 						</div>
-						<?php endwhile; ?>
 					</div>
 				</div>
 			</section>

@@ -1290,7 +1290,7 @@ ins.wlc-box {
   .slick-slide{
 
     img.school_logo {
-      box-shadow: 0!important;
+      box-shadow: none!important;
       border-radius: 0!important;
       cursor: pointer!important;
       &:focus {
@@ -1298,7 +1298,7 @@ ins.wlc-box {
       }
     }
 
-    
+
     .school_description {
       h5{
         color: white;
