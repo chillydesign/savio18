@@ -3,7 +3,7 @@
 	<?php $hurl = get_home_url(); ?>
 
 
-<?php if($_GET['testing']) :?>
+<?php if(isset($_GET['testing'])) :?>
 	<?php if( have_rows('schools', 'options') ): ?>
 <section class="partenaires">
 	<div class="slider_container">
