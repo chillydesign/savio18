@@ -3,7 +3,6 @@
 <?php $hurl = get_home_url(); ?>
 
 
-<?php if(isset($_GET['testing'])) :?>
 	<?php if( have_rows('schools', 'options') ): ?>
 		<section class="partenaires">
 			<div class="container">
@@ -32,7 +31,6 @@
 		</section>
 
 	<?php endif; ?>
-<?php endif; ?>
 
 <footer>
 
