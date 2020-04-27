@@ -3,9 +3,9 @@
 	<?php $hurl = get_home_url(); ?>
 
 
-
+<?php if($_GET['testing']) :?>
 	<?php if( have_rows('schools', 'options') ): ?>
-<section class="partenaires" style="display:none;">
+<section class="partenaires">
 	<div class="slider_container">
 			<div class="school_slider">
 <?php while ( have_rows('schools', 'options') ) : the_row(); ?>
@@ -21,6 +21,7 @@
 </div>
 </section>
 
+<?php endif; ?>
 <?php endif; ?>
 
     <footer>
