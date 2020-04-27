@@ -1282,3 +1282,28 @@ ins.wlc-box {
         opacity:1;
     }
 }
+
+
+
+.school_slider {
+  img {
+    box-shadow: 0;
+    border-radius: 0;
+    cursor: pointer;
+    &:focus {
+      border:0;
+    }
+  }
+
+  .school_description {
+    h5{
+      color: white;
+      font-weight: bold;
+      font-size: 1.8em;
+    }
+    p {
+      color: white;
+      font-size: 0.65em;
+    }
+  }
+}

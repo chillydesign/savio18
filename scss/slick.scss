@@ -39,4 +39,8 @@ ul.slick-dots {
         border-radius: 19px;
 
     }
+
+    &:focus {
+      border:0;
+    }
 }
