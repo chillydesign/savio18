@@ -2,6 +2,27 @@
 	<?php $tdu = get_template_directory_uri(); ?>
 	<?php $hurl = get_home_url(); ?>
 
+
+
+	<?php if( have_rows('schools', 'options') ): ?>
+<section class="partenaires" style="display:none;">
+	<div class="slider_container">
+			<div class="slider">
+<?php while ( have_rows('schools', 'options') ) : the_row(); ?>
+
+<div>
+	<img src="<?php echo get_sub_field('logo')['sizes']['medium']; ?>" alt="" />
+	<div class="school_description">
+		<h5><?php echo get_sub_field('nom'); ?></h5>
+		<p><?php echo get_sub_field('adresse'); ?></p>
+</div>
+<?php endwhile ?>
+</div>
+</div>
+</section>
+
+<?php endif; ?>
+
     <footer>
 
         <div id="copyright">
