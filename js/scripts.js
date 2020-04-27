@@ -178,8 +178,8 @@
             autoplaySpeed: 5000,
         });
 
-        $(".school_slider");
-        $testimonial_sliders.slick({
+
+        $(".school_slider").slick({
             dots: false,
             arrows: true,
             infinite: true,
