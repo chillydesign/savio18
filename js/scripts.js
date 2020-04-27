@@ -190,6 +190,8 @@
       adaptiveHeight: true,
       autoplay: true,
       autoplaySpeed: 5000,
+      prevArrow: $('.prev'),
+      nextArrow: $('.next'),
       responsive: [
         {
           breakpoint: 1000,

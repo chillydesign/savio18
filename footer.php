@@ -20,6 +20,12 @@
 							</div>
 							<?php endwhile; ?>
 						</div>
+						<div class="paginator">
+    <ul>
+        <li class="prev"></li>
+        <li class="next"></li>
+    </ul>
+</div>
 					</div>
 				</div>
 			</section>
