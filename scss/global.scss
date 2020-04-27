@@ -21,7 +21,7 @@
 body {
   font: normal 62.5% $font_stack;
   background: url('../images/bg.png') repeat top left,
-  linear-gradient(-90deg, $brand_color 0, $brand_color_hover 100%);
+    linear-gradient(-90deg, $brand_color 0, $brand_color_hover 100%);
   background-size: 250px, 100%;
   position: relative;
   color: $font_color;
@@ -107,21 +107,24 @@ section {
     width: 300px;
     bottom: -200px;
     right: -54px;
-    transform:rotate(15deg);
-    img{
+    transform: rotate(15deg);
+
+    img {
       animation: pulse 2s ease-in-out infinite;
     }
   }
 }
 
 @keyframes pulse {
-  0%{
+  0% {
     transform: scale(1);
   }
-  50%{
+
+  50% {
     transform: scale(1.03);
   }
-  100%{
+
+  100% {
     transform: scale(1);
   }
 }
@@ -708,8 +711,8 @@ $features_height: 450px;
   color: $brand_color;
 
   .rplg .rplg-review-text {
-    font-size:16px!important;
-    font-weight: bold!important;
+    font-size: 16px !important;
+    font-weight: bold !important;
   }
 
   .testimonials_flex {
@@ -1276,10 +1279,11 @@ ins.wlc-box {
 
 @keyframes fadein {
   from {
-    opacity:0;
+    opacity: 0;
   }
+
   to {
-    opacity:1;
+    opacity: 1;
   }
 }
 
@@ -1287,7 +1291,7 @@ ins.wlc-box {
 
 
 .school_slider {
-  .slick-slide{
+  .slick-slide {
 
     img.school_logo {
       box-shadow: none !important;
@@ -1298,8 +1302,9 @@ ins.wlc-box {
       max-width: 90%;
       max-height: 110px;
       margin: auto;
+
       &:focus {
-        border:0!important;
+        border: 0 !important;
       }
     }
 
@@ -1307,7 +1312,8 @@ ins.wlc-box {
     .school_description {
       opacity: 0;
       transition: all ease-in-out 0.3s;
-      h5{
+
+      h5 {
         color: white;
         font-weight: bold;
         font-size: 1.4em;
@@ -1330,6 +1336,7 @@ ins.wlc-box {
           border-radius: 2px 0 0 0;
         }
       }
+
       p {
         color: white;
         font-size: 1.15em;
@@ -1349,25 +1356,31 @@ ins.wlc-box {
 
   }
 }
-.partenaires .slider_container{position: relative;}
+
+.partenaires .slider_container {
+  position: relative;
+}
+
 .paginator ul {
   list-style: none;
-  position: absolute;
-  top: 25%;
+
 
   li.slick-arrow {
     background: white;
     border-left: solid 4px #0b6395;
     border-top: solid 4px #0b6395;
-    width: 15px!important;
-    height: 15px!important;
+    width: 15px !important;
+    height: 15px !important;
     content: '';
     padding: 0;
     left: 20px;
     /* top: calc(50% - 20px); */
     transform: rotate(-45deg);
+    position: absolute;
+    top: 50px;
+
     &.next {
-      left:auto;
+      left: auto;
       right: 20px;
       transform: rotate(135deg);
     }
