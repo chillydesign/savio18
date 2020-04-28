@@ -6,7 +6,7 @@
 	<?php if( have_rows('schools', 'options') ): ?>
 		<section class="partenaires">
 			<div class="container">
-				<h3 style="text-align: center;     position: relative;     top: -25px;">Ces écoles nous ont fait confiance...</h3>
+				<h3 style="text-align: center;position: relative;top: -25px;">Les écoles qui utilisent déjà Savio avec leurs élèves</h3>
 				<div class="slider_container">
 					<div class="school_slider">
 						<?php while ( have_rows('schools', 'options') ) : the_row(); ?>
