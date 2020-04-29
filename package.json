@@ -24,7 +24,7 @@
   "homepage": "https://github.com/chillydesign/savio18#readme",
   "dependencies": {
     "featherlight": "^1.7.14",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-match-height": "^0.7.2",
     "slick-carousel": "^1.8.1"
   },
