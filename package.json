@@ -1,41 +1,41 @@
 {
-  "name": "savio18",
-  "version": "0.0.2",
-  "description": "This is the savio 18 wordpress theme  by webfactor.ch",
-  "main": "index.php",
-  "scripts": {
-    "test": "say test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/chillydesign/savio18.git"
-  },
-  "keywords": [
-    "wordpress",
-    "webfactor",
-    "blank",
-    "theme"
-  ],
-  "author": "Charles Harvey",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/chillydesign/savio18/issues"
-  },
-  "homepage": "https://github.com/chillydesign/savio18#readme",
-  "dependencies": {
-    "featherlight": "^1.7.14",
-    "jquery": "^3.5.1",
-    "jquery-match-height": "^0.7.2",
-    "slick-carousel": "^1.8.1"
-  },
-  "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.1.0",
-    "gulp-minify": "^3.0.15",
-    "gulp-sass": "^4.1.0",
-    "gulp-watch": "^5.0.1",
-    "hoek": "^5.0.4",
-    "node-sass": "^4.14.1",
-    "sshpk": "^1.16.1"
-  }
+    "name": "savio18",
+    "version": "0.0.2",
+    "description": "This is the savio 18 wordpress theme  by webfactor.ch",
+    "main": "index.php",
+    "scripts": {
+        "test": "say test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/chillydesign/savio18.git"
+    },
+    "keywords": [
+        "wordpress",
+        "webfactor",
+        "blank",
+        "theme"
+    ],
+    "author": "Charles Harvey",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/chillydesign/savio18/issues"
+    },
+    "homepage": "https://github.com/chillydesign/savio18#readme",
+    "dependencies": {
+        "featherlight": "^1.7.14",
+        "jquery": "^3.5.1",
+        "jquery-match-height": "^0.7.2",
+        "slick-carousel": "^1.8.1"
+    },
+    "devDependencies": {
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-minify": "^3.0.15",
+        "gulp-sass": "^4.1.0",
+        "gulp-watch": "^5.0.1",
+        "hoek": "^5.0.4",
+        "node-sass": "^4.14.1",
+        "sshpk": "^1.16.1"
+    }
 }
