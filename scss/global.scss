@@ -1394,3 +1394,15 @@ section.partenaires {
     }
   }
 }
+
+
+//ANNOUNCEMENT SECTION
+section.section.section_announcement {
+    background: linear-gradient(90deg, $orange 0, $pink 100%);;
+    font-size: 1.8em;
+    color: white;
+    padding: 30px;
+    border-top: solid 6px;
+    margin-top: -5px;
+    position: relative;
+}
