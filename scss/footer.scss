@@ -56,30 +56,32 @@ a.frenchtechlink {
   width: 120px;
   bottom: 4px;
 }
-a.frenchtechlink:hover span{display: block!important; text-shadow: 0;
-    display: none;
-    position: absolute;
-    background: #0b6395;
-    width: 500px;
-    max-width: 50vw;
-    font-size: 0.8em;
-    line-height: 150%;
-    text-align: left;
-    padding: 5px 15px;
-    border: solid 2px #052f47;
-    top: -94px;
-    left: -5px;
-   }
+a.frenchtechlink:hover span{
+  display: block!important;
+  text-shadow: none;
+  display: none;
+  position: absolute;
+  background: #0b6395;
+  width: 500px;
+  max-width: 50vw;
+  font-size: 0.8em;
+  line-height: 150%;
+  text-align: left;
+  padding: 5px 15px;
+  border: solid 2px #052f47;
+  top: -94px;
+  left: -5px;
+}
 
-    a.frenchtechlink span:after {
-      content: '';
-      width: 15px;
-      height: 15px;
-      background: #0b6395;
-      border-bottom: solid 2px #052f47;
-      border-right: solid 2px #052f47;
-      position: absolute;
-      bottom: -10px;
-      left: 45px;
-      transform: rotate(45deg);
-    }
+a.frenchtechlink span:after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: #0b6395;
+  border-bottom: solid 2px #052f47;
+  border-right: solid 2px #052f47;
+  position: absolute;
+  bottom: -10px;
+  left: 45px;
+  transform: rotate(45deg);
+}
