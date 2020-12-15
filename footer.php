@@ -43,7 +43,12 @@
 				<br>
 				<span id="website_author"> Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></span>
 
-					<a class="frenchtechlink" href="https://www.ftalps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/french-tech-logo.png" alt="French Tech in the Alps logo"><span>Savio Éducation est une entreprise membre de la <strong>French Tech in the Alpes</strong>, mouvement collectif engagé pour le développement et le rayonnement de l’économie numérique.</span></a>
+					<a class="frenchtechlink" href="https://www.ftalps.com/" target="_blank">
+
+						<img src="<?php echo get_template_directory_uri(); ?>/images/french-tech-logo.png" alt="French Tech in the Alps logo">
+
+						<span>Savio Éducation est une entreprise membre de la <strong>French Tech in the Alpes</strong>, mouvement collectif engagé pour le développement et le rayonnement de l’économie numérique.</span>
+					</a>
 			</p>
 		</div>
 	</div>
