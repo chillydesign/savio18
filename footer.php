@@ -35,13 +35,22 @@
 <footer>
 
 	<div id="copyright">
-		<p class="container">
-			&copy; <?php echo date('Y'); ?> Savio | <a href="<?php echo $hurl; ?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | <a href="<?php echo $hurl; ?>/contact" target="infosavio">Contact</a> | <a href="<?php echo $hurl; ?>/conditions-generales/" target="infosavio">Conditions générales</a> |
-			<a target="_blank" class="social_icon social_icon_instagram" href="https://www.instagram.com/savio.fr/"></a>
-			<a target="_blank" class="social_icon social_icon_facebook" href="https://www.facebook.com/Savio-Le-français-en-samusant-389735735185222/"></a>
-			<br>
-			<span id="website_author"> Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></span>
-		</p>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-3 col-sm-push-9">
+					<a href="https://www.ftalps.com/" target="_blank"><img src="images/french-tech-logo.png" alt="French Tech in the Alps logo"><span>Une start-up Made in France</span></a>
+				</div>
+				<div class="col-sm-9 col-sm-pull-3">
+					<p>
+						&copy; <?php echo date('Y'); ?> Savio | <a href="<?php echo $hurl; ?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | <a href="<?php echo $hurl; ?>/contact" target="infosavio">Contact</a> | <a href="<?php echo $hurl; ?>/conditions-generales/" target="infosavio">Conditions générales</a> |
+						<a target="_blank" class="social_icon social_icon_instagram" href="https://www.instagram.com/savio.fr/"></a>
+						<a target="_blank" class="social_icon social_icon_facebook" href="https://www.facebook.com/Savio-Le-français-en-samusant-389735735185222/"></a>
+						<br>
+						<span id="website_author"> Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></span>
+					</p>
+				</div>
+			</div>
+		</div>
 	</div>
 
 </footer>
@@ -61,14 +70,14 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123170854-2"></script>
 <script>
-	window.dataLayer = window.dataLayer || [];
+window.dataLayer = window.dataLayer || [];
 
-	function gtag() {
-		dataLayer.push(arguments);
-	}
-	gtag('js', new Date());
+function gtag() {
+	dataLayer.push(arguments);
+}
+gtag('js', new Date());
 
-	gtag('config', 'UA-123170854-2');
+gtag('config', 'UA-123170854-2');
 </script>
 
 
