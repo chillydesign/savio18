@@ -1,50 +1,91 @@
 
 
 footer {
-    background-color: darken($brand_color, 10);
-    border-top:8px  solid white;
-    color: lighten($brand_color, 55);
-    margin:0;
-    padding:30px 0 30px;
+  background-color: darken($brand_color, 10);
+  border-top:8px  solid white;
+  color: lighten($brand_color, 55);
+  margin:0;
+  padding:30px 0 30px;
 
-     p {
-         padding: 0;
-         margin: 0;
-        color: white;
-         text-align: center;
-     }
+  p {
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+  }
 
-     a {
-         border:0;
-         &:link, &:visited, &:active {
-             color: white;
-             border: 0;
-         }
-         &:hover {
-             text-shadow: 0 0 5px white;
-         }
-     }
+  a {
+    border:0;
+    &:link, &:visited, &:active {
+      color: white;
+      border: 0;
+    }
+    &:hover {
+      text-shadow: 0 0 5px white;
+    }
+  }
 }
 
 
 
 $social_icon_size: 35px;
 .social_icon {
-    padding:10px 10px 10px 23px;
-    background: no-repeat center left;
-    background-size: $social_icon_size;
-    margin: 10px 0 0 6px;
+  padding:10px 10px 10px 23px;
+  background: no-repeat center left;
+  background-size: $social_icon_size;
+  margin: 10px 0 0 6px;
 
 
-    &.social_icon_facebook {
-        background-image: url('../images/facebook.svg')
-    }
-    &.social_icon_instagram {
-        background-image: url('../images/instagram.svg')
-    }
+  &.social_icon_facebook {
+    background-image: url('../images/facebook.svg')
+  }
+  &.social_icon_instagram {
+    background-image: url('../images/instagram.svg')
+  }
 }
 
 #website_author {
-    opacity: 0.75;
-    font-size: 90%;
+  opacity: 0.75;
+  font-size: 90%;
+}
+
+
+
+a.frenchtechlink {
+  position: absolute;
+  left: 15px;
+  width: 120px;
+  bottom: -26px;
+
+  span {
+    display: none;
+    position: absolute;
+    background: #0b6395;
+    width: 500px;
+    max-width: 50vw;
+    font-size: 0.8em;
+    line-height: 150%;
+    text-align: left;
+    padding: 5px 15px;
+    border: solid 2px #052f47;
+    top: -94px;
+    left: -5px;
+
+    &:after {
+      content: '';
+      width: 15px;
+      height: 15px;
+      background: #0b6395;
+      border-bottom: solid 2px #052f47;
+      border-right: solid 2px #052f47;
+      position: absolute;
+      bottom: -10px;
+      left: 45px;
+      transform: rotate(45deg);
+    }
+  }
+  &:hover span{
+    display: block;
+  }
+}
 }
