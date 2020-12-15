@@ -36,20 +36,15 @@
 
 	<div id="copyright">
 		<div class="container">
-			<div class="row">
-				<div class="col-sm-3 col-sm-push-9">
-					<a href="https://www.ftalps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/french-tech-logo.png" alt="French Tech in the Alps logo"><span>Membre de la French tech in the Alps</span></a>
-				</div>
-				<div class="col-sm-9 col-sm-pull-3">
-					<p>
-						&copy; <?php echo date('Y'); ?> Savio | <a href="<?php echo $hurl; ?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | <a href="<?php echo $hurl; ?>/contact" target="infosavio">Contact</a> | <a href="<?php echo $hurl; ?>/conditions-generales/" target="infosavio">Conditions générales</a> |
-						<a target="_blank" class="social_icon social_icon_instagram" href="https://www.instagram.com/savio.fr/"></a>
-						<a target="_blank" class="social_icon social_icon_facebook" href="https://www.facebook.com/Savio-Le-français-en-samusant-389735735185222/"></a>
-						<br>
-						<span id="website_author"> Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></span>
-					</p>
-				</div>
-			</div>
+			<p>
+				&copy; <?php echo date('Y'); ?> Savio | <a href="<?php echo $hurl; ?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | <a href="<?php echo $hurl; ?>/contact" target="infosavio">Contact</a> | <a href="<?php echo $hurl; ?>/conditions-generales/" target="infosavio">Conditions générales</a> |
+				<a target="_blank" class="social_icon social_icon_instagram" href="https://www.instagram.com/savio.fr/"></a>
+				<a target="_blank" class="social_icon social_icon_facebook" href="https://www.facebook.com/Savio-Le-français-en-samusant-389735735185222/"></a>
+				<br>
+				<span id="website_author"> Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></span>
+
+					<a style="display: none;" class="frenchtechlink" href="https://www.ftalps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/french-tech-logo.png" alt="French Tech in the Alps logo"><span>Savio Éducation est une entreprise membre de la French tech in the Alpes, mouvement collectif engagé pour le développement et le rayonnement de l’économie numérique.</span></a>
+			</p>
 		</div>
 	</div>
 
