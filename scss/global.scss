@@ -17,7 +17,10 @@
 
 @media (min-width: 1200px) {}
 
-
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
 body {
   font: normal 62.5% $font_stack;
   background: url('../images/bg.png') repeat top left,
