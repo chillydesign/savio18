@@ -55,10 +55,9 @@ a.frenchtechlink {
   left: 15px;
   width: 120px;
   bottom: -26px;
-  display: none;
 }
 
-a.frenchtechlink  span {
+a.frenchtechlink span {
     display: none;
     position: absolute;
     background: #0b6395;
@@ -71,10 +70,9 @@ a.frenchtechlink  span {
     border: solid 2px #052f47;
     top: -94px;
     left: -5px;
-
   }
 
-    a.frenchtechlink  span:after {
+    a.frenchtechlink span:after {
       content: '';
       width: 15px;
       height: 15px;
