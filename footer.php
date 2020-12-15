@@ -38,7 +38,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3 col-sm-push-9">
-					<a href="https://www.ftalps.com/" target="_blank"><img src="images/french-tech-logo.png" alt="French Tech in the Alps logo"><span>Une start-up Made in France</span></a>
+					<a href="https://www.ftalps.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/images/french-tech-logo.png" alt="French Tech in the Alps logo"><span>Membre de la French tech in the Alps</span></a>
 				</div>
 				<div class="col-sm-9 col-sm-pull-3">
 					<p>
