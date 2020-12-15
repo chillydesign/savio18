@@ -47,7 +47,7 @@
 
 						<img src="<?php echo get_template_directory_uri(); ?>/images/french-tech-logo.png" alt="French Tech in the Alps logo"/>
 
-						<span>Savio Éducation est une entreprise membre de la French Tech in the Alpes, mouvement collectif engagé pour le développement et le rayonnement de l’économie numérique.</span>
+						<span class="frenchtechspan">Savio Éducation est une entreprise membre de la <strong>French Tech in the Alpes</strong>, mouvement collectif engagé pour le développement et le rayonnement de l’économie numérique.</span>
 					</a>
 			</p>
 		</div>
