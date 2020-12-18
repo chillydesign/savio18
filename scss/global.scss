@@ -1415,10 +1415,9 @@ section.section.section_announcement {
 
 
 section#top_testimonial{
-  background: $grey;
+  background: red;
 
-  blockquote {background: red;}
-      .testimonial blockquote, section#top_testimonial blockquote {
+  blockquote {
         position: relative;
         padding: 20px 20px;
 
