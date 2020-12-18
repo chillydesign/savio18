@@ -763,9 +763,7 @@ $features_height: 450px;
 
   }
 
-  .testimonial {
 
-    margin-bottom: 30px;
 
     blockquote {
       position: relative;
@@ -801,6 +799,10 @@ $features_height: 450px;
         text-indent: 0;
       }
     }
+
+    .testimonial {
+
+      margin-bottom: 30px;
 
     cite {
       text-align: right;
