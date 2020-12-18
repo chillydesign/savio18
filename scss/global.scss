@@ -1444,12 +1444,18 @@ section#top_testimonial{
 
         p {
           text-indent: 50px;
-          font-size: 1.5em;
+          font-size: 1.65em;
         }
 
         p+p {
           text-indent: 0;
         }
+
+        @media(min-width: $mobile_width){
+          h3, p {
+            padding-left: 120px;
+            padding-right: 120px;
+          }
       }
 
 }
