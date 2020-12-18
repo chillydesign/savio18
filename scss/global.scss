@@ -24,7 +24,7 @@ html {
 body {
   font: normal 62.5% $font_stack;
   background: url('../images/bg.png') repeat top left,
-    linear-gradient(-90deg, $brand_color 0, $brand_color_hover 100%);
+  linear-gradient(-90deg, $brand_color 0, $brand_color_hover 100%);
   background-size: 250px, 100%;
   position: relative;
   color: $font_color;
@@ -1402,13 +1402,13 @@ section.partenaires {
 
 //ANNOUNCEMENT SECTION
 section.section.section_announcement {
-    background: linear-gradient(90deg, $orange 0, $pink 100%);;
-    font-size: 1.8em;
-    color: white;
-    padding: 30px;
-    border-top: solid 6px;
-    margin-top: -5px;
-    position: relative;
+  background: linear-gradient(90deg, $orange 0, $pink 100%);;
+  font-size: 1.8em;
+  color: white;
+  padding: 30px;
+  border-top: solid 6px;
+  margin-top: -5px;
+  position: relative;
 }
 
 
@@ -1418,44 +1418,45 @@ section#top_testimonial{
   background: $light_grey;
 
   blockquote {
-        position: relative;
-        padding: 20px 20px;
+    position: relative;
+    padding: 20px 20px;
 
-        &:after,
-        &:before {
-          content: '';
-          background: url('../images/quote.svg') no-repeat top left;
-          background-size: 100px;
-          height: 100px;
-          width: 100px;
-          position: absolute;
-          opacity: 0.1;
-          top: 0px;
-          left: 0px;
-        }
+    &:after,
+    &:before {
+      content: '';
+      background: url('../images/quote.svg') no-repeat top left;
+      background-size: 100px;
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      opacity: 0.1;
+      top: 0px;
+      left: 0px;
+    }
 
-        &:before {
-          top: auto;
-          left: auto;
-          bottom: 10px;
-          right: 0;
-          transform: rotate(180deg);
-        }
+    &:before {
+      top: auto;
+      left: auto;
+      bottom: 10px;
+      right: 0;
+      transform: rotate(180deg);
+    }
 
-        p {
-          text-indent: 50px;
-          font-size: 1.65em;
-        }
+    p {
+      text-indent: 50px;
+      font-size: 1.65em;
+    }
 
-        p+p {
-          text-indent: 0;
-        }
+    p+p {
+      text-indent: 0;
+    }
 
-        @media(min-width: $mobile_width){
-          h3, p {
-            padding-left: 120px;
-            padding-right: 120px;
-          }
+    @media(min-width: $mobile_width){
+      h3, p {
+        padding-left: 120px;
+        padding-right: 120px;
       }
+    }
+  }
 
-}
+  }
