@@ -763,9 +763,11 @@ $features_height: 450px;
 
   }
 
+  .testimonial {
 
-section#top_testimonial blockquote {background: red;}
-    .testimonial blockquote, section#top_testimonial blockquote {
+    margin-bottom: 30px;
+
+    blockquote {
       position: relative;
       padding: 20px 20px;
 
@@ -799,10 +801,6 @@ section#top_testimonial blockquote {background: red;}
         text-indent: 0;
       }
     }
-
-    .testimonial {
-
-      margin-bottom: 30px;
 
     cite {
       text-align: right;
@@ -1411,4 +1409,48 @@ section.section.section_announcement {
     border-top: solid 6px;
     margin-top: -5px;
     position: relative;
+}
+
+
+
+
+section#top_testimonial{
+  background: $grey;
+
+  blockquote {background: red;}
+      .testimonial blockquote, section#top_testimonial blockquote {
+        position: relative;
+        padding: 20px 20px;
+
+        &:after,
+        &:before {
+          content: '';
+          background: url('../images/quote.svg') no-repeat top left;
+          background-size: 100px;
+          height: 100px;
+          width: 100px;
+          position: absolute;
+          opacity: 0.1;
+          top: 0px;
+          left: 0px;
+        }
+
+        &:before {
+          top: auto;
+          left: auto;
+          bottom: 10px;
+          right: 0;
+          transform: rotate(180deg);
+        }
+
+        p {
+          text-indent: 50px;
+          font-size: 1.5em;
+        }
+
+        p+p {
+          text-indent: 0;
+        }
+      }
+
 }
