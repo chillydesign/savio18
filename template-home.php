@@ -49,7 +49,7 @@
         </section>
 
   <?php if($top_testimonial): ?>
-    <section id="top_testimonial" style="display:none;">
+    <section id="top_testimonial">
       <div class="container">
         <?php echo $top_testimonial; ?>
       </div>
