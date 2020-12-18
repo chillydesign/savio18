@@ -8,6 +8,7 @@
 
     <?php $welcome_paragraph = get_field('welcome_paragraph'); ?>
     <?php $launch_date = get_field('launch_date'); ?>
+    <?php $top_testimonial = get_field('top_testimonial'); ?>
 
     <?php $news_slider = get_field('news_slider'); ?>
     <?php $pre_newsletter_paragraph = get_field('pre_newsletter_paragraph'); ?>
@@ -46,6 +47,14 @@
             </div>
 
         </section>
+
+  <?php if($top_testimonial): ?>
+    <section id="top_testimonial" style="display:none;">
+      <div class="container">
+        <?php echo $top_testimonial; ?>
+      </div>
+    </section>
+  <?php endif; ?>
 
 <?php if ($news_slider): ?>
   <section id="countdown_section" >
