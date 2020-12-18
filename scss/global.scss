@@ -109,7 +109,7 @@ section {
 
   .testlink {
     position: absolute;
-    width: 300px;
+    width: 350px;
     bottom: -270px;
     right: -54px;
     transform: rotate(15deg);
@@ -118,6 +118,7 @@ section {
     }
 
     img {
+
       animation: pulse 2s ease-in-out infinite;
     }
   }
