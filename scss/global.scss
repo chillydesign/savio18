@@ -121,6 +121,14 @@ section {
 
       animation: pulse 2s ease-in-out infinite;
     }
+
+  }
+}
+
+@media (min-width:1110px){
+  #welcome_section .testlink {
+    width: 400px;
+    right: -114px;
   }
 }
 
@@ -1415,6 +1423,7 @@ section.section.section_announcement {
 
 
 section#top_testimonial{
+  padding: 20px 0;
 
   blockquote {
     position: relative;
@@ -1440,11 +1449,12 @@ section#top_testimonial{
       right: 0;
       transform: rotate(180deg);
     }
+    h2, h3 {font-size: 2em;}
 
     p {
-      text-indent: 50px;
-      font-size: 1.75em;
-      line-height: 170%;
+      text-indent: 0px;
+      font-size: 1.5em;
+      line-height: 140%;
     }
 
     p+p {
