@@ -47,7 +47,7 @@
             </div>
 
         </section>
-
+<div class="tobedeleted">
   <?php if($top_testimonial): ?>
     <section id="top_testimonial">
       <div class="container">
@@ -74,7 +74,30 @@
     </div>
   </section>
 <?php endif;  // if news_slider?>
+</div>
 
+<div id="showthisplease" style="display:none;">
+  <?php if ($news_slider): ?>
+    <section id="countdown_section" >
+      <div class="container">
+        <?php echo $top_testimonial; ?>
+        <div class="what_is_savio_slider">
+          <?php foreach ($news_slider as $slide): ?>
+            <div class="what_is_savio_flex">
+              <div class="what_is_savio_text">
+                <?php echo $slide['content']; ?>
+              </div>
+              <div class="what_is_savio_slider_container">
+                <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div>
+              </div>
+            </div>
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </section>
+  <?php endif;  // if news_slider?>
+
+</div>
 
 <?php if (false) : ?>
     <?php $date_paragraph = get_field('date_paragraph'); ?>

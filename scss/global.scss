@@ -152,6 +152,14 @@ section {
 #countdown_section {
 
 
+  blockquote{
+    &:after {
+      content: '';
+      background: ('../images/quote-bubble-shape.svg');
+    }
+  }
+
+
   color: white;
   background: none;
 
