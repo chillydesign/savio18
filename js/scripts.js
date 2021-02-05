@@ -312,15 +312,18 @@
       $single_questions.not($questiontopopen).removeClass('question_expanded');
       $questiontopopen.toggleClass('question_expanded');
 
-      setTimeout(() => {
-        $(window).trigger('resize'); // for slider
-      }, 500);
-
+      resizeWindow(500);
+      resizeWindow(1000);
     }
     // FAQ
     // FAQ
 
+    function resizeWindow(i) {
+      setTimeout(() => {
+        $(window).trigger('resize'); // for slider
+      }, i);
 
+    }
 
 
 
