@@ -6,22 +6,22 @@
     <div class="container">
 
         <?php foreach ($question_categories as $question_category) : ?>
-            <?php $questions = get_posts(array(
-                'post_type' => 'question_parent',
-                'posts_per_page' => -1,
-                'order' => 'DESC',
-                'orderby' => 'menu_order',
-                'tax_query' => array(
-                    array(
-                        'taxonomy' => 'question_cat',
-                        'field' => 'slug',
-                        'terms' => $question_category->slug
-                    )
-                )
-            )); ?>
+
             <h2> <?php echo $question_category->name; ?></h2>
             <div class="questions_container">
-
+                <?php $questions = get_posts(array(
+                    'post_type' => 'question_parent',
+                    'posts_per_page' => -1,
+                    'order' => 'DESC',
+                    'orderby' => 'menu_order',
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'question_parent_cat',
+                            'field' => 'slug',
+                            'terms' => $question_category->slug
+                        )
+                    )
+                )); ?>
 
                 <?php foreach ($questions as $question) :;  ?>
                     <div class="single_question" id="question_<?php echo $question->ID; ?>">
