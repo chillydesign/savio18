@@ -42,7 +42,9 @@
                                 <div class="faq_gallery_slider">
                                     <?php foreach ($slider as $image) : ?>
                                         <div>
-                                            <img class="school_logo" src="<?php echo $image['sizes']['medium']; ?>" alt="" />
+                                            <a class="slider_gallery" href="<?php echo $image['sizes']['large']; ?>">
+                                                <img class="school_logo" src="<?php echo $image['sizes']['medium']; ?>" alt="" />
+                                            </a>
                                         </div>
                                     <?php endforeach; ?>
                                 </div>

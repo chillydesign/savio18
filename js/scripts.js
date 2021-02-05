@@ -161,6 +161,12 @@
     // PRESS GALLERY
     // PRESS GALLERY
 
+    // FAQ SLIDER GALLERY
+    $('.slider_gallery').featherlightGallery({
+      galleryFadeIn: 100
+    });
+    // FAQ SLIDER GALLERY
+
 
     //////////
     // SLIDERS
@@ -187,7 +193,7 @@
       slidesToShow: 4,
       centerMode: false,
       variableWidth: false,
-      adaptiveHeight: true,
+      adaptiveHeight: false,
       autoplay: true,
       autoplaySpeed: 5000,
     });
