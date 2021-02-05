@@ -198,6 +198,10 @@
       autoplaySpeed: 5000,
     });
 
+    setTimeout(() => {
+      $(window).trigger('resize');
+    }, 500);
+
 
     $(".school_slider").slick({
       dots: false,
