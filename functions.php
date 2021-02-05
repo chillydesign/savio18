@@ -491,6 +491,21 @@ function create_post_types() {
         )
     );
 
+
+    $args_ques_cat = array(
+        'labels'                     => $que_news_cat,
+        'hierarchical'               => true,
+        'public'                     => true,
+        'show_ui'                    => true,
+        'show_admin_column'          => true,
+        'show_in_nav_menus'          => true,
+        'show_tagcloud'              => false,
+    );
+    register_taxonomy('question_parents_cat', array('question_parent'), $args_ques_cat);
+
+
+
+
     register_post_type(
         'question_parent', // Register Custom Post Type
         array(
@@ -521,7 +536,7 @@ function create_post_types() {
             ), // Go to Dashboard Custom HTML5 Blank post for supports
             'can_export' => true, // Allows export in Tools > Export
             'taxonomies' => array(
-
+                'question_parents_cat'
                 //    'category'
             ) // Add Category and Post Tags support
         )
