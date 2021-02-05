@@ -24,6 +24,9 @@
                 )); ?>
 
                 <?php foreach ($questions as $question) :;  ?>
+
+
+
                     <div class="single_question" id="question_<?php echo $question->ID; ?>">
                         <h2 class="single_question_title" data-question="#question_<?php echo $question->ID; ?>">
                             <a class="single_question_link" href="<?php echo $question->guid; ?>">
@@ -33,6 +36,18 @@
                         <div class="single_question_content">
 
                             <?php echo apply_filters('the_content', $question->post_content); ?>
+                            <?php $slider = get_field('slider', $question->ID); ?>
+
+                            <?php if ($slider) : ?>
+                                <div class="school_slider">
+                                    <?php foreach ($slider as $image) : ?>
+                                        <div>
+                                            <img class="school_logo" src="<?php echo $image['sizes']['medium']; ?>" alt="" />
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+
                         </div>
 
                     </div>
