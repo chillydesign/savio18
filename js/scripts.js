@@ -198,9 +198,7 @@
       autoplaySpeed: 5000,
     });
 
-    setTimeout(() => {
-      $(window).trigger('resize');
-    }, 500);
+
 
 
     $(".school_slider").slick({
@@ -313,6 +311,11 @@
       var $single_questions = $('.single_question');
       $single_questions.not($questiontopopen).removeClass('question_expanded');
       $questiontopopen.toggleClass('question_expanded');
+
+      setTimeout(() => {
+        $(window).trigger('resize'); // for slider
+      }, 500);
+
     }
     // FAQ
     // FAQ
