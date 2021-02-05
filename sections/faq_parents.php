@@ -32,7 +32,7 @@
                         </h2>
                         <div class="single_question_content">
 
-                            <?php echo $question->post_content; ?>
+                            <?php echo apply_filters('the_content', $question->post_content); ?>
                         </div>
 
                     </div>
