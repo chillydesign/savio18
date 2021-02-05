@@ -16,7 +16,7 @@
                     'orderby' => 'menu_order',
                     'tax_query' => array(
                         array(
-                            'taxonomy' => 'question_parent_cat',
+                            'taxonomy' => 'question_parents_cat',
                             'field' => 'slug',
                             'terms' => $question_category->slug
                         )
