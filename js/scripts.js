@@ -184,8 +184,8 @@
       autoplaySpeed: 5000,
     });
 
-    var $testimonial_sliders = $(".faq_gallery_slider");
-    $testimonial_sliders.slick({
+    var $faq_gallery_sliders = $(".faq_gallery_slider");
+    $faq_gallery_sliders.slick({
       dots: true,
       arrows: false,
       infinite: false,
