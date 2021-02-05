@@ -26,7 +26,7 @@
                 <?php foreach ($questions as $question) :;  ?>
                     <div class="single_question" id="question_<?php echo $question->ID; ?>">
                         <h2 class="single_question_title" data-question="#question_<?php echo $question->ID; ?>">
-                            <a class="single_question_link" href="<?php echo $quesion->guid; ?>">
+                            <a class="single_question_link" href="<?php echo $question->guid; ?>">
                                 <?php echo $question->post_title; ?>
                             </a>
                         </h2>
