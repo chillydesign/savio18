@@ -39,7 +39,7 @@
                             <?php $slider = get_field('slider', $question->ID); ?>
 
                             <?php if ($slider) : ?>
-                                <div class="slider">
+                                <div class="faq_gallery_slider">
                                     <?php foreach ($slider as $image) : ?>
                                         <div>
                                             <img class="school_logo" src="<?php echo $image['sizes']['medium']; ?>" alt="" />

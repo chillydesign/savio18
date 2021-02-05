@@ -178,6 +178,20 @@
       autoplaySpeed: 5000,
     });
 
+    var $testimonial_sliders = $(".faq_gallery_slider");
+    $testimonial_sliders.slick({
+      dots: true,
+      arrows: false,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 4,
+      centerMode: false,
+      variableWidth: false,
+      adaptiveHeight: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+    });
+
 
     $(".school_slider").slick({
       dots: false,
