@@ -21,10 +21,11 @@ html {
   width: 100vw;
   overflow-x: hidden;
 }
+
 body {
   font: normal 62.5% $font_stack;
   background: url('../images/bg.png') repeat top left,
-  linear-gradient(-90deg, $brand_color 0, $brand_color_hover 100%);
+    linear-gradient(-90deg, $brand_color 0, $brand_color_hover 100%);
   background-size: 250px, 100%;
   position: relative;
   color: $font_color;
@@ -113,6 +114,7 @@ section {
     bottom: -270px;
     right: -54px;
     transform: rotate(15deg);
+
     @media(min-width: $mobile_width) {
       bottom: -200px;
     }
@@ -125,7 +127,7 @@ section {
   }
 }
 
-@media (min-width:1110px){
+@media (min-width:1110px) {
   #welcome_section .testlink {
     width: 400px;
     right: -114px;
@@ -152,7 +154,7 @@ section {
 #countdown_section {
 
 
-  blockquote{
+  blockquote {
     &:after {
       content: '';
       background: ('../images/quote-bubble-shape.svg');
@@ -1085,6 +1087,7 @@ $features_height: 450px;
 
 .questions_container {
 
+  margin-bottom: 40px;
 
   .single_question {
 
@@ -1148,11 +1151,15 @@ $features_height: 450px;
     }
 
     &:first-child {
-      border-radius: $border_radius $border_radius 0 0;
+
+      border-top-left-radius: $border_radius;
+      border-top-right-radius: $border_radius
     }
 
     &:last-child {
-      border-radius: 0 0 $border_radius $border_radius;
+
+      border-bottom-left-radius: $border_radius;
+      border-bottom-right-radius: $border_radius;
       border-top: 0;
     }
 
@@ -1385,6 +1392,7 @@ ins.wlc-box {
 section.partenaires {
   padding-bottom: 0;
 }
+
 .partenaires .slider_container {
   position: relative;
 }
@@ -1418,7 +1426,8 @@ section.partenaires {
 
 //ANNOUNCEMENT SECTION
 section.section.section_announcement {
-  background: linear-gradient(90deg, $orange 0, $pink 100%);;
+  background: linear-gradient(90deg, $orange 0, $pink 100%);
+  ;
   font-size: 1.8em;
   color: white;
   padding: 30px;
@@ -1430,7 +1439,7 @@ section.section.section_announcement {
 
 
 
-section#top_testimonial{
+section#top_testimonial {
   padding: 20px 0;
 
   blockquote {
@@ -1457,7 +1466,11 @@ section#top_testimonial{
       right: 0;
       transform: rotate(180deg);
     }
-    h2, h3 {font-size: 2em;}
+
+    h2,
+    h3 {
+      font-size: 2em;
+    }
 
     p {
       text-indent: 0px;
@@ -1469,8 +1482,11 @@ section#top_testimonial{
       text-indent: 0;
     }
 
-    @media(min-width: $mobile_width){
-      h2, h3, p {
+    @media(min-width: $mobile_width) {
+
+      h2,
+      h3,
+      p {
         padding-left: 120px;
         padding-right: 120px;
       }
