@@ -501,27 +501,27 @@ function create_post_types() {
         'show_in_nav_menus'          => true,
         'show_tagcloud'              => false,
     );
+
+
+
     register_taxonomy('question_parents_cat', array('question_parent'), $args_ques_cat);
-
-
-
 
     register_post_type(
         'question_parent', // Register Custom Post Type
         array(
             'labels' => array(
-                'name' => __('Question Parent', 'webfactor'), // Rename these to suit
-                'singular_name' => __('Question Parent', 'webfactor'),
-                'add_new' => __('Add New', 'webfactor'),
-                'add_new_item' => __('Add New Question Parent', 'webfactor'),
-                'edit' => __('Edit', 'webfactor'),
-                'edit_item' => __('Edit Question Parent', 'webfactor'),
-                'new_item' => __('New Question Parent', 'webfactor'),
-                'view' => __('View Question Parent', 'webfactor'),
-                'view_item' => __('View Question Parent', 'webfactor'),
-                'search_items' => __('Search Question', 'webfactor'),
-                'not_found' => __('No Questions found', 'webfactor'),
-                'not_found_in_trash' => __('No Questions found in Trash', 'webfactor')
+                'name' => __('Question Parents', 'webfactor'), // Rename these to suit
+                'singular_name' => __('Question Parents', 'webfactor'),
+                'add_new' => __('Ajouter', 'webfactor'),
+                'add_new_item' => __('Ajouter Question Parents', 'webfactor'),
+                'edit' => __('Modifier', 'webfactor'),
+                'edit_item' => __('Chercher une Question Parents', 'webfactor'),
+                'new_item' => __('Nouvelle Question Parents', 'webfactor'),
+                'view' => __('Afficher Question Parents', 'webfactor'),
+                'view_item' => __('Afficher Question Parents', 'webfactor'),
+                'search_items' => __('Chercher Question', 'webfactor'),
+                'not_found' => __('Aucune Question trouvée', 'webfactor'),
+                'not_found_in_trash' => __('Aucune Question trouvée dans la corbeille', 'webfactor')
             ),
             'public' => true,
             'publicly_queryable' => true, // dont allow to see on front end
@@ -543,22 +543,102 @@ function create_post_types() {
     );
 
 
+    register_taxonomy('question_enseignants_cat', array('question_enseignant'), $args_ques_cat);
+
+    register_post_type(
+        'question_enseignant', // Register Custom Post Type
+        array(
+            'labels' => array(
+                'name' => __('Question Enseignants', 'webfactor'), // Rename these to suit
+                'singular_name' => __('Question Enseignants', 'webfactor'),
+                'add_new' => __('Ajouter', 'webfactor'),
+                'add_new_item' => __('Ajouter Question Enseignants', 'webfactor'),
+                'edit' => __('Modifier', 'webfactor'),
+                'edit_item' => __('Chercher une Question Enseignants', 'webfactor'),
+                'new_item' => __('Nouvelle Question Enseignants', 'webfactor'),
+                'view' => __('Afficher Question Enseignants', 'webfactor'),
+                'view_item' => __('Afficher Question Enseignants', 'webfactor'),
+                'search_items' => __('Chercher Question', 'webfactor'),
+                'not_found' => __('Aucune Question trouvée', 'webfactor'),
+                'not_found_in_trash' => __('Aucune Question trouvée dans la corbeille', 'webfactor')
+            ),
+            'public' => true,
+            'publicly_queryable' => true, // dont allow to see on front end
+            'exclude_from_search' => false, // dont show in search
+            'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'excerpt',
+                'thumbnail'
+            ), // Go to Dashboard Custom HTML5 Blank post for supports
+            'can_export' => true, // Allows export in Tools > Export
+            'taxonomies' => array(
+                'question_enseignants_cat'
+                //    'category'
+            ) // Add Category and Post Tags support
+        )
+    );
+
+
+    register_taxonomy('question_ecoles_cat', array('question_ecole'), $args_ques_cat);
+
+    register_post_type(
+        'question_ecole', // Register Custom Post Type
+        array(
+            'labels' => array(
+                'name' => __('Question Ecoles', 'webfactor'), // Rename these to suit
+                'singular_name' => __('Question Ecoles', 'webfactor'),
+                'add_new' => __('Ajouter', 'webfactor'),
+                'add_new_item' => __('Ajouter Question Ecoles', 'webfactor'),
+                'edit' => __('Modifier', 'webfactor'),
+                'edit_item' => __('Chercher une Question Ecoles', 'webfactor'),
+                'new_item' => __('Nouvelle Question Ecoles', 'webfactor'),
+                'view' => __('Afficher Question Ecoles', 'webfactor'),
+                'view_item' => __('Afficher Question Ecoles', 'webfactor'),
+                'search_items' => __('Chercher Question', 'webfactor'),
+                'not_found' => __('Aucune Question trouvée', 'webfactor'),
+                'not_found_in_trash' => __('Aucune Question trouvée dans la corbeille', 'webfactor')
+            ),
+            'public' => true,
+            'publicly_queryable' => true, // dont allow to see on front end
+            'exclude_from_search' => false, // dont show in search
+            'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+            'has_archive' => true,
+            'supports' => array(
+                'title',
+                'editor',
+                'excerpt',
+                'thumbnail'
+            ), // Go to Dashboard Custom HTML5 Blank post for supports
+            'can_export' => true, // Allows export in Tools > Export
+            'taxonomies' => array(
+                'question_ecoles_cat'
+                //    'category'
+            ) // Add Category and Post Tags support
+        )
+    );
+
+
+
+
     register_post_type(
         'testimonial', // Register Custom Post Type
         array(
             'labels' => array(
-                'name' => __('Testimonial', 'webfactor'), // Rename these to suit
-                'singular_name' => __('Testimonial', 'webfactor'),
-                'add_new' => __('Add New', 'webfactor'),
-                'add_new_item' => __('Add New Testimonial', 'webfactor'),
-                'edit' => __('Edit', 'webfactor'),
-                'edit_item' => __('Edit Testimonial', 'webfactor'),
-                'new_item' => __('New Testimonial', 'webfactor'),
-                'view' => __('View Testimonial', 'webfactor'),
-                'view_item' => __('View Testimonial', 'webfactor'),
-                'search_items' => __('Search Testimonial', 'webfactor'),
-                'not_found' => __('No Testimonials found', 'webfactor'),
-                'not_found_in_trash' => __('No Testimonials found in Trash', 'webfactor')
+                'name' => __('Témoignage', 'webfactor'), // Rename these to suit
+                'singular_name' => __('Témoignage', 'webfactor'),
+                'add_new' => __('Ajouter', 'webfactor'),
+                'add_new_item' => __('Ajouter témoignage', 'webfactor'),
+                'edit' => __('Modifier', 'webfactor'),
+                'edit_item' => __('Modifier témoignage', 'webfactor'),
+                'new_item' => __('Nouveau témoignage', 'webfactor'),
+                'view' => __('Afficher témoignage', 'webfactor'),
+                'view_item' => __('Afficher témoignage', 'webfactor'),
+                'search_items' => __('Charcher un témoignage', 'webfactor'),
+                'not_found' => __('Aucun témoignage trouvé', 'webfactor'),
+                'not_found_in_trash' => __('Pas de témoignage dans la corbeille', 'webfactor')
             ),
             'public' => true,
             'publicly_queryable' => false, // dont allow to see on front end
