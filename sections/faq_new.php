@@ -1,4 +1,5 @@
 <?php $site_url = site_url(); ?>
+<?php $type= get_sub_field('type'); ?>
 <?php $question_categories = get_terms('question_parents_cat'); ?>
 
 <section class="section_faq">
@@ -9,6 +10,8 @@
 
             <h2> <?php echo $question_category->name; ?></h2>
             <div class="questions_container">
+
+              <?php if ($type== 'parent'): ?>
                 <?php $questions = get_posts(array(
                     'post_type' => 'question_parent',
                     'posts_per_page' => -1,
@@ -22,6 +25,37 @@
                         )
                     )
                 )); ?>
+
+              <?php elseif ($type== 'enseignant'): ?>
+                  <?php $questions = get_posts(array(
+                      'post_type' => 'question_enseignant',
+                      'posts_per_page' => -1,
+                      'order' => 'DESC',
+                      'orderby' => 'menu_order',
+                      'tax_query' => array(
+                          array(
+                              'taxonomy' => 'question_enseignants_cat',
+                              'field' => 'slug',
+                              'terms' => $question_category->slug
+                          )
+                      )
+                  )); ?>
+                <?php else : ?>
+                  <?php $questions = get_posts(array(
+                      'post_type' => 'question_ecole',
+                      'posts_per_page' => -1,
+                      'order' => 'DESC',
+                      'orderby' => 'menu_order',
+                      'tax_query' => array(
+                          array(
+                              'taxonomy' => 'question_ecoles_cat',
+                              'field' => 'slug',
+                              'terms' => $question_category->slug
+                          )
+                      )
+                  )); ?>
+
+                <?php endif; ?>
 
                 <?php foreach ($questions as $question) :;  ?>
 
