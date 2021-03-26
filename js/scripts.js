@@ -296,6 +296,7 @@
 
     $('.single_question_link').on('click', function (e) {
       e.preventDefault();
+      resizeWindow(700);
     });
     $('.single_question_title').on('click', function (e) {
       var $this = $(this);
@@ -314,6 +315,7 @@
 
       resizeWindow(500);
       resizeWindow(1000);
+      resizeWindow(1500);
     }
     // FAQ
     // FAQ
