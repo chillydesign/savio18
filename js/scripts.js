@@ -301,7 +301,7 @@
 
       setTimeout(() => {
 
-        $(".faq_gallery_slider").slick({
+        $(".faq_gallery_slider", $questiontopopen).slick({
           dots: false,
           arrows: true,
           infinite: false,
