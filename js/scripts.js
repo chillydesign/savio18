@@ -302,15 +302,15 @@
       setTimeout(() => {
         var $faq_gallery_sliders = $(".faq_gallery_slider");
         $faq_gallery_sliders.slick({
-          dots: true,
-          arrows: false,
+          dots: false,
+          arrows: true,
           infinite: false,
           speed: 300,
           slidesToShow: 4,
           centerMode: false,
           variableWidth: false,
           adaptiveHeight: false,
-          autoplay: true,
+          autoplay: false,
           autoplaySpeed: 5000,
         });
       }, 500);
