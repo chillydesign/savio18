@@ -300,8 +300,8 @@
       $questiontopopen.toggleClass('question_expanded');
 
       setTimeout(() => {
-
-        $(".faq_gallery_slider", $questiontopopen).slick({
+        // dont reinit the same slider twice
+        $(".faq_gallery_slider", $questiontopopen).not('.slick-initialized').slick({
           dots: false,
           arrows: true,
           infinite: false,
@@ -313,7 +313,7 @@
           autoplay: false,
           autoplaySpeed: 5000,
         });
-      }, 500);
+      }, 400);
 
 
 
@@ -325,12 +325,12 @@
     // FAQ
     // FAQ
 
-    function resizeWindow(i) {
-      setTimeout(() => {
-        $(window).trigger('resize'); // for slider
-      }, i);
+    // function resizeWindow(i) {
+    //   setTimeout(() => {
+    //     $(window).trigger('resize'); // for slider
+    //   }, i);
 
-    }
+    // }
 
 
 
