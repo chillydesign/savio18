@@ -302,8 +302,8 @@
       setTimeout(() => {
         // dont reinit the same slider twice
         $(".faq_gallery_slider", $questiontopopen).not('.slick-initialized').slick({
-          dots: false,
-          arrows: true,
+          dots: true,
+          arrows: false,
           infinite: false,
           speed: 300,
           slidesToShow: 4,
