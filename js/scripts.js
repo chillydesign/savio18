@@ -300,8 +300,8 @@
       $questiontopopen.toggleClass('question_expanded');
 
       setTimeout(() => {
-        var $faq_gallery_sliders = $(".faq_gallery_slider");
-        $faq_gallery_sliders.slick({
+
+        $(".faq_gallery_slider").slick({
           dots: false,
           arrows: true,
           infinite: false,
