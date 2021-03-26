@@ -184,20 +184,6 @@
       autoplaySpeed: 5000,
     });
 
-    var $faq_gallery_sliders = $(".faq_gallery_slider");
-    $faq_gallery_sliders.slick({
-      dots: true,
-      arrows: false,
-      infinite: false,
-      speed: 300,
-      slidesToShow: 4,
-      centerMode: false,
-      variableWidth: false,
-      adaptiveHeight: false,
-      autoplay: true,
-      autoplaySpeed: 5000,
-    });
-
 
 
 
@@ -296,7 +282,7 @@
 
     $('.single_question_link').on('click', function (e) {
       e.preventDefault();
-      resizeWindow(700);
+
     });
     $('.single_question_title').on('click', function (e) {
       var $this = $(this);
@@ -313,9 +299,28 @@
       $single_questions.not($questiontopopen).removeClass('question_expanded');
       $questiontopopen.toggleClass('question_expanded');
 
-      resizeWindow(500);
-      resizeWindow(1000);
-      resizeWindow(1500);
+      setTimeout(() => {
+        var $faq_gallery_sliders = $(".faq_gallery_slider");
+        $faq_gallery_sliders.slick({
+          dots: true,
+          arrows: false,
+          infinite: false,
+          speed: 300,
+          slidesToShow: 4,
+          centerMode: false,
+          variableWidth: false,
+          adaptiveHeight: false,
+          autoplay: true,
+          autoplaySpeed: 5000,
+        });
+      }, 500);
+
+
+
+
+      // resizeWindow(500);
+      // resizeWindow(1000);
+      // resizeWindow(1500);
     }
     // FAQ
     // FAQ
