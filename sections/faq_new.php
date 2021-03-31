@@ -1,7 +1,20 @@
-<?php $site_url = site_url(); ?>
-<?php $type= get_sub_field('type'); ?>
-<?php $question_categories = get_terms('question_parents_cat'); ?>
-
+<?php
+$site_url = site_url();
+$type = get_sub_field('type');
+if ($type == 'parent') {
+    $qu_tax = 'question_parents_cat';
+    $question_categories = get_terms($qu_tax);
+    $qu_post_type = 'question_parent';
+} else if ($type == 'enseignant') {
+    $qu_tax = 'question_enseignants_cat';
+    $question_categories = get_terms($qu_tax);
+    $qu_post_type = 'question_enseignant';
+} else {
+    $qu_tax = 'question_ecoles_cat';
+    $question_categories = get_terms($qu_tax);
+    $qu_post_type = 'question_ecole';
+}
+?>
 <section class="section_faq">
 
     <div class="container">
@@ -11,55 +24,22 @@
             <h2> <?php echo $question_category->name; ?></h2>
             <div class="questions_container">
 
-              <?php if ($type== 'parent'): ?>
+
                 <?php $questions = get_posts(array(
-                    'post_type' => 'question_parent',
+                    'post_type' => $qu_post_type,
                     'posts_per_page' => -1,
                     'order' => 'DESC',
                     'orderby' => 'menu_order',
                     'tax_query' => array(
                         array(
-                            'taxonomy' => 'question_parents_cat',
+                            'taxonomy' => $qu_tax,
                             'field' => 'slug',
                             'terms' => $question_category->slug
                         )
                     )
                 )); ?>
 
-              <?php elseif ($type== 'enseignant'): ?>
-                  <?php $questions = get_posts(array(
-                      'post_type' => 'question_enseignant',
-                      'posts_per_page' => -1,
-                      'order' => 'DESC',
-                      'orderby' => 'menu_order',
-                      'tax_query' => array(
-                          array(
-                              'taxonomy' => 'question_enseignants_cat',
-                              'field' => 'slug',
-                              'terms' => $question_category->slug
-                          )
-                      )
-                  )); ?>
-                <?php else : ?>
-                  <?php $questions = get_posts(array(
-                      'post_type' => 'question_ecole',
-                      'posts_per_page' => -1,
-                      'order' => 'DESC',
-                      'orderby' => 'menu_order',
-                      'tax_query' => array(
-                          array(
-                              'taxonomy' => 'question_ecoles_cat',
-                              'field' => 'slug',
-                              'terms' => $question_category->slug
-                          )
-                      )
-                  )); ?>
-
-                <?php endif; ?>
-
                 <?php foreach ($questions as $question) :;  ?>
-
-
 
                     <div class="single_question" id="question_<?php echo $question->ID; ?>">
                         <h2 class="single_question_title" data-question="#question_<?php echo $question->ID; ?>">
