@@ -66,7 +66,8 @@
               <?php echo $slide['content']; ?>
             </div>
             <div class="what_is_savio_slider_container">
-              <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div>
+              <!-- <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div> -->
+              <iframe style="width:100%;" src="https://www.youtube.com/embed/sWtVLDZWqX0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay=false; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
           </div>
         <?php endforeach; ?>
