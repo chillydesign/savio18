@@ -8,6 +8,7 @@
 
     <?php $welcome_paragraph = get_field('welcome_paragraph'); ?>
     <?php $launch_date = get_field('launch_date'); ?>
+    <?php $newsflash = get_field('newsflash'); ?>
     <?php $top_testimonial = get_field('top_testimonial'); ?>
 
     <?php $news_slider = get_field('news_slider'); ?>
@@ -47,6 +48,13 @@
             </div>
 
         </section>
+        <?php if($newsflash) : ?>
+        <section class="section section_announcement">
+            <div class="container">
+                <h5><?php echo $newsflash; ?></h5>
+            </div>
+        </section>  
+        <?php endif; ?> 
 <div class="tobedeleted">
   <?php if($top_testimonial): ?>
     <section id="top_testimonial">
