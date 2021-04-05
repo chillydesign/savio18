@@ -111,6 +111,8 @@ section {
   .testlink {
     position: absolute;
     width: 350px;
+    z-index: 20px;
+
     bottom: -270px;
     right: -54px;
     transform: rotate(15deg);
