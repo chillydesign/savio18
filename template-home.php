@@ -55,11 +55,15 @@
             </div>
         </section>  
         <?php endif; ?> 
-<div class="tobedeleted">
+
   <?php if($top_testimonial): ?>
     <section id="top_testimonial">
       <div class="container">
-        <?php echo $top_testimonial; ?>
+          <div class="row">
+              <div class="col-sm-6"><?php echo $top_testimonial; ?></div>
+              <div class="col-sm-6"><iframe style="width:100%; height:320px;" src="https://www.youtube.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white" width="560" height="315" frameborder="0"></iframe></div>
+          </div>
+        
       </div>
     </section>
   <?php endif; ?>
@@ -75,7 +79,7 @@
             </div>
             <div class="what_is_savio_slider_container">
               <!-- <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div> -->
-              <iframe style="width:100%; height:320px;" src="https://www.youtube.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white" width="560" height="315" frameborder="0"></iframe>
+              
             </div>
           </div>
         <?php endforeach; ?>
@@ -83,30 +87,7 @@
     </div>
   </section>
 <?php endif;  // if news_slider?>
-</div>
 
-<div id="showthisplease" style="display:none;">
-  <?php if ($news_slider): ?>
-    <section id="countdown_section" >
-      <div class="container">
-        <?php echo $top_testimonial; ?>
-        <div class="what_is_savio_slider">
-          <?php foreach ($news_slider as $slide): ?>
-            <div class="what_is_savio_flex">
-              <div class="what_is_savio_text">
-                <?php echo $slide['content']; ?>
-              </div>
-              <div class="what_is_savio_slider_container">
-                <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div>
-              </div>
-            </div>
-          <?php endforeach; ?>
-        </div>
-      </div>
-    </section>
-  <?php endif;  // if news_slider?>
-
-</div>
 
 <?php if (false) : ?>
     <?php $date_paragraph = get_field('date_paragraph'); ?>
