@@ -228,6 +228,8 @@ section {
 
   .testlink {
     transform: rotate(15deg);
+    min-width: 400px!important;
+    max-width: 100%!important;
     a.freetest_opener:focus, a.freetest_opener:hover, a.freetest_opener:active {
       border: 0;
       outline: 0;
@@ -624,7 +626,7 @@ $push_features_up: 180px;
 }
 
 
-
+ul.slick-dots {display: none;}
 
 
 
