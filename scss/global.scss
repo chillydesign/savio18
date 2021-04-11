@@ -226,6 +226,14 @@ section {
     color: white;
   }
 
+  .testlink img {
+    width: 100%;
+    box-shadow: none;
+    transform: rotate(15deg);
+    margin: 0;
+    animation: pulse 2s ease-in-out infinite;
+}
+
 }
 
 // END OF countdown_section
