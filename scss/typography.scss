@@ -225,3 +225,17 @@ cite {
   color: $medium_grey;
   font-size: #{$font_size * 0.8};
 }
+
+.videocontainer {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25% 
+  iframe{
+    position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  }
+}

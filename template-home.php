@@ -56,7 +56,11 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-sm-6"><?php echo $top_testimonial; ?></div>
-                            <div class="col-sm-6"><iframe style="width:100%; height:320px;" src="https://www.youtube.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white" width="560" height="315" frameborder="0"></iframe></div>
+                            <div class="col-sm-6">
+                                <div class="videocontainer">
+                                 <iframe style="width:100%; height:320px;" src="https://www.youtube.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white" width="560" height="315" frameborder="0"></iframe>
+                                </div>
+                            </div>
                         </div>
 
                     </div>
