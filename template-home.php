@@ -40,11 +40,6 @@
                     <div class="welcome_text">
                         <?php echo $welcome_paragraph; ?>
                     </div>
-                    <div class="testlink">
-                        <a href="#" class="freetest_opener">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/Savio-test-gratuit2.png" alt="Testez votre niveau gratuitement!" />
-                        </a>
-                    </div>
                 </div>
 
             </section>
@@ -79,6 +74,11 @@
                                     </div>
                                     <!-- <div class="what_is_savio_slider_container"> -->
                                     <!-- <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div> -->
+                                    <div class="testlink">
+                        <a href="#" class="freetest_opener">
+                            <img src="<?php echo get_template_directory_uri(); ?>/images/Savio-test-gratuit2.png" alt="Testez votre niveau gratuitement!" />
+                        </a>
+                    </div>
 
                                     <!-- </div> -->
                                 </div>
