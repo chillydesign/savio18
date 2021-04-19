@@ -1442,7 +1442,7 @@ ins.wlc-box {
     list-style: none;
     display: block;
     background: none;
-    margin: 0 3px;
+    margin: 0px;
     padding: 5px 10px;
     border-bottom: 1px dotted #ddd;
     font-size: 1.4em;
@@ -1450,7 +1450,12 @@ ins.wlc-box {
     a {
       display: block;
       color: $brand_color;
-      padding: 4px;
+      padding: 4px 7px;
+
+      &:hover {
+        background-color: darken($light_grey, 10);
+      }
+
     }
   }
 }
