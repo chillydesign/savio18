@@ -20,6 +20,8 @@
 html {
   width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
+
 }
 
 body {
@@ -1425,7 +1427,11 @@ ins.wlc-box {
 }
 
 .questions_h2 {
-  margin-top: 20px;
+  margin-top: 35px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 
