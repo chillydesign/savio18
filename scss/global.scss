@@ -1431,7 +1431,7 @@ ins.wlc-box {
   top: 100px;
   width: 200px;
   background-color: $light_grey;
-  box-shadow: 0 10px $box_shadow_size transparentize($dark_grey, 0.45);
+  box-shadow: 0 10px 30px transparentize($dark_grey, 0.45);
 
   li {
     list-style: none;
