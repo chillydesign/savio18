@@ -1442,15 +1442,15 @@ ins.wlc-box {
     list-style: none;
     display: block;
     background: none;
-    margin: 0px;
-    padding: 5px 10px;
+    margin: 0;
+    padding: 0;
     border-bottom: 1px dotted #ddd;
     font-size: 1.4em;
 
     a {
       display: block;
       color: $brand_color;
-      padding: 4px 7px;
+      padding: 9px 12px;
 
       &:hover {
         background-color: darken($light_grey, 10);
