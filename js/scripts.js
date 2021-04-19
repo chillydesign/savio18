@@ -166,10 +166,10 @@
     //   galleryFadeIn: 100
     // });
 
-    $('.slider_gallery').each(function (_i, gallery) {
+    $('.faq_gallery_slider').each(function (_i, gallery) {
       $(gallery).featherlightGallery({
-        galleryFadeIn: 100
-
+        galleryFadeIn: 100,
+        filter: '.slider_gallery'
       });
     })
 
