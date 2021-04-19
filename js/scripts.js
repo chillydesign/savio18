@@ -162,9 +162,18 @@
     // PRESS GALLERY
 
     // FAQ SLIDER GALLERY
-    $('.slider_gallery').featherlightGallery({
-      galleryFadeIn: 100
-    });
+    // $('.slider_gallery').featherlightGallery({
+    //   galleryFadeIn: 100
+    // });
+
+    $('.slider_gallery').each(function (_i, gallery) {
+      $(gallery).featherlightGallery({
+        galleryFadeIn: 100
+
+      });
+    })
+
+
     // FAQ SLIDER GALLERY
 
 
