@@ -60,6 +60,8 @@ if ($type == 'parent') {
                                                 <img class="school_logo" src="<?php echo $image['sizes']['medium']; ?>" alt="" />
                                             </a>
                                         </div>
+
+                                        <!--  <?php var_dump($image); ?>-->
                                     <?php endforeach; ?>
                                 </div>
                             <?php endif; ?>
