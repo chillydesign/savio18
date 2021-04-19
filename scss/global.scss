@@ -1434,7 +1434,7 @@ ins.wlc-box {
 
   top: 10px;
 
-  background-color: $light_grey;
+  background-color: #f1f1f1;
   box-shadow: 0 10px 30px transparentize($dark_grey, 0.9);
   border-radius: $border_radius;
 
@@ -1445,6 +1445,7 @@ ins.wlc-box {
     margin: 0 3px;
     padding: 5px 10px;
     border-bottom: 1px dotted #ddd;
+    font-size: 1.4em;
 
     a {
       display: block;
