@@ -1426,10 +1426,10 @@ ins.wlc-box {
 
 
 .faq_menu {
-  position: fixed;
-  right: 0;
-  top: 100px;
-  width: 200px;
+  position: sticky;
+
+  top: 10px;
+
   background-color: $light_grey;
   box-shadow: 0 10px 30px transparentize($dark_grey, 0.45);
 
@@ -1438,6 +1438,7 @@ ins.wlc-box {
     display: block;
     background: none;
     margin: 0 3px;
+    padding: 5px 10px;
     border-bottom: 1px dotted #ddd;
 
     a {
