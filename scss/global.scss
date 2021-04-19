@@ -1127,7 +1127,7 @@ $features_height: 450px;
       padding: 20px;
       margin: 0;
       cursor: pointer;
-      font-size: #{$font_size * 1.2};
+      font-size: $font_size;
       transition: background 0.3s;
 
       &:hover {
@@ -1429,6 +1429,7 @@ ins.wlc-box {
 
 .questions_h2 {
   margin-top: 35px;
+  font-size: #{$font_size * 1.4};
 
   &:first-child {
     margin-top: 0;
