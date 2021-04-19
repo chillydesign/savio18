@@ -26,7 +26,7 @@ if ($type == 'parent') {
 
                 <?php foreach ($question_categories as $question_category) : ?>
 
-                    <h2 id="<?php echo  $question_category->slug;  ?>"> <?php echo $question_category->name; ?></h2>
+                    <h2 class="questions_h2" id="<?php echo  $question_category->slug;  ?>"> <?php echo $question_category->name; ?></h2>
                     <div class="questions_container">
 
 

@@ -1424,6 +1424,10 @@ ins.wlc-box {
   }
 }
 
+.questions_h2 {
+  margin-top: 20px;
+}
+
 
 .faq_menu {
   position: sticky;
@@ -1431,7 +1435,8 @@ ins.wlc-box {
   top: 10px;
 
   background-color: $light_grey;
-  box-shadow: 0 10px 30px transparentize($dark_grey, 0.45);
+  box-shadow: 0 10px 30px transparentize($dark_grey, 0.9);
+  border-radius: $border_radius;
 
   li {
     list-style: none;
