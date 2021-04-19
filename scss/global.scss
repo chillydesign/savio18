@@ -1437,9 +1437,17 @@ ins.wlc-box {
 
 
 .faq_menu {
-  position: fixed;
-  top: 30px;
-  z-index: 1;
+  position: static;
+
+
+  @media(min-width: $mobile_width) {
+    position: fixed;
+    top: 30px;
+    z-index: 1;
+  }
+
+
+
   background-color: #f1f1f1;
   box-shadow: 0 10px 30px transparentize($dark_grey, 0.9);
   border-radius: $border_radius;
