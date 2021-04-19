@@ -21,7 +21,7 @@ if ($type == 'parent') {
 
         <?php foreach ($question_categories as $question_category) : ?>
 
-            <h2> <?php echo $question_category->name; ?></h2>
+            <h2 id="<?php echo  $question_category->slug;  ?>"> <?php echo $question_category->name; ?></h2>
             <div class="questions_container">
 
 
@@ -81,3 +81,10 @@ if ($type == 'parent') {
 
     </div>
 </section>
+
+
+<ul class="faq_menu">
+    <?php foreach ($question_categories as $question_category) : ?>
+        <li> <a href="<?php echo  $question_category->slug;  ?>"> <?php echo $question_category->name; ?></a></li>
+    <?php endforeach; ?>
+</ul>

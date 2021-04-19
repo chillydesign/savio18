@@ -1424,6 +1424,30 @@ ins.wlc-box {
   }
 }
 
+
+.faq_menu {
+  position: fixed;
+  right: 0;
+  top: 100px;
+  width: 200px;
+  background-color: $light_grey;
+  box-shadow: 0 10px $box_shadow_size transparentize($dark_grey, 0.45);
+
+  li {
+    list-style: none;
+    display: block;
+    background: none;
+    margin: 0 3px;
+    border-bottom: 1px dotted #ddd;
+
+    a {
+      display: block;
+      color: $brand_color;
+      padding: 4px;
+    }
+  }
+}
+
 section.partenaires {
   padding-bottom: 0;
 }
