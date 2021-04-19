@@ -57,11 +57,13 @@ if ($type == 'parent') {
                                     <?php foreach ($slider as $image) : ?>
                                         <div>
                                             <a class="slider_gallery" href="<?php echo $image['sizes']['large']; ?>">
-                                                <img class="school_logo" src="<?php echo $image['sizes']['medium']; ?>" alt="" />
+                                                <img <?php if ($image['caption'] != '') {
+                                                            echo ' alt="' . $image['caption'] . '" ';
+                                                        }; ?> class="school_logo" src="<?php echo $image['sizes']['medium']; ?>" alt="" />
                                             </a>
                                         </div>
 
-                                        <!--  <?php var_dump($image); ?>-->
+
                                     <?php endforeach; ?>
                                 </div>
                             <?php endif; ?>
