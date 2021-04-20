@@ -1452,23 +1452,29 @@ ins.wlc-box {
 
 
 .faq_menu_outer {
-  width: 15%;
+  position: static;
+
+
+
+
+  @media(min-width: $mobile_width) {
+
+    flex-grow: 1;
+    flex-basis: 300px;
+    align-self: start;
+    position: sticky;
+    top: 10px;
+    z-index: 1;
+
+  }
+
+
 }
 
 
 .faq_menu_inner {}
 
 .faq_menu {
-  position: static;
-
-
-  @media(min-width: $mobile_width) {
-    position: sticky;
-    top: 10px;
-    z-index: 1;
-
-
-  }
 
 
 
