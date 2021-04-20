@@ -1441,7 +1441,7 @@ ins.wlc-box {
   display: flex;
   flex-wrap: nowrap;
   position: relative;
-  ;
+  justify-content: space-between;
 }
 
 .questions_container_inner {
@@ -1451,6 +1451,10 @@ ins.wlc-box {
 }
 
 
+.faq_menu_outer {
+  width: 15%;
+}
+
 .faq_menu {
   position: static;
 
@@ -1459,7 +1463,7 @@ ins.wlc-box {
     position: sticky;
     top: 10px;
     z-index: 1;
-    width: 15%;
+
 
   }
 
