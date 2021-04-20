@@ -1456,20 +1456,22 @@ ins.wlc-box {
 }
 
 .faq_menu_outer {
-  position: static;
 
+  @media(min-width: $mobile_width) {
+    width: 20%;
+  }
+}
+
+
+.faq_menu {
+  position: static;
 
   @media(min-width: $mobile_width) {
     position: sticky;
     top: 10px;
     z-index: 1;
-    width: 20%;
+
   }
-
-}
-
-
-.faq_menu {
 
 
   background-color: #f1f1f1;
