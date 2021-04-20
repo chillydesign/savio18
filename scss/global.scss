@@ -1455,9 +1455,9 @@ ins.wlc-box {
   width: 15%;
 }
 
-.faq_menu {
-  position: static;
 
+.faq_menu_inner {
+  position: static;
 
   @media(min-width: $mobile_width) {
     position: sticky;
@@ -1466,6 +1466,12 @@ ins.wlc-box {
 
 
   }
+
+}
+
+.faq_menu {
+
+
 
 
 

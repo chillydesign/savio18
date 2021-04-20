@@ -86,11 +86,13 @@ if ($type == 'parent') {
             </div>
 
             <div class="faq_menu_outer">
-                <ul class="faq_menu">
-                    <?php foreach ($question_categories as $question_category) : ?>
-                        <li> <a href="#<?php echo  $question_category->slug;  ?>"> <?php echo $question_category->name; ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
+                <div class="faq_menu_inner">
+                    <ul class="faq_menu">
+                        <?php foreach ($question_categories as $question_category) : ?>
+                            <li> <a href="#<?php echo  $question_category->slug;  ?>"> <?php echo $question_category->name; ?></a></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
