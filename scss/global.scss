@@ -1438,7 +1438,24 @@ ins.wlc-box {
 
 
 
-.faq_menu {
+.questions_container_outer {
+
+
+  @media(min-width: $mobile_width) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+
+}
+
+.questions_container_inner {
+  @media(min-width: $mobile_width) {
+    width: 75%;
+  }
+}
+
+.faq_menu_outer {
   position: static;
 
 
@@ -1446,7 +1463,13 @@ ins.wlc-box {
     position: sticky;
     top: 10px;
     z-index: 1;
+    width: 20%;
   }
+
+}
+
+
+.faq_menu {
 
 
   background-color: #f1f1f1;
