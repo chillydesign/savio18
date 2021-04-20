@@ -19,11 +19,9 @@ if ($type == 'parent') {
 
     <div class="container">
 
-        <div class="row">
+        <div class="questions_container_outer">
 
-            <div class="col-sm-9">
-
-
+            <div class="questions_container_inner">
                 <?php foreach ($question_categories as $question_category) : ?>
 
                     <h2 class="questions_h2" id="<?php echo  $question_category->slug;  ?>"> <?php echo $question_category->name; ?></h2>
@@ -84,18 +82,18 @@ if ($type == 'parent') {
                     </div><!--  end of questions_container -->
                 <?php endforeach; ?>
 
-            </div>
-
-            <div class="col-sm-3">
-
-                <ul class="faq_menu">
-                    <?php foreach ($question_categories as $question_category) : ?>
-                        <li> <a href="#<?php echo  $question_category->slug;  ?>"> <?php echo $question_category->name; ?></a></li>
-                    <?php endforeach; ?>
-                </ul>
 
             </div>
+
+
+            <ul class="faq_menu">
+                <?php foreach ($question_categories as $question_category) : ?>
+                    <li> <a href="#<?php echo  $question_category->slug;  ?>"> <?php echo $question_category->name; ?></a></li>
+                <?php endforeach; ?>
+            </ul>
+
         </div>
+    </div>
 
 
 

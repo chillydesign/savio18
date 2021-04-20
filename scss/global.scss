@@ -1437,14 +1437,30 @@ ins.wlc-box {
 }
 
 
+.questions_container_outer {
+  display: flex;
+  flex-wrap: nowrap;
+  position: relative;
+  ;
+}
+
+.questions_container_inner {
+  @media(min-width: $mobile_width) {
+    width: 80%;
+  }
+}
+
+
 .faq_menu {
   position: static;
 
 
   @media(min-width: $mobile_width) {
-    position: fixed;
-    top: 30px;
+    position: sticky;
+    top: 10px;
     z-index: 1;
+    width: 15%;
+
   }
 
 
