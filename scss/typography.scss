@@ -176,11 +176,12 @@ a.button , button, input.button, h6 a , a h6, input[type="submit"] {
   border: 0;
   margin: 10px 0;
   text-align: center;
-  font-weight: normal;
+  font-weight: bold;
   cursor: pointer;
   border-radius: 10px;
   font-size: $font_size;
   transition: all 0.3s;
+  line-height: 120%;
 
   &.fancy_button {
     // background: linear-gradient(90deg, $orange 0, $pink 100%);
