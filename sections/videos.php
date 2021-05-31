@@ -11,7 +11,7 @@
 		<div class="row">
 			<?php while (have_rows('video_repeater')) : the_row(); ?>
 				<div class="<?php echo $column_class; ?> ">
-					<div class="column">
+					<div class="video_container">
 						<?php $video =  get_sub_field('link'); ?>
 						<?php $video_title =  get_sub_field('title'); ?>
 						<?php if ($video_title) : ?>
