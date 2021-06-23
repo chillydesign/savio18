@@ -1269,16 +1269,25 @@ section.section_press {}
 .press_item {
   flex: 1 auto;
   flex-grow: unset;
-  margin: 20px;
+  margin: 20px 0;
+  min-width: 50%;
+  max-width: 50%;
 
   .gallery_container {
     display: none;
   }
 
   .cover_image {
-    height: 300px;
-    width: auto;
+    height: auto;
+    width: 160px;
     cursor: pointer;
+
+
+    @media(min-width: $mobile_width) {
+      width: 350px;
+    }
+
+
   }
 
   .link_container {
