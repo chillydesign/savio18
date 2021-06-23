@@ -1639,3 +1639,19 @@ section#top_testimonial {
   }
 
 }
+
+section.section_videos {
+
+.video_container p {
+    width: 100%;
+    padding: 36%;
+    position: relative;
+    iframe {
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+  }
+}
+}
