@@ -1376,21 +1376,14 @@ ins.wlc-box {
       z-index: -1;
       position: absolute;
       bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
 
 
       .school_description_inner {
         background: $brand_color;
         text-align: center;
         padding: 5px;
-      }
-
-      h5 {
-        color: white;
-        font-weight: bold;
-        font-size: 1.4em;
-        margin: 20px 20px 0;
-        padding: 0;
-        position: relative;
 
         &:after {
           content: '';
@@ -1406,13 +1399,23 @@ ins.wlc-box {
         }
       }
 
+      h5 {
+        color: white;
+        font-weight: bold;
+        font-size: 1.4em;
+        margin: 0;
+        padding: 0;
+        position: relative;
+
+
+      }
+
       p {
         color: white;
         font-size: 1.15em;
 
         margin: 0 20px 0;
         font-style: italic;
-
         padding: 0;
       }
     }
@@ -1512,6 +1515,10 @@ ins.wlc-box {
 
 section.partenaires {
   padding: 70px 0 0;
+
+  .slick-slide {
+    position: relative;
+  }
 
 }
 
