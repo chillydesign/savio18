@@ -13,8 +13,10 @@
 						<div>
 							<img class="school_logo" src="<?php echo get_sub_field('logo')['sizes']['medium']; ?>" alt="" />
 							<div class="school_description">
-								<h5><?php echo get_sub_field('nom'); ?></h5>
-								<p><?php echo get_sub_field('adresse'); ?></p>
+								<div class="school_description_inner">
+									<h5><?php echo get_sub_field('nom'); ?></h5>
+									<p><?php echo get_sub_field('adresse'); ?></p>
+								</div>
 							</div>
 						</div>
 					<?php endwhile; ?>
@@ -43,12 +45,12 @@
 				<br>
 				<span id="website_author"> Website by <a target="_blank" href="https://webfactor.ch">Webfactor</a></span>
 
-					<a class="frenchtechlink" href="https://www.ftalps.com/" target="_blank">
+				<a class="frenchtechlink" href="https://www.ftalps.com/" target="_blank">
 
-						<img src="<?php echo get_template_directory_uri(); ?>/images/french-tech-logo.png" alt="French Tech in the Alps logo"/>
+					<img src="<?php echo get_template_directory_uri(); ?>/images/french-tech-logo.png" alt="French Tech in the Alps logo" />
 
-						<span style="display: none; text-shadow: none;position: absolute;background: #0b6395;width: 500px;max-width: 50vw;font-size: 0.8em;line-height: 150%;text-align: left;padding: 5px 15px;border: solid 2px #052f47;top: -94px;left: -5px;">Savio Éducation est une entreprise membre de la <strong>French Tech in the Alpes</strong>, mouvement collectif engagé pour le développement et le rayonnement de l’économie numérique.</span>
-					</a>
+					<span style="display: none; text-shadow: none;position: absolute;background: #0b6395;width: 500px;max-width: 50vw;font-size: 0.8em;line-height: 150%;text-align: left;padding: 5px 15px;border: solid 2px #052f47;top: -94px;left: -5px;">Savio Éducation est une entreprise membre de la <strong>French Tech in the Alpes</strong>, mouvement collectif engagé pour le développement et le rayonnement de l’économie numérique.</span>
+				</a>
 			</p>
 		</div>
 	</div>
@@ -70,14 +72,14 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123170854-2"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
+	window.dataLayer = window.dataLayer || [];
 
-function gtag() {
-	dataLayer.push(arguments);
-}
-gtag('js', new Date());
+	function gtag() {
+		dataLayer.push(arguments);
+	}
+	gtag('js', new Date());
 
-gtag('config', 'UA-123170854-2');
+	gtag('config', 'UA-123170854-2');
 </script>
 
 
