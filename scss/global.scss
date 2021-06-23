@@ -1371,8 +1371,9 @@ ins.wlc-box {
 
 
     .school_description {
-      opacity: 0;
-      transition: all ease-in-out 0.3s;
+      // opacity: 0;
+      // transition: all ease-in-out 0.3s;
+      display: none;
 
       h5 {
         color: white;
@@ -1411,7 +1412,7 @@ ins.wlc-box {
 
     &:hover {
       .school_description {
-        opacity: 1;
+        display: block;
       }
     }
 
