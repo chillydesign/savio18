@@ -782,9 +782,9 @@ function count_to_bootstrap_3max_class($count) {
     } elseif ($count == 3) {
         $class = 'col-sm-4';
     } elseif ($count == 2) {
-        $class = 'col-md-3 col-sm-6';
+        $class = 'col-sm-6';
     } elseif ($count <= 5) {
-        $class = 'col-sm-2';
+        $class = 'col-sm-4';
     } else {
         $class = 'col-sm-1';
     }
