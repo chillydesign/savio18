@@ -774,6 +774,23 @@ function count_to_bootstrap_class($count) {
     return $class;
 };
 
+function count_to_bootstrap_3max_class($count) {
+    if ($count == 1) {
+        $class = 'col-sm-12';
+    } elseif ($count == 2) {
+        $class = 'col-sm-6';
+    } elseif ($count == 3) {
+        $class = 'col-sm-4';
+    } elseif ($count == 2) {
+        $class = 'col-md-3 col-sm-6';
+    } elseif ($count <= 5) {
+        $class = 'col-sm-2';
+    } else {
+        $class = 'col-sm-1';
+    }
+    return $class;
+};
+
 function thumbnail_of_post_url($post_id, $size = 'large') {
     $image_id = get_post_thumbnail_id($post_id);
     $image_url = wp_get_attachment_image_src($image_id, $size);

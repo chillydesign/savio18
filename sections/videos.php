@@ -1,7 +1,7 @@
 <?php $title =  get_sub_field('title'); ?>
 <section class="section section_videos">
 	<?php $column_count =  sizeof(get_sub_field('video_repeater')); ?>
-	<?php $column_class = count_to_bootstrap_class($column_count); ?>
+	<?php $column_class = count_to_bootstrap_3max_class($column_count); ?>
 
 
 	<div class="container">
@@ -15,7 +15,7 @@
 						<?php $video =  get_sub_field('link'); ?>
 						<?php $video_title =  get_sub_field('title'); ?>
 						<?php if ($video_title) : ?>
-							<h3><?php echo $video_title; ?></h3>
+							<h4><?php echo $video_title; ?></h4>
 						<?php endif; ?>
 						<?php echo apply_filters('the_content', $video);   ?>
 					</div>
