@@ -14,9 +14,13 @@
 					<div class="video_container">
 						<?php $video =  get_sub_field('link'); ?>
 						<?php $video_title =  get_sub_field('title'); ?>
+						<?php $video_subtitle =  get_sub_field('subtitle'); ?>
 						<?php echo apply_filters('the_content', $video);   ?>
 						<?php if ($video_title) : ?>
 							<h4><?php echo $video_title; ?></h4>
+						<?php endif; ?>
+						<?php if ($video_subtitle) : ?>
+							<h5><?php echo $video_subtitle; ?></h5>
 						<?php endif; ?>
 					</div>
 				</div>
