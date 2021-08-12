@@ -14,10 +14,10 @@
 					<div class="video_container">
 						<?php $video =  get_sub_field('link'); ?>
 						<?php $video_title =  get_sub_field('title'); ?>
+						<?php echo apply_filters('the_content', $video);   ?>
 						<?php if ($video_title) : ?>
 							<h4><?php echo $video_title; ?></h4>
 						<?php endif; ?>
-						<?php echo apply_filters('the_content', $video);   ?>
 					</div>
 				</div>
 			<?php endwhile; ?>
