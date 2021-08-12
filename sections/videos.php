@@ -1,7 +1,6 @@
 <?php $title =  get_sub_field('title'); ?>
 <section class="section section_videos">
 	<?php $column_count =  sizeof(get_sub_field('video_repeater')); ?>
-	<?php $column_class = count_to_bootstrap_3max_class($column_count); ?>
 
 
 	<div class="container">
@@ -9,8 +8,9 @@
 			<h2><?php echo $title; ?></h2>
 		<?php endif; ?>
 		<div class="row">
+			<?php $i=1; ?>
 			<?php while (have_rows('video_repeater')) : the_row(); ?>
-				<div class="<?php echo $column_class; ?> ">
+				<div class="col-sm-4">
 					<div class="video_container">
 						<?php $video =  get_sub_field('link'); ?>
 						<?php $video_title =  get_sub_field('title'); ?>
@@ -20,6 +20,10 @@
 						<?php endif; ?>
 					</div>
 				</div>
+				<?php if($i%3==0) : ?>
+					</div><div class="row">
+				<?php endif; ?>
+				<?php $i++;?>
 			<?php endwhile; ?>
 		</div> <!-- END OF ROW -->
 
