@@ -72,14 +72,21 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123170854-2"></script>
 <script>
-	window.dataLayer = window.dataLayer || [];
+	if (document.cookie.includes('cookielawinfo-checkbox-analytics=yes')) {
+		window.dataLayer = window.dataLayer || [];
 
-	function gtag() {
-		dataLayer.push(arguments);
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-123170854-2');
 	}
-	gtag('js', new Date());
+</script>
 
-	gtag('config', 'UA-123170854-2');
+<script>
+
+
 </script>
 
 
