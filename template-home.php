@@ -58,7 +58,12 @@
                             <div class="col-sm-6"><?php echo $top_testimonial; ?></div>
                             <div class="col-sm-6">
                                 <div class="videocontainer">
-                                 <iframe allowfullscreen src="https://www.youtube.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white" width="560" height="315" frameborder="0"></iframe>
+
+                                    <iframe allowfullscreen src="https://www.youtube-nocookie.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white" width="560" height="315" frameborder="0"></iframe>
+
+
+
+
                                 </div>
                             </div>
                         </div>
@@ -79,10 +84,10 @@
                                     <!-- <div class="what_is_savio_slider_container"> -->
                                     <!-- <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div> -->
                                     <div class="testlink">
-                        <a href="#" class="freetest_opener">
-                            <img src="<?php echo get_template_directory_uri(); ?>/images/Savio-test-gratuit2.png" alt="Testez votre niveau gratuitement!" />
-                        </a>
-                    </div>
+                                        <a href="#" class="freetest_opener">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/images/Savio-test-gratuit2.png" alt="Testez votre niveau gratuitement!" />
+                                        </a>
+                                    </div>
 
                                     <!-- </div> -->
                                 </div>
