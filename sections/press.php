@@ -28,7 +28,7 @@
             </div>
             <?php if ($link): ?>
             <div class="link_container">
-            <h4><?php echo $link; ?></h4>
+            <?php echo $link; ?>
             </div>
             <?php endif; ?>
 

@@ -1456,6 +1456,17 @@ ins.wlc-box {
       font-size: 1.4em;
       margin: 10px 0 0;
     }
+
+    .featherlight-next span, .featherlight-previous span{
+      width: 30px;
+      margin-top: -40px;
+      font-style: normal;
+      font-weight: 400;
+      background:$brand_color;
+      padding: 0;
+      font-size: 20px;
+      border-radius: 5px;
+    }
   }
 }
 
