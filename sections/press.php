@@ -6,7 +6,7 @@
 <section class="section section_press">
 
     <div class="container">
-        <?php if(get_sub_field('title'): ?><h2><?php the_sub_field('title'); ?></h2><?php endif; ?>
+        <?php if(get_sub_field('title')) : ?><h2><?php the_sub_field('title'); ?></h2><?php endif; ?>
 
     <div class="press_items">
     <?php while ( have_rows('press_item') ) : the_row(); ?>
