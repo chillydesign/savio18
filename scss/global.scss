@@ -1276,11 +1276,14 @@ section.section_press {}
 
   display: inline-block;
     width: calc(50% - 40px);
-    min-width: 300px;
     background: #f3f3f3;
     padding: 20px;
     margin: 0 20px 20px 0!important;
     vertical-align: top;
+
+    @media(max-width:500px){
+      width: 100%;
+    }
 
   .gallery_container {
     display: none;
