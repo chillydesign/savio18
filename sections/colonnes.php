@@ -6,7 +6,7 @@
 
 <div class="container">
 	<?php if(get_sub_field('title')) : ?>
-		<?php if(get_sub_field('position_title') == 'left') {$position = 'left'; else $position = 'center';} ?>
+		<?php if(get_sub_field('position_title') == 'left') {$position = 'left';} else {$position = 'center';} ?>
 		<h2 style="text-align: <?php echo $position; ?>"><?php the_sub_field('title'); ?></h2>
 	<?php endif; ?>
 	<div class="row">
