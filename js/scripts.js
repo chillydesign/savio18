@@ -92,6 +92,7 @@
 
 
     $('.blue .column').matchHeight();
+    $('.press_item').matchHeight();
 
 
 
