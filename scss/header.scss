@@ -5,6 +5,10 @@ header {
   position: relative;
   z-index: 9;
 
+  .container {
+    position: relative;
+  }
+
   nav {
     display: flex;
     justify-content: space-between;
@@ -195,11 +199,15 @@ header {
   top: 0;
   right: 0;
   a {
-    background: url("../images/en.svg") no-repeat center center;
+    background: url("../images/en.svg") no-repeat center right;
     background-size: 20px;
     text-indent: -9999px;
     display: inline-block;
     height: 30px;
-    width: 50px;
+    width: 300px;
+    text-align: right;
+    padding: 7px 30px 0px 0px;
+    font-size: 1.3em;
+    color: #555;
   }
 }
