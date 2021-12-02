@@ -59,11 +59,7 @@
                     <?php chilly_nav('primary-navigation'); ?>
                 </ul>
 
-                <?php if (isset($_GET['test'])) : ?>
-                    <div id="english_container">
-                        <a href="<?php echo home_url(); ?>/about-savio">About Savio (EN)</a>
-                    </div>
-                <?php endif; ?>
+
 
             </nav>
         </div>
