@@ -53,8 +53,8 @@
 					<span style="">Savio Éducation est une entreprise membre de la <strong>French Tech in the Alpes</strong>, mouvement collectif engagé pour le développement et le rayonnement de l’économie numérique.</span>
 				</a>
 				<a class="partnerlink edtechlink" href="https://edtechfrance.fr/" target="_blank">
-					<img src="<?php echo get_template_directory_uri(); ?>/images/ed-tech.png" alt="French Tech in the Alps logo" />
-					s
+					<img src="<?php echo get_template_directory_uri(); ?>/images/ed-tech.png" alt="EdTech " />
+					<span>EdTech</span>
 				</a>
 			</p>
 		</div>
