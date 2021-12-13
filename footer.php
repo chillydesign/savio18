@@ -54,7 +54,6 @@
 				</a>
 				<a class="partnerlink edtechlink" href="https://edtechfrance.fr/" target="_blank">
 					<img src="<?php echo get_template_directory_uri(); ?>/images/ed-tech.png" alt="EdTech " />
-					<span>EdTech</span>
 				</a>
 			</p>
 		</div>
