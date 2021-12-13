@@ -16,7 +16,6 @@ gulp.task("sass", function (done) {
     .pipe(
       autoprefixer({
         cascade: false,
-        browsers: ["last 3 versions"],
       })
     )
     .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))

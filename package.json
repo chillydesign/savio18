@@ -28,6 +28,7 @@
         "jquery-match-height": "^0.7.2",
         "slick-carousel": "^1.8.1"
     },
+    "browserslist": ["last 3 versions"],
     "devDependencies": {
         "gulp": "^4.0.2",
         "gulp-autoprefixer": "^6.1.0",
