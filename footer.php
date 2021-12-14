@@ -39,7 +39,10 @@
 	<div id="copyright">
 		<div class="container">
 			<p>
-				&copy; <?php echo date('Y'); ?> Savio | <a href="<?php echo $hurl; ?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Protection des données</a> | <a href="<?php echo $hurl; ?>/contact" target="infosavio">Contact</a> | <a href="<?php echo $hurl; ?>/conditions-generales/" target="infosavio">Conditions générales</a> |
+				&copy; <?php echo date('Y'); ?> Savio | <a href="<?php echo $hurl; ?>/information-sur-la-protection-des-donnees-personnelles" target="infosavio">Politique de confidentialité</a> | <a href="<?php echo $hurl; ?>/contact" target="infosavio">Contact</a> | <a href="<?php echo $hurl; ?>/conditions-generales/" target="infosavio">Conditions générales d'abonnement</a> |
+				<a href="<?php echo $hurl; ?>/mentions-legales/" target="infosavio">
+					Mentions légales</a> |
+				<a target="_blank" class="social_icon social_icon_instagram" href="https://www.instagram.com/savio.fr/"></a>
 				<a target="_blank" class="social_icon social_icon_instagram" href="https://www.instagram.com/savio.fr/"></a>
 				<a target="_blank" class="social_icon social_icon_facebook" href="https://www.facebook.com/Savio-Le-français-en-samusant-389735735185222/"></a>
 				<br>
