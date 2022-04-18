@@ -885,8 +885,8 @@ function social_meta_properties() {
 if (function_exists('acf_add_options_page')) {
 
     acf_add_options_page(array(
-        'page_title'     => 'Ecoles partenaires',
-        'menu_title'    => 'Logos écoles',
+        'page_title'     => 'Savio settings',
+        'menu_title'    => 'Savio settings',
         'menu_slug'     => 'savio-settings',
         'capability'    => 'edit_posts',
         'redirect'        => false
