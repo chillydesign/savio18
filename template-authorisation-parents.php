@@ -15,13 +15,12 @@ if ($lang == 'en') {
 
 $file = get_attached_file($file_id);
 
-var_dump($file);
 
 
 // // Header content type
-// header("Content-type: application/pdf");
+header("Content-type: application/pdf");
 
-// header("Content-Length: " . filesize($file));
+header("Content-Length: " . filesize($file));
 
-// // Send the file to the browser.
-// readfile($file);
+// Send the file to the browser.
+readfile($file);
