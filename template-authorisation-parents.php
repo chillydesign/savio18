@@ -2,7 +2,7 @@
 $lang = 'fr';
 if (isset($_GET['lang'])) {
 
-    $lang = $_GE['lang'];
+    $lang = $_GET['lang'];
 }
 
 
