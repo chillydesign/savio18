@@ -866,7 +866,7 @@ function social_meta_properties() {
             $excerpt =  wp_trim_words($post->post_content, 20);
         }
         $smp->title = get_the_title();
-        $smp->description = $excerpt;
+        $smp->description = strip_tags($excerpt);
         $smp->image =  thumbnail_of_post_url($post_id, 'medium');
         $smp->url = get_the_permalink();
     } else {
