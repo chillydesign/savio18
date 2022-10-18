@@ -3,14 +3,20 @@
 
 
 
-    <section class="section_welcome_paragraph"  <?php echo $background_image; ?>   >
-        <h1><?php echo sprintf( __( '%s Search Results for ', 'webfactor' ), $wp_query->found_posts ); echo get_search_query(); ?></h1>
-        <div class="sheep"></div>
-    </section>
+
+<section id="welcome_section">
+    <div class="container">
+        <div class="welcome_text">
+            <h1><?php echo sprintf(__('%s Search Results for ', 'webfactor'), $wp_query->found_posts);
+                echo get_search_query(); ?></h1>
+        </div>
+    </div>
+</section>
 
 
-    <!-- section -->
-    <section class="container">
+
+<!-- section -->
+<section class="container">
 
     <?php get_template_part('loop'); ?>
 
