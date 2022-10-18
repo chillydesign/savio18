@@ -4,7 +4,9 @@
     "description": "This is the savio 18 wordpress theme  by webfactor.ch",
     "main": "index.php",
     "scripts": {
-        "test": "say test"
+        "test": "say test",
+        "dev": "sass scss/global.scss css/global.css  --watch --style=compressed  --no-source-map",
+        "build": "postcss css/global.css -r  -u autoprefixer -m "
     },
     "repository": {
         "type": "git",
@@ -28,15 +30,8 @@
         "jquery-match-height": "^0.7.2",
         "slick-carousel": "^1.8.1"
     },
-    "browserslist": ["last 3 versions"],
-    "devDependencies": {
-        "gulp": "^4.0.2",
-        "gulp-autoprefixer": "^6.1.0",
-        "gulp-minify": "^3.0.15",
-        "gulp-sass": "^5.0.0",
-        "gulp-watch": "^5.0.1",
-        "hoek": "^5.0.4",
-        "node-sass": "^6.0.1",
-        "sshpk": "^1.16.1"
-    }
+    "browserslist": [
+        "last 3 versions"
+    ],
+    "devDependencies": {}
 }
