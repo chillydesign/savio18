@@ -114,15 +114,23 @@
     });
 
     updatePayFreq($payment_freq);
-    // $boolOuter.on("click", function () {
-    //   if ($payment_freq == "month") {
-    //     $payment_freq = "year";
-    //   } else {
-    //     $payment_freq = "month";
-    //   }
+    $boolOuterFreq.on("click", function () {
+      if ($payment_freq == "month") {
+        $payment_freq = "year";
+      } else {
+        $payment_freq = "month";
+      }
+      updatePayFreq($payment_freq);
+    });
 
-    //   updatePayFreq($payment_freq);
-    // });
+    $boolOuterCurrency.on("click", function () {
+      if ($payment_currency == "usd") {
+        $payment_currency = "eur";
+      } else {
+        $payment_currency = "usd";
+      }
+      updatePayCurrency($payment_currency);
+    });
 
     function updatePayFreq(freq) {
       if (freq == "month") {
@@ -136,14 +144,14 @@
       }
     }
     function updatePayCurrency(currency) {
-      if (currency == "usd") {
+      if (currency == "eur") {
         $boolOuterCurrency.removeClass("active");
-        $pay_usd.addClass("active");
-        $pay_eur.removeClass("active");
+        $pay_eur.addClass("active");
+        $pay_usd.removeClass("active");
       } else {
         $boolOuterCurrency.addClass("active");
-        $pay_usd.removeClass("active");
-        $pay_eur.addClass("active");
+        $pay_eur.removeClass("active");
+        $pay_usd.addClass("active");
       }
     }
 

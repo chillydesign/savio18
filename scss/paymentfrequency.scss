@@ -74,12 +74,25 @@ $boolean_offset: 3px;
         .currency {
             position: relative;
             top: -8px;
+            display: none;
+
+
+            &.active {
+                display: block;
+            }
         }
 
         .amount {
             font-size: 2em;
             padding: 0 4px 0 0;
             color: #000;
+            display: none;
+
+
+            &.active {
+                display: block;
+            }
+
         }
 
         .freq {}
