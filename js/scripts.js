@@ -95,6 +95,9 @@
     var $pay_usd = $(".pay_usd");
     var $pay_links = $(".pay_link");
 
+    updatePayFreq($payment_freq);
+    updatePayCurrency($payment_currency);
+
     $pay_links.on("click", function (e) {
       e.preventDefault();
       var $this = $(this);
@@ -113,7 +116,6 @@
       }
     });
 
-    updatePayFreq($payment_freq);
     $boolOuterFreq.on("click", function () {
       if ($payment_freq == "month") {
         $payment_freq = "year";
