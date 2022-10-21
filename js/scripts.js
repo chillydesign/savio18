@@ -114,15 +114,15 @@
     });
 
     updatePayFreq($payment_freq);
-    $boolOuter.on("click", function () {
-      if ($payment_freq == "month") {
-        $payment_freq = "year";
-      } else {
-        $payment_freq = "month";
-      }
+    // $boolOuter.on("click", function () {
+    //   if ($payment_freq == "month") {
+    //     $payment_freq = "year";
+    //   } else {
+    //     $payment_freq = "month";
+    //   }
 
-      updatePayFreq($payment_freq);
-    });
+    //   updatePayFreq($payment_freq);
+    // });
 
     function updatePayFreq(freq) {
       if (freq == "month") {
