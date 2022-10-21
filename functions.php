@@ -819,19 +819,23 @@ function payment_frequency_shortcode($atts, $content = null) {
             <div class="boolean_inner"></div>
         </div>
         <a class="pay_link pay_annually" href="#" data-freq="year">Paiement annuel</a>
-    </div>
-    <div class="payment_boolean_container payment_currency">
+    </div>';
+    return $switcher;
+}
+add_shortcode('payment_frequency_switcher', 'payment_frequency_shortcode');
+
+
+function payment_currency_shortcode($atts, $content = null) {
+    $switcher = '<p class=" payment_currency">
         <a class="pay_link pay_eur" href="#" data-currency="eur">EUR</a>
-        <div class="boolean_outer">
-            <div class="boolean_inner"></div>
-        </div>
+       /
         <a class="pay_link pay_usd" href="#" data-currency="usd">USD</a>
-    </div>
+    </p>
     
     ';
     return $switcher;
 }
-add_shortcode('payment_frequency_switcher', 'payment_frequency_shortcode');
+add_shortcode('payment_currency_switcher', 'payment_currency_shortcode');
 
 
 
@@ -842,6 +846,8 @@ function pay_freq_option_func($atts, $content = null) {
         'year_id' => 'family_year_1',
         'month_amount' => 50,
         'year_amount' => 100,
+        'month_word' => 'mois',
+        'year_word' => 'an'
     ), $atts);
 
 
@@ -853,6 +859,8 @@ function pay_freq_option_func($atts, $content = null) {
     $year_amount = $attributes['year_amount'];
     $month_amount_usd = $attributes['month_amount'];
     $year_amount_usd = $attributes['year_amount'];
+    $month_word = $attributes['month_word'];
+    $year_word = $attributes['year_word'];
 
     $pay_option = '<div class="pay_buttons">';
     $pay_option .= '<div class="pay_monthly">
@@ -860,7 +868,7 @@ function pay_freq_option_func($atts, $content = null) {
     <span class="amount pay_eur ">' . $month_amount . '</span><span class=" pay_eur currency">&euro;</span>
     <span class="amount pay_usd ">' . $month_amount_usd . '</span><span class=" pay_usd currency">$</span>
 
-    <span class="freq">/mois</span>
+    <span class="freq">/' . $month_word . '</span>
     </p>
     <h6  style="display:none;"><a href="' . $register_url .  $month_id . '">' . $button_text . '</a></h6>
     </div>';
@@ -868,7 +876,7 @@ function pay_freq_option_func($atts, $content = null) {
     <p class="cost">
     <span class="amount pay_eur">' . $year_amount . '</span><span class="currency pay_eur">&euro;</span>
     <span class="amount pay_usd">' . $year_amount_usd . '</span><span class="pay_usd currency">$</span>
-    <span class="freq">/an</span></p>
+    <span class="freq">/' . $year_word . '</span></p>
     <h6 style="display:none;"><a href="' . $register_url .  $year_id . '">' . $button_text . '</a></h6>
     </div>';
     $pay_option .= '</div>';

@@ -125,15 +125,6 @@
       updatePayFreq($payment_freq);
     });
 
-    $boolOuterCurrency.on("click", function () {
-      if ($payment_currency == "usd") {
-        $payment_currency = "eur";
-      } else {
-        $payment_currency = "usd";
-      }
-      updatePayCurrency($payment_currency);
-    });
-
     function updatePayFreq(freq) {
       if (freq == "month") {
         $boolOuterFreq.removeClass("active");
