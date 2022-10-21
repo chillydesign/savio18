@@ -67,6 +67,15 @@ $boolean_offset: 3px;
         }
     }
 
+    .pay_eur,
+    .pay_usd {
+        display: none;
+
+        &.active {
+            display: inline-block;
+        }
+    }
+
     .cost {
         text-align: center;
         color: #444;
@@ -74,24 +83,16 @@ $boolean_offset: 3px;
         .currency {
             position: relative;
             top: -8px;
-            display: none;
 
-
-            &.active {
-                display: inline-block;
-            }
         }
 
         .amount {
             font-size: 2em;
             padding: 0 4px 0 0;
             color: #000;
-            display: none;
 
 
-            &.active {
-                display: inline-block;
-            }
+
 
         }
 
