@@ -826,7 +826,13 @@ add_shortcode('payment_frequency_switcher', 'payment_frequency_shortcode');
 
 
 function payment_currency_shortcode($atts, $content = null) {
-    $switcher = '<p class=" payment_currency">
+    $attributes = shortcode_atts(array(
+        'prefix' => "",
+    ), $atts);
+    $prefix = $attributes['prefix'];
+
+
+    $switcher = '<p class=" payment_currency"> ' . $prefix . '
         <a class="pay_link pay_eur" href="#" data-currency="eur">EUR</a>
        /
         <a class="pay_link pay_usd" href="#" data-currency="usd">USD</a>
