@@ -88,7 +88,6 @@
     var $payment_freq = "month";
     var $payment_currency = "eur";
     var $boolOuterFreq = $(".payment_frequency .boolean_outer");
-    var $boolOuterCurrency = $(".payment_currency .boolean_outer");
     var $pay_monthly = $(".pay_monthly");
     var $pay_annually = $(".pay_annually");
     var $pay_eur = $(".pay_eur");
@@ -138,11 +137,9 @@
     }
     function updatePayCurrency(currency) {
       if (currency == "eur") {
-        $boolOuterCurrency.removeClass("active");
         $pay_eur.addClass("active");
         $pay_usd.removeClass("active");
       } else {
-        $boolOuterCurrency.addClass("active");
         $pay_eur.removeClass("active");
         $pay_usd.addClass("active");
       }
