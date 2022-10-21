@@ -832,7 +832,7 @@ function payment_currency_shortcode($atts, $content = null) {
     $prefix = $attributes['prefix'];
 
 
-    $switcher = '<p class=" payment_currency"> ' . $prefix . '
+    $switcher = '<p class=" payment_currency"> ' . $prefix . ' : 
         <a class="pay_link pay_eur" href="#" data-currency="eur">EUR</a>
        /
         <a class="pay_link pay_usd" href="#" data-currency="usd">USD</a>
