@@ -93,7 +93,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '0.8.8';
+    return '0.8.9';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -813,13 +813,22 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 
 function payment_frequency_shortcode($atts, $content = null) {
-    $switcher = '<div class="payment_frequency_container">
+    $switcher = '<div class="payment_boolean_container payment_frequency">
         <a class="pay_link pay_monthly" href="#" data-freq="month">Paiement mensuel</a>
         <div class="boolean_outer">
             <div class="boolean_inner"></div>
         </div>
         <a class="pay_link pay_annually" href="#" data-freq="year">Paiement annuel</a>
-    </div>';
+    </div>
+    <div class="payment_boolean_container payment_currency">
+        <a class="pay_link pay_eur" href="#" data-currency="eur">EUR</a>
+        <div class="boolean_outer">
+            <div class="boolean_inner"></div>
+        </div>
+        <a class="pay_link pay_usd" href="#" data-currency="usd">USD</a>
+    </div>
+    
+    ';
     return $switcher;
 }
 add_shortcode('payment_frequency_switcher', 'payment_frequency_shortcode');
@@ -831,8 +840,10 @@ function pay_freq_option_func($atts, $content = null) {
         'button' => "choisir cette offre",
         'month_id' => 'family_month_1',
         'year_id' => 'family_year_1',
-        'month_amount' => 100,
+        'month_amount' => 50,
         'year_amount' => 100,
+        'month_amount_usd' => 51,
+        'year_amount_usd' => 101,
     ), $atts);
 
 
@@ -842,14 +853,24 @@ function pay_freq_option_func($atts, $content = null) {
     $year_id = $attributes['year_id'];
     $month_amount = $attributes['month_amount'];
     $year_amount = $attributes['year_amount'];
+    $month_amount_usd = $attributes['month_amount_usd'];
+    $year_amount_usd = $attributes['year_amount_usd'];
 
     $pay_option = '<div class="pay_buttons">';
     $pay_option .= '<div class="pay_monthly">
-    <p class="cost"><span class="amount">' . $month_amount . '</span><span class="currency">&euro;</span><span class="freq">/mois</span></p>
+    <p class="cost">
+    <span class="amount pay_eur ">' . $month_amount . '</span><span class=" pay_eur currency">&euro;</span>
+    <span class="amount pay_usd ">' . $month_amount_usd . '</span><span class=" pay_usd currency">$</span>
+
+    <span class="freq">/mois</span>
+    </p>
     <h6  style="display:none;"><a href="' . $register_url .  $month_id . '">' . $button_text . '</a></h6>
     </div>';
     $pay_option .= '<div class="pay_annually">
-    <p class="cost"><span class="amount">' . $year_amount . '</span><span class="currency">&euro;</span><span class="freq">/an</span></p>
+    <p class="cost">
+    <span class="amount pay_eur">' . $year_amount . '</span><span class="currency pay_eur">&euro;</span>
+    <span class="amount pay_usd">' . $year_amount_usd . '</span><span class="pay_usd currency">$</span>
+    <span class="freq">/an</span></p>
     <h6 style="display:none;"><a href="' . $register_url .  $year_id . '">' . $button_text . '</a></h6>
     </div>';
     $pay_option .= '</div>';

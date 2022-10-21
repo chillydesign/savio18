@@ -1,9 +1,7 @@
-
-
-
-.payment_frequency_container {
+.payment_boolean_container {
     margin: 0 0 20px;
     text-align: center;
+
     a {
         display: inline-block;
         font-size: $font_size;
@@ -15,8 +13,8 @@
     }
 
     .boolean_outer {
-            position: relative;
-            top: 5px;
+        position: relative;
+        top: 5px;
     }
 
 }
@@ -26,16 +24,17 @@
 $boolean_height: 25px;
 $boolean_width: 46px;
 $boolean_offset: 3px;
+
 .boolean_outer {
     display: inline-block;
     height: $boolean_height;
     border-radius: $boolean_height;
-    width:  $boolean_width;
+    width: $boolean_width;
     background: $medium_grey;
     margin: 0 10px;
     position: relative;
     cursor: pointer;
-        transition: all 0.3s;
+    transition: all 0.3s;
 
     .boolean_inner {
         height: #{$boolean_height - (2 * $boolean_offset) };
@@ -50,6 +49,7 @@ $boolean_offset: 3px;
 
     &.active {
         background: $brand_color;
+
         .boolean_inner {
             left: #{$boolean_width -  $boolean_height + $boolean_offset };
         }
@@ -57,8 +57,11 @@ $boolean_offset: 3px;
 }
 
 .pay_buttons {
-    .pay_monthly, .pay_annually {
+
+    .pay_monthly,
+    .pay_annually {
         display: none;
+
         &.active {
             display: block;
         }
@@ -67,17 +70,19 @@ $boolean_offset: 3px;
     .cost {
         text-align: center;
         color: #444;
+
         .currency {
-    position: relative;
-    top: -8px;
+            position: relative;
+            top: -8px;
         }
+
         .amount {
             font-size: 2em;
-            padding: 0 4px 0 0 ;
+            padding: 0 4px 0 0;
             color: #000;
         }
-        .freq {
-        }
+
+        .freq {}
     }
 
 }

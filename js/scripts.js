@@ -2,25 +2,19 @@
 // import matchHeight from 'jquery-match-height';
 
 (function ($, root, undefined) {
-
   $(function () {
-
-    'use strict';
-
-
+    "use strict";
 
     /////////////////////////////////
     ///////  COUNTDOWN TIMER  ///////
-    if (typeof launch_date !== 'undefined') {
+    if (typeof launch_date !== "undefined") {
       var now = new Date();
       var diff = launch_date - now;
       if (diff > 0) {
-
-        var span_secondes = $('#span_secondes');
-        var span_minutes = $('#span_minutes');
-        var span_heures = $('#span_heures');
-        var span_jours = $('#span_jours');
-
+        var span_secondes = $("#span_secondes");
+        var span_minutes = $("#span_minutes");
+        var span_heures = $("#span_heures");
+        var span_jours = $("#span_jours");
 
         setInterval(function () {
           var now = new Date();
@@ -33,50 +27,47 @@
             span_minutes.html(Math.floor(minutes) % 60);
             span_heures.html(Math.floor(hours) % 24);
             span_jours.html(Math.floor(hours / 24));
-          };
-
+          }
         }, 1000);
-
-      };
+      }
     } // if we have launch date
-
-
 
     ////////////////////////////////////////
     ///////  MOBILE MENU NAVIGATION  ///////
-    var menu_button = $('#menu_button');
-    var menu_navigation = $('#menu_navigation');
-    menu_button.on('click', function () {
-      menu_navigation.toggleClass('show_menu');
+    var menu_button = $("#menu_button");
+    var menu_navigation = $("#menu_navigation");
+    menu_button.on("click", function () {
+      menu_navigation.toggleClass("show_menu");
     });
-    $(window).on('keyup', function (e) {
-      if (e.keyCode === 27) { // escape
+    $(window).on("keyup", function (e) {
+      if (e.keyCode === 27) {
+        // escape
         hideMenu();
         hideFreeTestPopup();
       }
 
-      if (e.keyCode == 70) { // if press f
+      if (e.keyCode == 70) {
+        // if press f
         openFreeTestPopup();
       }
     });
 
     function hideMenu() {
-      var menu_navigation = $('#menu_navigation');
-      menu_navigation.removeClass('show_menu');
+      var menu_navigation = $("#menu_navigation");
+      menu_navigation.removeClass("show_menu");
     }
 
     function hideFreeTestPopup() {
-      var freetest_popup = $('#freetest_popup');
-      freetest_popup.removeClass('visibile_freetest');
+      var freetest_popup = $("#freetest_popup");
+      freetest_popup.removeClass("visibile_freetest");
     }
     function openFreeTestPopup() {
-      var freetest_popup = $('#freetest_popup');
-      freetest_popup.addClass('visibile_freetest');
+      var freetest_popup = $("#freetest_popup");
+      freetest_popup.addClass("visibile_freetest");
     }
 
-
-    var freetest_popup = $('#freetest_popup');
-    freetest_popup.on('click', function (e) {
+    var freetest_popup = $("#freetest_popup");
+    freetest_popup.on("click", function (e) {
       hideFreeTestPopup();
       // clicking on the background
       // if (e.target.nodeName == 'DIV') {
@@ -84,79 +75,89 @@
       // }
     });
 
-    $('.freetest_opener').on('click', function (e) {
+    $(".freetest_opener").on("click", function (e) {
       e.preventDefault();
       openFreeTestPopup();
     });
 
-
-
-    $('.blue .column').matchHeight();
-    $('.press_item').matchHeight();
-
-
-
+    $(".blue .column").matchHeight();
+    $(".press_item").matchHeight();
 
     /////////
     // FREQUENCY SWITCHER
-    var $payment_freq = 'month';
-    var $boolOuter = $('.boolean_outer');
-    var $pay_monthly = $('.pay_monthly');
-    var $pay_annually = $('.pay_annually');
-    var $pay_links = $('.pay_link');
+    var $payment_freq = "month";
+    var $payment_currency = "eur";
+    var $boolOuterFreq = $(".payment_frequency .boolean_outer");
+    var $boolOuterCurrency = $(".payment_currency .boolean_outer");
+    var $pay_monthly = $(".pay_monthly");
+    var $pay_annually = $(".pay_annually");
+    var $pay_eur = $(".pay_eur");
+    var $pay_usd = $(".pay_usd");
+    var $pay_links = $(".pay_link");
 
-    $pay_links.on('click', function (e) {
+    $pay_links.on("click", function (e) {
       e.preventDefault();
       var $this = $(this);
-      if ($this.data('freq') == 'year') {
-        $payment_freq = 'year';
-      } else {
-        $payment_freq = 'month';
-      };
-      updatePayFreq($payment_freq);
-
-    })
-
-
+      if ($this.data("freq") == "year") {
+        $payment_freq = "year";
+        updatePayFreq($payment_freq);
+      } else if ($this.data("freq") == "month") {
+        $payment_freq = "month";
+        updatePayFreq($payment_freq);
+      } else if ($this.data("currency") == "eur") {
+        $payment_currency = "eur";
+        updatePayCurrency($payment_currency);
+      } else if ($this.data("currency") == "usd") {
+        $payment_currency = "usd";
+        updatePayCurrency($payment_currency);
+      }
+    });
 
     updatePayFreq($payment_freq);
-    $boolOuter.on('click', function () {
-      if ($payment_freq == 'month') {
-        $payment_freq = 'year';
+    $boolOuter.on("click", function () {
+      if ($payment_freq == "month") {
+        $payment_freq = "year";
       } else {
-        $payment_freq = 'month';
-      };
+        $payment_freq = "month";
+      }
 
       updatePayFreq($payment_freq);
-
-    })
+    });
 
     function updatePayFreq(freq) {
-
-      if (freq == 'month') {
-        $boolOuter.removeClass('active');
-        $pay_monthly.addClass('active');
-        $pay_annually.removeClass('active');
+      if (freq == "month") {
+        $boolOuterFreq.removeClass("active");
+        $pay_monthly.addClass("active");
+        $pay_annually.removeClass("active");
       } else {
-        $boolOuter.addClass('active');
-        $pay_monthly.removeClass('active');
-        $pay_annually.addClass('active');
+        $boolOuterFreq.addClass("active");
+        $pay_monthly.removeClass("active");
+        $pay_annually.addClass("active");
+      }
+    }
+    function updatePayCurrency(currency) {
+      if (currency == "usd") {
+        $boolOuterCurrency.removeClass("active");
+        $pay_usd.addClass("active");
+        $pay_eur.removeClass("active");
+      } else {
+        $boolOuterCurrency.addClass("active");
+        $pay_usd.removeClass("active");
+        $pay_eur.addClass("active");
       }
     }
 
-
-
     // PRESS GALLERY
     // PRESS GALLERY
 
-    $('.cover_image').on('click', function (e) {
+    $(".cover_image").on("click", function (e) {
       var $this = $(this);
-      var $gallery_images = $this.parent().find('.gallery_container a');
+      var $gallery_images = $this.parent().find(".gallery_container a");
       if ($gallery_images) {
         $gallery_images.featherlightGallery({
-          galleryFadeIn: 100
+          galleryFadeIn: 100,
         });
-        $gallery_images[0].click();  // open the gallery by clicking on the first one
+        $gallery_images[0].click(); // open the gallery by clicking on the first one
       }
     });
     // PRESS GALLERY
@@ -167,22 +168,22 @@
     //   galleryFadeIn: 100
     // });
 
-    $('.faq_gallery_slider').each(function (_i, gallery) {
+    $(".faq_gallery_slider").each(function (_i, gallery) {
       $(gallery).featherlightGallery({
         galleryFadeIn: 100,
-        filter: '.slider_gallery'
+        filter: ".slider_gallery",
       });
-    })
-
+    });
 
     $.featherlightGallery.prototype.afterContent = function () {
-      var caption = this.$currentTarget.find('img').attr('alt');
-      this.$instance.find('.caption').remove();
-      $('<div class="caption">').text(caption).appendTo(this.$instance.find('.featherlight-content'));
+      var caption = this.$currentTarget.find("img").attr("alt");
+      this.$instance.find(".caption").remove();
+      $('<div class="caption">')
+        .text(caption)
+        .appendTo(this.$instance.find(".featherlight-content"));
     };
 
     // FAQ SLIDER GALLERY
-
 
     //////////
     // SLIDERS
@@ -200,9 +201,6 @@
       autoplaySpeed: 5000,
     });
 
-
-
-
     $(".school_slider").slick({
       dots: false,
       arrows: true,
@@ -214,16 +212,16 @@
       adaptiveHeight: true,
       autoplay: true,
       autoplaySpeed: 5000,
-      prevArrow: $('.prev'),
-      nextArrow: $('.next'),
+      prevArrow: $(".prev"),
+      nextArrow: $(".next"),
       responsive: [
         {
           breakpoint: 1000,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        }
+            slidesToScroll: 1,
+          },
+        },
       ],
     });
 
@@ -241,7 +239,9 @@
       autoplaySpeed: 5000,
     });
 
-    var $what_is_savio_sliders = $(".what_is_savio_slider, .interactive_slider, .slider");
+    var $what_is_savio_sliders = $(
+      ".what_is_savio_slider, .interactive_slider, .slider"
+    );
     $what_is_savio_sliders.slick({
       dots: true,
       arrows: false,
@@ -255,30 +255,20 @@
       autoplaySpeed: 2000,
     });
 
-
     //////////
     // SLIDERS
 
-
-
-
-
-
-
-
-
-
     ////////////////////////////
     // animate sliding down page
-    $('.scroll_link').on('click', function (e) {
+    $(".scroll_link").on("click", function (e) {
       e.preventDefault();
 
       var $this = $(this);
-      var $href = $this.attr('href');
-      var $hash = $href.split('#')[1];
+      var $href = $this.attr("href");
+      var $hash = $href.split("#")[1];
 
-      if (typeof $hash !== 'undefined') {
-        var $location = $('#' + $hash);
+      if (typeof $hash !== "undefined") {
+        var $location = $("#" + $hash);
         if ($location.length > 0) {
           $("html, body").animate({ scrollTop: $location.offset().top }, 1000);
         } else {
@@ -291,48 +281,44 @@
     ////////////////////////////
     // animate sliding down page
 
-
-
     // FAQ
     // FAQ
 
-    $('.single_question_link').on('click', function (e) {
+    $(".single_question_link").on("click", function (e) {
       e.preventDefault();
-
     });
-    $('.single_question_title').on('click', function (e) {
+    $(".single_question_title").on("click", function (e) {
       var $this = $(this);
-      var $parent_id = $this.data('question');
+      var $parent_id = $this.data("question");
       openQuestion($parent_id);
     });
     var $hash = window.location.hash;
-    if ($hash != '') {
+    if ($hash != "") {
       openQuestion($hash);
     }
     function openQuestion(hash) {
       var $questiontopopen = $(hash);
-      var $single_questions = $('.single_question');
-      $single_questions.not($questiontopopen).removeClass('question_expanded');
-      $questiontopopen.toggleClass('question_expanded');
+      var $single_questions = $(".single_question");
+      $single_questions.not($questiontopopen).removeClass("question_expanded");
+      $questiontopopen.toggleClass("question_expanded");
 
       setTimeout(() => {
         // dont reinit the same slider twice
-        $(".faq_gallery_slider", $questiontopopen).not('.slick-initialized').slick({
-          dots: true,
-          arrows: false,
-          infinite: false,
-          speed: 300,
-          slidesToShow: 4,
-          centerMode: false,
-          variableWidth: false,
-          adaptiveHeight: false,
-          autoplay: false,
-          autoplaySpeed: 5000,
-        });
+        $(".faq_gallery_slider", $questiontopopen)
+          .not(".slick-initialized")
+          .slick({
+            dots: true,
+            arrows: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            centerMode: false,
+            variableWidth: false,
+            adaptiveHeight: false,
+            autoplay: false,
+            autoplaySpeed: 5000,
+          });
       }, 400);
-
-
-
 
       // resizeWindow(500);
       // resizeWindow(1000);
@@ -347,10 +333,5 @@
     //   }, i);
 
     // }
-
-
-
-
   });
-
 })(jQuery, this);
