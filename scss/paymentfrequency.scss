@@ -100,3 +100,20 @@ $boolean_offset: 3px;
     }
 
 }
+
+p.payment_currency {
+    text-align: right;
+    color: white;
+    position: relative;
+    top: -170px;
+    padding: 0 50px;
+
+    a {
+        color: white;
+
+        &:visited {
+            color: white;
+        }
+    }
+
+}
