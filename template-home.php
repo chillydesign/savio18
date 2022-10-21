@@ -29,6 +29,7 @@
         <?php $image_enseignants2 = get_field('image_enseignants2')['url']; ?>
         <?php $tutor2 = get_field('tutors2'); ?>
         <?php $image_enseignants3 = get_field('image_enseignants3')['url']; ?>
+        <?php $follow_header = get_field('follow_header'); ?>
         <?php $follow_paragraph = get_field('follow_paragraph'); ?>
         <?php $newsletter_text_footer = get_field('newsletter_text_footer'); ?>
 
