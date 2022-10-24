@@ -1275,15 +1275,15 @@ section.section_press {}
   // text-align: center;
 
   display: inline-block;
-    width: calc(50% - 40px);
-    background: #f3f3f3;
-    padding: 20px;
-    margin: 0 20px 20px 0!important;
-    vertical-align: top;
+  width: calc(50% - 40px);
+  background: #f3f3f3;
+  padding: 20px;
+  margin: 0 20px 20px 0 !important;
+  vertical-align: top;
 
-    @media(max-width:700px){
-      width: 100%;
-    }
+  @media(max-width:700px) {
+    width: 100%;
+  }
 
   .gallery_container {
     display: none;
@@ -1460,19 +1460,21 @@ ins.wlc-box {
       margin: 10px 0 0;
     }
 
-    .featherlight-next span, .featherlight-previous span{
+    .featherlight-next span,
+    .featherlight-previous span {
       width: 25px;
       left: -7px;
       margin-top: -40px;
       font-style: normal;
       font-weight: 400;
-      background:$brand_color;
+      background: $brand_color;
       padding: 0;
       font-size: 20px;
       border-radius: 5px;
       display: block;
     }
-    .featherlight-next span{
+
+    .featherlight-next span {
       left: auto;
       right: -7px;
     }
@@ -1656,6 +1658,40 @@ section#top_testimonial {
       text-indent: 0;
     }
 
+
+
+
+    ul {
+      display: flex;
+      gap: 13px;
+      margin: 0 0 20px;
+
+      li {
+        width: 50%;
+        background: none;
+        padding: 0 17px 30px;
+        text-align: center;
+        font-size: 1.5em;
+        background: #f1f1f1;
+        margin: 0;
+        border-radius: 7px;
+
+        span {
+          display: block;
+          font-size: 3.6em;
+          color: #0e82c5;
+          font-weight: bold;
+          margin: 0 0 10px;
+
+          em {
+            color: #888;
+            font-style: normal;
+            font-size: 65%;
+          }
+        }
+      }
+    }
+
     @media(min-width: $mobile_width) {
 
       h2,
@@ -1669,33 +1705,37 @@ section#top_testimonial {
 
 }
 
-  section.section_videos {
+section.section_videos {
 
-    .video_container {
-      margin-top: 15px;
-      h4 {
-        margin-top: 5px;
-        font-size: 1.8em;
-        margin-bottom: -10px;
-      }
-      h5 {
-        margin-top: -15px;
-        font-size: 1.5em;
-        color: #262626;
-        font-weight: 400;
-        font-style: italic;
-        display: inline-block;
+  .video_container {
+    margin-top: 15px;
+
+    h4 {
+      margin-top: 5px;
+      font-size: 1.8em;
+      margin-bottom: -10px;
     }
-      p {
+
+    h5 {
+      margin-top: -15px;
+      font-size: 1.5em;
+      color: #262626;
+      font-weight: 400;
+      font-style: italic;
+      display: inline-block;
+    }
+
+    p {
+      width: 100%;
+      padding: 36%;
+      position: relative;
+
+      iframe {
         width: 100%;
-        padding: 36%;
-        position: relative;
-        iframe {
-          width: 100%;
-          position: absolute;
-          left: 0;
-          top: 0;
-          height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
       }
     }
   }
