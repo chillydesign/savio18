@@ -1618,6 +1618,42 @@ section.section.section_announcement {
 section#top_testimonial {
   padding: 20px 0;
 
+
+
+
+  ul {
+    display: flex;
+    gap: 13px;
+    margin: 0 0 20px;
+
+    li {
+      width: 50%;
+      background: none;
+      padding: 0 17px 30px;
+      text-align: center;
+      font-size: 1.5em;
+      background: #f1f1f1;
+      margin: 0;
+      border-radius: 7px;
+
+      span {
+        display: block;
+        font-size: 3.6em;
+        color: #0e82c5;
+        font-weight: bold;
+        margin: 0 0 10px;
+
+        em {
+          color: #888;
+          font-style: normal;
+          font-size: 65%;
+        }
+      }
+    }
+  }
+
+
+
   blockquote {
     position: relative;
     padding: 20px 20px;
@@ -1660,37 +1696,6 @@ section#top_testimonial {
 
 
 
-
-    ul {
-      display: flex;
-      gap: 13px;
-      margin: 0 0 20px;
-
-      li {
-        width: 50%;
-        background: none;
-        padding: 0 17px 30px;
-        text-align: center;
-        font-size: 1.5em;
-        background: #f1f1f1;
-        margin: 0;
-        border-radius: 7px;
-
-        span {
-          display: block;
-          font-size: 3.6em;
-          color: #0e82c5;
-          font-weight: bold;
-          margin: 0 0 10px;
-
-          em {
-            color: #888;
-            font-style: normal;
-            font-size: 65%;
-          }
-        }
-      }
-    }
 
     @media(min-width: $mobile_width) {
 
