@@ -7,10 +7,10 @@
 
     <?php $order = get_sub_field('order'); ?>
     <?php $text1 = get_sub_field('text1'); ?>
-    <?php $image1 = get_sub_field('image1'); ?>
+    <?php $image1 = get_sub_field('image1')['url']; ?>
     <?php $link1 = get_sub_field('link1'); ?>
     <?php $text2 = get_sub_field('text2'); ?>
-    <?php $image2 = get_sub_field('image2'); ?>
+    <?php $image2 = get_sub_field('image2')['sizes']['medium']; ?>
     <?php $link2 = get_sub_field('link2'); ?>
 
 
