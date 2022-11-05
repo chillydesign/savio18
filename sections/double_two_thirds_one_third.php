@@ -17,17 +17,17 @@
     <div class="container">
         <div class="unequalcols flipped">
             <!-- <img src="<?php echo $tdu; ?>/images/beach-chair.png" alt="" /> -->
-            <img src="<?php echo $image_parents1; ?>" alt="" />
-            <div class="for_parent_text">
-                <?php echo $for_parents_paragraph_1; ?>
+            <img src="<?php echo $image1; ?>" alt="" />
+            <div class="unequalcols_text">
+                <?php echo $text1; ?>
             </div>
         </div>
         <hr />
         <div class="unequalcols">
             <!-- <img src="<?php echo $tdu; ?>/images/hotairballoon.png" alt="" /> -->
-            <img src="<?php echo $image_parents2; ?>" alt="" />
+            <img src="<?php echo $image2; ?>" alt="" />
             <div class="unequalcols_text">
-                <?php echo $for_parents_paragraph_2; ?>
+                <?php echo $text2; ?>
             </div>
         </div>
     </div>
