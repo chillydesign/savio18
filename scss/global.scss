@@ -421,12 +421,12 @@ $section_image_width: 300px;
 
 
 #for_parents,
-#newsletter_signup {
+#newsletter_signup, .section_double_two_thirds_one_third {
   background-color: white;
 
 
   .for_parent_flex,
-  .newsletter_signup {
+  .newsletter_signup, .unequalcols {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -442,7 +442,7 @@ $section_image_width: 300px;
 
 
     .for_parent_text,
-    .newsletter_signup_text {
+    .newsletter_signup_text, .unequalcols_text {
       flex: 1 auto 0;
 
       @media (min-width: $mobile_width) {
