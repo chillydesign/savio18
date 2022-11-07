@@ -12,13 +12,13 @@
     <?php $image2 = get_sub_field('image2'); ?>
     <?php $link2 = get_sub_field('link2'); ?>
 
-    <?php $swapped = get_field('swapped') ?>
-    <?php $swapped_1 = $swapped ?  '' : 'flipped'; ?>
-    <?php $swapped_2 = $swapped ?  'flipped' : ''; ?>
+    <?php $flipped = get_field('flipped') ?>
+    <?php $flipped_1 = $flipped ?  '' : 'flipped'; ?>
+    <?php $flipped_2 = $flipped ?  'flipped' : ''; ?>
 
 
     <div class="container">
-        <div class="unequalcols <?php echo $swapped_1; ?>">
+        <div class="unequalcols <?php echo $flipped_1; ?>">
 
             <?php if ($link1) : ?>
                 <a href="<?php echo $link1; ?>" target="_blank">
@@ -32,7 +32,7 @@
             </div>
         </div>
         <hr />
-        <div class="unequalcols <?php echo $swapped_2; ?>">
+        <div class="unequalcols <?php echo $flipped_2; ?>">
 
             <?php if ($link1) : ?>
                 <a href="<?php echo $link1; ?>" target="_blank">
