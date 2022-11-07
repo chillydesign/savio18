@@ -15,7 +15,7 @@
     <?php $swapped = get_field('swapped') ?>
     <?php $swapped_1 = $swapped ?  '' : 'flipped'; ?>
     <?php $swapped_2 = $swapped ?  'flipped' : ''; ?>
-
+    <?php var_dump($swapped); ?>
 
     <div class="container">
         <div class="unequalcols <?php echo $swapped_1; ?>">
