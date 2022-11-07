@@ -11,10 +11,8 @@
     <?php $text2 = get_sub_field('text2'); ?>
     <?php $image2 = get_sub_field('image2'); ?>
     <?php $link2 = get_sub_field('link2'); ?>
-
-    <?php $swapped = get_sub_field('swapped') ?>
-    <?php $swapped_1 = $swapped ?  '' : 'flipped'; ?>
-    <?php $swapped_2 = $swapped ?  'flipped' : ''; ?>
+    <?php $swapped_1 = ($order == 'right') ?  '' : 'flipped'; ?>
+    <?php $swapped_2 = ($order == 'right') ?  'flipped' : ''; ?>
 
     <div class="container">
         <div class="unequalcols <?php echo $swapped_1; ?>">
