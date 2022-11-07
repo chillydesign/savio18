@@ -33,12 +33,12 @@
         <hr />
         <div class="unequalcols <?php echo $swapped_2; ?>">
 
-            <?php if ($link1) : ?>
-                <a href="<?php echo $link1; ?>" target="_blank">
+            <?php if ($link2) : ?>
+                <a href="<?php echo $link2; ?>" target="_blank">
                 <?php endif; ?>
                 <img src="<?php echo $image2['sizes']['medium']; ?>" alt="" />
 
-                <?php if ($link1) : ?>
+                <?php if ($link2) : ?>
                 </a>
             <?php endif; ?>
 
