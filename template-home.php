@@ -267,14 +267,16 @@
             <?php $testimonials =  false; //get_posts(array('post_type'  => 'testimonial', 'posts_per_page' => 15)); 
             ?>
             <?php if ($testimonials) : ?>
-                <?php foreach ($testimonials as $testimonial) : ?>
-                    <div class="testimonial">
-                        <blockquote>
-                            <p><?php echo $testimonial->post_content; ?></p>
-                        </blockquote>
-                        <cite><?php echo $testimonial->post_title; ?></cite>
-                    </div>
-                <?php endforeach;  ?>
+                <div class="testimonial_slider">
+                    <?php foreach ($testimonials as $testimonial) : ?>
+                        <div class="testimonial">
+                            <blockquote>
+                                <p><?php echo $testimonial->post_content; ?></p>
+                            </blockquote>
+                            <cite><?php echo $testimonial->post_title; ?></cite>
+                        </div>
+                    <?php endforeach;  ?>
+                </div>
             <?php endif; ?>
 
             <section id="testimonials">
@@ -284,9 +286,6 @@
                         <div class="testimonials_container">
                             <h2>Ce qu’ils en disent</h2>
                             <?php echo do_shortcode('[brb_collection id="773"]'); ?>
-                            <!-- <div class="testimonial_slider">
-                            
-                            </div> -->
                         </div><!--  END OF testimonials_container -->
                     </div><!--  END OF testimonials_flex -->
                 </div>
