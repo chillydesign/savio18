@@ -817,29 +817,6 @@ $features_height: 450px;
     margin-bottom: 30px;
 
     blockquote {
-      position: relative;
-      padding: 20px 20px;
-
-      &:after,
-      &:before {
-        content: '';
-        background: url('../images/quote.svg') no-repeat top left;
-        background-size: 100px;
-        height: 100px;
-        width: 100px;
-        position: absolute;
-        opacity: 0.1;
-        top: 0px;
-        left: 0px;
-      }
-
-      &:before {
-        top: auto;
-        left: auto;
-        bottom: 10px;
-        right: 0;
-        transform: rotate(180deg);
-      }
 
       p {
         text-indent: 50px;
@@ -864,6 +841,32 @@ $features_height: 450px;
 
 // END OF #testimonials
 
+
+blockquote {
+  position: relative;
+  padding: 20px 20px;
+
+  &:after,
+  &:before {
+    content: '';
+    background: url('../images/quote.svg') no-repeat top left;
+    background-size: 100px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    opacity: 0.1;
+    top: 0px;
+    left: 0px;
+  }
+
+  &:before {
+    top: auto;
+    left: auto;
+    bottom: 10px;
+    right: 0;
+    transform: rotate(180deg);
+  }
+}
 
 // GOOGLES SUMMARY OF ALL REVIEWS ABOUT SAVIO CAN HIDE
 .rplg-businesses {
