@@ -4,7 +4,7 @@
 
 
 
-<section id="welcome_section">
+<section class="welcome_section">
     <div class="container">
         <div class="welcome_text">
             <h1><?php echo sprintf(__('%s Search Results for ', 'webfactor'), $wp_query->found_posts);
