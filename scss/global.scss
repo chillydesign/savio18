@@ -852,13 +852,14 @@ blockquote {
   &:before {
     content: '';
     background: url('../images/quote.svg') no-repeat top left;
-    background-size: 100px;
+    background-size: 70px;
     height: 100px;
     width: 100px;
     position: absolute;
-    opacity: 0.1;
+    opacity: 0.25;
     top: 0px;
     left: 0px;
+
   }
 
   &:before {
