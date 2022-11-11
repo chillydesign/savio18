@@ -332,20 +332,36 @@
 
     // }
 
-    if (typeof iframe_url !== "undefined") {
-      // <iframe allowfullscreen src="https://www.youtube-nocookie.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white" width="560" height="315" frameborder="0"></iframe>
+    // if (typeof iframe_url !== "undefined") {
+    //   const ifrc = document.getElementById("video_iframe");
+    //   if (ifrc) {
+    //     ifrc.addEventListener("click", () => {
+    //       const ifr = document.createElement("IFRAME");
+    //       ifr.width = 560;
+    //       ifr.height = 315;
+    //       ifr.frameborder = 0;
+    //       ifr.src = iframe_url;
+    //       ifr.allowFullscreen = "true";
+    //       ifrc.appendChild(ifr);
+    //       ifrc.classList.add("hide_image");
+    //     });
+    //   }
+    // }
+    if (typeof video_id !== "undefined") {
+      var tag = document.createElement("script");
+      tag.src = "https://www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName("script")[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      const ifrc = document.getElementById("video_iframe");
-      if (ifrc) {
-        ifrc.addEventListener("click", () => {
-          const ifr = document.createElement("IFRAME");
-          ifr.width = 560;
-          ifr.height = 315;
-          ifr.frameborder = 0;
-          ifr.src = iframe_url;
-          ifr.allowFullscreen = "true";
-          ifrc.appendChild(ifr);
-          ifrc.classList.add("hide_image");
+      // Replace the 'ytplayer' element with an <iframe> and
+      // YouTube player after the API code downloads.
+      var player;
+      function onYouTubePlayerAPIReady() {
+        player = new YT.Player("video_iframe", {
+          height: "315",
+          width: "560",
+          videoId: video_id,
+          autoplay: 1,
         });
       }
     }
