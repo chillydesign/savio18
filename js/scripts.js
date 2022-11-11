@@ -355,22 +355,21 @@
         var firstScriptTag = document.getElementsByTagName("script")[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        console.log(firstScriptTag);
-
-        // Replace the 'ytplayer' element with an <iframe> and
-        // YouTube player after the API code downloads.
-        var player;
-        function onYouTubePlayerAPIReady() {
-          player = new YT.Player("video_iframe", {
-            height: "315",
-            width: "560",
-            videoId: "sWtVLDZWqX0",
-            autoplay: 1,
-          });
-
-          console.log(player);
-        }
+        console.log(tag);
       });
     }
   });
 })(jQuery, this);
+
+let player;
+
+function onYouTubePlayerAPIReady() {
+  player = new YT.Player("video_iframe", {
+    height: "315",
+    width: "560",
+    videoId: "sWtVLDZWqX0",
+    autoplay: 1,
+  });
+
+  console.log(player);
+}
