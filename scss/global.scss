@@ -1757,10 +1757,16 @@ section.section_videos {
 
 
 #video_iframe {
+  position: relative;
+
   img {
     width: 100%;
     height: auto;
     cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 
   &.hide_image {
@@ -1768,6 +1774,25 @@ section.section_videos {
       display: none;
     }
   }
+
+  p.spinner {
+    display: none;
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    left: 0;
+    width: 100%;
+
+  }
+
+  &.loading {
+    display: block;
+  }
+}
+
+#youtube_player {
+  position: relative;
+  z-index: 3;
 }
 
 .videocontainer {
@@ -1784,4 +1809,16 @@ section.section_videos {
     height: 315px;
     // height: 100%;
   }
+}
+
+$spinner_big_height: 100px;
+
+p.spinner {
+  background-image: url("../images/spinner_color.svg");
+  display: block;
+  background-size: $spinner_big_height;
+  height: $spinner_big_height;
+  width: $spinner_big_height;
+  margin: 20px auto;
+  animation: fadeIn 0.3s forwards;
 }
