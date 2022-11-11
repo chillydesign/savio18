@@ -60,8 +60,10 @@
                             <div class="col-sm-6">
                                 <div class="videocontainer">
 
-                                    <iframe allowfullscreen src="https://www.youtube-nocookie.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white" width="560" height="315" frameborder="0"></iframe>
-
+                                    <div id="video_iframe"></div>
+                                    <script>
+                                        const iframe_url = "https://www.youtube-nocookie.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white";
+                                    </script>
 
 
 
