@@ -1779,7 +1779,7 @@ section.section_videos {
     display: none;
     position: absolute;
     top: 10px;
-    z-index: 2;
+    z-index: 4;
     left: 0;
     width: 100%;
 
@@ -1817,7 +1817,7 @@ section.section_videos {
 $spinner_big_height: 100px;
 
 p.spinner {
-  background: no-repeat center center url("../images/spinner_color.svg");
+  background: no-repeat center center url("../images/spinner_white.svg");
   display: block;
   background-size: $spinner_big_height;
   height: $spinner_big_height;

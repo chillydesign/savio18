@@ -332,21 +332,6 @@
 
     // }
 
-    // if (typeof iframe_url !== "undefined") {
-    //   const ifrc = document.getElementById("video_iframe");
-    //   if (ifrc) {
-    //     ifrc.addEventListener("click", () => {
-    //       const ifr = document.createElement("IFRAME");
-    //       ifr.width = 560;
-    //       ifr.height = 315;
-    //       ifr.frameborder = 0;
-    //       ifr.src = iframe_url;
-    //       ifr.allowFullscreen = "true";
-    //       ifrc.appendChild(ifr);
-    //       ifrc.classList.add("hide_image");
-    //     });
-    //   }
-    // }
     const ifrc = document.getElementById("video_iframe");
     if (ifrc) {
       ifrc.addEventListener("click", () => {
@@ -355,7 +340,7 @@
         var firstScriptTag = document.getElementsByTagName("script")[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-        console.log(tag);
+        ifrc.classList.add("loading");
       });
     }
   });
@@ -384,6 +369,7 @@ function onPlayerReady(e) {
   console.log(e, "onPlayerReady");
   const ifrc = document.getElementById("video_iframe");
   ifrc.classList.add("hide_image");
+  ifrc.classList.remove("loading");
 }
 function onPlayerStateChange(e) {
   console.log(e, "onPlayerStateChange");
