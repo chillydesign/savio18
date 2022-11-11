@@ -368,8 +368,21 @@ function onYouTubePlayerAPIReady() {
     height: "315",
     width: "560",
     videoId: "sWtVLDZWqX0",
-    autoplay: 1,
+    playerVars: {
+      autoplay: 1,
+    },
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange,
+    },
   });
 
   console.log(player);
+}
+
+function onPlayerReady(e) {
+  console.log(e, "onPlayerReady");
+}
+function onPlayerStateChange(e) {
+  console.log(e, "onPlayerStateChange");
 }
