@@ -62,7 +62,7 @@
 
                                     <div id="video_iframe"></div>
                                     <script>
-                                        const iframe_url = "https://www.youtube-nocookie.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white";
+                                        //  const iframe_url = "https://www.youtube-nocookie.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white";
                                     </script>
 
 
