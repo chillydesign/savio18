@@ -364,7 +364,7 @@
 let player;
 
 function onYouTubePlayerAPIReady() {
-  player = new YT.Player("video_iframe", {
+  player = new YT.Player("youtube_player", {
     height: "315",
     width: "560",
     videoId: "sWtVLDZWqX0",
@@ -382,6 +382,8 @@ function onYouTubePlayerAPIReady() {
 
 function onPlayerReady(e) {
   console.log(e, "onPlayerReady");
+  const ifrc = document.getElementById("video_iframe");
+  ifrc.classList.add("hide_image");
 }
 function onPlayerStateChange(e) {
   console.log(e, "onPlayerStateChange");

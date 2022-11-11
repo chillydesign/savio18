@@ -62,6 +62,7 @@
 
                                     <div id="video_iframe">
                                         <img src="<?php echo $tdu; ?>/images/youtube_preview.jpg" alt="Youtube preview">
+                                        <div id="youtube_player"></div>
                                     </div>
                                     <script>
                                         const iframe_url = "https://www.youtube-nocookie.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white";
