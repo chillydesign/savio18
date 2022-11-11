@@ -347,7 +347,7 @@
 
         setTimeout(() => {
           ifrc.appendChild(ifr);
-        }, 500);
+        }, 250);
       }
     }
   });
