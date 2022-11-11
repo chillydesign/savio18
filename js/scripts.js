@@ -371,7 +371,5 @@ function onYouTubePlayerAPIReady() {
     autoplay: 1,
   });
 
-  player.playVideo();
-
   console.log(player);
 }
