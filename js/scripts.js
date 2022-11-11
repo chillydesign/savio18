@@ -336,7 +336,6 @@
       // <iframe allowfullscreen src="https://www.youtube-nocookie.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white" width="560" height="315" frameborder="0"></iframe>
 
       const ifrc = document.getElementById("video_iframe");
-      console.log(ifrc);
 
       if (ifrc) {
         const ifr = document.createElement("IFRAME");
@@ -344,8 +343,7 @@
         ifr.height = 315;
         ifr.frameborder = 0;
         ifr.src = iframe_url;
-        ifr.allowfullscreen = "allowfullscreen";
-        console.log(ifr);
+        ifr.allowFullscreen = "true";
 
         setTimeout(() => {
           ifrc.appendChild(ifr);
