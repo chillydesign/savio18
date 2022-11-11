@@ -1786,7 +1786,10 @@ section.section_videos {
   }
 
   &.loading {
-    display: block;
+    p.spinner {
+      display: block;
+
+    }
   }
 }
 
@@ -1814,7 +1817,7 @@ section.section_videos {
 $spinner_big_height: 100px;
 
 p.spinner {
-  background-image: url("../images/spinner_color.svg");
+  background: no-repeat center center url("../images/spinner_color.svg");
   display: block;
   background-size: $spinner_big_height;
   height: $spinner_big_height;
