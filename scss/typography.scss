@@ -1,6 +1,9 @@
-
-
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: $heading_font_stack;
   line-height: 120%;
   color: $brand_color;
@@ -38,7 +41,7 @@ h4 {
   line-height: 135%;
 }
 
-h6.h6inline{
+h6.h6inline {
   display: inline-block;
   font-size: 0.8em;
   line-height: 200%;
@@ -49,13 +52,13 @@ p {
   font-size: $font_size;
   line-height: 150%;
   padding: 0 0 10px;
-  margin:0;
+  margin: 0;
   color: $font_color;
 }
 
 li {
   font-size: $font_size;
-  padding:0 0 5px;
+  padding: 0 0 5px;
   color: $font_color;
 }
 
@@ -63,7 +66,7 @@ li {
 section ul {
   li {
 
-    background: url('../images/tick.svg') no-repeat  0 1px;
+    background: url('../images/tick.svg') no-repeat 0 1px;
     background-size: 20px;
     padding: 0 0 25px 30px;
   }
@@ -71,10 +74,12 @@ section ul {
 
 
 
-dd, dt {
+dd,
+dt {
   font-size: $font_size;
   padding: 0 0 5px;
 }
+
 dt {
   font-weight: bold;
 }
@@ -84,26 +89,38 @@ a {
   border: 0;
   color: $brand_color;
   transition: all 0.3s;
-  &:link, &:active, &:visited {
+
+  &:link,
+  &:active,
+  &:visited {
     text-decoration: none;
     color: $brand_color;
   }
+
   &:hover {
     text-decoration: none;
     color: $brand_color_hover;
   }
+
   &.button {
     color: white;
   }
 }
 
 
-strong, b {font-weight: bold}
-em, i {font-style: italic}
+strong,
+b {
+  font-weight: bold
+}
+
+em,
+i {
+  font-style: italic
+}
 
 
 table {
-  margin:10px 0 30px;
+  margin: 10px 0 30px;
   width: 100%;
   text-align: center;
   max-width: 100%;
@@ -113,7 +130,8 @@ table {
     font-size: 0.8em;
   }
 
-  th, td {
+  th,
+  td {
     padding: 8px;
     font-size: $font_size;
 
@@ -129,15 +147,14 @@ table {
     color: $brand_color;
 
   }
+
   tr:nth-child(2n-1) {
     td {
       background-color: lighten($brand_color, 52);
     }
   }
 
-  td {
-
-  }
+  td {}
 
   h6 a {
     font-size: 0.8em;
@@ -162,17 +179,22 @@ input {
 
   &.big_input {
     width: 100%;
-    padding:20px;
+    padding: 20px;
     font-size: #{$font_size * 1.5};
   }
 }
 
 
-a.button , button, input.button, h6 a , a h6, input[type="submit"] {
+a.button,
+button,
+input.button,
+h6 a,
+a h6,
+input[type="submit"] {
   background: $brand_color;
   color: white;
   font-family: $font_stack;
-  padding:15px 35px;
+  padding: 15px 35px;
   display: inline-block;
   border: 0;
   margin: 10px 0;
@@ -188,11 +210,11 @@ a.button , button, input.button, h6 a , a h6, input[type="submit"] {
     // background: linear-gradient(90deg, $orange 0, $pink 100%);
     background: linear-gradient(90deg, #5fd6b0 0, #00a22b 100%);
     color: white;
-    box-shadow: 0 0 30px rgba(0,0,0,0.2);
-font-size: 2em;
-/* text-transform: uppercase; */
-font-weight: bold;
-padding: 30px 30px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+    font-size: 2em;
+    /* text-transform: uppercase; */
+    font-weight: bold;
+    padding: 30px 30px;
 
     &:hover {
       transform: scale(1.1);
@@ -205,7 +227,9 @@ padding: 30px 30px;
 
   }
 
-  &:active, &:visited, &:link {
+  &:active,
+  &:visited,
+  &:link {
     color: white;
   }
 
@@ -226,18 +250,4 @@ cite {
 
   color: $medium_grey;
   font-size: #{$font_size * 0.8};
-}
-
-.videocontainer {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-top: 56.25%; 
-  iframe{
-    position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  }
 }
