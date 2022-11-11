@@ -60,7 +60,9 @@
                             <div class="col-sm-6">
                                 <div class="videocontainer">
 
-                                    <div id="video_iframe"></div>
+                                    <div id="video_iframe">
+                                        <img src="<?php echo $tdu; ?>/youtube_preview.jpg" alt="Youtube preview">
+                                    </div>
                                     <script>
                                         const iframe_url = "https://www.youtube-nocookie.com/embed/sWtVLDZWqX0?modestbranding=1&showinfo=0&rel=0&color=white";
                                     </script>

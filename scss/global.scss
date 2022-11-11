@@ -1754,3 +1754,17 @@ section.section_videos {
     }
   }
 }
+
+
+#video_iframe {
+  img {
+    width: 100%;
+    height: auto;
+  }
+
+  &.hide_image {
+    img {
+      display: none;
+    }
+  }
+}
