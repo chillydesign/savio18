@@ -678,9 +678,9 @@ function number_box($atts, $content = null) {
     $text = $attributes['text'];
 
     $str  = '';
-    $str .=  '<div class="number_box>';
-    $str .=  '<div class="stat_container>' . $number . '</div>';
-    $str .=  '<div class="text_container>' . $text . '</div>';
+    $str .=  '<div class="number_box">';
+    $str .=  '<div class="stat_container">' . $number . '</div>';
+    $str .=  '<div class="text_container">' . $text . '</div>';
     $str .= '</div>';
     return $str;
 }
