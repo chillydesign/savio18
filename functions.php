@@ -666,7 +666,9 @@ add_shortcode('number_box_outer', 'number_box_outer');
 add_shortcode('number_box', 'number_box');
 
 function number_box_outer($atts, $content = null) {
-    return '<div class="number_box_outer">' . do_shortcode($content) . '</div>';
+
+    $count = substr_count($content, "[number_box");
+    return '<div data-count="' . $count . '" class="number_box_outer">' . do_shortcode($content) . '</div>';
 }
 
 function number_box($atts, $content = null) {
