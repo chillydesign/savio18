@@ -93,7 +93,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '0.9.7';
+    return '0.9.8';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -414,9 +414,7 @@ add_filter('image_send_to_editor', 'remove_thumbnail_dimensions', 10); // Remove
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
 
-// Shortcodes
-add_shortcode('html5_shortcode_demo', 'html5_shortcode_demo'); // You can place [html5_shortcode_demo] in Pages, Posts now.
-add_shortcode('html5_shortcode_demo_2', 'html5_shortcode_demo_2'); // Place [html5_shortcode_demo_2] in Pages, Posts now.
+
 
 // Shortcodes above would be nested like this -
 // [html5_shortcode_demo] [html5_shortcode_demo_2] Here's the page title! [/html5_shortcode_demo_2] [/html5_shortcode_demo]
@@ -664,16 +662,27 @@ function create_post_types() {
 /*------------------------------------*\
     ShortCode Functions
 \*------------------------------------*/
+add_shortcode('number_box_outer', 'number_box_outer');
+add_shortcode('number_box', 'number_box');
 
-// Shortcode Demo with Nested Capability
-function html5_shortcode_demo($atts, $content = null) {
-    return '<div class="shortcode-demo">' . do_shortcode($content) . '</div>'; // do_shortcode allows for nested Shortcodes
+function number_box_outer($atts, $content = null) {
+    return '<div class="number_box_outer">' . do_shortcode($content) . '</div>';
 }
 
-// Shortcode Demo with simple <h2> tag
-function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
-{
-    return '<h2>' . $content . '</h2>';
+function number_box($atts, $content = null) {
+    $attributes = shortcode_atts(array(
+        'number' => null,
+        'text' => null,
+    ), $atts);
+    $number = $attributes['number'];
+    $text = $attributes['text'];
+
+    $str  = '';
+    $str .=  '<div class="number_box>';
+    $str .=  '<div class="stat_container>' . $number . '</div>';
+    $str .=  '<div class="text_container>' . $text . '</div>';
+    $str .= '</div>';
+    return $str;
 }
 
 
