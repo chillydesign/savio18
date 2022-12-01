@@ -55,12 +55,32 @@
             <nav>
                 <a href="<?php echo home_url(); ?>" class="branding"><?php echo $site_name; ?></a>
                 <a href="#" id="menu_button">Menu</a>
-                <ul id="menu_navigation">
+
+
+                <ul id="menu_navigation" class="menu_navigation">
                     <?php chilly_nav('primary-navigation'); ?>
                 </ul>
 
 
 
             </nav>
+
+
         </div>
+
+
     </header>
+
+    <?php if (is_user_logged_in()) : ?>
+        <header id="test_admin_header">
+            <nav>
+                <div class="container">
+
+                    <ul class="menu_navigation">
+                        <?php chilly_nav('extra-menu'); ?>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+    <?php endif; ?>

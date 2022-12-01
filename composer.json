@@ -1,0 +1,17 @@
+{
+    "name": "charles/savio18",
+    "description": "Savio Wordpress Theme",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Charles\\Savio18\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Charles Harvey",
+            "email": "harvey.charles@gmail.com"
+        }
+    ],
+    "require": {}
+}

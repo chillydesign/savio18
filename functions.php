@@ -1,21 +1,11 @@
 <?php
-/*
- *  Author: Todd Motto | @toddmotto
- *  URL: webfactor.com | @webfactor
- *  Custom functions, support, custom post types and more.
- */
 
-/*------------------------------------*\
-    External Modules/Files
-\*------------------------------------*/
 
-// Load any external files you have here
 
-/*------------------------------------*\
-    Theme Support
-\*------------------------------------*/
 
 // COMPOSER PACKAGAES
+// require_once(__DIR__ . "/vendor/autoload.php");
+
 
 
 // ENVIRONMENTAL VARIABLES
@@ -93,7 +83,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '0.9.8';
+    return '0.9.9';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -156,9 +146,9 @@ function webfactor_styles() {
 // Register HTML5 Blank Navigation
 function register_html5_menu() {
     register_nav_menus(array( // Using array to specify more menus if needed
-        'primary-navigation' => __('Primary Menu', 'webfactor'), // Main Navigation
-        'sidebar-menu' => __('Sidebar Menu', 'webfactor'), // Sidebar Navigation
-        'extra-menu' => __('Extra Menu', 'webfactor') // Extra Navigation if needed (duplicate as many as you need!)
+        'primary-navigation' => __('Primary Menu', 'webfactor'),
+        'sidebar-menu' => __('Sidebar Menu', 'webfactor'),
+        'extra-menu' => __('Test Admin Menu', 'webfactor')
     ));
 }
 
@@ -939,5 +929,34 @@ if (function_exists('acf_add_options_page')) {
         'redirect'        => false
     ));
 }
+
+
+
+
+
+function sib_config() {
+    $config = SendinBlue\Client\Configuration::getDefaultConfiguration()->setApiKey('api-key', SIB_KEY);
+
+    return $config;
+}
+
+function sib_get_account() {
+    $config = sib_config();
+    $apiInstance = new SendinBlue\Client\Api\AccountApi(
+        new GuzzleHttp\Client(),
+        $config
+    );
+    try {
+        $result = $apiInstance->getAccount();
+        print_r($result);
+    } catch (Exception $e) {
+        echo 'Exception when calling AccountApi->getAccount: ', $e->getMessage(), PHP_EOL;
+    }
+}
+
+
+
+
+
 
     ?>

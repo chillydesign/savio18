@@ -58,7 +58,7 @@ header {
 
     $menu_width: 295px;
 
-    ul#menu_navigation {
+    ul.menu_navigation {
       display: block;
       flex: 1 auto 0;
       transition: all 0.3s;
@@ -106,6 +106,7 @@ header {
           padding: 10px 10px;
           border-radius: 5px 5px 0 0;
           color: white;
+
           &:link,
           &:active,
           &:hover,
@@ -215,6 +216,7 @@ header {
   position: absolute;
   top: 0;
   right: 20px;
+
   a {
     background: url("../images/en.svg") no-repeat center right;
     background-size: 20px;
@@ -227,4 +229,11 @@ header {
     font-size: 1.3em;
     color: #555;
   }
+}
+
+
+#test_admin_header {
+  z-index: 3;
+
+
 }
