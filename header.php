@@ -58,7 +58,12 @@
 
 
                 <ul id="menu_navigation" class="menu_navigation">
-                    <?php chilly_nav('primary-navigation'); ?>
+
+                    <?php if (is_user_logged_in()) : ?>
+                        <?php chilly_nav('extra-menu'); ?>
+                    <?php else : ?>
+                        <?php chilly_nav('primary-navigation'); ?>
+                    <?php endif; ?>
                 </ul>
 
 
@@ -70,17 +75,3 @@
 
 
     </header>
-
-    <?php if (is_user_logged_in()) : ?>
-        <header id="test_admin_header">
-            <nav>
-                <div class="container">
-
-                    <ul class="menu_navigation">
-                        <?php chilly_nav('extra-menu'); ?>
-                    </ul>
-                </div>
-
-            </nav>
-        </header>
-    <?php endif; ?>
