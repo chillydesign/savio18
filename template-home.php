@@ -309,8 +309,9 @@
                             <h2><?php echo $follow_header; ?></h2>
                             <?php echo $follow_paragraph; ?>
 
-                            <?php get_template_part('partials/mailchimp_signup_form'); ?>
-                            <?php // get_template_part('partials/sib_signup_form'); 
+                            <?php // get_template_part('partials/mailchimp_signup_form'); 
+                            ?>
+                            <?php get_template_part('partials/sib_signup_form');
                             ?>
                             <?php echo $newsletter_text_footer; ?>
                         </div>
