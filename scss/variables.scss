@@ -1,10 +1,10 @@
-$brand_color:  #0e82c5 ;
+$brand_color: #0e82c5;
 $brand_color_hover: #48c1ed;
 $brand_color_dark: #112F58;
 
 // , for use with MyFonts
-$font_stack:  'sofia-pro-soft', 'Sofia Pro Soft',   'Varela Round' , 'Quicksand', 'Comfortaa', 'Avenir' , 'Roboto', sans-serif;
-$heading_font_stack:  $font_stack;
+$font_stack: 'sofia-pro-soft', 'Sofia Pro Soft', 'Varela Round', 'Quicksand', 'Comfortaa', 'Avenir', 'Roboto', sans-serif;
+$heading_font_stack: $font_stack;
 $font_size: 1.8em;
 $font_color: #222;
 
@@ -22,12 +22,13 @@ $green: #3db634;
 $orange: #fea520;
 $pink: #f3136a;
 
-$skyblue: lighten($brand_color_hover,10);
+$skyblue: lighten($brand_color_hover, 10);
 
 
 $transition_time: 0.3s;
 
-
+$padding: 20px;
+$half_padding: 10px;
 
 $mobile_width: 768px;
 

@@ -1607,13 +1607,27 @@ section.partenaires {
 //ANNOUNCEMENT SECTION
 section.section.section_announcement {
   background: linear-gradient(90deg, $orange 0, $pink 100%);
-  ;
-  font-size: 1.8em;
+  // font-size: 1.8em;
   color: white;
   padding: 30px;
   border-top: solid 6px;
   margin-top: -5px;
   position: relative;
+
+  p {
+    color: white;
+  }
+
+  img {
+    height: 118px;
+    width: auto;
+    padding: 13px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    margin: 0 0 20px;
+  }
+
+
 
   h5 {
     color: white;
@@ -1862,4 +1876,77 @@ p.spinner {
   width: $spinner_big_height;
   margin: 20px auto;
   animation: fadeIn 0.3s forwards;
+}
+
+
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0 0 $padding;
+
+  @media (min-width: $mobile_width) {
+    margin-bottom: 0;
+    flex-wrap: nowrap;
+
+    &.columns_wrap {
+      flex-wrap: wrap;
+    }
+  }
+
+
+
+}
+
+// end of columns
+
+.column {
+  flex: 1 auto;
+  margin: 0;
+  width: 100%;
+
+
+  @media (min-width: $mobile_width) {
+    margin: 0 $half_padding;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &.column_half {
+    width: auto;
+    max-width: 50%;
+    max-width: calc(50% - #{$padding});
+  }
+
+  &.column_small {
+    @media (min-width: $mobile_width) {
+      width: #{100% * 0.3333333};
+    }
+  }
+
+  &.column_very_small {
+    @media (min-width: $mobile_width) {
+      width: #{100% * 0.2};
+    }
+  }
+
+  &.column_large {
+    @media (min-width: $mobile_width) {
+      width: #{100% * 0.666666667};
+    }
+  }
+
+  &.column_right {
+    @media (min-width: $mobile_width) {
+      text-align: right;
+    }
+  }
 }

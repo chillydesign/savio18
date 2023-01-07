@@ -83,7 +83,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '0.9.9';
+    return '1.0.1';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -678,6 +678,17 @@ function number_box($atts, $content = null) {
 }
 
 
+add_shortcode('columns', 'columns_shortcode');
+function columns_shortcode($atts, $content = null) {
+    return '<div class="columns">' . do_shortcode($content) . '</div>';
+}
+
+add_shortcode('column', 'column_shortcode');
+function column_shortcode($atts, $content = null) {
+    return '<div class="column">' . do_shortcode($content) . '</div>';
+}
+
+
 
 
 function chilly_nav($menu) {
@@ -909,7 +920,7 @@ function social_meta_properties() {
     } else {
         $smp->title = 'Savio';
         $smp->description = get_bloginfo('description');
-        $smp->image =   get_template_directory_uri() . '/images/savio-fb-preview.jpg';
+        $smp->image =   get_template_directory_uri() . '/images/accueil-savio.jpg';
         $smp->url = get_home_url();
     }
 
