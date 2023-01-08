@@ -1606,20 +1606,24 @@ section.partenaires {
 
 //ANNOUNCEMENT SECTION
 section.section.section_announcement {
-  background: linear-gradient(90deg, $orange 0, $pink 100%);
+  // background: linear-gradient(90deg, $orange 0, $pink 100%);
+  background: none;
   // font-size: 1.8em;
   color: white;
   padding: 30px;
   border-top: solid 6px;
-  margin-top: -5px;
+  margin-top: -6px;
   position: relative;
 
   p {
     color: white;
+    margin: 0;
+    padding: 0;
+    // font-size: 1.6em;
   }
 
   img {
-    height: 118px;
+    height: 140px;
     width: auto;
     padding: 13px;
     background: rgba(255, 255, 255, 0.5);
