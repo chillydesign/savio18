@@ -11,13 +11,17 @@
 	</div>
 </section>
 
-<!-- section -->
 <section>
+
+</section>
+
+<!-- section -->
+<section class="news_section">
 	<div class="container">
-		<?php get_template_part('loop'); ?>
-
+		<div class="news_container">
+			<?php get_template_part('loop'); ?>
+		</div>
 		<?php get_template_part('pagination'); ?>
-
 
 
 	</div>

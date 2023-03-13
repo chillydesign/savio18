@@ -16,13 +16,22 @@
 
 
 <section>
-    <div class="container">
-        <?php get_template_part('loop'); ?>
 
-        <?php get_template_part('pagination'); ?>
-    </div>
 </section>
 
+<!-- section -->
+<section class="news_section">
+    <div class="container">
+        <div class="news_container">
+            <?php get_template_part('loop'); ?>
+        </div>
+        <?php get_template_part('pagination'); ?>
+
+
+    </div>
+
+</section>
+<!-- /section -->
 
 
 <?php get_footer(); ?>
