@@ -2061,3 +2061,49 @@ body.single {
     }
   }
 }
+
+
+.pagination {
+
+
+  .page-numbers {
+    display: inline-block;
+    padding: 10px 8px;
+    font-size: $font_size;
+    border: 1px solid $light_grey;
+    color: $dark_grey;
+    border-radius: 3px;
+    margin: 0 3px 0 0;
+
+    &.current {
+      background-color: $brand_color;
+      color: white;
+
+    }
+  }
+}
+
+
+.loop_with_image {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: space-between;
+  margin: 0 0 40px;
+}
+
+.loop_image {
+  width: 150px;
+  height: 150px;
+  flex-shrink: 0;
+  background-size: cover;
+  background-color: $light_grey;
+
+  @media (min-width: $mobile_width) {
+    width: 200px;
+    height: 200px;
+  }
+
+}
+
+.loop_content {}
