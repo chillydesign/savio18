@@ -16,11 +16,15 @@
 					<?php endif; ?>
 					<div class="blog_content">
 
-						<h4>
-							<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-						</h4>
-						<?php html5wp_excerpt(20, false); // Build your custom callback length in functions.php 
-						?>
+
+						<div class="title_and_summary">
+
+							<h4>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+							</h4>
+							<?php html5wp_excerpt(20, false); // Build your custom callback length in functions.php 
+							?>
+						</div>
 
 						<a class="button" href="<?php the_permalink(); ?>"><?php _e('View Article', 'webfactor'); ?></a>
 
