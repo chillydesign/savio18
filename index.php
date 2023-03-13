@@ -7,7 +7,6 @@
 	<div class="container">
 		<div class="welcome_text">
 			<h1><?php _e('Latest Posts', 'webfactor'); ?></h1>
-
 		</div>
 	</div>
 </section>
