@@ -83,7 +83,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '1.0.7';
+    return '1.0.8';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -273,10 +273,12 @@ function html5wp_excerpt($length_callback = '', $more_callback = '') {
     echo $output;
 }
 
+
 // Custom View Article link to Post
 function html5_blank_view_article($more) {
-    global $post;
-    return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'webfactor') . '</a>';
+    // global $post;
+    // return '... <a class="view-article" href="' . get_permalink($post->ID) . '">' . __('View Article', 'webfactor') . '</a>';
+    return '';
 }
 
 // Remove Admin bar
