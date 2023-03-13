@@ -2015,6 +2015,10 @@ p.spinner {
       height: 50px;
     }
 
+    input {
+      width: 100%;
+    }
+
     button.search-submit {
       background-position: center center;
       background-image: url('../images/search.svg');
@@ -2034,5 +2038,12 @@ p.spinner {
 
 
 .sidebar-widget {
-  margin: 0 0 40px;
+  margin: 40px 0 0;
+
+  h3 {
+    font-size: 2.1em;
+    color: $medium_grey;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+  }
 }
