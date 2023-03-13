@@ -1983,7 +1983,7 @@ p.spinner {
 .day {
   background-color: lighten($brand_color, 10);
   font-size: 5em;
-  padding: 20px 0;
+  padding: 10px 0;
 
 }
 
@@ -1997,4 +1997,29 @@ p.spinner {
 
 .blog_content {
   width: 100%;
+}
+
+.sidebar {
+  form.search {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 10px;
+    justify-content: space-between;
+
+    input,
+    button {
+      flex-shrink: 1;
+      width: 100%;
+    }
+
+
+
+  }
+}
+
+button.search-submit {
+  background-position: center center;
+  background-image: url('../img/search.svg');
+  text-indent: -9999px;
+
 }
