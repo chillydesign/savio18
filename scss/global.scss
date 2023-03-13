@@ -2053,3 +2053,11 @@ p.spinner {
     }
   }
 }
+
+body.single {
+  article {
+    .wp-post-image {
+      margin: 0 0 40px;
+    }
+  }
+}
