@@ -7,6 +7,7 @@
 		<?php $post_type = get_field('post_type'); ?>
 		<?php $date = get_field('date'); ?>
 		<?php $link = get_field('link'); ?>
+		<?php $link_text = get_field('link_text'); ?>
 
 
 
@@ -59,6 +60,11 @@
 								<div class="blog_content">
 									<?php the_content(); // Dynamic Content 
 									?>
+
+									<?php if ($link && $link_text) : ?>
+										<a href="<?php echo $link; ?>" target="_blank" class="button"><?php echo $link_text; ?></a>
+									<?php endif; ?>
+
 
 								</div>
 
