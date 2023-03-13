@@ -2038,12 +2038,18 @@ p.spinner {
 
 
 .sidebar-widget {
-  margin: 40px 0 0;
+  margin: 40px 0 20px;
 
   h3 {
     font-size: 2.1em;
     color: $medium_grey;
     text-transform: uppercase;
     letter-spacing: 0.6px;
+  }
+
+  ul {
+    li {
+      padding-bottom: 15px;
+    }
   }
 }
