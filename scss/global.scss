@@ -2000,6 +2000,9 @@ p.spinner {
 }
 
 .sidebar {
+  background-color: $light_grey;
+  padding: 30px;
+
   form.search {
     display: flex;
     flex-wrap: nowrap;
@@ -2012,15 +2015,24 @@ p.spinner {
       height: 50px;
     }
 
+    button.search-submit {
+      background-position: center center;
+      background-image: url('../images/search.svg');
+      text-indent: -9999px;
+      width: 50px;
+      background-size: 30px;
+      background-repeat: no-repeat;
+      margin: 0;
+
+    }
+
 
 
   }
 }
 
-button.search-submit {
-  background-position: center center;
-  background-image: url('../images/search.svg');
-  text-indent: -9999px;
-  width: 50px;
 
+
+.sidebar-widget {
+  margin: 0 0 40px;
 }
