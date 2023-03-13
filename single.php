@@ -4,6 +4,13 @@
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+		<?php $post_type = get_field('post_type'); ?>
+		<?php $date = get_field('date'); ?>
+		<?php $link = get_field('link'); ?>
+
+
+
+
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -19,22 +26,56 @@
 			<section>
 				<div class="container">
 
-					<!-- post thumbnail -->
-					<?php if (has_post_thumbnail()) : // Check if Thumbnail exists 
-					?>
 
-						<?php the_post_thumbnail(); // Fullsize image for the single post 
-						?>
+					<div class="row">
 
-					<?php endif; ?>
-					<!-- /post thumbnail -->
+						<div class="col-sm-8">
+							<!-- post thumbnail -->
+							<?php if (has_post_thumbnail()) : // Check if Thumbnail exists 
+							?>
+
+								<?php the_post_thumbnail(); // Fullsize image for the single post 
+								?>
+
+							<?php endif; ?>
+							<!-- /post thumbnail -->
 
 
-					<?php the_content(); // Dynamic Content 
-					?>
 
-					<?php // comments_template(); 
-					?>
+							<div class="blog_with_date">
+								<?php if ($date) : ?>
+									<div class="date_container">
+										<div class="day">
+											<?php echo date_of($date); ?>
+										</div>
+										<div class="month">
+											<?php echo month_of($date); ?>
+										</div>
+									</div>
+
+								<?php endif; ?>
+
+								<div class="blog_content">
+									<?php the_content(); // Dynamic Content 
+									?>
+
+								</div>
+
+							</div>
+
+
+
+
+						</div>
+						<div class="col-sm-4">
+							<?php get_sidebar(); ?>
+
+						</div>
+
+					</div>
+
+
+
 				</div>
 			</section>
 			<!-- /section -->

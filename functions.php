@@ -968,6 +968,26 @@ function sib_get_account() {
 
 
 
+function shortmonth_of($date) {
+    $nice_date =  date_i18n('M', strtotime(($date)));
+    return $nice_date;
+}
+
+function month_of($date) {
+    $nice_date =  date_i18n('F', strtotime(($date)));
+    return $nice_date;
+}
+
+function day_of($date) {
+
+    $nice_date =  date_i18n('l', strtotime(($date)));
+    return $nice_date;
+}
+function date_of($date) {
+
+    $nice_date =  date_i18n('d', strtotime(($date)));
+    return $nice_date;
+}
 
 
     ?>
