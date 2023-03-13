@@ -26,7 +26,7 @@
 							?>
 						</div>
 
-						<a class="button" href="<?php the_permalink(); ?>"><?php _e('View Article', 'webfactor'); ?></a>
+						<a class="button" href="<?php the_permalink(); ?>">Lire plus</a>
 
 
 					</div>
