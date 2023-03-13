@@ -1983,16 +1983,32 @@ p.spinner {
 .day {
   background-color: lighten($brand_color, 10);
   font-size: 5em;
-  padding: 10px 0;
+  padding: 3px 0;
 
 }
 
 .month {
   background-color: $brand_color;
-  padding: 10px 0;
+  padding: 5px 0;
   font-size: 2em;
   text-transform: uppercase;
 
+}
+
+
+.loop_with_image {
+  .date_container {
+    width: 70px;
+  }
+
+  .day {
+    font-size: 3em;
+  }
+
+  .month {
+    font-size: 1.5em;
+    padding: 3px 0;
+  }
 }
 
 .blog_content {

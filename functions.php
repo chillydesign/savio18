@@ -83,7 +83,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '1.0.6';
+    return '1.0.7';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -989,5 +989,30 @@ function date_of($date) {
     return $nice_date;
 }
 
+
+function target_main_category_query_with_conditional_tags($query) {
+    if (!is_admin() && $query->is_main_query()) {
+
+
+        if (isset($_GET['type_post'])) {
+            $type_post = 'post';
+            if ($_GET['type_post'] == 'event') {
+                $type_post = 'event';
+            }
+            $query->set('meta_key', 'post_type');
+            $query->set('meta_value', $type_post);
+        }
+    }
+}
+add_action('pre_get_posts', 'target_main_category_query_with_conditional_tags');
+
+
+function make_date_container($date) {
+
+    echo '<div class="date_container">
+<div class="month">' . shortmonth_of($date) . '</div>
+<div class="day">' . date_of($date) . '</div>
+</div>';
+}
 
     ?>

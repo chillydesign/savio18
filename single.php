@@ -45,29 +45,15 @@
 
 							<div class="blog_with_date">
 								<?php if ($date) : ?>
-									<div class="date_container">
-										<div class="month">
-											<?php echo shortmonth_of($date); ?>
-										</div>
-										<div class="day">
-											<?php echo date_of($date); ?>
-										</div>
-
-									</div>
-
+									<?php echo make_date_container($date); ?>
 								<?php endif; ?>
-
 								<div class="blog_content">
 									<?php the_content(); // Dynamic Content 
 									?>
-
 									<?php if ($link && $link_text) : ?>
 										<a href="<?php echo $link; ?>" target="_blank" class="button"><?php echo $link_text; ?></a>
 									<?php endif; ?>
-
-
 								</div>
-
 							</div>
 
 

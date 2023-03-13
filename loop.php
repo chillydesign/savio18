@@ -1,6 +1,6 @@
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<?php $image = thumbnail_of_post_url(get_the_ID(), 'medium'); ?>
-
+		<?php $date = get_field('date', get_the_ID()); ?>
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -10,15 +10,24 @@
 				<div class="loop_content">
 
 
-					<!-- post title -->
-					<h4>
-						<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-					</h4>
-					<!-- /post title -->
 
 
-					<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php 
-					?>
+					<div class="blog_with_date">
+						<?php if ($date) : ?>
+							<?php echo make_date_container($date); ?>
+						<?php endif; ?>
+						<div class="blog_content">
+
+							<h4>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
+							</h4>
+							<?php html5wp_excerpt('html5wp_index'); // Build your custom callback length in functions.php 
+							?>
+
+						</div>
+					</div>
+
+
 
 				</div>
 			</div>
