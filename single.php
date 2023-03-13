@@ -45,12 +45,13 @@
 							<div class="blog_with_date">
 								<?php if ($date) : ?>
 									<div class="date_container">
+										<div class="month">
+											<?php echo shortmonth_of($date); ?>
+										</div>
 										<div class="day">
 											<?php echo date_of($date); ?>
 										</div>
-										<div class="month">
-											<?php echo month_of($date); ?>
-										</div>
+
 									</div>
 
 								<?php endif; ?>
