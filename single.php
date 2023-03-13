@@ -10,6 +10,15 @@
 		<!-- article -->
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
+		<section class="welcome_section">
+                <div class="container">
+                    <div class="welcome_text">
+                        <h1><?php the_title(); ?></h1>
+                    </div>
+                </div>
+            </section>
+
+
 			<!-- post thumbnail -->
 			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
 
@@ -17,8 +26,6 @@
 
 			<?php endif; ?>
 			<!-- /post thumbnail -->
-
-			<h1><?php the_title(); ?></h1>
 
 
 			<?php the_content(); // Dynamic Content ?>
