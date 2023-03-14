@@ -3,13 +3,8 @@
 		<?php $date = get_field('date', get_the_ID()); ?>
 		<article class="single_article_loop">
 
-
 			<a href="<?php the_permalink(); ?>" class="loop_image" style="background-image:url(<?php echo $image; ?>)"></a>
 			<div class="loop_content">
-
-
-
-
 				<div class="blog_with_date">
 					<?php if ($date) : ?>
 						<?php echo make_date_container($date); ?>
@@ -25,23 +20,12 @@
 							<?php html5wp_excerpt(20, false); // Build your custom callback length in functions.php 
 							?>
 						</div>
-
 						<a class="button" href="<?php the_permalink(); ?>">Lire plus</a>
-
-
 					</div>
 				</div>
-
-
-
-
 			</div>
 
 			<div class="cool_orange_bar"></div>
-
-
-
-
 		</article>
 
 	<?php endwhile; ?>
@@ -49,7 +33,7 @@
 <?php else : ?>
 
 	<article>
-		<h2><?php _e('Sorry, nothing to display.', 'webfactor'); ?></h2>
+		<h2 style="text-align:center"><?php _e('Sorry, nothing to display.', 'webfactor'); ?></h2>
 	</article>
 
 <?php endif; ?>
