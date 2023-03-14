@@ -3,21 +3,19 @@
 $type_post =  get_sub_field('type_post');
 $args = array(
     'post_type' => 'post',
-
+    'meta_key'   => 'post_type',
+    'meta_query' => array(
+        array(
+            'key'     => 'post_type',
+            'value'   =>  $type_post,
+            'compare' => '=',
+        ),
+    ),
     'posts_per_page' => 12,
     'paged' => get_query_var('paged')
 );
 $the_query = new WP_Query($args);
 
-
-
-// 'meta_query' => array(
-//     array(
-//         'key'     => 'post_type',
-//         'value'   =>  $type_post,
-//         'compare' => '=',
-//     ),
-// ),
 ?>
 
 <section class="news_section">
