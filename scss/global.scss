@@ -2090,6 +2090,18 @@ body.single {
 
 .loop_content {
   padding: 30px;
+  position: relative;
+
+  &:before {
+    content: '';
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    top: -28px;
+    left: 0;
+    background: url('../images/squiggle2.svg') repeat top left,
+
+  }
 }
 
 .news_section {
