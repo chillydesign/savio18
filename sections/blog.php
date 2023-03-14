@@ -10,6 +10,8 @@ $args = array(
 );
 $the_query = new WP_Query($args);
 
+var_dump($the_query);
+
 ?>
 
 <section class="news_section">
