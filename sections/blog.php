@@ -3,7 +3,6 @@
 $type_post =  get_sub_field('type_post');
 $args = array(
     'post_type' => 'post',
-    'meta_key'   => 'post_type',
     'meta_query' => array(
         array(
             'key'     => 'post_type',
@@ -15,6 +14,8 @@ $args = array(
     'paged' => get_query_var('paged')
 );
 $the_query = new WP_Query($args);
+
+var_dump($the_query);
 
 ?>
 
