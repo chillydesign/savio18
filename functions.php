@@ -974,6 +974,10 @@ function sib_get_account() {
 
 
 
+function short_date_of($date) {
+    $nice_date =  date_i18n('d M y', strtotime(($date)));
+    return $nice_date;
+}
 function shortmonth_of($date) {
     $nice_date =  date_i18n('M', strtotime(($date)));
     return $nice_date;
