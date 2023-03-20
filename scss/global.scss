@@ -2111,6 +2111,17 @@ body.single {
 
     margin-top: -150px;
   }
+
+
+  p {
+    font-size: 1.5em;
+
+  }
+
+  a.button {
+    float: right;
+  }
+
 }
 
 .news_container {
@@ -2197,6 +2208,8 @@ body.single {
 }
 
 
+
+
 .blog_content {
   width: 100%;
 
@@ -2205,10 +2218,6 @@ body.single {
     padding: 0 0 10px;
   }
 
-  p {
-    font-size: 1.5em;
-
-  }
 
   .title_and_summary {
     @media (min-width: $mobile_width) {
@@ -2233,7 +2242,7 @@ body.single {
   a.button {
     font-size: 1.5em;
     padding: 10px 30px;
-    float: right;
+
   }
 }
 
