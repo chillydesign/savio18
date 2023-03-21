@@ -18,7 +18,7 @@
 			<section class="welcome_section">
 				<div class="container">
 					<div class="welcome_text">
-						<h1><?php the_title(); ?></h1>
+						<h1>Actualités</h1>
 					</div>
 				</div>
 			</section>
@@ -31,15 +31,6 @@
 					<div class="row">
 
 						<div class="col-sm-8">
-							<!-- post thumbnail -->
-							<?php if (has_post_thumbnail()) : // Check if Thumbnail exists 
-							?>
-
-								<?php the_post_thumbnail(); // Fullsize image for the single post 
-								?>
-
-							<?php endif; ?>
-							<!-- /post thumbnail -->
 
 
 
@@ -48,6 +39,7 @@
 									<?php echo make_date_container($date); ?>
 								<?php endif; ?>
 								<div class="blog_content">
+									<h2><?php the_title(); ?></h2>
 									<?php the_content(); // Dynamic Content 
 									?>
 									<?php if ($link && $link_text) : ?>
@@ -61,6 +53,13 @@
 
 						</div>
 						<div class="col-sm-4">
+							<!-- post thumbnail -->
+							<?php if (has_post_thumbnail()) : // Check if Thumbnail exists 
+								the_post_thumbnail(); // Fullsize image for the single post 
+							endif; ?>
+							<!-- /post thumbnail -->
+
+
 							<?php get_sidebar(); ?>
 
 						</div>
