@@ -27,7 +27,10 @@
 			<section>
 				<div class="container">
 
-
+					<ul class="breadcrumbs" typeof="BreadcrumbList" vocab="https://schema.org/">
+						<li><a href="<?php echo site_url(''); ?>">Accueil</a></li>
+						<li><a href="<?php echo site_url('actualites'); ?>">Actualités</a></li>
+					</ul>
 					<div class="row">
 
 						<div class="col-sm-8">
