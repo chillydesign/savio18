@@ -23,14 +23,14 @@ $ws_class = ''; ?>
             <div class="welcome_text ">
                 <?php echo $text; ?>
             </div>
-
-            <?php if ($side_src) : ?>
-                <div class="col-sm-4">
-                    <img class="side_image" src="<?php echo $side_src; ?>">
-                </div>
         </div>
-    <?php endif; ?>
+        <?php if ($side_src) : ?>
+            <div class="col-sm-4">
+                <img class="side_image" src="<?php echo $side_src; ?>">
+            </div>
+        <?php endif; ?>
+
     </div>
-    </div>
+
 
 </section>
