@@ -2305,14 +2305,11 @@ body.single {
 
 
 form.bingo_form {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 20px;
 
   input {
     padding: 20px;
     font-size: 2em;
+    margin: 0 10px 0 0;
   }
 
   button {
@@ -2322,14 +2319,14 @@ form.bingo_form {
 }
 
 .alert {
-  padding: 20px;
+  padding: 10px;
   margin: 10px 0 20px;
   border-radius: $border_radius;
   font-size: $font_size;
   color: white;
   background-color: $brand_color;
 
-  &.success {
+  &.alert_success {
     background-color: $green;
   }
 }

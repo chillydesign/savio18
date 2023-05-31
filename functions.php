@@ -664,13 +664,12 @@ add_shortcode('number_box', 'number_box');
 
 
 function bingo_form($atts, $content = null) {
-    $str = '';
-    $str .= '<form method="get" action="?success" class="bingo_form"><input type="text" name="email" id="email" placeholder="email" /><button type="submit">Submit</button>';
+    $str = '<div>';
+    $str .= '<form method="get" action="?success" class="bingo_form"><input type="text" name="email" id="email" placeholder="email" /><button type="submit">Submit</button></form>';
     if (isset($_GET['success'])) :
-        $str .= '<div class="alert alert-success">Congrats.</div>';
+        $str .= '<div class="alert alert_success">Congrats.</div>';
     endif;
-
-    $str  .= '</form>';
+    $str  .= '</div>';
 
     return $str;
 }
