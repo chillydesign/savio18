@@ -2302,3 +2302,34 @@ body.single {
 
 
 }
+
+
+form.bingo_form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
+
+  input {
+    padding: 20px;
+    font-size: 2em;
+  }
+
+  button {
+    font-size: 2em;
+  }
+
+}
+
+.alert {
+  padding: 20px;
+  margin: 10px 0 20px;
+  border-radius: $border_radius;
+  font-size: $font_size;
+  color: white;
+  background-color: $brand_color;
+
+  &.success {
+    background-color: $green;
+  }
+}
