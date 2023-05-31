@@ -665,7 +665,7 @@ add_shortcode('number_box', 'number_box');
 
 function bingo_form($atts, $content = null) {
     $str = '<div>';
-    $str .= '<form id="bingo_form" method="get" action="?success" class="bingo_form"><input type="text" name="bingoemail" id="bingoemail" placeholder="Votre adresse email" /><button type="submit">Recevoir l’imprimable</button></form>';
+    $str .= '<form id="bingoform" method="get" action="?success" class="bingo_form"><input type="text" name="bingoemail" id="bingoemail" placeholder="Votre adresse email" /><button type="submit">Recevoir l’imprimable</button></form>';
     $str .= '<div id="bingo_success" class="alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !</div>';
     $str .= '<div id="bingo_error" class="alert alert_danger">Error</div>';
     $str  .= '</div>';
