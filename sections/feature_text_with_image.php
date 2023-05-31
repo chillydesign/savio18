@@ -16,7 +16,7 @@ $ws_class = ''; ?>
 
 <section class="welcome_section <?php echo $ws_class; ?>" style="background-image:url(<?php echo $bg_src; ?>)">
     <div class="container" style="position:relative;">
-        <div class="welcome_text">
+        <div class="welcome_text welcome_text_ftwi">
             <div class="welcome_text_inner">
                 <?php echo $text; ?>
             </div>

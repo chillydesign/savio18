@@ -93,9 +93,13 @@ section {
     margin: auto;
     text-align: center;
     color: $brand_color;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
+
+    &.welcome_text_ftwi {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+    }
 
     @media (min-width: $mobile_width) {
       width: $section_text_width;
