@@ -377,51 +377,53 @@ function onPlayerStateChange(e) {
 
 // BINGO FORM
 // BINGO FORM
-
-const bingo_error = document.getElementById("bingo_error");
-const bingo_success = document.getElementById("bingo_success");
-bingo_success.style.display = "none";
-bingo_error.style.display = "none";
 const bingoform = document.getElementById("bingoform");
-const bingoemail = document.getElementById("bingoemail");
-// const consent = document.getElementById("consent");
-// consent: consent.checked,
 
-bingoform.addEventListener("submit", (e) => {
+if (bingoform) {
+  const bingo_error = document.getElementById("bingo_error");
+  const bingo_success = document.getElementById("bingo_success");
   bingo_success.style.display = "none";
   bingo_error.style.display = "none";
+  const bingoemail = document.getElementById("bingoemail");
+  // const consent = document.getElementById("consent");
+  // consent: consent.checked,
 
-  e.preventDefault();
-  const options = {
-    method: "POST",
-    body: JSON.stringify({
-      data: {
-        attributes: { email: bingoemail.value },
+  bingoform.addEventListener("submit", (e) => {
+    bingo_success.style.display = "none";
+    bingo_error.style.display = "none";
+
+    e.preventDefault();
+    const options = {
+      method: "POST",
+      body: JSON.stringify({
+        data: {
+          attributes: { email: bingoemail.value },
+        },
+      }),
+      headers: {
+        Accept: "application/json; version=1",
+        "Content-Type": "application/json",
       },
-    }),
-    headers: {
-      Accept: "application/json; version=1",
-      "Content-Type": "application/json",
-    },
-  };
+    };
 
-  const response = fetch("http://localhost:3000/bingousers", options)
-    .then((data) => {
-      // console.log(data);
-      if (data.ok) {
-        bingo_success.style.display = "block";
-        data.json().then((j) => {
-          console.log(j.data.attributes);
-        });
-      } else {
-        throw new Error("error");
-      }
-    })
-    .catch((error) => {
-      console.error(error);
-      bingo_error.style.display = "block";
-    });
-});
+    const response = fetch("http://localhost:3000/bingousers", options)
+      .then((data) => {
+        // console.log(data);
+        if (data.ok) {
+          bingo_success.style.display = "block";
+          data.json().then((j) => {
+            console.log(j.data.attributes);
+          });
+        } else {
+          throw new Error("error");
+        }
+      })
+      .catch((error) => {
+        console.error(error);
+        bingo_error.style.display = "block";
+      });
+  });
+}
 
 // BINGO FORM
 // BINGO FORM
