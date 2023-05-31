@@ -385,8 +385,9 @@ bingo_error.style.display = "none";
 const bingoform = document.getElementById("bingoform");
 const bingoemail = document.getElementById("bingoemail");
 // const consent = document.getElementById("consent");
+// consent: consent.checked,
 
-form.addEventListener("submit", (e) => {
+bingoform.addEventListener("submit", (e) => {
   bingo_success.style.display = "none";
   bingo_error.style.display = "none";
 
@@ -395,7 +396,7 @@ form.addEventListener("submit", (e) => {
     method: "POST",
     body: JSON.stringify({
       data: {
-        attributes: { consent: consent.checked, email: email.value },
+        attributes: { email: bingoemail.value },
       },
     }),
     headers: {
@@ -403,12 +404,13 @@ form.addEventListener("submit", (e) => {
       "Content-Type": "application/json",
     },
   };
+
   const response = fetch("http://localhost:3000/bingousers", options)
     .then((data) => {
       // console.log(data);
       if (data.ok) {
         bingo_success.style.display = "block";
-        const json = data.json().then((j) => {
+        data.json().then((j) => {
           console.log(j.data.attributes);
         });
       } else {
