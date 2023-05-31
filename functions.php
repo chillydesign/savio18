@@ -667,7 +667,7 @@ function bingo_form($atts, $content = null) {
     $str = '<div>';
     $str .= '<form method="get" action="?success" class="bingo_form"><input type="text" name="email" id="email" placeholder="Votre adresse email" /><button type="submit">Recevoir l’imprimable</button></form>';
     if (isset($_GET['success'])) :
-        $str .= '<div class="alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !.</div>';
+        $str .= '<div class="alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !</div>';
     endif;
     $str  .= '</div>';
 
