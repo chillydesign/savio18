@@ -46,10 +46,10 @@
         hideFreeTestPopup();
       }
 
-      if (e.keyCode == 70) {
-        // if press f
-        openFreeTestPopup();
-      }
+      // if (e.keyCode == 70) {
+      //   // if press f
+      //   openFreeTestPopup();
+      // }
     });
 
     function hideMenu() {
