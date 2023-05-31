@@ -2338,4 +2338,8 @@ form.bingo_form {
   &.alert_success {
     background-color: $green;
   }
+
+  &.alert_danger {
+    background-color: $red;
+  }
 }

@@ -374,3 +374,52 @@ function onPlayerReady(e) {
 function onPlayerStateChange(e) {
   console.log(e, "onPlayerStateChange");
 }
+
+// BINGO FORM
+// BINGO FORM
+
+const bingo_error = document.getElementById("bingo_error");
+const bingo_success = document.getElementById("bingo_success");
+bingo_success.style.display = "none";
+bingo_error.style.display = "none";
+const bingoform = document.getElementById("bingoform");
+const bingoemail = document.getElementById("bingoemail");
+// const consent = document.getElementById("consent");
+
+form.addEventListener("submit", (e) => {
+  bingo_success.style.display = "none";
+  bingo_error.style.display = "none";
+
+  e.preventDefault();
+  const options = {
+    method: "POST",
+    body: JSON.stringify({
+      data: {
+        attributes: { consent: consent.checked, email: email.value },
+      },
+    }),
+    headers: {
+      Accept: "application/json; version=1",
+      "Content-Type": "application/json",
+    },
+  };
+  const response = fetch("http://localhost:3000/bingousers", options)
+    .then((data) => {
+      // console.log(data);
+      if (data.ok) {
+        bingo_success.style.display = "block";
+        const json = data.json().then((j) => {
+          console.log(j.data.attributes);
+        });
+      } else {
+        throw new Error("error");
+      }
+    })
+    .catch((error) => {
+      console.error(error);
+      bingo_error.style.display = "block";
+    });
+});
+
+// BINGO FORM
+// BINGO FORM
