@@ -67,6 +67,11 @@ section {
 }
 
 
+.side_image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
 
 .welcome_section {
   display: flex;
@@ -102,11 +107,7 @@ section {
 
     }
 
-    .side_image {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
+
 
 
     h1,
