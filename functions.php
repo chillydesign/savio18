@@ -658,20 +658,22 @@ function create_post_types() {
 /*------------------------------------*\
     ShortCode Functions
 \*------------------------------------*/
-add_shortcode('bingo_form', 'bingo_form');
 add_shortcode('number_box_outer', 'number_box_outer');
 add_shortcode('number_box', 'number_box');
 
+// add_shortcode('bingo_form', 'bingo_form');
 
-function bingo_form($atts, $content = null) {
-    $str = '<div>';
-    $str .= '<form id="bingoform" method="get" action="?success" class="bingo_form"><input type="text" name="bingoemail" id="bingoemail" placeholder="Votre adresse email" /><button type="submit">Recevoir</button></form>';
-    $str .= '<div id="bingo_success" class="alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !</div>';
-    $str .= '<div id="bingo_error" class="alert alert_danger">Error</div>';
-    $str  .= '</div>';
+// function bingo_form($atts, $content = null) {
+//     $str = '<div id="bingo_popup">';
+//     $str .= '<div id="bingo_popup_inner">';
+//     $str .= '<form id="bingoform" method="get" action="?success" class="bingo_form"><input type="text" name="bingoemail" id="bingoemail" placeholder="Votre adresse email" /><button type="submit">Recevoir</button></form>';
+//     $str .= '<div id="bingo_success" class="alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !</div>';
+//     $str .= '<div id="bingo_error" class="alert alert_danger">Error</div>';
+//     $str  .= '</div>';
+//     $str  .= '</div>';
 
-    return $str;
-}
+//     return $str;
+// }
 
 function number_box_outer($atts, $content = null) {
 

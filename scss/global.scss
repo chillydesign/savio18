@@ -2312,6 +2312,25 @@ body.single {
 
 }
 
+.bingo_section {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#bingo_popup {
+  height: 100px;
+  padding: 100px;
+  width: 450px;
+  padding: 50px;
+  background: white;
+  position: absolute;
+  top: 100px;
+  box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+
+}
 
 form.bingo_form {
 
