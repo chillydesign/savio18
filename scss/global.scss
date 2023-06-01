@@ -2328,48 +2328,48 @@ body.single {
   top: 100px;
   box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
   z-index: 100;
+}
 
 
+#close_bingo_popup {
+  width: 30px;
+  height: 30px;
+  background-color: $red;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
 
-  #close_bingo_popup {
-    width: 30px;
-    height: 30px;
+form.bingo_form {
+
+  input {
+    padding: 13px;
+    font-size: 2em;
+    margin: 0 10px 0 0;
+  }
+
+  button {
+    font-size: 2em;
+  }
+
+}
+
+.alert {
+  padding: 15px;
+  margin: 10px 0 20px;
+  border-radius: $border_radius;
+  font-size: $font_size;
+  color: white;
+  background-color: $brand_color;
+
+  &.alert_success {
+    background-color: $green;
+  }
+
+  &.alert_danger {
     background-color: $red;
-    text-align: center;
-    line-height: 30px;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
   }
-
-  form.bingo_form {
-
-    input {
-      padding: 13px;
-      font-size: 2em;
-      margin: 0 10px 0 0;
-    }
-
-    button {
-      font-size: 2em;
-    }
-
-  }
-
-  .alert {
-    padding: 15px;
-    margin: 10px 0 20px;
-    border-radius: $border_radius;
-    font-size: $font_size;
-    color: white;
-    background-color: $brand_color;
-
-    &.alert_success {
-      background-color: $green;
-    }
-
-    &.alert_danger {
-      background-color: $red;
-    }
-  }
+}
