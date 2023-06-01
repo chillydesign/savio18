@@ -406,7 +406,7 @@ if (bingoform) {
       },
     };
 
-    const response = fetch("http://localhost:3000/bingousers", options)
+    const response = fetch("https://api.savio.fr/bingousers", options)
       .then((data) => {
         // console.log(data);
         if (data.ok) {
