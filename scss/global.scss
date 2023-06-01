@@ -2328,6 +2328,7 @@ body.single {
   top: 100px;
   box-shadow: 0 0 0 2000px rgba(0, 0, 0, 0.5);
   z-index: 100;
+  text-align: center;
 }
 
 
@@ -2341,6 +2342,9 @@ body.single {
   top: 20px;
   right: 20px;
   cursor: pointer;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
 }
 
 form.bingo_form {

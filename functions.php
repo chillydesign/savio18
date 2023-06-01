@@ -83,7 +83,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '1.1.4';
+    return '1.1.5';
 }
 
 // Load HTML5 Blank scripts (header.php)
