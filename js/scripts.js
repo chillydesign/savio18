@@ -380,6 +380,8 @@ function onPlayerStateChange(e) {
 const bingoform = document.getElementById("bingoform");
 
 if (bingoform) {
+  const close_bingo_popup = document.getElementById("close_bingo_popup");
+  const bingo_popup = document.getElementById("bingo_popup");
   const bingo_error = document.getElementById("bingo_error");
   const bingo_success = document.getElementById("bingo_success");
   bingo_success.style.display = "none";
@@ -387,6 +389,10 @@ if (bingoform) {
   const bingoemail = document.getElementById("bingoemail");
   // const consent = document.getElementById("consent");
   // consent: consent.checked,
+
+  close_bingo_popup.addEventListener("click", (e) => {
+    bingo_popup.style.display = "none";
+  });
 
   bingoform.addEventListener("submit", (e) => {
     bingo_success.style.display = "none";

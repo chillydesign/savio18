@@ -5,5 +5,6 @@
             <div id="bingo_success" class="alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !</div>
             <div id="bingo_error" class="alert alert_danger">Error</div>
         </div>
+        <div id="close_bingo_popup">X</div>
     </div>
 </section>
