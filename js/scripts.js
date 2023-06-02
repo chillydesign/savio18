@@ -381,7 +381,7 @@ function onPlayerStateChange(e) {
 const close_bingo_popup = document.getElementById("close_bingo_popup");
 const bingo_popup = document.getElementById("bingo_popup");
 bingo_popup.style.display = "none";
-
+let hasShown = false;
 if (bingo_popup) {
   const html = document.documentElement;
   const body = document.body;
@@ -394,8 +394,12 @@ if (bingo_popup) {
       html.scrollHeight,
       html.offsetHeight
     );
-    console.log((wy / bh) * 100);
-    // bingo_popup.style.display = "block";
+    if (!hasShown) {
+      if (wy / bh > 0.25) {
+        bingo_popup.style.display = "block";
+        hasShown = true;
+      }
+    }
   });
 
   close_bingo_popup.addEventListener("click", (e) => {
