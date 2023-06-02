@@ -383,9 +383,18 @@ const bingo_popup = document.getElementById("bingo_popup");
 bingo_popup.style.display = "none";
 
 if (bingo_popup) {
+  const html = document.documentElement;
+  const body = document.body;
   addEventListener("scroll", (event) => {
-    console.log(event);
-    console.log(window);
+    const wy = window.scrollY;
+    const bh = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+    console.log((wy / bh) * 100);
     // bingo_popup.style.display = "block";
   });
 
