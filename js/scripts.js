@@ -377,58 +377,73 @@ function onPlayerStateChange(e) {
 
 // BINGO FORM
 // BINGO FORM
-const bingoform = document.getElementById("bingoform");
 
-if (bingoform) {
-  const close_bingo_popup = document.getElementById("close_bingo_popup");
-  const bingo_popup = document.getElementById("bingo_popup");
-  const bingo_error = document.getElementById("bingo_error");
-  const bingo_success = document.getElementById("bingo_success");
-  bingo_success.style.display = "none";
-  bingo_error.style.display = "none";
-  const bingoemail = document.getElementById("bingoemail");
-  // const consent = document.getElementById("consent");
-  // consent: consent.checked,
+const close_bingo_popup = document.getElementById("close_bingo_popup");
+const bingo_popup = document.getElementById("bingo_popup");
+bingo_popup.style.display = "none";
+
+if (bingo_popup) {
+  setTimeout(() => {
+    bingo_popup.style.display = "block";
+  }, 5000);
 
   close_bingo_popup.addEventListener("click", (e) => {
     bingo_popup.style.display = "none";
   });
+}
 
-  bingoform.addEventListener("submit", (e) => {
+const bingoforms = document.getElementsByClassName("bingoform");
+
+if (bingoforms.length > 0) {
+  for (let a = 0; a < bingoforms.length; a++) {
+    const bingoform = bingoforms[a];
+
+    const bingo_error = [...bingoform.getElementsByClassName("bingo_error")][0];
+    const bingo_success = [
+      ...bingoform.getElementyClassName("bingo_success"),
+    ][0];
     bingo_success.style.display = "none";
     bingo_error.style.display = "none";
+    const bingoemail = [...bingoform.getElementsByClassName("bingoemail")][0];
+    // const consent = document.getElementById("consent");
+    // consent: consent.checked,
 
-    e.preventDefault();
-    const options = {
-      method: "POST",
-      body: JSON.stringify({
-        data: {
-          attributes: { email: bingoemail.value },
+    bingoform.addEventListener("submit", (e) => {
+      bingo_success.style.display = "none";
+      bingo_error.style.display = "none";
+
+      e.preventDefault();
+      const options = {
+        method: "POST",
+        body: JSON.stringify({
+          data: {
+            attributes: { email: bingoemail.value },
+          },
+        }),
+        headers: {
+          Accept: "application/json; version=1",
+          "Content-Type": "application/json",
         },
-      }),
-      headers: {
-        Accept: "application/json; version=1",
-        "Content-Type": "application/json",
-      },
-    };
+      };
 
-    const response = fetch("https://api.savio.fr/bingousers", options)
-      .then((data) => {
-        // console.log(data);
-        if (data.ok) {
-          bingo_success.style.display = "block";
-          data.json().then((j) => {
-            console.log(j.data.attributes);
-          });
-        } else {
-          throw new Error("error");
-        }
-      })
-      .catch((error) => {
-        console.error(error);
-        bingo_error.style.display = "block";
-      });
-  });
+      const response = fetch("https://api.savio.fr/bingousers", options)
+        .then((data) => {
+          // console.log(data);
+          if (data.ok) {
+            bingo_success.style.display = "block";
+            data.json().then((j) => {
+              console.log(j.data.attributes);
+            });
+          } else {
+            throw new Error("error");
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+          bingo_error.style.display = "block";
+        });
+    });
+  }
 }
 
 // BINGO FORM
