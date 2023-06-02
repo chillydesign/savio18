@@ -383,9 +383,11 @@ const bingo_popup = document.getElementById("bingo_popup");
 bingo_popup.style.display = "none";
 
 if (bingo_popup) {
-  setTimeout(() => {
-    bingo_popup.style.display = "block";
-  }, 5000);
+  addEventListener("scroll", (event) => {
+    console.log(event);
+    console.log(window);
+    // bingo_popup.style.display = "block";
+  });
 
   close_bingo_popup.addEventListener("click", (e) => {
     bingo_popup.style.display = "none";
