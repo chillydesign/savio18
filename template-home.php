@@ -299,7 +299,7 @@
                 </div>
             </section>
 
-            <?php get_template_part('sections', 'newsletter_signup'); ?>
+            <?php get_template_part('sections/newsletter_signup'); ?>
 
 
 
