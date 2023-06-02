@@ -1,3 +1,24 @@
+<?php
+global $follow_header;
+global $follow_paragraph;
+global $newsletter_text_footer;
+
+
+if (!isset($follow_header)) {
+    $follow_header =  "";
+};
+
+if (!isset($follow_paragraph)) {
+    $follow_paragraph =  "";
+};
+
+if (!isset($newsletter_text_footer)) {
+    $newsletter_text_footer =  "";
+};
+
+?>
+
+
 <section id="follow_savio">
 
     <div class="container">
