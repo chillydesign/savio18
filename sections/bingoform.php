@@ -2,8 +2,8 @@
 <?php $image =  get_sub_field('image'); ?>
 <?php $img_src  = ($image)  ? $image['sizes']['large'] : ''; ?>
 <section class="bingo_section">
-    <div class="bingo_popup">
-        <div class="bingo_popup_inner">
+    <div id="bingo_popup">
+        <div id="bingo_popup_inner">
 
             <div class="container-fluid">
 
@@ -24,6 +24,6 @@
 
 
         </div>
-        <div class="close_bingo_popup">X</div>
+        <div id="close_bingo_popup">X</div>
     </div>
 </section>

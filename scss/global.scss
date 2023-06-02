@@ -2319,7 +2319,7 @@ body.single {
   align-items: center;
 }
 
-.bingo_popup {
+#bingo_popup {
   padding: 100px;
   width: 70%;
   padding: 50px;
@@ -2333,7 +2333,7 @@ body.single {
 }
 
 
-.close_bingo_popup {
+#close_bingo_popup {
   width: 30px;
   height: 30px;
   background-color: $red;
