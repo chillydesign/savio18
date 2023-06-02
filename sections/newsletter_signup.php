@@ -5,11 +5,11 @@ global $newsletter_text_footer;
 
 
 if (!isset($follow_header)) {
-    $follow_header =  "";
+    $follow_header =  "<h2>Suivez Savio</h2>";
 };
 
 if (!isset($follow_paragraph)) {
-    $follow_paragraph =  "";
+    $follow_paragraph =  "<p>Inscrivez-vous à la newsletter et recevez les nouveautés du site et des codes de réduction sur les abonnements.</p>";
 };
 
 if (!isset($newsletter_text_footer)) {
@@ -25,7 +25,7 @@ if (!isset($newsletter_text_footer)) {
         <div class="follow_savio_flex">
 
             <div class="follow_savio_text">
-                <h2><?php echo $follow_header; ?></h2>
+                <?php echo $follow_header; ?>
                 <?php echo $follow_paragraph; ?>
 
                 <?php // get_template_part('partials/mailchimp_signup_form'); 
