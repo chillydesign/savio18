@@ -2,8 +2,8 @@
 <?php $image =  get_sub_field('image'); ?>
 <?php $img_src  = ($image)  ? $image['sizes']['large'] : ''; ?>
 <section class="bingo_section">
-    <div id="bingo_popup">
-        <div id="bingo_popup_inner">
+    <div class="bingo_popup">
+        <div class="bingo_popup_inner">
 
             <div class="container-fluid">
 
@@ -12,9 +12,9 @@
                         <?php echo $content; ?>
                     <?php endif; ?>
 
-                    <form id="bingoform" method="get" action="?success" class="bingo_form"><input type="text" name="bingoemail" id="bingoemail" placeholder="Votre adresse email" /><button type="submit">Recevoir</button></form>
-                    <div id="bingo_success" class="alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !</div>
-                    <div id="bingo_error" class="alert alert_danger">Error</div>
+                    <form class="bingoform" method="get" action="?success" class="bingo_form"><input type="text" name="bingoemail" class="bingoemail" placeholder="Votre adresse email" /><button type="submit">Recevoir</button></form>
+                    <div class="bingo_success alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !</div>
+                    <div class="bingo_error alert alert_danger">Error</div>
 
                 </div>
                 <div class="col-sm-4">
@@ -24,6 +24,6 @@
 
 
         </div>
-        <div id="close_bingo_popup">X</div>
+        <div class="close_bingo_popup">X</div>
     </div>
 </section>
