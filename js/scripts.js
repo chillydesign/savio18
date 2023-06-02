@@ -400,7 +400,7 @@ if (bingoforms.length > 0) {
 
     const bingo_error = [...bingoform.getElementsByClassName("bingo_error")][0];
     const bingo_success = [
-      ...bingoform.getElementyClassName("bingo_success"),
+      ...bingoform.getElementsByClassName("bingo_success"),
     ][0];
     bingo_success.style.display = "none";
     bingo_error.style.display = "none";
