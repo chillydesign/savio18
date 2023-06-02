@@ -396,19 +396,17 @@ const bingoforms = document.getElementsByClassName("bingoform");
 
 if (bingoforms.length > 0) {
   for (let a = 0; a < bingoforms.length; a++) {
-    const bingoform = bingoforms[a];
+    const bf = bingoforms[a];
 
-    const bingo_error = [...bingoform.getElementsByClassName("bingo_error")][0];
-    const bingo_success = [
-      ...bingoform.getElementsByClassName("bingo_success"),
-    ][0];
+    const bingo_error = [...bf.getElementsByClassName("bingo_error")][0];
+    const bingo_success = [...bf.getElementsByClassName("bingo_success")][0];
     bingo_success.style.display = "none";
     bingo_error.style.display = "none";
-    const bingoemail = [...bingoform.getElementsByClassName("bingoemail")][0];
+    const bingoemail = [...bf.getElementsByClassName("bingoemail")][0];
     // const consent = document.getElementById("consent");
     // consent: consent.checked,
 
-    bingoform.addEventListener("submit", (e) => {
+    bf.addEventListener("submit", (e) => {
       bingo_success.style.display = "none";
       bingo_error.style.display = "none";
 
