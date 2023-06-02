@@ -12,10 +12,11 @@
                         <?php echo $content; ?>
                     <?php endif; ?>
 
-                    <form class="bingoform" method="get" action="?success" class="bingo_form"><input type="text" name="bingoemail" class="bingoemail" placeholder="Votre adresse email" /><button type="submit">Recevoir</button></form>
-                    <div class="bingo_success alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !</div>
-                    <div class="bingo_error alert alert_danger">Error</div>
-
+                    <div class="bingo_outer">
+                        <form class="bingoform" method="get" action="?success" class="bingo_form"><input type="text" name="bingoemail" class="bingoemail" placeholder="Votre adresse email" /><button type="submit">Recevoir</button></form>
+                        <div class="bingo_success alert alert_success">Nous vous avons envoyé l\'imprimable Savio par email !</div>
+                        <div class="bingo_error alert alert_danger">Error</div>
+                    </div>
                 </div>
                 <div class="col-sm-4">
                     <img class="side_image" src="<?php echo $img_src; ?>">

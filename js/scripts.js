@@ -392,17 +392,18 @@ if (bingo_popup) {
   });
 }
 
-const bingoforms = document.getElementsByClassName("bingoform");
+const bingo_outers = document.getElementsByClassName("bingo_outer");
 
-if (bingoforms.length > 0) {
-  for (let a = 0; a < bingoforms.length; a++) {
-    const bf = bingoforms[a];
+if (bingo_outers.length > 0) {
+  for (let a = 0; a < bingo_outers.length; a++) {
+    const bo = bingo_outers[a];
+    const bf = [...bo.getElementsByClassName("bingoform")][0];
 
-    const bingo_error = [...bf.getElementsByClassName("bingo_error")][0];
-    const bingo_success = [...bf.getElementsByClassName("bingo_success")][0];
+    const bingo_error = [...bo.getElementsByClassName("bingo_error")][0];
+    const bingo_success = [...bo.getElementsByClassName("bingo_success")][0];
     bingo_success.style.display = "none";
     bingo_error.style.display = "none";
-    const bingoemail = [...bf.getElementsByClassName("bingoemail")][0];
+    const bingoemail = [...bo.getElementsByClassName("bingoemail")][0];
     // const consent = document.getElementById("consent");
     // consent: consent.checked,
 
