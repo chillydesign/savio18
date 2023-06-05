@@ -386,6 +386,7 @@ iframe.addEventListener("load", function () {
     iframe.style.width = iframe.contentDocument.body.scrollWidth + "px";
   }, 500);
 });
+let iframe2 = document.querySelector("#iframe-ete");
 
 const close_bingo_popup = document.getElementById("close_bingo_popup");
 const bingo_popup = document.getElementById("bingo_popup");
@@ -407,15 +408,11 @@ if (bingo_popup) {
       if (wy / bh > 0.25) {
         bingo_popup.style.display = "block";
         hasShown = true;
-        let iframe2 = document.querySelector("#iframe-ete");
-        iframe2.addEventListener("load", function () {
-          setInterval(function () {
-            iframe2.style.height =
-              iframe2.contentDocument.body.scrollHeight + "px";
-            iframe2.style.width =
-              iframe2.contentDocument.body.scrollWidth + "px";
-          }, 101);
-        });
+        setInterval(function () {
+          iframe2.style.height =
+            iframe2.contentDocument.body.scrollHeight + "px";
+          iframe2.style.width = iframe2.contentDocument.body.scrollWidth + "px";
+        }, 101);
       }
     }
   });
