@@ -2321,6 +2321,8 @@ body.single {
 
 #bingo_popup {
   width: 70%;
+  height: 70vh;
+  overflow-y: scroll;
   padding: 30px;
   background: white;
   position: fixed;
