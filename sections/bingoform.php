@@ -12,7 +12,7 @@
                         <?php echo $content; ?>
                     <?php endif; ?>
 
-                    <? php //  echo do_shortcode('[bingo_form]'); 
+                    <?php //  echo do_shortcode('[bingo_form]'); 
                     ?>
                 </div>
                 <div class="col-sm-6">
