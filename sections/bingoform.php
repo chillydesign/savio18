@@ -12,7 +12,8 @@
                         <?php echo $content; ?>
                     <?php endif; ?>
 
-                    <?php echo do_shortcode('[bingo_form]'); ?>
+                    <? php //  echo do_shortcode('[bingo_form]'); 
+                    ?>
                 </div>
                 <div class="col-sm-6">
                     <img class="side_image" src="<?php echo $img_src; ?>">

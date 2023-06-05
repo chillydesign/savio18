@@ -378,6 +378,15 @@ function onPlayerStateChange(e) {
 // BINGO FORM
 // BINGO FORM
 
+let iframe = document.querySelector("#iFrameGuideEte");
+
+iframe.addEventListener("load", function () {
+  setInterval(function () {
+    iframe.style.height = iframe.contentDocument.body.scrollHeight + "px";
+    iframe.style.width = iframe.contentDocument.body.scrollWidth + "px";
+  }, 500);
+});
+
 const close_bingo_popup = document.getElementById("close_bingo_popup");
 const bingo_popup = document.getElementById("bingo_popup");
 bingo_popup.style.display = "none";
@@ -407,7 +416,7 @@ if (bingo_popup) {
   });
 }
 
-const bingo_outers = document.getElementsByClassName("bingo_outer");
+/*const bingo_outers = document.getElementsByClassName("bingo_outer");
 
 if (bingo_outers.length > 0) {
   for (let a = 0; a < bingo_outers.length; a++) {
@@ -459,6 +468,7 @@ if (bingo_outers.length > 0) {
     });
   }
 }
+*/
 
 // BINGO FORM
 // BINGO FORM
