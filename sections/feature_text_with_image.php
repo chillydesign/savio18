@@ -11,7 +11,9 @@ $ws_class = ''; ?>
 } else if ($image_position == 'side') {
     $ws_class = 'blue';
     $side_src = $img_src;
-    $fc_class = 'col-sm-8';
+    if ($image) {
+        $fc_class = 'col-sm-8';
+    }
 }
 
 ?>
