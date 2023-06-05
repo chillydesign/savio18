@@ -2303,7 +2303,7 @@ body.single {
 
   .loop_content {
     &:before {
-      content: none
+      content: none;
     }
 
     padding: 0 0 0 10px;
@@ -2320,16 +2320,25 @@ body.single {
 }
 
 #bingo_popup {
-  padding: 100px;
   width: 70%;
-  padding: 50px;
+  padding: 30px;
   background: white;
   position: fixed;
-  top: 100px;
+  top: 40px;
   box-shadow: 0 0 0 4000px rgba(0, 0, 0, 0.5);
   z-index: 100;
   text-align: center;
-  border: 7px solid $orange;
+  border: 6px solid $orange;
+
+  h3 {
+    font-size: 2.4em;
+    padding: 0 0 10px;
+  }
+
+  p {
+    font-size: 1.55em;
+    padding: 0 0 10px;
+  }
 }
 
 
