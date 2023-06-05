@@ -390,9 +390,9 @@ let iframe2 = document.querySelector("#iframe-ete");
 
 iframe2.addEventListener("load", function () {
   setInterval(function () {
-    iframe.style.height = iframe.contentDocument.body.scrollHeight + "px";
-    iframe.style.width = iframe.contentDocument.body.scrollWidth + "px";
-  }, 500);
+    iframe2.style.height = iframe2.contentDocument.body.scrollHeight + "px";
+    iframe2.style.width = iframe2.contentDocument.body.scrollWidth + "px";
+  }, 501);
 });
 
 const close_bingo_popup = document.getElementById("close_bingo_popup");
