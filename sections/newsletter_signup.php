@@ -30,7 +30,7 @@ if (!isset($newsletter_text_footer)) {
 
                 <?php // get_template_part('partials/mailchimp_signup_form'); 
                 ?>
-                <?php get_template_part('partials/sib_signup_form');
+                <?php get_template_part('partials/sib_signup_form_2');
                 ?>
                 <?php echo $newsletter_text_footer; ?>
             </div>
