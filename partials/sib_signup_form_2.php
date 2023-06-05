@@ -48,17 +48,18 @@
         </div>
         <div></div>
         <div id="sib-container" class="sib-container--large sib-container--vertical">
-            <form id="sib-form" method="POST" action="https://c8f1151e.sibforms.com/serve/MUIEAACq0aZerhtzv-YvhXxuGQ_B5oPdzYiPqZC3jACQUuuTuwR1T1sabHw9DCYgQUQXgf9nrQVrQk4nG2wmbiVihTGli1GfYeOfK30mf4E4Xue3512JwxoEUwa5rvHbf_dA9htDMWBY-a8_mCWbYtzWlNHsfiJLP5BTQm6m6FVE470Yt_Bzv8Cj4LEVeWX6KWmpUaOERjCcD9e3" data-type="subscription">
+            <form id="sib-form" class="signup_form" method="POST" action="https://c8f1151e.sibforms.com/serve/MUIEAACq0aZerhtzv-YvhXxuGQ_B5oPdzYiPqZC3jACQUuuTuwR1T1sabHw9DCYgQUQXgf9nrQVrQk4nG2wmbiVihTGli1GfYeOfK30mf4E4Xue3512JwxoEUwa5rvHbf_dA9htDMWBY-a8_mCWbYtzWlNHsfiJLP5BTQm6m6FVE470Yt_Bzv8Cj4LEVeWX6KWmpUaOERjCcD9e3" data-type="subscription">
 
-
-                <div style="padding: 8px 0;">
+                <div class="form-field">
                     <div class="sib-input sib-form-block">
                         <div class="form__entry entry_block">
                             <div class="form__label-row ">
-                                <label class="entry__label" for="EMAIL" data-required="*"> Email</label>
+                                <label class="entry__label" for="EMAIL" data-required="*">
+                                    Email
+                                </label>
 
                                 <div class="entry__field">
-                                    <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+                                    <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
                                 </div>
                             </div>
 
@@ -68,14 +69,16 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding: 8px 0;">
+                <div class="form-field">
                     <div class="sib-input sib-form-block">
                         <div class="form__entry entry_block">
                             <div class="form__label-row ">
-                                <label class="entry__label" for="NOM" data-required="*">Nom</label>
+                                <label class="entry__label" for="NOM" data-required="*">
+                                    Nom
+                                </label>
 
                                 <div class="entry__field">
-                                    <input class="input " maxlength="200" type="text" id="NOM" name="NOM" autocomplete="off" placeholder="NOM" data-required="true" required />
+                                    <input class="input" maxlength="200" type="text" id="NOM" name="NOM" autocomplete="off" placeholder="NOM" data-required="true" required />
                                 </div>
                             </div>
 
@@ -85,11 +88,13 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding: 8px 0;">
+                <div class="form-field">
                     <div class="sib-radiobutton-group sib-form-block" data-required="true">
                         <div class="form__entry entry_mcq">
                             <div class="form__label-row ">
-                                <label class="entry__label" for="ROLE" data-required="*"> Je suis</label>
+                                <label class="entry__label" for="ROLE" data-required="*">
+                                    Je suis
+                                </label>
                                 <div>
                                     <div class="entry__choice">
                                         <label>
@@ -108,13 +113,13 @@
                         </div>
                     </div>
                 </div>
-                <div style="padding: 8px 0;">
+                <div class="form-field">
                     <div class="sib-form-block">
                         <button class="sib-form-block__button sib-form-block__button-with-loader" form="sib-form" type="submit">
                             <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512">
                                 <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
                             </svg>
-                            SUBSCRIBE
+                            Envoyer
                         </button>
                     </div>
                 </div>
