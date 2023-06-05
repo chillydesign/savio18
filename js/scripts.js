@@ -412,7 +412,7 @@ if (bingo_popup) {
           iframe2.style.height =
             iframe2.contentDocument.body.scrollHeight + "px";
           iframe2.style.width = iframe2.contentDocument.body.scrollWidth + "px";
-        }, 101);
+        }, 501);
       }
     }
   });
