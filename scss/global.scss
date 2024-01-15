@@ -2468,6 +2468,7 @@ form.bingo_form {
 
 
 .single_article_loop2{
+  width: 80%;
   .horizontal_blog_post{
     position:relative;
     .horizontal_blog_post_image{
@@ -2483,6 +2484,12 @@ form.bingo_form {
       position: relative;
       margin-left: 30%;
       padding: 30px;
+      hr {
+        margin: -12px 0px 10px;
+        height: 10px;
+        background-size: 24px;
+        max-width: 100%;
+      }
     }
   }
 }
