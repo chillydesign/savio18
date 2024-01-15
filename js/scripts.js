@@ -394,20 +394,21 @@ let hasShown = false;
 if (bingo_popup) {
   const html = document.documentElement;
   const body = document.body;
-  addEventListener("scroll", (event) => {
-    const wy = window.scrollY;
+  //addEventListener("scroll", (event) => {
+  document.addEventListener("mouseleave", (event) => {
+    /*const wy = window.scrollY;
     const bh = Math.max(
       body.scrollHeight,
       body.offsetHeight,
       html.clientHeight,
       html.scrollHeight,
       html.offsetHeight
-    );
+    );*/
     if (!hasShown) {
-      if (wy / bh > 0.25) {
+      //if (wy / bh > 0.25) {
         bingo_popup.style.display = "block";
         hasShown = true;
-      }
+      //}
     }
   });
 
