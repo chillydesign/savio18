@@ -2465,3 +2465,15 @@ form.bingo_form {
     color: #0e82c5;
 }
 /*Landing page Kit Vacances d'été END*/
+
+
+.single_article_loop2{
+  .horizontal_blog_post{
+    position:relative;
+    .horizontal_blog_post_image{
+      position: relative;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+}
