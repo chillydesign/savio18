@@ -2180,6 +2180,35 @@ body.single {
 
 
 
+.single_article_loop2 {
+  flex-grow: 0;
+  margin: 0 0 30px;
+
+  background-color: white;
+  box-shadow: 0 20px 80px transparentize($dark_grey, 0.7), 0 4px 3px transparentize($dark_grey, 0.9);
+  border-radius: 5px;
+
+  @media (min-width: $mobile_width) {
+    width: 100%;
+
+  }
+
+  .date_container {
+    width: 70px;
+  }
+
+  .day {
+    font-size: 3em;
+  }
+
+  .month {
+    font-size: 1.5em;
+    padding: 3px 0;
+  }
+}
+
+
+
 
 .loop_with_image {
   display: flex;

@@ -53,7 +53,7 @@ $has_events = $events_query->have_posts();
 
 
             <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <?php get_template_part('loop_single'); ?>
+                    <?php get_template_part('loop_single2'); ?>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
@@ -68,7 +68,7 @@ $has_events = $events_query->have_posts();
 
         <?php if ($has_events) : ?>
             <div id="events_container">
-                <h3>Agenda - nouveau layout</h3>
+                <h3>Agenda</h3>
                 <?php if ($events_query->have_posts()) : while ($events_query->have_posts()) : $events_query->the_post(); ?>
                         <?php get_template_part('loop_single'); ?>
                     <?php endwhile; ?>
