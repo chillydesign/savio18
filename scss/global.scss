@@ -2501,6 +2501,11 @@ form.bingo_form {
     }
     
   }
+  @media (min-width: $mobile_width) {
+    width:100%;
+    max-width: 100%;
+    display: block;
+  }
   @media (min-width: 1200px) {
     width:85%;
     max-width: 85%;
