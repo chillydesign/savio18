@@ -51,7 +51,7 @@ $has_events = $events_query->have_posts();
         endif; ?>
         <div class="news_container">
 
-        <?php $post_number == 0; ?>
+        <?php $post_number = 0; ?>
             <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
             <?php echo $post_number; ?>
                 <article class="single_article_loop2">
