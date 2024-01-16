@@ -2468,10 +2468,10 @@ form.bingo_form {
 
 
 .single_article_loop2{
+  display: inline-block;
+  max-width : 400px;
   .horizontal_blog_post{
     position:relative;
-    display: inline-block;
-    max-width : 400px;
     .horizontal_blog_post_image{
       background-size: cover;
       display: inline-block;
@@ -2499,13 +2499,12 @@ form.bingo_form {
         margin-left: 35%;
       }
     }
-    @media (min-width: 1200px) {
-      width:85%;
-      max-width: 85%;
-      display: block;
-      &.odd{margin-left : 15%;}
-    }
+    
   }
-  
-
+  @media (min-width: 1200px) {
+    width:85%;
+    max-width: 85%;
+    display: block;
+    &.odd{margin-left : 15%;}
+  }
 }
