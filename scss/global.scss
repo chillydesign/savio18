@@ -2470,6 +2470,8 @@ form.bingo_form {
 .single_article_loop2{
   .horizontal_blog_post{
     position:relative;
+    display: inline-block;
+    max-width : 400px;
     .horizontal_blog_post_image{
       background-size: cover;
       display: inline-block;
@@ -2479,6 +2481,7 @@ form.bingo_form {
         position: absolute;
         height: 100%;
         width: 35%;
+        padding: 0;
       }
     }
     .horizontal_blog_post_text{
@@ -2499,6 +2502,8 @@ form.bingo_form {
   }
   @media (min-width: 1200px) {
     width:85%;
+    max-width: 85%;
+    display: block;
     &.odd{margin-left : 15%;}
   }
 
