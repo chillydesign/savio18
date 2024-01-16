@@ -52,6 +52,7 @@ $has_events = $events_query->have_posts();
         <div class="news_container">
 
         <?php $post_number == 0; ?>
+        <?php echo $post_number; ?>
             <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
                 <article class="single_article_loop2 <?php if ($post_number % 2 = 0) {echo "even";} ?>">
                     <?php get_template_part('loop_single2'); ?>
