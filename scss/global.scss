@@ -2499,12 +2499,13 @@ form.bingo_form {
         margin-left: 35%;
       }
     }
+    @media (min-width: 1200px) {
+      width:85%;
+      max-width: 85%;
+      display: block;
+      &.odd{margin-left : 15%;}
+    }
   }
-  @media (min-width: 1200px) {
-    width:85%;
-    max-width: 85%;
-    display: block;
-    &.odd{margin-left : 15%;}
-  }
+  
 
 }
