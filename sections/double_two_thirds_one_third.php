@@ -10,9 +10,9 @@
     <?php $link1 = get_sub_field('link1'); ?>
     <?php $text2 = get_sub_field('text2'); ?>
     <?php $image2 = get_sub_field('image2'); ?>
-    <?php $image_circulaire = get_sub_field('image_circulaire'); ?>
+    <?php $image_a_logo = get_sub_field('image_a_logo'); ?>
     <?php $image2 = get_sub_field('image2'); ?>
-    <?php $image_2_circulaire = get_sub_field('image_2_circulaire'); ?>
+    <?php $image_2_a_logo = get_sub_field('image_2_a_logo'); ?>
     <?php $link2 = get_sub_field('link2'); ?>
     <?php $swapped_1 = ($order == 'right') ?  '' : 'flipped'; ?>
     <?php $swapped_2 = ($order == 'right') ?  'flipped' : ''; ?>
@@ -23,7 +23,7 @@
             <?php if ($link1) : ?>
                 <a href="<?php echo $link1; ?>" target="_blank">
                 <?php endif; ?>
-                <img src="<?php echo $image1['sizes']['medium']; ?>" class="<?php echo ($image_circulaire) ? 'circular' : ''; ?>" alt="" />
+                <img src="<?php echo $image1['sizes']['medium']; ?>" class="<?php echo ($image_a_logo) ? 'not_circular' : ''; ?>" alt="" />
                 <?php if ($link1) : ?>
                 </a>
             <?php endif; ?>
@@ -37,7 +37,7 @@
             <?php if ($link2) : ?>
                 <a href="<?php echo $link2; ?>" target="_blank">
                 <?php endif; ?>
-                <img src="<?php echo $image2['sizes']['medium']; ?>" class="<?php echo ($image_circulaire) ? 'circular' : ''; ?>" alt="" />
+                <img src="<?php echo $image2['sizes']['medium']; ?>" class="<?php echo ($image_2_a_logo) ? 'not_circular' : ''; ?>" alt="" />
 
                 <?php if ($link2) : ?>
                 </a>
