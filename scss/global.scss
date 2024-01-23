@@ -474,6 +474,11 @@ $section_image_width: 300px;
       background: $light_grey;
       margin: 0 0 50px;
 
+      &.not_circular {
+        border-radius: 0px;
+
+      }
+
       @media (min-width: $mobile_width) {
         min-width: $section_image_width;
       }
