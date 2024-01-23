@@ -2442,39 +2442,55 @@ form.bingo_form {
 }
 
 /*Landing page Kit Vacances d'été */
-#post-2693 section:nth-child(3){
-	padding-bottom: 0px;
-}
-#post-2693 section:nth-child(4){
-	padding-top: 40px;
-	padding-bottom: 0px;
-}
-#post-2693 section:nth-child(5){
-	padding-top: 40px;
-	padding-bottom: 90px;
+#post-2693 section:nth-child(3) {
+  padding-bottom: 0px;
 }
 
-.kit-form-container{
-	background: #d3ebf6;
-    border-radius: 10px;
-    padding: 45px;
-    -ms-flex-item-align: center;
-    align-self: center;
-    margin: auto;
-    text-align: center;
-    color: #0e82c5;
+#post-2693 section:nth-child(4) {
+  padding-top: 40px;
+  padding-bottom: 0px;
 }
+
+#post-2693 section:nth-child(5) {
+  padding-top: 40px;
+  padding-bottom: 90px;
+}
+
+.kit-form-container {
+  background: #d3ebf6;
+  border-radius: 10px;
+  padding: 45px;
+  -ms-flex-item-align: center;
+  align-self: center;
+  margin: auto;
+  text-align: center;
+  color: #0e82c5;
+}
+
 /*Landing page Kit Vacances d'été END*/
 
 
-.single_article_loop2{
-  .horizontal_blog_post{
-    position:relative;
-    .horizontal_blog_post_image{
+.single_article_loop2 {
+  .horizontal_blog_post {
+    position: relative;
+
+    .date {
+      color: $medium_grey;
+      font-style: italic;
+    }
+
+    .horizontal_blog_post_image {
       background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
       display: inline-block;
       width: 100%;
       padding: 40%;
+
+      &.image_contain {
+        background-size: contain;
+      }
+
       @media (min-width: $mobile_width) {
         position: absolute;
         height: 100%;
@@ -2482,30 +2498,38 @@ form.bingo_form {
         padding: 0;
       }
     }
-    .horizontal_blog_post_text{
+
+    .horizontal_blog_post_text {
       display: inline-block;
       padding: 30px;
+
       hr {
         margin: -12px 0px 10px;
         height: 10px;
         background-size: 24px;
         max-width: 100%;
       }
+
       @media (min-width: $mobile_width) {
         width: 65%;
         position: relative;
         margin-left: 35%;
       }
     }
-    
+
   }
+
   @media (min-width: $mobile_width) {
-    width:100%;
+    width: 100%;
     max-width: 100%;
   }
+
   @media (min-width: 1200px) {
-    width:85%;
+    width: 85%;
     max-width: 85%;
-    &.odd{margin-left : 15%;}
+
+    &.odd {
+      margin-left: 15%;
+    }
   }
 }

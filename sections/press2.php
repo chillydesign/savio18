@@ -9,33 +9,44 @@
         <?php if (get_sub_field('title')) : ?><h2><?php the_sub_field('title'); ?></h2><?php endif; ?>
 
         <div class="press_items">
+            <?php $post_number = 0; ?>
             <?php while (have_rows('press_item')) : the_row(); ?>
 
-                <div class="press_item">
-                    <?php $cover_image =  get_sub_field('cover_image'); ?>
-                    <?php $gallery =  get_sub_field('gallery'); ?>
+                <article class="single_article_loop2 <?php echo ($post_number % 2 == 1) ? 'odd' : ''; ?>">
+                    <?php $image =  get_sub_field('logo'); ?>
                     <?php $link =  get_sub_field('link'); ?>
+                    <?php $description =  get_sub_field('description'); ?>
+                    <?php $title =  get_sub_field('title'); ?>
+                    <?php $date =  get_sub_field('date'); ?>
+                    <?php $publication =  get_sub_field('publication'); ?>
 
-                    <img class="cover_image" src="<?php echo $cover_image['sizes']['medium']; ?>" alt="Cover Image" />
+                    <div class="horizontal_blog_post">
+                        <div class="horizontal_blog_post_image image_contain" style="background-image:url(<?php echo $image['url']; ?>)"></div>
+                        <div class="horizontal_blog_post_text">
+                            <h4>
+                                <a href="<?php echo $link; ?>" target="_blank" title="<?php echo $title; ?>">
+                                    <?php echo $title; ?>
+                                </a>
+                            </h4>
+                            <hr>
 
-
-                    <div class="gallery_container">
-                        <a href="<?php echo $cover_image['sizes']['large']; ?>"><img class="pres_img" src="<?php echo $cover_image['sizes']['medium']; ?>" alt="Cover Image" /></a>
-                        <?php if ($gallery) : ?>
-                            <?php foreach ($gallery as $image) : ?>
-                                <a href="<?php echo $image['sizes']['large']; ?>"><img class="pres_img" src="<?php echo $image['sizes']['medium']; ?>" alt="" /></a>
-                            <?php endforeach; ?>
-                        <?php endif; ?>
-                    </div>
-                    <?php if ($link) : ?>
-                        <div class="link_container">
-                            <?php echo $link; ?>
+                            <?php if ($date || $publication) : ?>
+                                <p class="date">
+                                    <?php echo short_date_of($date); ?>
+                                    <?php if ($date && $publication) : ?> | <?php endif; ?>
+                                    <?php echo $publication; ?>
+                                </p>
+                            <?php endif; ?>
+                            <?php echo $description; ?>
+                            <a class="button" target="_blank" href="<?php echo $link; ?>">Lire plus</a>
                         </div>
-                    <?php endif; ?>
+                    </div>
 
-                </div> <!--  end of press item -->
+                    <div class="cool_orange_bar"></div>
 
+                </article>
 
+                <?php $post_number++; ?>
             <?php endwhile; ?>
         </div> <!--  end of press items -->
 
