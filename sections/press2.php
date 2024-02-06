@@ -32,7 +32,8 @@
 
                             <?php if ($date || $publication) : ?>
                                 <p class="date">
-                                    <?php echo short_date_of($date); ?>
+                                    <?php echo ($date); // short_date_of  
+                                    ?>
                                     <?php if ($date && $publication) : ?> | <?php endif; ?>
                                     <?php echo $publication; ?>
                                 </p>
