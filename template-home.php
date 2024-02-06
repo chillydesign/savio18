@@ -33,15 +33,34 @@
         <?php $follow_paragraph = get_field('follow_paragraph'); ?>
         <?php $newsletter_text_footer = get_field('newsletter_text_footer'); ?>
 
+        <?php $testing = isset($_GET['testing']); ?>
         <!-- article -->
         <article id="post-<?php the_ID(); ?>">
 
             <section class="welcome_section">
                 <div class="container" style="position:relative;">
-                    <div class="welcome_text">
-                        <?php echo $welcome_paragraph; ?>
-                    </div>
+                    <?php if ($testing) : ?>
+                        <div class="welcome_flex">
+                            <div class="welcome_text_outer">
+
+                            <?php endif; ?>
+                            <div class="welcome_text">
+                                <?php echo $welcome_paragraph; ?>
+                            </div>
+                            <?php if ($testing) : ?>
+                            </div>
+                            <div class="welcome_macaron">
+                                <div class="testlink">
+                                    <a href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
+                                        <img src="<?php echo $tdu; ?>/images/Savio-test-gratuit-coupe.png" alt="Testez votre niveau gratuitement!" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 </div>
+
+
 
             </section>
             <?php if ($newsflash) : ?>
@@ -93,8 +112,8 @@
                                     <!-- <div class="what_is_savio_slider_container"> -->
                                     <!-- <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div> -->
                                     <div class="testlink">
-                                        <a href="#" class="freetest_opener">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/images/macaron-savio2.png" alt="Testez votre niveau gratuitement!" />
+                                        <a href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
+                                            <img src="<?php echo $tdu; ?>/images/macaron-savio2.png" alt="Testez votre niveau gratuitement!" />
                                         </a>
                                     </div>
 
@@ -106,6 +125,8 @@
                 </section>
             <?php endif;  // if news_slider
             ?>
+
+
 
 
             <?php if (false) : ?>
