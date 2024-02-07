@@ -18,7 +18,7 @@
 						<?php $video_image =  get_sub_field('image'); ?>
 						<?php if ($video_image) : ?>
 							<a href="<?php echo $video_link; ?>">
-								<img class="video_image" src="<?php echo $video_image['url']; ?>" alt="">
+								<div class="video_image" style="background-image:url(<?php echo $video_image['url']; ?>)"></div>
 							</a>
 						<?php else : ?>
 							<?php echo apply_filters('the_content', $video_link);   ?>

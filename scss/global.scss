@@ -1827,6 +1827,14 @@ section.section_videos {
   .video_container {
     margin-top: 15px;
 
+    .video_image {
+      aspect-ratio: 1.38;
+      width: 100%;
+      background: no-repeat center center;
+      background-size: cover;
+      min-height: 200px;
+    }
+
     h4 {
       margin-top: 5px;
       font-size: 1.8em;
