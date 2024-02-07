@@ -1650,7 +1650,21 @@ section.section.section_announcement {
     margin: 0 0 20px;
   }
 
-  .testlink {}
+  .testlink {
+    border-radius: 0;
+    background: none;
+    position: absolute;
+    right: 10px;
+    top: -140px;
+    height: 300px;
+    z-index: 100;
+    display: none;
+
+    @media(min-width: $mobile_width) {
+      display: inline-block;
+    }
+
+  }
 
   h5 {
     color: white;
