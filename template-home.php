@@ -39,35 +39,29 @@
 
             <section class="welcome_section">
                 <div class="container" style="position:relative;">
-                    <?php if ($testing) : ?>
-                        <div class="welcome_flex">
-                            <div class="welcome_text_outer">
-
-                            <?php endif; ?>
-                            <div class="welcome_text">
-                                <?php echo $welcome_paragraph; ?>
-                            </div>
-                            <?php if ($testing) : ?>
-                            </div>
-                            <div class="welcome_macaron">
-                                <div class="testlink">
-                                    <a href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
-                                        <img src="<?php echo $tdu; ?>/images/Savio-test-gratuit-coupe.png" alt="Testez votre niveau gratuitement!" />
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    <?php endif; ?>
+                    <div class="welcome_text">
+                        <?php echo $welcome_paragraph; ?>
+                    </div>
                 </div>
-
-
-
             </section>
             <?php if ($newsflash) : ?>
                 <section class="section section_announcement">
+
+
+
                     <div class="container">
                         <h5><?php echo $newsflash; ?></h5>
                     </div>
+                    <?php if ($testing) : ?>
+
+                        <div class="testlink">
+                            <a href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
+                                <img src="<?php echo $tdu; ?>/images/Savio-test-gratuit-coupe.png" alt="Testez votre niveau gratuitement!" />
+                            </a>
+                        </div>
+                    <?php endif; ?>
+
+
                 </section>
             <?php endif; ?>
 

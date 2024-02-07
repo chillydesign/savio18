@@ -89,16 +89,7 @@ section {
 
   }
 
-  .welcome_flex {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    gap: 20px;
-  }
 
-  .welcome_text_outer {}
-
-  .welcome_macaron {}
 
   .welcome_text {
     flex: 1 auto 0;
@@ -1659,7 +1650,7 @@ section.section.section_announcement {
     margin: 0 0 20px;
   }
 
-
+  .testlink {}
 
   h5 {
     color: white;
