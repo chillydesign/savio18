@@ -52,14 +52,12 @@
                     <div class="container">
                         <h5><?php echo $newsflash; ?></h5>
                     </div>
-                    <?php if ($testing) : ?>
 
-                        <div class="testlink">
-                            <a href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
-                                <img src="<?php echo $tdu; ?>/images/Savio-test-gratuit-coupe.png" alt="Testez votre niveau gratuitement!" />
-                            </a>
-                        </div>
-                    <?php endif; ?>
+                    <div class="testlink">
+                        <a href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
+                            <img src="<?php echo $tdu; ?>/images/Savio-test-gratuit-coupe.png" alt="Testez votre niveau gratuitement!" />
+                        </a>
+                    </div>
 
 
                 </section>
