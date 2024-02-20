@@ -40,23 +40,26 @@ $event_args = array(
 );
 $events_query = new WP_Query($event_args);
 $has_events = $events_query->have_posts();
+$show_sidebar = true;
 ?>
 
 <section class="news_section">
     <div class="container">
 
 
-        <?php if ($has_events) :
+        <?php if ($has_events || $show_sidebar) :
             echo ' <div class="row"><div class="col-sm-8">';
         endif; ?>
         <div class="news_container">
 
-        <?php $post_number = 0; ?>
+            <?php $post_number = 0; ?>
             <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                <article class="single_article_loop2 <?php if ($post_number % 2 == 1) {echo "odd";} ?>">
-                    <?php get_template_part('loop_single2'); ?>
-                    <?php $post_number++;  ?>
-                </article>
+                    <article class="single_article_loop2 <?php if ($post_number % 2 == 1) {
+                                                                echo "odd";
+                                                            } ?>">
+                        <?php get_template_part('loop_single2'); ?>
+                        <?php $post_number++;  ?>
+                    </article>
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
@@ -65,9 +68,17 @@ $has_events = $events_query->have_posts();
         </div>
 
 
-        <?php if ($has_events) :
+        <?php if ($has_events || $show_sidebar) :
             echo '  </div>  <div class="col-sm-4">';
         endif; ?>
+
+
+        <?php if ($show_sidebar) :
+            get_sidebar();
+        endif; ?>
+
+
+
 
         <?php if ($has_events) : ?>
             <div id="events_container">
@@ -81,7 +92,7 @@ $has_events = $events_query->have_posts();
             </div>
         <?php endif; ?>
 
-        <?php if ($has_events) :
+        <?php if ($has_events || $show_sidebar) :
             echo '  </div>  </div>';
         endif; ?>
     </div>
