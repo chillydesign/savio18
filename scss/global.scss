@@ -85,7 +85,7 @@ section {
   z-index: 3;
 
   @media (min-width: $mobile_width) {
-    padding: 90px 0;
+    padding: 50px 0;
 
   }
 
@@ -93,7 +93,7 @@ section {
 
   .welcome_text {
     flex: 1 auto 0;
-    background: transparentize(white, 0.2);
+    background: transparentize(white, 0.1);
     border-radius: 10px;
     padding: 20px;
     align-self: center;

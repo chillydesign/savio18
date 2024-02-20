@@ -43,6 +43,14 @@
 								<?php endif; ?>
 								<div class="blog_content">
 									<h2><?php the_title(); ?></h2>
+
+									<p class="meta"><?php echo get_the_date(); ?></p>
+
+									<?php if (has_post_thumbnail()) : // Check if Thumbnail exists 
+										the_post_thumbnail(); // Fullsize image for the single post 
+									endif; ?>
+
+
 									<?php the_content(); // Dynamic Content 
 									?>
 									<?php if ($link && $link_text) : ?>
@@ -56,11 +64,7 @@
 
 						</div>
 						<div class="col-sm-4">
-							<!-- post thumbnail -->
-							<?php if (has_post_thumbnail()) : // Check if Thumbnail exists 
-								the_post_thumbnail(); // Fullsize image for the single post 
-							endif; ?>
-							<!-- /post thumbnail -->
+
 
 
 							<?php get_sidebar(); ?>
