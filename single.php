@@ -44,7 +44,10 @@
 								<div class="blog_content">
 									<h2><?php the_title(); ?></h2>
 
-									<p class="meta"><?php echo get_the_date(); ?></p>
+									<p class="meta"><em>
+											<?php echo get_the_date(); ?>
+											<?php echo get_categories(); ?>
+										</em></p>
 
 									<?php if (has_post_thumbnail()) : // Check if Thumbnail exists 
 										the_post_thumbnail(); // Fullsize image for the single post 
