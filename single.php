@@ -68,11 +68,14 @@
 									<?php if ($link && $link_text) : ?>
 										<a href="<?php echo $link; ?>" target="_blank" class="button"><?php echo $link_text; ?></a>
 									<?php endif; ?>
+
+									<div class="comment_form">
+										<?php get_template_part('comments'); ?>
+									</div>
+
 								</div>
 
-								<div class="comment_form">
-									<?php get_template_part('comments'); ?>
-								</div>
+
 							</div>
 
 
