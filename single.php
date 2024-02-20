@@ -47,8 +47,8 @@
 									<p class="meta"><em>
 											<?php echo get_the_date(); ?>
 											<?php
-											if (false) :
-												foreach (get_categories() as $category) {
+											if (true) :
+												foreach (get_categories(array('taxonomy' => 'post_tag')) as $category) {
 													echo sprintf(
 														'<a href="%1$s" alt="%2$s">%3$s</a>',
 														esc_url(get_category_link($category->term_id)),
