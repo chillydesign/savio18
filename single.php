@@ -70,7 +70,7 @@
 									<?php endif; ?>
 
 									<div class="comment_form">
-										<?php get_template_part('comments'); ?>
+										<?php comments_template(); ?>
 									</div>
 
 								</div>
