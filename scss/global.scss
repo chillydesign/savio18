@@ -2292,11 +2292,13 @@ body.single {
       color: #888;
       display: inline-block;
 
+      font-size: 90%;
+
       &:before {
         content: '|';
         color: #aaa;
-        padding-left: 5px;
-        margin-left: 5px;
+        padding-right: 5px;
+        font-style: normal;
       }
     }
   }
