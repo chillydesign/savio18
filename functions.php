@@ -335,9 +335,7 @@ function webfactorcomments($comment, $args, $depth) {
             <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
             <?php endif; ?>
             <div class="comment-author vcard">
-                <?php if ($args['avatar_size'] != 0) {
-                    echo get_avatar($comment, $args['180']);
-                } ?>
+
                 <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
             </div>
             <?php if ($comment->comment_approved == '0') : ?>
