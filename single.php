@@ -69,6 +69,10 @@
 										<a href="<?php echo $link; ?>" target="_blank" class="button"><?php echo $link_text; ?></a>
 									<?php endif; ?>
 
+
+									<?php generate_social_links(get_the_permalink(), get_the_title()); ?>
+
+
 									<div class="comment_form">
 										<?php comments_template(); ?>
 									</div>

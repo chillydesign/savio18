@@ -83,7 +83,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '1.2.9';
+    return '1.3.0';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -1032,5 +1032,29 @@ function make_date_container($date) {
 <div class="day">' . date_of($date) . '</div>
 </div>';
 }
+
+
+
+function generate_social_links($url, $title) {
+
+
+    $encoded_url = urlencode($url);
+    $encoded_title = urlencode($title);
+    $rand_id = 'social_links_' . rand(1000, 1000000);
+    $str = '<div class="social_link_container" id="' . $rand_id . '">';
+    $str .= '<h4>' .  __("Partager", 'html5blank') . '</h4>';
+    $str .= '<a title="Facebook" class="social_link social_link_facebook" href="https://www.facebook.com/sharer/sharer.php?u=' . $encoded_url . '" target="_blank" ><span>Facebook</span></a>';
+    $str .= '<a title="Twitter" class="social_link social_link_twitter" href="https://twitter.com/share?text=' . $encoded_title . '&url=' . $encoded_url . '&hashtags=jazzra" target="_blank" ><span>Twitter</span></a>';
+
+    // $str .= '<a title="' .  __("Copier le lien", 'html5blank') . '" class="social_link  copy_email_button" ><span>Copier le lien</span><em>Le lien a été copié!</em></a>';
+    // $str .= '<input type="text" class="input_for_copying" name="copy_input" value="' . $url  . '" >';
+
+
+    $str .= '</div><!-- END OF SOCIAL_LINK_CONTAINER -->';
+    echo $str;
+}
+
+
+
 
     ?>

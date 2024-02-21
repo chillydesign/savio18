@@ -2654,3 +2654,93 @@ form.bingo_form {
     }
   }
 }
+
+
+
+
+// SOCIAL SHARING
+// SOCIAL SHARING
+
+.social_link_container {
+  margin: 20px 00;
+  color: black;
+
+  @media only screen and (max-width: 500px) {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  h6 {
+    padding-bottom: 15px;
+    // padding-left: 10px;
+    // font-size: 1.8em;
+  }
+}
+
+a.social_link {
+  display: inline-block;
+  margin: 0 5px;
+  background: $light_grey;
+  border-radius: 0px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.7em;
+  font-weight: bold;
+  padding: 6px;
+  color: black;
+
+  &.social_link_facebook,
+  &.social_link_twitter {
+    text-indent: -9999px;
+    color: white;
+    width: 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 30px;
+  }
+
+  &.social_link_twitter {
+    background-color: #1ea1f2;
+    background-image: url("../images/twitter.svg");
+  }
+
+  &.social_link_facebook {
+    background-image: url("../images/facebook.svg");
+    background-color: #3b5998;
+  }
+
+  &:hover {
+    background-color: $orange;
+    color: white;
+  }
+
+  span {
+    display: inline-block;
+    padding: 6px;
+  }
+
+  em {
+    display: none;
+    padding: 0;
+  }
+
+  em.visible {
+    display: inline-block;
+    padding: 0 20px;
+  }
+}
+
+input.input_for_copying {
+  opacity: 0.01;
+  width: 50px;
+  /* height: 2px; */
+}
+
+.groupsearchtext {
+  display: none;
+}
+
+
+
+// SOCIAL SHARING
+// SOCIAL SHARING
