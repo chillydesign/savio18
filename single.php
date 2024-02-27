@@ -66,6 +66,9 @@
 									endif; ?>
 
 
+									<?php generate_social_links(get_the_permalink(), get_the_title()); ?>
+
+
 									<?php the_content(); // Dynamic Content 
 									?>
 									<?php if ($link && $link_text) : ?>
