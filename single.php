@@ -77,7 +77,8 @@
 
 
 									<div class="comment_form">
-										<?php comments_template(); ?>
+										<?php // comments_template(); 
+										?>
 									</div>
 
 								</div>

@@ -7,7 +7,7 @@
 <section class="welcome_section">
 	<div class="container">
 		<div class="welcome_text">
-			<h1><?php _e('Tag Archive: ', 'webfactor');
+			<h1><?php _e('Sur le thème de  : ', 'webfactor');
 				echo single_tag_title('', false); ?></h1>
 
 		</div>
