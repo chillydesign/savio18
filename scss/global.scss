@@ -2690,6 +2690,8 @@ a.social_link {
   color: black;
 
   &.social_link_facebook,
+  &.social_link_linkedin,
+  &.social_link_email,
   &.social_link_twitter {
     text-indent: -9999px;
     color: white;
@@ -2707,6 +2709,16 @@ a.social_link {
   &.social_link_facebook {
     background-image: url("../images/facebook.svg");
     background-color: #3b5998;
+  }
+
+  &.social_link_linkedin {
+    background-image: url("../images/linkedin.svg");
+    background-color: #0a66c2;
+  }
+
+  &.social_link_email {
+    background-image: url("../images/email.svg");
+    background-color: #888;
   }
 
   &:hover {

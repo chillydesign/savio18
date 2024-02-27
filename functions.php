@@ -1044,10 +1044,12 @@ function generate_social_links($url, $title) {
     $str = '<div class="social_link_container" id="' . $rand_id . '">';
     $str .= '<h4>' .  __("Partager", 'html5blank') . '</h4>';
     $str .= '<a title="Facebook" class="social_link social_link_facebook" href="https://www.facebook.com/sharer/sharer.php?u=' . $encoded_url . '" target="_blank" ><span>Facebook</span></a>';
-    $str .= '<a title="Twitter" class="social_link social_link_twitter" href="https://twitter.com/share?text=' . $encoded_title . '&url=' . $encoded_url . '&hashtags=jazzra" target="_blank" ><span>Twitter</span></a>';
+    $str .= '<a title="Twitter" class="social_link social_link_linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url=' . $encoded_url . '" target="_blank" ><span>LinkedIn</span></a>';
+    $str .= '<a title="X" class="social_link social_link_twitter" href="https://twitter.com/share?text=' . $encoded_title . '&url=' . $encoded_url . '&hashtags=jazzra" target="_blank" ><span>X</span></a>';
+    $str .= '<a title="X" class="social_link social_link_email" href="mailto:example@website.com?subject=' . $encoded_url . '" target="_blank" ><span>Email</span></a>';
 
-    // $str .= '<a title="' .  __("Copier le lien", 'html5blank') . '" class="social_link  copy_email_button" ><span>Copier le lien</span><em>Le lien a été copié!</em></a>';
-    // $str .= '<input type="text" class="input_for_copying" name="copy_input" value="' . $url  . '" >';
+    $str .= '<a title="' .  __("Copier le lien", 'html5blank') . '" class="social_link  copy_email_button" ><span>Copier le lien</span><em>Le lien a été copié!</em></a>';
+    $str .= '<input type="text" class="input_for_copying" name="copy_input" value="' . $url  . '" >';
 
 
     $str .= '</div><!-- END OF SOCIAL_LINK_CONTAINER -->';
