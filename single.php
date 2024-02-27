@@ -75,11 +75,12 @@
 
 									<?php generate_social_links(get_the_permalink(), get_the_title()); ?>
 
-
+									<!--
 									<div class="comment_form">
 										<?php // comments_template(); 
 										?>
 									</div>
+									-->
 
 								</div>
 
