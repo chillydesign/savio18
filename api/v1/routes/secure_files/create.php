@@ -21,6 +21,11 @@ if (!empty($data)) {
                 $email = $data->email;
                 $secure_file_download_id =  create_secure_file_download($secure_file_id, $email);
 
+
+                // send email here
+                $message = 'Your download is available here : ' . $res;
+                mail($email, 'Savio Download', $message);
+
                 echo json_encode($res, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);
             } else {
                 http_response_code(404);
