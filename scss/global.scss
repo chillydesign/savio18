@@ -2569,8 +2569,20 @@ form.bingo_form {
       .horizontal_blog_post_text_inner {
 
         @media (min-width: $mobile_width) {
-          height: 250px;
+          height: 220px;
           overflow: hidden;
+          position: relative;
+
+          &:after {
+            content: '';
+            height: 100px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, white 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 2;
+          }
         }
       }
 
