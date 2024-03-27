@@ -66,7 +66,7 @@ $show_sidebar = false;
                         </div>
 
 
-                        <?php if ($post_number % 3 == 2) : ?>
+                        <?php if ($post_number % 3 == 0) : ?>
             </div>
             <div class="row">
             <?php endif; ?>
