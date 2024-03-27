@@ -40,7 +40,7 @@ $event_args = array(
 );
 $events_query = new WP_Query($event_args);
 $has_events = $events_query->have_posts();
-$show_sidebar = true;
+$show_sidebar = false;
 ?>
 
 <section class="news_section">
