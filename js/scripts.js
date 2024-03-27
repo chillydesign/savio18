@@ -23,6 +23,49 @@
       }
     });
 
+    // secure file form downloader
+
+    $(".secure_file_form_start").on("click", function (e) {
+      e.preventDefault();
+      var $this = $(this);
+      var $parent = $this.parent();
+      $parent.addClass("visible");
+    });
+
+    $(".secure_file_form_container").on("submit", function (e) {
+      e.preventDefault();
+      let $this = $(this);
+
+      const action = $this.attr("action");
+      const method = $this.attr("method");
+      const $fields = $("input", $this);
+      const data = {};
+      $fields.each(function (i) {
+        const $f = $(this);
+        const name = $f.attr("name");
+        const val = $f.val();
+        data[name] = val;
+      });
+
+      doFetch(action, method, data)
+        .then((response) => {
+          console.log(response);
+          if (response) {
+            console.log(response);
+            $(".button", $this).attr({ href: response });
+            $this.addClass("showButton");
+            $this.removeClass("errorOccurred");
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+          $this.removeClass("showButton");
+          $this.addClass("errorOccurred");
+        });
+    });
+
+    // secure file form downloader
+
     // /////////////////////////////////
     // ///////  COUNTDOWN TIMER  ///////
     // if (typeof launch_date !== "undefined") {
@@ -491,3 +534,16 @@ if (bingo_outers.length > 0) {
 
 // BINGO FORM
 // BINGO FORM
+function doFetch(action, method, data) {
+  return fetch(action, {
+    method: method,
+    body: JSON.stringify(data),
+  }).then((response) => {
+    if (!response.ok) {
+      return response.json().then((data) => {
+        throw data;
+      });
+    }
+    return response.json();
+  });
+}

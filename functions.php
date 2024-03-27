@@ -650,12 +650,131 @@ function create_post_types() {
             ) // Add Category and Post Tags support
         )
     );
+
+
+    register_post_type(
+        'secure_file', // Register Custom Post Type
+        array(
+            'labels' => array(
+                'name' => __("Secure Files", 'webfactor'), // Rename these to suit
+                'singular_name' => __("Secure File", 'webfactor'),
+                'add_new' => __("Add Secure File", 'webfactor'),
+                'add_new_item' => __("New Secure File", 'webfactor'),
+                'edit' => __("Edit", 'webfactor'),
+                'edit_item' => __("Edit Secure File", 'webfactor'),
+                'new_item' => __("New Secure File", 'webfactor'),
+                'view' => __("View Secure File", 'webfactor'),
+                'view_item' => __("View Secure File", 'webfactor'),
+                'search_items' => __("Search Secure Files", 'webfactor'),
+                'not_found' => __("No Secure Files found", 'webfactor'),
+                'not_found_in_trash' => __("No Secure Files found in the bin", 'webfactor')
+            ),
+            'public' => true,
+            'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
+            'show_ui' => true,
+            'has_archive' => false,
+            'exclude_from_search' => true, // remove from search engine
+            'supports' => array(
+                'title',
+                // 'editor'
+                // 'author',
+            ), // Go to Dashboard Custom webfactor Blank post for supports
+            'can_export' => true, // Allows export in Tools > Export
+            'taxonomies' => array() // Add Category and Post Tags support
+        )
+    );
+
+
+    register_post_type(
+        'secure_file_download', // Register Custom Post Type
+        array(
+            'labels' => array(
+                'name' => __("Secure File Downloads", 'webfactor'), // Rename these to suit
+                'singular_name' => __("Secure File Download", 'webfactor'),
+                // 'add_new' => __("Add Secure File Download", 'webfactor'),
+                // 'add_new_item' => __("New Secure File Download", 'webfactor'),
+                'edit' => __("Edit", 'webfactor'),
+                'edit_item' => __("Edit Secure File Download", 'webfactor'),
+                // 'new_item' => __("New Secure File Download", 'webfactor'),
+                'view' => __("View Secure File Download", 'webfactor'),
+                'view_item' => __("View Secure File Download", 'webfactor'),
+                'search_items' => __("Search Secure File Downloads", 'webfactor'),
+                'not_found' => __("No Secure File Downloads found", 'webfactor'),
+                'not_found_in_trash' => __("No Secure File Downloads found in the bin", 'webfactor')
+            ),
+            'public' => true,
+            'hierarchical' => false, // Allows your posts to behave like Hierarchy Pages
+            'show_ui' => true,
+            'has_archive' => false,
+            'exclude_from_search' => true, // remove from search engine
+            'supports' => array(
+                'title',
+                // 'editor'
+                // 'author',
+            ), // Go to Dashboard Custom webfactor Blank post for supports
+            'can_export' => true, // Allows export in Tools > Export
+            'taxonomies' => array() // Add Category and Post Tags support
+        )
+    );
 }
 
 
 /*------------------------------------*\
     ShortCode Functions
 \*------------------------------------*/
+
+
+
+// LOGIN FORM SHORTCODE
+add_shortcode('secure_file_form', 'secure_file_form_shortcode');
+function secure_file_form_shortcode($atts, $content = null) {
+
+    $attributes = shortcode_atts(
+        array(
+            'id' =>  null,
+        ),
+        $atts
+    );
+
+    $secure_file = get_post($attributes['id']);
+
+    if ($secure_file) {
+        $show_form = get_field('show_form', $secure_file->ID);
+        $file = get_field('file', $secure_file->ID);
+
+        if ($file) {
+            $ret = '<div>';
+
+            if ($show_form == 'no') {
+                $ret .= '<a target="_blank" class="button" href="' . $file['url'] . '">Download file</a>';
+            } else {
+
+                $ret .= '<div class="secure_file_form_outer">';
+                $ret .= '<a target="_blank" class="button secure_file_form_start" href="#">Download file</a>';
+                $ret .= '<form  action="' . api_url() . '?route=secure_files" method="post"  class="secure_file_form_container">';
+                $ret .= '<h3>' . $secure_file->post_title . '</h3>';
+                $ret .= '<div class="form_field"><input type="text"  placeholder="Email *"  name="email" /></div>';
+                $ret .= '<div class="form_field"><input type="hidden" name="secure_file_id" value="' . $attributes['id'] . '" />';
+                $ret .= '<button type="submit" name="submit_secure_file_form"  />Submit</button></div>';
+                $ret .= '<a target="_blank" class="button" href="">Download file</a>';
+                $ret .= '<div class="alert alert_danger">An error occurred.</div>';
+                $ret .= '</form>';
+                $ret .= '</div>';
+            }
+            $ret .= '</div>';
+        }
+    }
+
+
+
+    return $ret;
+}
+
+
+function api_url() {
+    return  get_template_directory_uri() . '/api/v1/';
+}
+
 add_shortcode('number_box_outer', 'number_box_outer');
 add_shortcode('number_box', 'number_box');
 
