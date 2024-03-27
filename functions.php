@@ -808,9 +808,6 @@ function secure_file_downloads_details() {
         $ret = '';
         $ret .= '<table class="widefat fixed striped" style="border:0"><thead><tr>
         <th>Email</th>
-        <th>Name</th>
-        <th>Company</th>
-        <th>Phone</th>
         <th>Date</th>
         </tr></thead><tbody>';
         foreach ($downloads as $download) {
