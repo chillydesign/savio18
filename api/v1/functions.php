@@ -20,11 +20,11 @@ if (!function_exists('api_remove_line_breaks')) {
 
 
 
-function create_secure_file_download($secure_file_id, $name, $company_name, $email, $phone_number) {
+function create_secure_file_download($secure_file_id,  $email) {
 
 
     $post = array(
-        'post_title'     =>  $name . ' | ' . $email,
+        'post_title'     => 'SF:' . $email,
         'post_status'    => 'publish',
         'post_type'      => 'secure_file_download',
         'post_content'   => '',
@@ -33,18 +33,11 @@ function create_secure_file_download($secure_file_id, $name, $company_name, $ema
 
     );
     $post_id = wp_insert_post($post);
-    if ($name) {
-        add_post_meta($post_id, 'name', $name, true);
-    }
-    if ($company_name) {
-        add_post_meta($post_id, 'company_name', $company_name, true);
-    }
+
     if ($email) {
         add_post_meta($post_id, 'email', $email, true);
     }
-    if ($phone_number) {
-        add_post_meta($post_id, 'phone_number', $phone_number, true);
-    }
+
     return $post_id;
 }
 

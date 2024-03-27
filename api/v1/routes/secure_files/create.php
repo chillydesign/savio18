@@ -18,11 +18,8 @@ if (!empty($data)) {
                 $res  = $file['url'];
 
 
-                $name = $data->name;
-                $company_name = $data->company_name;
                 $email = $data->email;
-                $phone_number = $data->phone_number;
-                $secure_file_download_id =  create_secure_file_download($secure_file_id, $name, $company_name, $email, $phone_number);
+                $secure_file_download_id =  create_secure_file_download($secure_file_id, $email);
 
                 echo json_encode($res, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT | JSON_NUMERIC_CHECK);
             } else {

@@ -20,23 +20,17 @@ if (isset($_GET['secure_file_id'])) {
 
 
 
-        $data =  'file,email,name,company,phone,date'  . "\n";
+        $data =  'file,email,date'  . "\n";
 
         foreach ($posts as $post) {
 
 
 
             $email = csv_safe_string(get_field('email', $post->ID));
-            $name = csv_safe_string(get_field('name', $post->ID));
-            $company_name = csv_safe_string(get_field('company_name', $post->ID));
-            $phone_number = csv_safe_string(get_field('phone_number', $post->ID));
 
             $ar = array(
                 $file_name,
                 $email,
-                $name,
-                $company_name,
-                $phone_number,
                 $post->post_date,
 
             );
