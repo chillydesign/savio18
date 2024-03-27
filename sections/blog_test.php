@@ -52,16 +52,29 @@ $show_sidebar = false;
         endif; ?>
         <div class="news_container">
 
-            <?php $post_number = 0; ?>
-            <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
-                    <article class="single_article_loop2 <?php if ($post_number % 2 == 1) {
-                                                                echo "odd";
-                                                            } ?>">
-                        <?php get_template_part('loop_single2'); ?>
-                        <?php $post_number++;  ?>
-                    </article>
-                <?php endwhile; ?>
+            <div class="row">
+
+                <?php $post_number = 0; ?>
+                <?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+                        <div class="col-sm-4">
+                            <article class="single_article_loop2 <?php if ($post_number % 2 == 1) {
+                                                                        echo "odd";
+                                                                    } ?>">
+                                <?php get_template_part('loop_single2'); ?>
+                                <?php $post_number++;  ?>
+                            </article>
+                        </div>
+
+
+                        <?php if ($post_number % 3 == 2) : ?>
+            </div>
+            <div class="row">
             <?php endif; ?>
+        <?php endwhile; ?>
+    <?php endif; ?>
+            </div>
+
+
         </div>
         <div class="pagination">
             <?php html5wp_pagination($the_query); ?>
