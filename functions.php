@@ -775,6 +775,24 @@ function api_url() {
     return  get_template_directory_uri() . '/api/v1/';
 }
 
+
+add_action("admin_init", "securefile_shortcode_box_init");
+function securefile_shortcode_box_init() {
+    add_meta_box("securefile_details", "Shortcode to copy", "secure_file_shortcode_details",  'secure_file',  "normal", "default");
+}
+function secure_file_shortcode_details() {
+    global $post_id;
+    if ($post_id) {
+        $ret = '';
+        $ret .= '<p>Copy this shortcode into an editor to make a form</p>';
+        $ret .= '<input type="text" readonly="" value="[secure_file_form id=' . $post_id . ']" />';
+
+        echo $ret;
+    }
+}
+
+
+
 add_shortcode('number_box_outer', 'number_box_outer');
 add_shortcode('number_box', 'number_box');
 
