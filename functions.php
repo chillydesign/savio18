@@ -792,6 +792,45 @@ function secure_file_shortcode_details() {
 }
 
 
+add_action("admin_init", "securefile_downloads_box_init");
+function securefile_downloads_box_init() {
+    add_meta_box("securefile_downloads", "Downloads", "secure_file_downloads_details",  'secure_file',  "normal", "default");
+}
+function secure_file_downloads_details() {
+    global $post_id;
+    if ($post_id) {
+
+        $downloads = get_posts(array(
+            'post_type' => 'secure_file_download',
+            'post_parent' => $post_id,
+            'posts_per_page' => -1,
+        ));
+        $ret = '';
+        $ret .= '<table class="widefat fixed striped" style="border:0"><thead><tr>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Company</th>
+        <th>Phone</th>
+        <th>Date</th>
+        </tr></thead><tbody>';
+        foreach ($downloads as $download) {
+            $email = get_field('email', $download->ID);
+            $href = get_edit_post_link($download->ID);
+            $ret .= '<tr>
+            <td><a href="' . $href . '">' . $email . ' </a></td>
+            <td> ' .  $download->post_date . '</td></tr>';
+        }
+        $tdu = get_template_directory_uri();  // get_home_url()
+        $download_link = $tdu . '/api/v1/?route=secure_file_downloads&secure_file_id=' . $post_id;
+        $ret .= '</tbody></table><a class="button button-primary " href="' . $download_link . '">Download</a>';
+
+        echo $ret;
+    }
+}
+
+
+
+
 
 add_shortcode('number_box_outer', 'number_box_outer');
 add_shortcode('number_box', 'number_box');
