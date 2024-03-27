@@ -135,6 +135,7 @@ header {
           a {
             background: $brand_color;
             color: white !important;
+            pointer-events: auto !important;
           }
         }
 
@@ -149,6 +150,7 @@ header {
             padding-right: 21px;
             text-align: left;
             // position: relative;
+            pointer-events: auto !important;
             // top: -3px;
             height: 40px;
           }
