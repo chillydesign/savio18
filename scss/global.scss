@@ -2758,3 +2758,17 @@ input.input_for_copying {
 
 // SOCIAL SHARING
 // SOCIAL SHARING
+
+.alignleft,
+.alignright {
+  float: left;
+  width: auto;
+  padding: 20px;
+  margin: auto;
+  width: 209px;
+  border: 10px solid white;
+}
+
+.alignright {
+  float: right;
+}
