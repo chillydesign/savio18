@@ -2545,15 +2545,19 @@ form.bingo_form {
       width: 100%;
       padding: 40%;
 
+
+
       &.image_contain {
         background-size: contain;
       }
 
       @media (min-width: $mobile_width) {
-        position: absolute;
-        height: 100%;
-        width: 35%;
+        // position: absolute;
+        // height: 100%;
+        // width: 35%;
         padding: 0;
+        width: 100%;
+        height: 300px;
       }
     }
 
@@ -2569,9 +2573,20 @@ form.bingo_form {
       }
 
       @media (min-width: $mobile_width) {
-        width: 65%;
+        // width: 65%;
         position: relative;
-        margin-left: 35%;
+        // margin-left: 35%;
+
+        height: 300px;
+        overflow: hidden;
+      }
+
+      a.button {
+        @media (min-width: $mobile_width) {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
       }
     }
 
