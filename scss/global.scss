@@ -2565,6 +2565,15 @@ form.bingo_form {
       display: inline-block;
       padding: 30px;
 
+
+      .horizontal_blog_post_text_inner {
+
+        @media (min-width: $mobile_width) {
+          height: 250px;
+          overflow: hidden;
+        }
+      }
+
       hr {
         margin: -12px 0px 10px;
         height: 10px;
@@ -2585,7 +2594,7 @@ form.bingo_form {
         @media (min-width: $mobile_width) {
           position: absolute;
           bottom: 0;
-          right: 0;
+          right: 20px;
         }
       }
     }
