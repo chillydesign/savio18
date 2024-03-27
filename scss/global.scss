@@ -2815,3 +2815,61 @@ input.input_for_copying {
 .alignright {
   float: right;
 }
+
+
+
+
+.secure_file_form_outer {
+
+  .secure_file_form_container {
+    display: none;
+
+  }
+
+  &.visible {
+    .secure_file_form_container {
+      display: block;
+    }
+
+    .secure_file_form_start {
+      display: none;
+    }
+  }
+
+}
+
+.secure_file_form_container {
+  background-color: transparentize(black, 0.92);
+  padding: $padding;
+  margin: $padding 0;
+  max-width: 500px;
+  border-radius: $border_radius;
+
+
+
+  a.button {
+    display: none
+  }
+
+
+  .alert_danger {
+    display: none;
+  }
+
+  &.errorOccurred {
+    .alert_danger {
+      display: block;
+    }
+  }
+
+  &.showButton {
+    a.button {
+      display: inline-block;
+    }
+
+    button {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+  }
+}
