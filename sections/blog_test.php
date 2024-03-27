@@ -50,7 +50,7 @@ $show_sidebar = false;
         <?php if ($has_events || $show_sidebar) :
             echo ' <div class="row"><div class="col-sm-8">';
         endif; ?>
-        <div class="news_container">
+        <div class="news_container ">
 
             <div class="row">
 

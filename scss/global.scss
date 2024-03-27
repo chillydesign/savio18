@@ -2183,6 +2183,12 @@ body.single {
   }
 
 
+  &.boring_news_container {
+    display: block;
+
+
+  }
+
 }
 
 
@@ -2572,16 +2578,16 @@ form.bingo_form {
   }
 
   @media (min-width: $mobile_width) {
-    width: 100%;
-    max-width: 100%;
+    // width: 100%;
+    // max-width: 100%;
   }
 
   @media (min-width: 1200px) {
-    width: 85%;
-    max-width: 85%;
+    // width: 85%;
+    // max-width: 85%;
 
     &.odd {
-      margin-left: 15%;
+      // margin-left: 15%;
     }
   }
 }
