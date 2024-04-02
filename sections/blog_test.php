@@ -14,6 +14,8 @@ $args = array(
 );
 $the_query = new WP_Query($args);
 
+wp_reset_query();
+
 $s = new DateTime('today');
 $today = $s->format('Ymd');
 $event_args = array(
@@ -41,6 +43,7 @@ $event_args = array(
 $events_query = new WP_Query($event_args);
 $has_events = $events_query->have_posts();
 $show_sidebar = false;
+wp_reset_query();
 ?>
 
 <section class="news_section">
@@ -50,7 +53,7 @@ $show_sidebar = false;
         <?php if ($has_events || $show_sidebar) :
             echo ' <div class="row"><div class="col-sm-8">';
         endif; ?>
-        <div class="news_container ">
+        <div class=" ">
 
             <div class="row">
 
