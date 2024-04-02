@@ -70,7 +70,7 @@ wp_reset_query();
 
 
                         <?php if ($post_number % 3 == 0) : ?>
-            </div>
+            </div><!-- end of row -->
             <div class="row">
             <?php endif; ?>
         <?php endwhile; ?>
