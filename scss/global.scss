@@ -1150,6 +1150,15 @@ blockquote {
     background: $light_grey;
     border: 1px solid darken($light_grey, 10);
 
+
+    img {
+      width: 100%;
+      height: auto;
+      border: 0;
+      float: none;
+      margin: 0 0 20px;
+    }
+
     h2.single_question_title {
 
       padding: 20px;
