@@ -13,5 +13,7 @@
             "email": "harvey.charles@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "getbrevo/brevo-php": "1.x.x"
+    }
 }
