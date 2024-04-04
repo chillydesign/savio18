@@ -1152,11 +1152,13 @@ blockquote {
 
 
     img {
+      // all necessary
       width: 100%;
       height: auto;
       border: 0;
       float: none;
       margin: 0 0 20px;
+      padding: 0;
     }
 
     h2.single_question_title {
