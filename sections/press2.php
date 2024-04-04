@@ -23,7 +23,7 @@
                             <?php $publication =  get_sub_field('publication'); ?>
 
                             <div class="horizontal_blog_post">
-                                <div class="horizontal_blog_post_image image_contain" style="background-image:url(<?php echo $image['url']; ?>)"></div>
+                                <div class="horizontal_blog_post_image " style="background-image:url(<?php echo $image['url']; ?>)"></div>
                                 <div class="horizontal_blog_post_text">
                                     <div class="horizontal_blog_post_text_inner">
 
