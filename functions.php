@@ -4,7 +4,7 @@
 
 
 // COMPOSER PACKAGAES
-require_once(__DIR__ . "/vendor/autoload.php");
+// require_once(__DIR__ . "/vendor/autoload.php");
 
 
 
@@ -1231,7 +1231,7 @@ function generate_social_links($url, $title) {
 }
 
 
-include("functions_brevo.php");
+// include("functions_brevo.php");
 
 
     ?>
