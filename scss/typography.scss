@@ -172,6 +172,11 @@ select {
   }
 }
 
+label {
+  font-size: $font_size;
+  display: block;
+}
+
 input {
   font-family: $font_stack;
   padding: 10px;

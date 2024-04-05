@@ -52,21 +52,27 @@ function process_download_kit_2024_04() {
         $role = $_POST['ROLE'];
         $email = $_POST['EMAIL'];
         $agree_to_emails = $_POST['agree_to_emails'];
-        $role_string = ($role == '1') ? 'parent' : 'teacher';
-        $sendtransemail =  makeTransactionalEmailDownloadKit2024_04($email, $role_string);
-        if ($sendtransemail) {
-            if ($agree_to_emails == 'true') {
-                $added_to_contacts = addEmailToContacts($email, $role);
-                if ($added_to_contacts) {
-                    wp_redirect($referer . '?success=tr_co', $status = 302);
+        $agree_to_terms = $_POST['agree_to_terms'];
+
+        if ($agree_to_terms === 'true') {
+            $role_string = ($role == '1') ? 'parent' : 'teacher';
+            $sendtransemail =  makeTransactionalEmailDownloadKit2024_04($email, $role_string);
+            if ($sendtransemail) {
+                if ($agree_to_emails == 'true') {
+                    $added_to_contacts = addEmailToContacts($email, $role);
+                    if ($added_to_contacts) {
+                        wp_redirect($referer . '?success=tr_co', $status = 302);
+                    } else {
+                        wp_redirect($referer . '?success=tr&problem=co', $status = 302);
+                    };
                 } else {
-                    wp_redirect($referer . '?success=tr&problem=co', $status = 302);
-                };
+                    wp_redirect($referer . '?success=tr', $status = 302);
+                }
             } else {
-                wp_redirect($referer . '?success=tr', $status = 302);
+                wp_redirect($referer . '?problem=tr', $status = 302);
             }
         } else {
-            wp_redirect($referer . '?problem=tr', $status = 302);
+            wp_redirect($referer . '?problem=att', $status = 302);
         }
     } else {
         wp_redirect($referer . '?problem=act', $status = 302);
@@ -129,27 +135,29 @@ add_shortcode('download_kit_2024_04', 'webfactor_download_kit_2024_04_shortcode'
 function webfactor_download_kit_2024_04_shortcode($atts) {
 
 
-    $output = '<div class="download_kit_2024_04_container">';
+    $output = '<div class="download_kit_form" id="download_kit_2024_04_container">';
+
+    if (isset($_GET['success'])) :
+        $output .= '<div class="alert alert_success">Succès!</div>';
+    endif;
+    if (isset($_GET['problem'])) :
+        $output .= '<div class="alert alert_danger">Un problème est survenu</div>';
+    endif;
+
     $output .= '<form id="download_kit_2024_04" action="' . esc_url(admin_url('admin-post.php')) . ' " method="post">';
 
-
-    $output .= '  <label class="entry__label" for="EMAIL" data-required="*">Email</label>
-        <div class="entry__field">
+    $output .= '  <div class=""> <label class="" for="EMAIL" >Email *</label>
+       
         <input class="input" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
         </div>';
-    $output .= '<label class="entry__label" for="agree_to_emails"> Je souhaite recevoir la newsletter de Savio</label>
-        <div class="entry__field">
-        <input class="input" type="checkbox" value="true" id="agree_to_emails" name="agree_to_emails" autocomplete="off"  />
-        </div>';
+    $output .= '<div class=""> <input class="input" type="checkbox" value="true" id="agree_to_emails" name="agree_to_emails" autocomplete="off"  /><label class="inline" for="agree_to_emails"> &nbsp; Je souhaite recevoir la newsletter de Savio</label> </div>';
+    $output .= '<div class=""> <input class="input" type="checkbox" value="true" id="agree_to_terms" name="agree_to_terms" autocomplete="off"  required  /><label class="inline" for="agree_to_terms"> &nbsp; J’ai pris connaissance des <a href="https://savio.fr/conditions-generales/" target="_blank">conditions d’utilisation</a> et la <a href="https://savio.fr/information-sur-la-protection-des-donnees-personnelles/" target="_blank"> politique de confidentialité</a>. * </label> </div>';
 
 
-    $output .= '<label class="entry__label" for="ROLE" data-required="*">Je suis</label>
-                <div class="entry__choice">
+    $output .= '<div class=""><label class="" for="ROLE" >Je suis *</label>
                 <label>
                 <input type="radio" name="ROLE" class="input_replaced" value="1" required>
                 <span class="radio-button"></span><span>Parent</span> </label>
-                </div>
-                <div class="entry__choice">
                 <label>
                 <input type="radio" name="ROLE" class="input_replaced" value="2" required>
                 <span class="radio-button"></span><span>Enseignant / École</span> </label>
@@ -157,7 +165,7 @@ function webfactor_download_kit_2024_04_shortcode($atts) {
 
 
     $output .= '<input type="hidden" name="action" value="download_kit_2024_04">';
-    $output .= '<input class="button" id="download_kit_2024_04_form_submit_button" type="submit" value="Envoyer">';
+    $output .= '<div><input class="button" id="download_kit_2024_04_form_submit_button" type="submit" value="Recevoir le document"></div>';
     $output .= '</form>';
     $output .= '</div>';
     return $output;
