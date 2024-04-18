@@ -54,7 +54,7 @@
                     </div>
 
                     <div class="testlink">
-                        <a href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
+                        <a target="_blank" href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
                             <img src="<?php echo $tdu; ?>/images/Savio-test-gratuit-coupe.png" alt="Testez votre niveau gratuitement!" />
                         </a>
                     </div>
@@ -104,7 +104,7 @@
                                     <!-- <div class="what_is_savio_slider_container"> -->
                                     <!-- <div><img src="<?php echo $slide['image']['url']; ?>" alt="" /></div> -->
                                     <div class="testlink">
-                                        <a href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
+                                        <a target="_blank" href="https://app.savio.fr/test-de-niveau" class="freetest_opener">
                                             <img src="<?php echo $tdu; ?>/images/macaron-savio2.png" alt="Testez votre niveau gratuitement!" />
                                         </a>
                                     </div>
