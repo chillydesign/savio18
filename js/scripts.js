@@ -136,10 +136,11 @@
       // }
     });
 
-    $(".freetest_opener").on("click", function (e) {
-      e.preventDefault();
-      openFreeTestPopup();
-    });
+    // GO STRAIGHT TO TEST NOW
+    // $(".freetest_opener").on("click", function (e) {
+    //   e.preventDefault();
+    //   openFreeTestPopup();
+    // });
 
     $(".blue .column").matchHeight();
     $(".press_item").matchHeight();
