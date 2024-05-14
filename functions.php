@@ -84,7 +84,7 @@ function webfactor_nav() {
 }
 
 function wf_version() {
-    return '1.3.9';
+    return '1.4.0';
 }
 
 // Load HTML5 Blank scripts (header.php)
@@ -508,7 +508,7 @@ function create_post_types() {
                 'add_new' => __('Ajouter', 'webfactor'),
                 'add_new_item' => __('Ajouter Question Parents', 'webfactor'),
                 'edit' => __('Modifier', 'webfactor'),
-                'edit_item' => __('Chercher une Question Parents', 'webfactor'),
+                'edit_item' => __('Modifier une Question Parents', 'webfactor'),
                 'new_item' => __('Nouvelle Question Parents', 'webfactor'),
                 'view' => __('Afficher Question Parents', 'webfactor'),
                 'view_item' => __('Afficher Question Parents', 'webfactor'),
@@ -547,7 +547,7 @@ function create_post_types() {
                 'add_new' => __('Ajouter', 'webfactor'),
                 'add_new_item' => __('Ajouter Question Enseignants', 'webfactor'),
                 'edit' => __('Modifier', 'webfactor'),
-                'edit_item' => __('Chercher une Question Enseignants', 'webfactor'),
+                'edit_item' => __('Modifier une Question Enseignants', 'webfactor'),
                 'new_item' => __('Nouvelle Question Enseignants', 'webfactor'),
                 'view' => __('Afficher Question Enseignants', 'webfactor'),
                 'view_item' => __('Afficher Question Enseignants', 'webfactor'),
@@ -586,7 +586,7 @@ function create_post_types() {
                 'add_new' => __('Ajouter', 'webfactor'),
                 'add_new_item' => __('Ajouter Question Ecoles', 'webfactor'),
                 'edit' => __('Modifier', 'webfactor'),
-                'edit_item' => __('Chercher une Question Ecoles', 'webfactor'),
+                'edit_item' => __('Modifier une Question Ecoles', 'webfactor'),
                 'new_item' => __('Nouvelle Question Ecoles', 'webfactor'),
                 'view' => __('Afficher Question Ecoles', 'webfactor'),
                 'view_item' => __('Afficher Question Ecoles', 'webfactor'),
