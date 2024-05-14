@@ -28,9 +28,10 @@ if (!isset($newsletter_text_footer)) {
                 <?php echo $follow_header; ?>
                 <?php echo $follow_paragraph; ?>
 
-                <?php // get_template_part('partials/mailchimp_signup_form'); 
-                ?>
-                <?php get_template_part('partials/sib_signup_form_2');
+                <?php
+                // get_template_part('partials/mailchimp_signup_form'); 
+                //get_template_part('partials/sib_signup_form_2');
+                get_template_part('partials/sib_signup_form_3');
                 ?>
                 <?php echo $newsletter_text_footer; ?>
             </div>

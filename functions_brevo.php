@@ -41,6 +41,31 @@ function newBrevoAPITransactional() {
 
 
 
+add_action('admin_post_nopriv_brevo_signup_3',    'process_brevo_signup_3');
+add_action('admin_post_brevo_signup_3',  'process_brevo_signup_3');
+
+
+function process_brevo_signup_3() {
+    $referer = $_SERVER['HTTP_REFERER'];
+    $referer =  explode('?',   $referer)[0];
+
+    if (isset($_POST['action'])  && $_POST['action'] == 'brevo_signup_3') {
+        $role = $_POST['ROLE'];
+        $email = $_POST['EMAIL'];
+        $nom = $_POST['NOM'];
+        $role_string = ($role == '1') ? 'parent' : 'teacher';
+
+        $added_to_contacts = addEmailToContactsFromSignupForm($email, $nom, $role);
+        if ($added_to_contacts) {
+            wp_redirect($referer . '?success=si_co#brevo_signup_3', $status = 302);
+        } else {
+            wp_redirect($referer . '?problem=co#brevo_signup_3', $status = 302);
+        };
+    } else {
+        wp_redirect($referer . '?problem=act#brevo_signup_3', $status = 302);
+    }
+}
+
 add_action('admin_post_nopriv_download_kit_2024_04',    'process_download_kit_2024_04');
 add_action('admin_post_download_kit_2024_04',  'process_download_kit_2024_04');
 
@@ -59,7 +84,7 @@ function process_download_kit_2024_04() {
             $sendtransemail =  makeTransactionalEmailDownloadKit2024_04($email, $role_string);
             if ($sendtransemail) {
                 if ($agree_to_emails == 'true') {
-                    $added_to_contacts = addEmailToContacts($email, $role);
+                    $added_to_contacts = addEmailToContactsFromDownloadKit($email, $role);
                     if ($added_to_contacts) {
                         wp_redirect($referer . '?success=tr_co', $status = 302);
                     } else {
@@ -104,9 +129,37 @@ function makeTransactionalEmailDownloadKit2024_04($email, $type) {
     }
 }
 
-function addEmailToContacts($email, $role) {
 
-    $contact = array('email' => $email, 'attributes' => array('ROLE' => $role, 'FROM_WP' => true));
+
+
+function addEmailToContactsFromSignupForm($email, $nom,  $role) {
+
+    $contact = array('email' => $email, 'attributes' => array(
+        'ROLE' => $role,
+        'NOM' => $nom,
+        'OPT_IN' => true,
+        'FROM_WP' => true
+    ));
+    $apiInstance = newBrevoAPIContacts();
+    try {
+        $result = $apiInstance->createContact($contact);
+        print_r($result);
+        return true;
+    } catch (Exception $e) {
+        echo 'Exception when calling ContactsApi->createContact: ', $e->getMessage(), PHP_EOL;
+        return false;
+    }
+}
+
+
+function addEmailToContactsFromDownloadKit($email, $role) {
+
+    $contact = array('email' => $email, 'attributes' => array(
+        'ROLE' => $role,
+        'OPT_IN' => true,
+        'FROM_WP' => true,
+        'FROM_DOWNLOAD_KIT' => true
+    ));
 
 
     $apiInstance = newBrevoAPIContacts();

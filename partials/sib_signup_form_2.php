@@ -157,45 +157,5 @@
 <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
 
 
-<style>
-    #sib-container {
-        background-color: transparent;
-        padding: 0;
-        margin: 0;
-    }
-
-    .signup_form label {
-        font-size: 1em;
-    }
-
-    .sib-form {
-        padding: 0;
-        font-size: initial;
-    }
-
-    .sib-form .entry__field {
-        background-color: transparent;
-        border: 0;
-    }
-
-    .sib-form-block {
-        padding: 0;
-    }
-
-    .sib-form-block button {
-        font-size: 1.5em;
-    }
-
-    .sib-form .input,
-    .sib-form .input__affix {
-        border-bottom: 1px solid white;
-
-    }
-
-    #follow_savio .signup_form label.entry__error {
-        color: #fddcdc;
-        font-weight: bold;
-    }
-</style>
 <!-- END - We recommend to place the above code in footer or bottom of your website html  -->
 <!-- End Brevo Form -->

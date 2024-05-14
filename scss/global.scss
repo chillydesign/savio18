@@ -959,14 +959,9 @@ blockquote {
 
 .signup_form {
 
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: 10px 0 0;
 
-  @media (min-width: $mobile_width) {
-    flex-wrap: nowrap;
-  }
+
+  @media (min-width: $mobile_width) {}
 
   .form-field {
     width: 100%;
@@ -2893,4 +2888,62 @@ input.input_for_copying {
   label.inline {
     display: inline-block;
   }
+}
+
+
+
+#sib-container {
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+.signup_form label {
+  font-size: 1em;
+}
+
+.sib-form {
+  padding: 0 0 30px;
+  font-size: initial;
+
+
+  input[type="radio"] {
+    width: auto;
+    max-width: auto;
+    min-width: auto;
+    height: auto;
+    margin: 8px 0 5px;
+  }
+
+  button {
+    padding: 10px;
+    height: auto;
+    font-size: 1.4em;
+  }
+}
+
+.sib-form .entry__field {
+  background-color: transparent;
+  border: 0;
+}
+
+.sib-form-block {
+  padding: 0;
+}
+
+.sib-form-block button {
+  font-size: 1.5em;
+}
+
+.sib-form .input,
+.sib-form .input__affix {
+  border-bottom: 1px solid white;
+  background-color: none;
+  font-size: 1em;
+
+}
+
+#follow_savio .signup_form label.entry__error {
+  color: #fddcdc;
+  font-weight: bold;
 }
