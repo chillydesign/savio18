@@ -2884,7 +2884,8 @@ input.input_for_copying {
 #maths_input {
   opacity: 0.001;
   height: 1px;
-  display: inline;
+  display: inline-block;
+  overflow: hidden;
 }
 
 .download_kit_form {
