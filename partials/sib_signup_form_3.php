@@ -42,13 +42,16 @@
 
             </div>
             <div class="column">
-                <button>Envoyer</button>
-                <input type="hidden" name="action" value="brevo_signup_3">
 
                 <div id="maths_input">
                     <label for="maths">3+5?</label>
                     <input type="text" placholder="3+5=?" name="maths" id="maths">
                 </div>
+
+
+                <button>Envoyer</button>
+                <input type="hidden" name="action" value="brevo_signup_3">
+
 
             </div>
         </div>
