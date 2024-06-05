@@ -50,17 +50,25 @@ function process_brevo_signup_3() {
     $referer =  explode('?',   $referer)[0];
 
     if (isset($_POST['action'])  && $_POST['action'] == 'brevo_signup_3') {
-        $role = $_POST['ROLE'];
-        $email = $_POST['EMAIL'];
-        $nom = $_POST['NOM'];
-        $role_string = ($role == '1') ? 'parent' : 'teacher';
 
-        $added_to_contacts = addEmailToContactsFromSignupForm($email, $nom, $role);
-        if ($added_to_contacts) {
-            wp_redirect($referer . '?success=si_co#brevo_signup_3', $status = 302);
+        $maths = $_POST['maths'];
+
+        if ($maths == 8 || $maths == '8' || !$maths || !isset($maths)) {
+            $role = $_POST['ROLE'];
+            $email = $_POST['EMAIL'];
+            $nom = $_POST['NOM'];
+            $role_string = ($role == '1') ? 'parent' : 'teacher';
+
+            $added_to_contacts = addEmailToContactsFromSignupForm($email, $nom, $role);
+            if ($added_to_contacts) {
+                wp_redirect($referer . '?success=si_co#brevo_signup_3', $status = 302);
+            } else {
+                wp_redirect($referer . '?problem=co#brevo_signup_3', $status = 302);
+            };
         } else {
-            wp_redirect($referer . '?problem=co#brevo_signup_3', $status = 302);
-        };
+            // SPAM
+            wp_redirect($referer . '?problem=spm#brevo_signup_3', $status = 302);
+        }
     } else {
         wp_redirect($referer . '?problem=act#brevo_signup_3', $status = 302);
     }
