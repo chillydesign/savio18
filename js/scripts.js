@@ -428,10 +428,12 @@ function onYouTubePlayerAPIReady() {
 }
 
 function onPlayerReady(e) {
-  console.log(e, "onPlayerReady");
+  // console.log(e, "onPlayerReady");
   const ifrc = document.getElementById("video_iframe");
-  ifrc.classList.add("hide_image");
-  ifrc.classList.remove("loading");
+  if (ifrc) {
+    ifrc.classList.add("hide_image");
+    ifrc.classList.remove("loading");
+  }
 }
 function onPlayerStateChange(e) {
   console.log(e, "onPlayerStateChange");
@@ -440,14 +442,17 @@ function onPlayerStateChange(e) {
 // BINGO FORM
 // BINGO FORM
 
-let iframe = document.querySelector("#iFrameGuideEte");
-
-iframe.addEventListener("load", function () {
-  setInterval(function () {
-    iframe.style.height = iframe.contentDocument.body.scrollHeight + "px";
-    iframe.style.width = iframe.contentDocument.body.scrollWidth + "px";
-  }, 500);
-});
+let guide_ete_fr = document.querySelector("#iFrameGuideEte");
+if (guide_ete_fr) {
+  guide_ete_fr.addEventListener("load", function () {
+    setInterval(function () {
+      guide_ete_fr.style.height =
+        guide_ete_fr.contentDocument.body.scrollHeight + "px";
+      guide_ete_fr.style.width =
+        guide_ete_fr.contentDocument.body.scrollWidth + "px";
+    }, 500);
+  });
+}
 
 const close_bingo_popup = document.getElementById("close_bingo_popup");
 const bingo_popup = document.getElementById("bingo_popup");
