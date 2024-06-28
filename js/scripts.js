@@ -454,11 +454,11 @@ if (guide_ete_fr) {
   });
 }
 
-const close_bingo_popup = document.getElementById("close_bingo_popup");
 const bingo_popup = document.getElementById("bingo_popup");
-bingo_popup.style.display = "none";
 let hasShown = false;
 if (bingo_popup) {
+  bingo_popup.style.display = "none";
+
   const html = document.documentElement;
   const body = document.body;
   //addEventListener("scroll", (event) => {
@@ -478,7 +478,7 @@ if (bingo_popup) {
       //}
     }
   });
-
+  const close_bingo_popup = document.getElementById("close_bingo_popup");
   close_bingo_popup.addEventListener("click", (e) => {
     bingo_popup.style.display = "none";
   });
