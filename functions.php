@@ -1050,8 +1050,10 @@ function pay_freq_option_func($atts, $content = null) {
         'button' => "choisir cette offre",
         'month_id' => 'family_month_1',
         'year_id' => 'family_year_1',
-        'month_amount' => 50,
-        'year_amount' => 100,
+        'month_amount' => 0,
+        'year_amount' => 0,
+        'month_amount_usd' => 0,
+        'year_amount_usd' => 0,
         'month_word' => 'mois',
         'year_word' => 'an'
     ), $atts);
@@ -1063,10 +1065,17 @@ function pay_freq_option_func($atts, $content = null) {
     $year_id = $attributes['year_id'];
     $month_amount = $attributes['month_amount'];
     $year_amount = $attributes['year_amount'];
-    $month_amount_usd = $attributes['month_amount'];
-    $year_amount_usd = $attributes['year_amount'];
+    $month_amount_usd = $attributes['month_amount_usd'];
+    $year_amount_usd = $attributes['year_amount_usd'];
     $month_word = $attributes['month_word'];
     $year_word = $attributes['year_word'];
+
+    if (!$month_amount_usd) {
+        $month_amount_usd = $month_amount;
+    }
+    if (!$year_amount_usd) {
+        $year_amount_usd = $year_amount;
+    }
 
     $pay_option = '<div class="pay_buttons">';
     $pay_option .= '<div class="pay_monthly">

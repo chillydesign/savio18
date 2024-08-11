@@ -5,8 +5,8 @@
     "main": "index.php",
     "scripts": {
         "test": "say test",
-        "dev": "sass scss/global.scss css/global.css  --watch --style=compressed  --no-source-map",
-        "build": "postcss css/global.css -r  -u autoprefixer -m "
+        "css": "sass scss/global.scss css/global.css  --watch --style=compressed  --no-source-map",
+        "cssbuild": "postcss css/global.css -r  -u autoprefixer -m "
     },
     "repository": {
         "type": "git",

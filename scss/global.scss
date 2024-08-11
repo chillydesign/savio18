@@ -6,8 +6,6 @@
 @import 'header';
 @import 'footer';
 
-
-@import '../node_modules/slick-carousel/slick/slick.scss';
 @import 'slick';
 
 
@@ -171,6 +169,9 @@ section {
 
 #countdown_section {
 
+  color: white;
+  background: none;
+
 
   blockquote {
     &:after {
@@ -179,9 +180,6 @@ section {
     }
   }
 
-
-  color: white;
-  background: none;
 
 
   #saviocountdown {
@@ -1552,6 +1550,9 @@ ins.wlc-box {
 
 .faq_menu {
   position: static;
+  background-color: #f1f1f1;
+  box-shadow: 0 10px 30px transparentize($dark_grey, 0.9);
+  border-radius: $border_radius;
 
   @media(min-width: $mobile_width) {
     position: sticky;
@@ -1561,9 +1562,7 @@ ins.wlc-box {
   }
 
 
-  background-color: #f1f1f1;
-  box-shadow: 0 10px 30px transparentize($dark_grey, 0.9);
-  border-radius: $border_radius;
+
 
   li {
     list-style: none;
@@ -2395,11 +2394,12 @@ body.single {
   }
 
   .loop_content {
+    padding: 0 0 0 10px;
+
     &:before {
       content: none;
     }
 
-    padding: 0 0 0 10px;
   }
 
 
